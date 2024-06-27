@@ -1,0 +1,356 @@
+Central Minnesota  
+Regional Logger Committee Meeting 
+Location: Microsoft Teams Meeting ONLY 
+Join Microsoft Teams Meeting 
+Due to the COVID-19 pandemic, physical meeting locations are unavailable 
+June 12th, 2020 (Immediately following the end of the RAC) 
+ 
+Agenda 
+ 
+ 
+1. Call to Order 
+2. Roll Call 
+3. Revisions and Approval of Agenda 
+4. Approval of Minutes, May 8th, 2020 
+ 
+(P1-7)  
+5. Communications 
+ 
+New Business 
+6. Service Level Agreement (discussion) 
+ 
+ 
+Old Business 
+7. Logger User Concerns 
+8. Open Discussion 
+9. Next Meeting  
+July – 10th Alexandria Fire Hall (Physical location dependent upon COVID-
+19 circumstances) 
+10. 
+Adjourn 
+ 
+ 
+ 
+1 
+ 
+Central Minnesota 
+Regional Logger Committee Meeting 
+Microsoft Teams Meeting 
+Due to the COVID-19 pandemic, physical meeting locations are unavailable 
+May 8, 2020 – 11:00 a.m. (After RAC) 
+ 
+ 
+Members/Alternates Present: 
+1. 
+Micah Myers & Brandon Larson, Chair – City of St. Cloud  
+2. 
+Sheriff Mark Brown – Big Stone County 
+3. 
+Mike Henrion, Vice Chair – Douglas County  
+4. 
+Jon Combs – Grant County 
+5. 
+Jason Karlgaard – Otter Tail County 
+6. 
+Sheriff Tim Riley – Pope County 
+7. 
+Mary Lieser & Kristen Lahr – Stearns County 
+8. 
+Dona Greiner – Stevens County 
+9. 
+Haley Dubois – Wright County 
+ 
+Members/Alternates Absent: 
+10. 
+Kandiyohi County  
+11. 
+Meeker County 
+12. 
+Mille Lacs County 
+13. 
+Sherburne County 
+14. 
+Wilkin County 
+ 
+Guests Present: 
+Andy Beckstrom – Mille Lacs County 
+Dave Theis – Regional Coordinator Contract  
+Derek Leyde – Northland Business Systems 
+Scott Wosje – Northland Business Systems 
+ 
+Approval of the Agenda 
+Larson made a couple of edits to the agenda. Larson identified item #7 Technical Assistance as an 
+action item. Larson made item #10 Regional Admin Opening an action item as well. City of St. Cloud 
+made a motion to approve the amended agenda. Big Stone County seconded. Roll call vote: City of 
+St. Cloud – approved; Big Stone – approved; Douglas – approved; Grant – approved; Otter Tail – 
+approved; Pope – approved; Stearns – approved; Stevens – approved.   
+Approval of Minutes 
+Pope County motioned to approve the minutes from March 13, 2020. Otter Tail County noted a 
+correction that Jason Karlgaard attended, not Keith VanDyke. City of St. Cloud seconded. Roll call 
+vote: City of St. Cloud – approved; Big Stone – approved; Douglas – approved; Grant – approved; 
+Otter Tail – approved; Pope – approved; Stearns – approved; Stevens – approved.   
+ 
+Communications 
+None. 
+ 
+2 
+ 
+NEW BUSINESS 
+6. ByLaws 
+Larson explained we discussed this at our last meeting. We have both a clean version and 
+the edited version, that have been posted more than 30 days since we did not meet at our 
+last meeting. City of St. Cloud moved to approve. Grant County seconded. Larson asked for 
+further discussion. Roll call vote: City of St. Cloud – approved; Big Stone – approved; Douglas 
+– approved; Grant – approved; Otter Tail – approved; Pope – approved; Stearns – approved; 
+Stevens – approved. Motion approved.  
+ 
+7. Technical Assistance 
+Larson explained this piece came up with Washington County bringing forth their intent to 
+join the Regional Logger. When we had initial conversations with another region there was a 
+question surrounding a concern about pulling talkgroups from a different zone into our zone 
+and putting undo bandwidth loading on the interzone site links. There was a concern there 
+would be a noticeable disruption on the ARMER system. With us taking the Washington 
+County request through SECB governance, to make sure we alleviate any concern, we 
+motioned and approved to request technical assistance through the O&O Committee for 
+Dave Theis’ time to research this issue. In your meeting packet, is Dave’s report.  
+ 
+Dave Theis reported there is some background information there that talks about call 
+processing. There are routers at each site called exit routers that connect the 6 zones 
+together in the state. These exit routers are connected with four T1s used in what is called 
+aggregation mode. Which provide a total bandwidth a little bit in excess of 6 megabits. Part 
+of the challenge was trying to find a tool that could be used to measure and manage 
+bandwidth on the interzone links. Some people are familiar with Provisioning Manager and 
+zone historical reports where you can run reports on virtually everything on the system. 
+There does not exist a tool that lets you look at calls being sent across the interzone links. In 
+other words, calls being sent out to another zone by the exit routers. When does that 
+happen? Anytime there is a statewide talkgroup call. In some cases, some regional calls, 
+sometimes a county roam channel, will traverse the interzone links. But there is no tool to 
+be able to measure that. Theis did go to Motorola Systems Engineering, spoke with Susie 
+the Systems Engineering Manager, and she got a guy on the phone, a network architect, his 
+name is Vince. Vince has been around a long time. He has a lot of history with P25. Theis 
+detailed the summary of that conversation with Vince in that the question came up many 
+years ago how to gauge the interzone bandwidth. Since there was not a tool, they had some 
+custom software. They used some devices call bulk call generators which basically flooded 
+the interzone links with talkgroup calls and analog calls. They could never reach a point 
+where the four T1’s got choked for bandwidth. They made a decision then that it is never 
+going to happen given the size, capacity and design of a P25 system with up to 7 zones. 
+There is no possible way that you can choke the bandwidth on an interzone link.  
+ 
+Theis does have a section called Exit Router T1 Link Sizing. Theis explained Susie and I were 
+able to find an old bandwidth planner that lets an engineer design a system and size the 
+interzone links. You can have up to 4 T1s. If you look at those examples there. The first 
+screenshot shows on the zone pairs, zone 1 connected to zone 4. It shows five analog 
+channels and 25 trunked talkgroups passing a link.  
+ 
+3 
+ 
+NEW BUSINESS (Continued) 
+7. Technical Assistance (Continued) 
+Theis explained all the way to the right it says how many T1s are required. In this case, it is 
+two. Theis ran some scenarios here. If you look at the bottom one [screenshot], Theis has 20 
+analog channels, 200 simultaneous talkgroups now crossing the link. Four T1s is capacity. 
+There will rarely, if ever, be 200 simultaneous trunked calls passing across an interzone link. 
+There might be more than 20, but it depends upon technical factors. For most routine 
+operations we will never get close to reaching the needed capacity to get to enough 
+talkgroups occurring at the same time to even get close to needing four T1s.  
+ 
+Theis noted based on all that, there is precedence in the system today where consoles are 
+being used across interzone links. Most recent one is Hennepin County is relocating one of 
+their dispatch sites from Zone 2 into Zone 1. They are going to relocate it to downtown 
+Minneapolis in their public safety facility. That will be a Zone 1 console connected to Zone 2 
+resources. Another words, Hennepin West/Hennepin East. Those simulcast cells exist on 
+Zone 2. Theis did ask King if he had to go to the LMR or MESB to get permission and he said 
+it was never an issue. There is precedence out there where it is happening today and no one 
+is questioning whether, or not, there is going to be a problem with interzone link capacity. 
+Based on all this, Theis sees no reason why there would be any problem in terms of 
+interzone link capacity that Washington County cannot join the Central MN Regional Logger.  
+ 
+Lahr asked with this, and with Dave’s findings on the capacity on those interzone links, do 
+we anticipate this approval still needing to go to OTC just to present what we found? Larson 
+wants to be very clear and upfront with the whole governance process. The concern was 
+already brought to us in a conversation Larson was in by the current LMR Chair. Larson 
+wants to take this process next to O&O and then forward through SECB governance unless 
+there is an objection from the Committee. Lahr agreed. Theis would suggest knowing how 
+the MESB likes to work, and it will be affecting Zone 1, Theis would say it would make sense 
+to follow a normal process. Get the required approvals even though it may not seem like it 
+would be required.  
+ 
+Myers explained we have tried to be above board with everything we have done with the 
+logger. One of the reasons why it took us so long to get to market before we went live with 
+this is the hoops we had to jump through with the BCA. We do not want to change course, 
+keep doing what it is, and set the model for everyone else to follow.  
+ 
+Larson asked do you feel it appropriate to take this separately to the MESB, or is it fine to go 
+O&O and then to LMR? If LMR wishes to kick us over to MESB we can do that as well. Myers 
+agreed. Lahr responded is this our region’s acceptance of Washington County to join the 
+logger, or has that already been done? Larson reported we have approved the intent, our 
+ESB has not approved an official joining. We approved the intent contingent upon this 
+process from this research. Larson stated the next step would be to take this to Owners & 
+Operators based upon action from the Committee approving this technical assistance report 
+and approval to move it forward to O&O through the governance process. City of St. Cloud 
+motioned to approve from this group, and then move it forward as discussed to the O&O, 
+then to LMR and whatever committees the LMR deems we follow. Stevens County seconded.  
+ 
+4 
+ 
+NEW BUSINESS (Continued) 
+7. Technical Assistance (Continued) 
+Larson called for further discussion. Roll call vote: City of St. Cloud – approved; Big Stone – 
+approved; Douglas – approved; Grant – approved; Otter Tail – approved; Pope – approved; 
+Stearns – approved; Stevens – approved; and Wright – approved. Motion approved. 
+ 
+8. Northland Business – Proposal  
+Wosje reported in passing the conversation has come up how can we record either 
+temporarily, smaller agencies are looking to save costs. With the ability to record when a 
+911 center gets shut down, in this case due to a possible pandemic, nobody has thought 
+about this in advance. Agencies are starting to think if we have our dispatchers work at 
+home, especially as agencies start to go with the hosted Vesta solution, how can we have 
+those at home 911 operators still be able to record? There is a way to do that. What we are 
+working through is a temporary license verses a hosted license. That is the premise of the 
+conversation to start floating out to the Logger Committee.  
+ 
+Leyde explained we have had discussions with Vesta regarding this as well. Whether it is a 
+temporary license or a subscription. Those are some things we have thought about, IP 
+recording and screen recording. Wosje explained the intent was to just kick off the concept 
+to get the temperature of the group. Similar to Washington County, outside agency, not a 
+member of the group, is it something you even want to consider as a possible revenue 
+opportunity? Government agencies typically do not do things to make money, but 
+operational efficiency with the backbone that you already have in place.  
+ 
+Larson explained with the COVID Continuity of Operations Planning ‘enhanced’ planning, 
+some regions are starting to think well outside the box. Thinking about what if we cannot 
+staff our center. With our CPE vendor we have the ability to have dispatching from home. 
+There would then be a need to be able to log and record the phone calls. Primarily over IP 
+and there would be a need to offer those entities an ability to do so. With the Regional 
+Logger, we are all set-up for that. Larson does not know that there would be discussion, 
+desire, or need for radio logging at this time. But it would be some urgent need to log 911 
+phones, perhaps screen capture if the agency desired. The question to the committee is, are 
+you open to the idea of continuing to do shared services with more entities outside of our 
+region? Wosje added we are specifically talking about telephony, phone calls, no radio.  
+ 
+Otter Tail County’s question to the group is any dispatch center entertaining the idea of 
+having dispatchers at home? Otter Tail County is not looking at that right now. There is a lot 
+of other steps we would need to be looking at well before recording. Recording would be 
+one of those if we were looking at that, but it is not an option right now. Wosje replied no 
+body within your region. It is coming up as smaller agencies, might not have the resources 
+and nobody is even wanting to do it right now. It is COOP operations version 2 or 3 they are 
+just starting to think, ‘What would happen if?’ Nobody is coming to us now saying we need 
+this, we need a plan and we need to know how much it is going to charge. Right now, they 
+are just concerning what would happen if our dispatchers were at home? We would have to 
+record and how could we do that.  
+ 
+ 
+5 
+ 
+NEW BUSINESS (Continued) 
+8. Northland Business – Proposal  
+Stevens County is thinking well beyond COVID, but thinking potential hazmat incident, if we 
+would need to evacuate our PSAP. Using this for something like that? Larson thinks there is 
+a multitude of different reasons to do it. Larson brought up the dispatching from home as 
+being a genesis of thought of this. But, it would not necessarily be something restricted to 
+only that. It would be an entity coming to us, or Northland, looking for a solution saying we 
+want logging, where can we find that? And the question of, would the Regional Logger, 
+since we have the infrastructure, continue to be open to sharing services at that level. There 
+would be specifics to be hammered out in details. At the high-level, is this something the 
+committee would support? Stevens County does not know enough to share enough with 
+her sheriff for his opinion at this time, but if there is more information she could share she 
+sure would. Larson rephrased, when we had the conversation of Washington County coming 
+on, we asked the committee members, “Are you open to sharing services with another 
+region, county, etc.” At the time the response was yeah, as long as it makes sense and 
+depending upon the finance and capacity piece. Larson wants to understand is that still the 
+feeling of the committee today? Lahr would assume it likely would be, but it is just hard for 
+people to respond to a hypothetical question of what are we saying ‘yes’ to. It would be on 
+a case-by-case basis. We are open to doing business with agencies outside of our county, 
+but we just need to address what that encompasses just to make sure it fits within the 
+scope of capacity of the Regional Logger and finances, etc. Otter Tail County concurred.  
+ 
+Larson asked is there any apprehension from the committee to have us continue to work 
+with Northland to explore additional shared services with others outside of our region? Lahr 
+would say ‘no,’ because those individual requests you would always bring back to the 
+committee for consideration anyway, correct? Larson is wondering is there any hesitance in 
+having us move forward to lay the ground work for it right now? The specific individual 
+requests we would bring forth before the committee and the governance process. Lahr 
+cannot think of objection for laying the groundwork for that from her county’s perspective. 
+Larson heard [read in chat] from Stevens County she is agreeing with a case-by-case basis. If 
+there is no objection, then we will just move forward on laying the groundwork and bring 
+back to the committee any forward movement on it, if any at all.   
+ 
+9. Logger Update  
+Leyde explained currently there are some minor issues we are working through with Mille 
+Lacs, Otter Tail and Kandiyohi County accessing calls. The calls are there, they are recorded. 
+But as far as the view and the tagging our team is working through that. We are rolling out 
+Kaseya, with the RMM (remote monitoring). We are roughly 60% of the way through that. 
+Hopefully in the next month to bring to the committee our plan to remove the v5 loggers 
+that are in place, that extra layer of redundancy we have. We are still open to any onsite 
+training that anyone would request. We have the videos we shared with the Central Region. 
+ 
+Larson mentioned the City of St. Cloud will be doing some maintenance next Wednesday. 
+There will be a logger outage. We are hoping the actual outage of logging will only be a 
+matter of minutes. We are going to be replacing some switches that support the logger 
+itself.  
+ 
+6 
+ 
+OLD BUSINESS  
+10. Regional Admin Opening 
+Larson reported we discussed this at our last meeting. Currently, Randy Celander serves as 
+the regional admin for the logger. The role entails receiving any data practice requests. 
+Largely, it has been from other public safety agencies requesting audio from regional or 
+statewide interops, then handling that data practice request appropriately. They are not 
+asked to go in, or have access to local talkgroups of yours. Any request of those kind they 
+send them to the local entity. Recently, we did have Swift County that put in a request that 
+Randy Celander is working on. Larson did have interest from Mary Lieser, Stearns County. 
+Mary was still interested in filling the vacancy. Larson asked if anyone else was interested in 
+this vacancy. Larson sought a motion to have Mary Lieser fill Al Fjerstads position as regional 
+admin. City of St. Cloud motioned, Douglas County seconded. Roll call vote: City of St. Cloud 
+– approved; Douglas – approved; Grant – approved; Otter Tail – approved; Stearns – 
+approved; Stevens – approved; and Wright – approved. Motion approved. Motion approved. 
+ 
+11. Logger User Concerns  
+ 
+ 
+Otter Tail County is working with Northland right now. There is one entire week in April 
+where we are not able to access any radio recordings. They tell us the recordings are there, 
+it is just they are not displaying for us when we search for them. Otter Tail explained when 
+you go to add/update a remark on a file it seems like the first time you do it takes a 20-30 
+second delay just waiting for that box to open. Leyde asked if anyone else experience that 
+issue? Wright County has. Leyde explained we have been talking to Verint and we are trying 
+to get a better understanding of the latency between the centralized equipment and each 
+agency, because we cannot replicate that in our test lab. Worse case our team could get 
+those recordings from the v5 logger. Leyde explained we have confirmed these recordings 
+are in the v15, it is more of a tagging issue. Similar to v5, it would upload to the centralized 
+CAS and it has to tag to an agent within the system. It is a tagging database issue at a high 
+level. We have the Verint engineers involved and it is escalated right now to a tier 3 status. 
+It is a critical status for them. Any issues in the meantime reach out to our team and we can 
+get you the calls on the v5 system. Otter Tail County went back to add/update remarks, it 
+seems like just the first time he goes to do it after he logs in it will take a good 20-30 
+seconds. And any time after that there is still a delay, but it is maybe 5-10 seconds. Leyde 
+asked are you using Chrome or Microsoft Edge? Otter Tail is using Internet Explorer (IE). 
+Leyde replied what we are starting to do with agencies now is use either Edge or Chrome. 
+The next update we run will actually have full support for Chrome. But we have seen with 
+the versions you guys are currently on that better performance with Chrome and Edge. 
+Leyde added as an FYI, Otter Tail will be the first in the state to do it with the hosted Vesta 
+doing the SIP/IP recording and we are going to be doing some testing with Brad from 
+Motorola next week. We have to confirm the quality for the recording is not more high 
+definition than the quality of what the dispatcher hears on the phone. Otter Tail County 
+reported he was not aware of using the Chrome browser, he had tried that shortly after 
+they went to the v15 and it was not working then and someone at Northland said we had to 
+use IE. Leyde replied Internet Explorer was the preferred during the initial roll-out, but it is 
+not a bad idea to try it. When we do the next round of upgrades, that will be fully supported 
+and the preferred method, because we see Internet Explorer fading away and Google 
+Chrome being more of a standard now for internet usage.  
+ 
+7 
+ 
+12. Open Discussion 
+None.  
+ 
+13. Next Meeting:  June 12, 2020 – Alexandria Fire Hall 
+Larson explained it is all going to be dependent on this pandemic and the recommendations 
+on in-person physical locations, or if we are going to be doing electronic again.  
+ 
+14. Adjournment  
+Stearns County made a motion to adjourn the meeting. Douglas County seconded and the 
+motion was carried unanimously at 11:54 a.m.  
+ 
+Minutes recorded by Shari Gieseke. 

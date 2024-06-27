@@ -1,0 +1,4991 @@
+ 
+ 
+ 
+Central MN Executive Committee 
+Wednesday, June 10, 2020 – 11:00 AM 
+Microsoft Teams Meeting Link 
+Agenda 
+ 
+1. 
+Call to Order 
+2. 
+Roll Call  
+ 
+ 
+3. 
+Revisions and Approval of Agenda (P1) 
+4.  
+Approval of Minutes from March 25, 2020 (P2-8) 
+ 
+5.  
+Communications 
+a. 2020 Training Scheduling (In-Person and TEAMS) (P9-37) 
+b. Interop Consolidation Schedule (P38-39) 
+c. Regional Interoperability Talkgroups Uplifted (P40) 
+ 
+ 
+6.  
+General Discussion: 
+ 
+Regional Concerns 
+d. Grants (View online) (Update)  
+e. SECB Committees Appointments (Update) (P41) 
+f. 2020 SUA Cost Allocations (P42-64) 
+g. EMAC FFY2020 SHSP – Training & Exercise Regional Contractor (Action Required) 
+h. Meeting Room Reservations – Douglas County 
+i. Protocols for Virtual Meetings/Rules of Engagement (P65-78) 
+j. Standard 8.10 (P79-83) 
+            
+7.  
+Old Business:  
+a. Committee Attendance (View online) 
+b.  Website  
+ 
+8.   
+Upcoming Meetings 
+a) July 29, 2020 – 11:00 a.m. (ESB Meeting) 
+b) August 19, 2020 – 11:00 a.m. (After Final Budget Adoption Review) 
+      
+9. 
+Adjournment 
+ 
+1 
+ 
+ 
+Central MN Executive Committee Meeting 
+St. Cloud City Hall CR#1, 400 2nd ST S, St. Cloud, MN 
+March 25, 2020 – 11:00 AM 
+ 
+MEMBERS/ALTERNATES PRESENT: 
+1. Jeff Jelinski – ESB Chair 
+2. Steve Schmitt – ESB Vice Chair (via phone) 
+3. Micah Myers – RAC Chair  
+4. Kristen Lahr – O&O Chair (via phone) 
+5. Brandon Larson – O&O Vice Chair and Logger Chair 
+6. Paul McIntyre – Users Chair (via phone) 
+7. Jason Karlgaard – NG911 Chair (via phone) 
+ 
+CALL TO ORDER: 
+The meeting was called to order by ESB Chair Jeff Jelinski at 11:00 a.m. 
+ 
+INTRODUCTIONS:  
+Introductions were conducted. 
+ 
+APPROVAL OF AGENDA:  
+Schmitt made a motion to approve the agenda. Karlgaard seconded, motion carried.  
+ 
+APPROVAL OF MINUTES: 
+Larson made a motion to approve the minutes from March 4, 2020. Schmitt seconded, motion 
+carried.  
+ 
+COMMUNICATIONS: 
+a. Coronavirus (COVID-19) 
+Jelinski stated as far as the Executive Committee is concerned is there a reason that we need to 
+meet? The next meeting is May 13th. As it is right now do we want to just hold May 13th open? Do 
+we feel as though we need to have a meeting? And would we want to meet again on a phone 
+conference? Lahr responded depending on how the other committees follow through with April 
+meetings. The April O&O/User Committee meeting was already cancelled in anticipation of the 
+Public Safety Conference which has also been cancelled. However, maybe just in case there is 
+some sort of business that needs to be done we could just hold it on the calendar. Jelinski agreed to 
+hold it on the calendar. Karlgaard agrees as well at least keep it on the calendar for now and maybe 
+a little closer if there is not anything pertinent to discuss we could cancel it. Schmitt is in 
+consensus. See also “Next Meeting.”  
+ 
+GENERAL DISCUSSION: 
+Regional Concerns 
+ 
+A. Grants 
+Subd.8.Emergency Communication Networks: Myers noted page #10 starts with the 
+appropriations that was granted to ECN. ECN had $77,768,000 in their budget. The next page 
+(page #11) lays out what those dollars are for. If you go back to this whole appropriations 
+language. It is either through the tax fold, but a lot of the services that are listed here below 
+are stemming from the 9-1-1 fees. Then it talks about the appropriations from the state 
+special revenue fund for 9-1-1 emergency telecommunications services. This appropriation 
+includes funds for information technology project and support subject to provisions of 
+Minnesota Statutes.  
+ 
+2 
+ 
+GENERAL DISCUSSION: (Continued) 
+Regional Concerns (Continued) 
+ 
+A. Grants (Continued) 
+Subd.8.Emergency Communication Networks 
+(a) Public Safety Answering Points: Myers explained right here is the one that is key. 
+Where they make reference to the 403.113 Statute which is in your packet. There are 
+different viewpoints on how the funding from the 9-1-1 fees are supposed to be distributed.  
+ 
+(c) ARMER Debt Service: The $23,261,000 is debt service that is issued on an annual basis 
+to pay down the construction of the ARMER network. As this also talks about anything that 
+was left that was not paid to the debt service was able for capital improvements. This is 
+where some of the grant funding we have gotten has come from this. This number varies. 
+Down here the one that is key is the $1,000,000 appropriation. Each year the biennium is 
+where the basis of the SECB grant comes from. There are differences of opinion as to what is 
+eligible expense through the grant process. Myers met with ECN last week and we went 
+through this. It is their belief that if it is not tied to the confines of a 911 center, or the brick 
+and mortar, that it is not eligible through the grant process.  
+ 
+Investment Hierarchy – 2019 SECB Grant: Myers explained with that being said, in the 
+packet is the Investment Hierarchy. The Grants Workgroup met earlier this week and we 
+talked about the GIS component this is coming off as Priority 1. Priority 2 is standard 
+Training & Interoperable Voice Communication Exercises and Planning Costs. There is 
+going to be some clean-up to this language here. Priority 3 the Integration Costs or 
+Enhancements. Priority 4 the Interoperability and operability Infrastructure. There is three. 
+This is still viable. This is one we actually have in our infrastructure requests, the list we 
+provide at all of our meetings. We have items that would be eligible in here. The question is 
+the BDAs. ECN’s belief is BDAs are not eligible in this grant which we believe they are. 
+There is further discussion that will come on the 2nd when this group gets back together as we 
+do more research on this. Sites going on the air. What we put as our number 6 priority when 
+we reorganized our grant priorities. Putting a site on air would still be eligible. We are going 
+to submit with our grant. We are going to have to move the requests up. Swift County has a 
+request in, but one of the things that it is going to come back to is the ability to pay. This has 
+been a big discussion for the group. Where ECN looks at what they have in reserves from 
+their 9-1-1 funding and says that is your ability to pay. Not taking into consideration if an 
+agency is saving and have a plan to spend on a bigger project that it is going to take them a 
+few years. They say you have to make a choice between which project you want. That is part 
+of the reason why our CPE grant is being held up right now. They are looking at all of the 
+members that are part of that grant, and what they have in reserves. Myers stated that is one 
+thing to take into consideration when you are putting in these projects, that ECN is going to 
+weigh back in on this looking at your ability to pay based on your reserve accounts. 
+ 
+Prioritizing Capital and Other Spending Standard: This standard we made revisions to 
+this back in 2018. The Grants Workgroup had some discussions with ECN. We made some 
+changes to it. This is another item they are bringing up. It is ECN’s belief that grant 
+applications have to go through all committees. Myers had said, no, if you read #5 
+Recommended Procedure – Evaluation process #1 talks about how it goes through there, but 
+if you look at #2 it also gives you latitude that you do not have to follow this directly if there 
+is a timeliness or some other components to it. There is talk that this standard is going to be 
+revised. Myers thinks the standard handles what we need to do currently. Myers wants to 
+make our region aware of what is coming on this.   
+ 
+ 
+ 
+3 
+ 
+GENERAL DISCUSSION: (Continued) 
+Regional Concerns (Continued) 
+ 
+A. Grants (Continued) 
+Minnesota Statutes 2019 – 403.11 and 403.113: Myers explained this basically just states 
+where the special revenue or the 9-1-1 enhanced fee. This is where it makes the reference. 
+This one does not really tell you that you can spend it on this. It makes a reference to the 
+upcoming statute here. It talks about where it is collecting. It talks about the funding 
+mechanism and how they allocate. Half of these monies goes to all the PSAPs equally. Then 
+there is a city and how their allocation comes out of the county’s allocation. It talks about 
+how the money is distributed and it talks about the items that can be used. One of the things 
+we are looking at doing, and there is discussion from the group, as to when we redo the 
+hierarchy making sure it aligns with this. And if it is deemed we cannot spend the monies like 
+we had spent in the past, where what the SECB has granted authority to, because if you go 
+back to January of 2015 that is when the SECB established the SECB grant program which 
+talked about taking a million dollars, or whatever was available, out of the $2 million they 
+get, basically by a million each year and it established the SECB grant program. It also 
+established what they could spend it on. There was discussion as to they did this so the 
+individual membership was not trying to go to the legislative to get their items there that they 
+wanted to have. It does not vote well for them when you have said county coming to ask for 
+things that the legislative looks at that we have already provided a funding mechanism for 
+that. If that is not the case, then the discussion we had with ECN is looking at aligning these 
+so there is clear direction as to how we can spend these funding. The recommendation was to 
+look with the Steering Committee Chair, Finance Chair, and the Legislative Chair to sit down 
+with Commissioner West to go through and say if we are not aligned with what we have in 
+these State Statutes, then we make the provisions in the State Statues that we can fund it. But 
+we have to define it. The other component coming out of this was what the Grants 
+Workgroup is tasked with is if you go back to the Regional Quarterly we had in July of last 
+year there was the discussion as to how the SHSP gets funded. Right now, we have dollars in 
+there for training and then there was $50,000 out of that grant that was going to be a 
+competitive grant. The reason why we got funded the amount we had was because there was 
+no direction from ECN to HSEM as to what our needs were. That is another component that 
+is coming up. We have to define what it is we are looking for assistance in, and they want us 
+to put together a strategic plan. The region has done a strategic plan. We can update that. 
+Some of the folks are going to make the ask for planning dollars depending on how this all 
+shakes out to either create their strategic plan, or in our case, update the plan we have. There 
+are a lot of things coming through there. Take a deep dive into these standards. 
+ 
+Minnesota Statutes 2019 – 403.36: This is not per the grants. Currently, the Legislative 
+Committee has an ask that is going to change the make-up of this board. This is something 
+we need to watch, because they are adding another state position in the Indian Council, but 
+they are not adding a greater MN and a Metro position which would change the balance of 
+the SECB. The SECB was defined on a 1/3 State, 1/3 Metro and 1/3 Greater MN. The 
+changes that are being proposed by ECN right now, that is not the case, they are going to 
+affect the balance of power. That has not officially gone through yet, but it is there. There is a 
+draft. Jelinski has a pain with that last statement: If we are playing in the sandbox right now 
+equally, and if tomorrow this is changed to where we are not playing in the sandbox 
+anymore, there is a good chance that the rules as we know them right now will not be those 
+same rules. Myers replied you sat on the last Legislative call when Dana Wahlberg presented 
+and no one said anything. Thankfully, they have not been able to get a hearing or anything on 
+it. Myers has to go back and look from the SECB, Myers does not think SECB gave the 
+authority for her to do this, but that would not be out of the norm because there are some 
+things that are being done that are not following the governance.  
+ 
+4 
+ 
+GENERAL DISCUSSION: (Continued) 
+Regional Concerns (Continued) 
+ 
+A. Grants (Continued) 
+Minnesota Statutes 2019 – 403.36: 
+Myers added and that is one of the things that was mentioned in the letter from the MESB 
+and we also talked about this grant process. This is part of why we are going through the 
+grant process. There is a difference of opinions as to how this stuff is going. This is where we 
+need to make sure that we need to do our due diligence and look at what is going on.  
+ 
+Myers stated back to the grants, from the Committee Chairs looking at it, what is it that we 
+are looking for, what is our priority? At the RAC we established our priority list. But, if 
+BDAs are deemed not approved, then we need to look at it. Or, making the ask so that they 
+are approved. At one point they were. But that was based on utilizing funding that was either 
+in ECN’s eye funding that was coming from the debt service. The bonds that are issued and 
+not paying on the debt service. Anything that was left over could be thrown in that we could 
+assign out through a grant, or however the Commissioner of Public Safety saw fit to use. 
+ 
+Larson asked typically when there is legislation changes being suggested, does that normally 
+go to the Legislative Committee and they have to approve it and then it is approved by SECB 
+before it gets pushed to Legislature? Myers replied it should. Jelinski questioned but does it? 
+Myers stated with this round and there is a time table that is given. This is going to come 
+back, because it is not going to get a hearing. By September, according to the timetable that 
+was presented by Director Wahlberg, that if they are looking for changes it has to go this 
+route. Myers has to confirm, Myers does not remember, but that does not mean it did not 
+happen, this being brought to the SECB, the current language change she is looking to do on 
+the 403 Statute. Larson’s recent recollection is that a lot of Legislative Committee meetings 
+have been cancelled lately, this seems like a big deal to bring forth. Myers stated the meeting 
+he just came out of, they are not even going to do bonding this year, is what we are 
+anticipating. They are dealing with COVID-19 right now, they are going back into session 
+tomorrow. They are going to be meeting one or two more times is what the Mayor’s 
+anticipating, and they are just going to take care of this and we will not see a bonding bill in 
+this session. Myers is not concerned with this going through on this session, but it needs to be 
+addressed at the Legislative Committee, but the challenge is that committee does not ever 
+meet. It is going back to where we were several years ago, where no one is voicing any 
+concerns, or reaching out to the chair of that group. That group is going to cancel the 
+meeting, because there are no business items to meet. Chair Jelinski thinks that part of that is 
+you have to know what the issue is. The 1/3-1/3-1/3, and it is all of a sudden not, it could be 
+changed to where it is not that same equal shares. Unless, it is actually conversed that way 
+during a phone conference of the Legislative Committee, most nobody really gets it. Myers 
+replied historical knowledge. Myers was going back and reading through the minutes on the 
+Legislative that is what tripped him when he looked at the balance. If you look at the way it is 
+laid out in the 403 Statute. If you read through the 403.36, this is key when you look at how it 
+is worded right now. The board is comprised of 18 members. They put in these chairs of the 
+Met Councils, State Patrol, DNR, State of MN, and then it goes down and talks about the 
+elected officials. And also what made Myers think about this too is when we were going 
+through the Bylaws. The Bylaws revision, and the Bylaws have not been approved yet. There 
+were some changes to the Bylaws, but the Bylaws cannot trump state statute. This is where 
+we need to make sure we are doing our due diligence. There is a reason why, they may not be 
+meeting, but there is a reason why they are on there, and it is the make-up of this board. If 
+you go to the January Legislative Committee packet, you will see the mark-up of the 
+document and read Dana’s comments. You should pay attention to the changes as to her 
+rationale behind the wording. It changes the scope of what the SECB is intended for.  
+ 
+5 
+ 
+GENERAL DISCUSSION: (Continued) 
+Regional Concerns (Continued) 
+ 
+A. Grants (Continued) 
+Minnesota Statutes 2019 – 403.36: 
+Myers explained if we are going to open up these statutes as they pertain to funding, we want 
+to make sure they do not lose their intent. These are the other things you need to look at. Like 
+where they have taken parts of the language, or changed it, looking at it in its whole going all 
+the way back to the 2002 law. Which established, it changed the Metropolitan Emergency 
+Services Board power was removed from them and put to the State Radio Board when it was 
+crafted. Because the MESB had the authority to do it. In the construct of the ARMER, doing 
+the history on it, legislation went in 2002 and then it continues to move forward. There has 
+been some changes, but you have to go all the back to look at the intent. You cannot just read 
+in one section of here. This is where Myers will meet with some folks from the MESB to go 
+through it and make sure we are tracking on the same. If it is ruled that this is all we can 
+spend it on, and that is what we have to work with, we cannot change that. This is part of the 
+meeting with ECN last week. Myers is not going to go back and forth semantics on this. Here 
+is what our need is, we need to define it. That is when the discussion came with having the 
+Finance, Steering and the Legislative Chairs say we have identified our need assessment, 
+now let us look at how we get it funded, or what the funding mechanism is and define it. And 
+not define it so narrowly focused that someone looking at this 5-6 years down the road, well 
+that is all it, no, it needs to have that high-level overview of what we are looking for and not 
+painted specifically to one technology. The brick and mortar, or the confines of a PSAP, the 
+ARMER, which they use. The ARMER is not per se in the PSAP, but it an integral part of the 
+PSAP in communicating from the dispatch center to the officers. In-building coverage and 
+where they are looking at is buildings we work in on a daily basis. Or, it says county 
+buildings. One of the ones we have in our list is Alomere Health, that is a county-owned 
+facility. So, they would be eligible. Now if it was a private sector, school districts, school 
+buildings, all these different things where you put first responders in the building you need to 
+be able to communicate. You can make the case for that. The language that says it has to be 
+tied to the brick and mortar of a PSAP, that language needs to be changed as the technology. 
+The other one is looking at the shared services we are doing for the Central Region’s CPE 
+equipment. The core of it will be in one of our PSAPs, but what about the other 10 entities 
+that are participating in it that are coming through a network access to that. Take a look at it, 
+if there are any concerns in there let it be known.   
+ 
+Myers explained we have a spreadsheet that our newly appointed chair of the Workgroup had 
+put out. It is the one defining, there is going to be a master needs sheets that will show all of 
+the regions. Each region is going to get tasked with providing what are your needs and 
+looking at that Strategic Plan. We have most of what needs to be done on it to update it and 
+provide it. A lot of that is going to be tied on what we can and cannot reach out for on the 
+grants side. From the RAC and the O&O/Users, Myers would ask that your membership 
+weigh in on what their needs are. Part of it is going to be hampered by the fact that we are 
+trying to get the SECB and SHSP grants completed and out to the folks. Looking at long term 
+provisioning what these grant programs are going to be able to cover. We need to come up 
+with a long-term spending plan for what our region’s needs are. 
+ 
+B. SECB Committees Appointments 
+Larson reported stemming from the latest RAC meeting, we did have a volunteer to be the 
+alternate for Wireless Broadband and Applications which is Mike Wisniewski. We still have 
+a vacancy with NG911, however that will not require board action as their Bylaws state 
+whomever is the Vice Chair becomes the representative for the state committee. With the 
+representative list we are complete.  
+ 
+6 
+ 
+GENERAL DISCUSSION: (Continued) 
+Regional Concerns (Continued) 
+C. Training Provider Contract 
+Page #2 (VII. Indemnification) is the only area of the contract with legal review that had a 
+change very minor. There are some things Myers had Rey Freeman clean-up in the contract. 
+Myers submitted it to our legal. They added, “defend and hold.” Myers spoke with Rey 
+Freeman on this one and he had no problems with that and he said he would adhere to that. 
+This contract has been reviewed by legal. We want to present this to the ESB at their meeting 
+this afternoon to give you authority to sign off on it. Myers made the motion that we bring it 
+forward to the ESB for approval. Schmitt seconded. Motion carried.  
+ 
+D. 2020 SUA Cost Allocations 
+Myers stated what was provided here from MnDOT you can see the different regions and 
+Central’s allocation. This is what your anticipated SUA costs are going to be for this current 
+year. You will be seeing the bills come from MnDOT. This should be the same, unless you 
+added something, as what you paid the previous year. Next year is going to be the interesting 
+one depending on what comes up with whoever negotiates the Motorola SUA contract.  
+ 
+E. COMU Renewal for Scott MacKissock 
+Lahr stated generally it is the O&O Committee that reviews COMU approvals and renewals. 
+We did not meet in March and will not be meeting in April. We did not want to hold up this 
+renewal for Scott MacKissock. We ask that it be added to the Executive Committee for 
+review. There is not anything unusual per se about the renewal. He has all the paperwork in 
+order here. We are just looking for a motion to approve this COMU renewal at the regional 
+level so it can be moved onto the Statewide COMU Workgroup. Lahr made that motion. 
+Myers seconded. Motion carried.  
+ 
+OLD BUSINESS: 
+A.  Committee Attendance 
+  
+No update.  
+B.  Website 
+Myers explained this is the ADA compliance, this is a memo Shari put together based on the 
+recommendation from the ESB. This we are looking to send out with their billing. We just 
+wanted to see if there was anything in here that you have any aversion to. One highlight here, 
+we were looking at when do we have the meeting to discuss it. Typically, we had it at the 
+ECN Conference which was cancelled. Looking at either through the next regional quarterly, 
+that is not going to happen, so we will most likely end up with a webinar to discuss and have 
+the other regions weigh in after they get the information. Jelinski agrees with that, this is 
+something the ESB has said early on that we need to do this.  
+ 
+NEXT MEETING: 
+The next meeting will be May 13, 2020 at St. Cloud City Hall Conference Room #1.  
+ 
+Myers stated in light of COVID, looking at if Roberts Rules allows for it, looking at if there are action 
+items. There is one Myers got yesterday, Stevens County has their CRAE/SOAR project. It is a 
+SOAR, it has to be updated to a CRAE and there is a process it has to go back up to the state for 
+approval. The O&O would review. There is a letter that was provided from West Central 
+Communication stating the process. Is it something you would have to have the full O&O, or is it just 
+review, bless and move forward? Myers does not know, so he is looking at can we ask the ESB if we 
+can call a special meeting via electronic meetings, send the documentation, they can review. It is just 
+the only action item that you have on it. Call it, approve it and move it forward.  
+ 
+ 
+7 
+ 
+NEXT MEETING: (Continued) 
+Myers explained in light of everything that is going with COVID, what is the timeliness, how soon do 
+they need to have it? Myers will have to follow-up with Dona Greiner and Jim Stromberg.  
+ 
+Myers added if you are not meeting until May would it be prudent for this group to review if we get 
+together, meet and push it forward to the Board as the reviewing agency? We have to look at how we 
+are currently doing business and do we have the legal means? Will we be violating Open Meeting 
+Laws? Looking at our process for approving stuff. There are things that still have to get done. The 
+meeting is just the approval portion of it. Can we modify our approval process through this COVID-
+19 thing to keep business moving forward? Look for having discussion with the board. Do we want to 
+ask them to look at our current process for handling business, can we modify that through the 
+COVID-19?  
+ 
+ADJORNMENT: 
+Jeff Jelinski made the executive motion to adjourn the meeting and the motion was carried 
+unanimously at 11:49 p.m.  
+ 
+Minutes by Shari Gieseke. 
+1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Proposal to: 
+ 
+Central Minnesota  
+Emergency Services Board 
+ATTN: CM Regional Coordinator 
+For 
+ 
+Consultation and Training Services 
+ 
+ 
+February 26, 2020 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+On Target Training & Consulting 
+13517 Larkin Drive 
+Minnetonka, MN 55305 
+320-293-9011 
+Rey.Freeman@ontargettc.com 
+www.Ontargettc.com 
+ 
+ 
+2 
+ 
+March 2, 2020 
+ 
+Central Minnesota Emergency Services Board 
+Attention: CM Regional Coordinator 
+400 – 2nd Street South 
+St. Cloud, MN 56301 
+ 
+Response to RFP and Proposal for Radio System Training Services 
+ 
+Attn: CM Regional Coordinator 
+On Target Training and Consulting (OTTC) welcomes the opportunity to present this proposal 
+to the Central Region for ARMER radio training services. On Target was established in 2010, 
+and has been the primary provider of ARMER radio system training services throughout the 
+state of Minnesota since that time. As of October 2019 On Target is under new ownership, 
+since the untimely passing of Tom Justin, the founder and original owner of On Target. 
+However, little else has changed: The company continues forward with the same staff of 
+training personnel, curriculum, and mission of providing quality individualized training services 
+for public safety radio system users. Since the ownership change in October 2019, we have 
+conducted several training classes for the Central, Northeast and Southeast Regions in 
+Minnesota. All OTTC team members are currently employed or recently retired from public 
+safety communications or related vendor services work.  
+Provided in this proposal is a detailed response to the Region’s RFP requirements. On Target is 
+fully capable of meeting or exceeding all of the Region’s ARMER training requirements.  
+We appreciate the opportunity to continue our work with the public safety agencies in Minnesota.  
+ 
+Regards 
+Rey Freeman 
+On Target Training and Consulting 
+13517 Larkin Drive 
+Minnetonka, MN 55305 
+rfreeman@isd.net  
+320-293-9011 Cell 
+www.ontargettc.com  
+ 
+ 
+3 
+ 
+On Target Training and Consulting 
+ 
+Proposal Table of Contents 
+ 
+Section I: Requested Courses of Instruction .......................................................................... 4 
+Section 2: Proposal Cover Page ............................................................................................. 5 
+Section 3: Qualifications and Proposal Components 
+.............................................................. 6 
+A. Organizational Background ............................................................................................... 6 
+B. Experience and Qualifications ........................................................................................... 6 
+C. Capacity to Provide Service ............................................................................................... 7 
+D. Training Content ................................................................................................................ 8 
+A. Development of Training Work Plan ........................................................................... 9 
+B. Development of Class Scope and Curriculum ............................................................. 9 
+C. Training Phase ........................................................................................................... 10 
+D. Training Scope ........................................................................................................... 11 
+1. ARMER Dispatcher 
+............................................................................................... 11 
+2. ARMER Radio Trainer (Initial) .............................................................................. 13 
+3. ARMER Radio Trainer (Refresher) ....................................................................... 15 
+4. ARMER System Administrator ............................................................................. 16 
+E. Budget and Cost Effectiveness ........................................................................................ 21 
+F. References ....................................................................................................................... 22 
+Appendix A: On Target Training Staff Biographies ...................................................................... 23 
+Appendix B: List of On Target Training Services 
+.......................................................................... 29 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4 
+ 
+SECTION I – REQUESTED COURSES OF INSTRUCTION 
+ 
+On Target Training and Consulting (OTTC) acknowledges the Central Region’s need for the 
+following training courses:  
+1. ARMER Dispatcher 
+Time required: 8 hours 
+2. ARMER Radio Trainer (Train the Trainer) Initial 
+Time required: 8 to 16 hours 
+3. ARMER Radio Trainer (Train the Trainer) Refresher 
+Time required: 8 hours 
+4. ARMER System Administrator (Level 2) 
+Time required: 16-24 hours 
+OTTC is fully qualified and proposes to provide all of the above-listed training services to the 
+Central Region. A detailed description of the individual course training syllabus and other 
+training details are provided in Section III of this proposal. OTTC also provides other ARMER 
+radio and operational training courses in addition to the courses listed above, as shown in 
+Appendix B.  
+ 
+ 
+ 
+5 
+ 
+SECTION II – PROPOSAL COVER PAGE 
+Central MN Emergency Services Board 
+Request for Professional Services 
+ 
+Applicant Organization 
+Federal ID Number / SSN 
+On Target Training and Consulting 
+84-3206021 
+Street Address 
+ 
+ 
+13517 Larkin Drive 
+ 
+ 
+City 
+State 
+Zip code 
+Minnetonka 
+MN 
+55305 
+Printed Name 
+Title of Applicant’s Authorized Representative 
+Rey Freeman 
+Owner, On Target Training and Consulting 
+Telephone Number 
+ 
+320-293-9011 (Pri); 952-541-0747 (Alt) 
+ 
+E-mail Address 
+Website 
+Rey.Freeman@ontargettc.com 
+www.ontargettc.com  
+ 
+Certification 
+I certify that: 
+a) I have been authorized to submit and sign this proposal on behalf of the submitting organization; 
+b) that the quote is accurate and true to the best of my knowledge, the costs are reasonable and 
+necessary for the proposed services; 
+c) the proposed costs do not duplicate other funds already available, or which may become available, 
+to pay the projected costs; 
+d) my organization will implement the services in compliance with the stipulations and guidelines set 
+forth by Central MN Emergency Services Board; and 
+e) the organization that I represent is an equal opportunity employer/provider. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2-28-2020 
+ 
+ 
+Authorized Signature 
+ 
+Date 
+ 
+6 
+ 
+SECTION III – QUALIFICATIONS and PROPOSAL COMPONENTS 
+Introduction 
+On Target Training & Consulting (OTTC) understands that the Central Minnesota Emergency 
+Services Board (CMESB) is requesting a training program designed to provide a standardized 
+professional level of training services for the city, county and other public safety agency 
+personnel who utilize the State of Minnesota ARMER radio system throughout the Central 
+Region.  
+The OTTC staff provides the greatest level of experience of any group within the state, and has 
+provided ARMER system radio training to most of the agencies and entities within the Central 
+and other Regions over the past several years. Our team is familiar with the concepts and 
+objectives that the State of Minnesota and the Central Region are attempting to attain in 
+regards to interoperable communications, and standardization of a level of radio user and 
+trainer knowledge. All OTTC training meets or exceeds the Standards established by the 
+Minnesota SECB for ARMER system training requirements. 
+In addition to the specific training sessions requested in this proposal, OTTC is willing to 
+provide additional training as requested and agreed upon by both parties. All direct and 
+indirect costs are included in this proposal. 
+A. Organization Background 
+On Target was established in 2010, and has been the primary provider of ARMER radio 
+system training services throughout the state since that time. As of October 2019 On 
+Target is under new ownership, since the untimely passing of Tom Justin, the founder and 
+original owner of On Target. However, little else has changed: The company continues 
+forward with the same staff of training personnel, curriculum, and mission of providing 
+quality individualized training services for public safety radio system users. All OTTC team 
+members are currently employed or recently retired from public safety communications or 
+vendor services work.  
+B. Experience and Qualifications 
+When the Minnesota ARMER radio network began to expand outstate from the Metro, St. 
+Cloud and Rochester corridors in the late 2000’s, On Target founder Tom Justin recognized 
+the need for detailed and agency-specific training services. As a lieutenant for the City of St. 
+Cloud police department, Tom was acutely aware of the criticality of public safety 
+communications; he recognized first-hand the challenges faced by personnel learning to 
+use a new and complex radio network.  
+His vision was to establish a company which could provide high-level training services that 
+were specifically tailored to the individual agencies. This need was confirmed after 
+customers’ experience with radio vendor-based training options, which were often rather 
+generic and equipment/feature-specific, without consideration of the agencies’ specific 
+operational requirements.  
+Mr. Justin proceeded to assemble a team of individuals from various agencies and vendors 
+around the state who were actively involved in the public safety communications industry, 
+7 
+ 
+with good training and presentation skills and interested in working with other agencies 
+and personnel to develop client-specific training programs. Tom was also one of the 
+primary team members involved in planning and conducting the training sessions with 
+customer agencies.  
+Since that time there have been some changes in the On Target staff, most noticeably the 
+passing of Tom in July 2019. However, his team of training personnel felt the need to 
+continue this work and with the new ownership of the company in October 2019 are able 
+to do so. Refer to Section C of this proposal and Appendix A for a list of the current OTTC 
+training staff.  
+These individuals had worked with Tom to develop the numerous training courses and 
+programs being offered to customer agencies. The On Target team has provided these 
+classes to thousands of agency personnel through hundreds of classes taught of during the 
+company’s time in business. These classes have been presented for all Regions in 
+Minnesota, and are now also being conducted for agencies in Iowa as they migrate to the 
+new ISICS statewide radio network. The OTTC team has also presented training courses at 
+the annual Minnesota Interoperable Communications Conference.  
+POST certification: OTTC will provide POST certificates for any classes deemed eligible.  
+The courses and curriculum developed by the OTTC staff have become the standard for 
+radio user training in the upper Midwest region. Refer to Appendix B for a list of the 
+training courses available from OTTC. 
+C. Capacity to Provide Service 
+The On Target training team currently includes the following personnel:  
+ Dave Theis 
+ Steve Olson 
+ Rowan Watkins 
+ Jason Matthias 
+ Randy Donahue 
+ Dave Pike 
+Refer to Appendix A for the biographies of the OTTC training staff.  
+All of these individuals are currently actively employed in the public communications 
+industry, or recently retired from the communications industry. OTTC has other personnel 
+available to assist with training services on an as-needed basis.  
+Training materials are provided to all class students electronically via USB “memory stick”.  
+Expectations (from RFP): On Target Training acknowledges and meets the following 
+requirements as identified in the Region’s RFP:  
+ The instructor/awardee will provide:  
+1. Detailed syllabus for each class 
+2. Comprehensive list of all instructors to include biographies 
+3. Electronic Copy of class information 
+8 
+ 
+ The CM Emergency Services Board Region will provide: 
+1. Location (for classes) 
+2. Date(s) for classes 
+3. Coordinate the logistics with the approved instructor(s) 
+4. Online registration (for classes) 
+Minimum Requirements of Approved Instructors: On Target Training hereby verifies that 
+all instructors meet and/or exceed the following requirements as stated in the Region’s 
+RFP:  
+ Possession of a valid Minnesota Driver’s License and reliable transportation 
+ Experience in class and curriculum development, implementation of best practices 
+policy and procedure, and in-depth knowledge of the Minnesota ARMER radio 
+system and other Department of Public Safety initiatives 
+Insurance Requirements: On Target Training hereby verifies that the company meets or 
+exceeds the following Insurance requirements and values set forth in the Region’s RFP:  
+ Worker’s Compensation 
+ Commercial General Liability  
+ Automobile 
+ Professional Liability 
+Compensation (for Training Services): The pricing of these Training Services included in this 
+proposal by On Target Training to the Central Region (Section E) are structured as a “not to 
+exceed” as required in the Region’s RFP.  
+Background Investigation: On Target Training understands and accepts the requirement as 
+set forth in the Region’s RFP that all company staff members involved in providing training 
+services to the Region via this process may be subject to a detailed background 
+investigation prior to the approval of providing such training services.  
+ 
+D. Training Content 
+On Target Training and Consulting is qualified and available to provide all of the training 
+classes and services identified in Section 1 this RFP.  
+OTTC utilizes a similar planning and development approach for all required courses:  
+1. ARMER Dispatcher  
+2. ARMER Radio Trainer (Initial) 
+3. ARMER Radio Trainer (Refresher) 
+4. ARMER System Administrator (Level 2) 
+This work plan is structured as follows:  
+ 
+ 
+ 
+9 
+ 
+A. Development of Training Work Plan 
+OTTC proposes to complete the requested services in phases. During this phase the 
+CMESB will be expected to provide the following: 
+ Designate a single point of contact/Project Leader 
+ Identify and designate entity representatives to attend the training. 
+ Arrange logistics and administrative support for training. 
+Based on OTTC’s previous work with the CMESB, we have developed this proposal work 
+plan in consideration of the following assumptions:  
+ All Training will be conducted in 2020 calendar year. 
+ CMESB Region personnel receive priority in attendance; however, open class 
+space may be filled by other defined radio region personnel. 
+ Training scheduled will be conducted no matter attendance count or weather. 
+ Logistics such as registration for courses, posting of training sessions, 
+regional administrative paperwork, class rosters, evaluations, etc. will be 
+the responsibility of the Project Leader. 
+OTTC will determine the specific training staff to conduct the class, and submit to the 
+CMESB a minimum of 1 month prior to the class date(s) to allow for announcement to 
+interested agencies and staff.  
+B. Development of Class Scope and Curriculum 
+OTTC has previously developed Training Plan documents containing the training 
+syllabus/course outline and general planning elements on which the training is 
+developed and conducted. OTTC staff will review the current training requirements 
+for the Central Region to ensure that all materials are up to date and meet the 
+Region’s education needs.  
+The State of Minnesota ARMER Standards, upon which this training is structured, 
+along with local and regional requirements, will be reviewed for any changes which 
+may need to be incorporated into the training materials prior to class sessions. Policy, 
+procedure, and governance issues are not static; training materials must continually 
+evolve based on the above mentioned information. 
+OTTC anticipates the utilization of some training materials already created for the 
+CMESB as well as materials developed, created, collected, produced and owned by 
+OTTC. In addition, OTTC will utilize materials already produced for utilization by 
+ARMER system users. 
+OTTC understand that the individual entities involved in this training may not be 
+utilizing the same manufacturer standardized equipment. It is assumed that not every 
+individual entity’s equipment is identically programmed. Therefore, OTTC will build 
+and update the curriculum used to conduct this training to meet the general 
+characteristics and features of the ARMER system during the duration of this proposal. 
+ 
+ 
+ 
+10 
+ 
+OTTC anticipates state and regional compliance with standardization in policy, 
+procedure and functional operational aspects of equipment utilized on the ARMER 
+system; however, it is assumed that not every entities policies and/or procedures will 
+be the same. 
+* The training materials developed and delivered by OTTC shall be considered a 
+product produced by OTTC. The materials cannot be modified, used, copied, sold, 
+provided for resale, provided for profit in anyway, or distributed without the 
+written consent of OTTC. 
+ 
+C. Training Phase 
+OTTC utilizes a multi-discipline team approach to accomplish training objectives 
+through adult learning concepts. Active student participation should be considered 
+mandatory. OTTC believes this training approach lends itself to the most realistic 
+training and educational opportunity available in a non-active, non-operational 
+environment. OTTC will provide qualified staff to accomplish the training objectives. 
+OTTC and the CMESB will establish a mutually agreeable timeline for training after 
+discussions with the Project Leader. 
+OTTC verifies successful training through both live interactions and physical 
+manipulation processes. As with any training, it is understood that information 
+retention is in part based on the amount of time between receiving and utilization of 
+the information/training provided. 
+Due to the inherent complexities associated with the utilization of the ARMER 
+system, student level of familiarity, standardization and competence desired of 
+personnel when utilizing the ARMER radio system, OTTC reserves the right to modify 
+any training timelines if, based on the professional opinion of OTTC staff, a 
+modification is necessary to provide for the best possible training and educational 
+opportunity available. 
+Class sizes: It is important to property manage the number of students attending the 
+classes, so as to allow the appropriate level of interaction and attention between the 
+instructors and students. However, not all classes have the same requirements. For 
+example, when teaching the MCC7500 Dispatch console class, it is best to somewhat 
+limit class size and allow access to a live radio console. Other classes such as the Train 
+the Trainer sessions can be much larger, but at the same time need to allow sufficient 
+time for each student to “present back” to the group an example of the radio 
+features and functions just learned, which ensures that the student is capable of 
+teaching others later on. OTTC staff will work with the Region’s project managers to 
+establish class sizes for each topic being taught.  
+This training will provide sufficient education of each of the specific session’s facets 
+to allow for a level of understanding of the personnel trained on the general 
+processes, standards, characteristics and procedures of the ARMER system. 
+ 
+ 
+ 
+11 
+ 
+OTTC’s general stipulations on number of attendees at any training sessions include: 
+ PSAP Personnel training is limited to no more than 12 students in any one 
+session, and no more than 4 personnel per any console  
+ Trainer training and trainer refresher sessions are limited to no more than 20 
+students per session. 
+ System Admin training is limited to no more than 14 students per session 
+OTTC will provide training in consecutive day/consecutive shift patterns when 
+considered appropriate or necessary. 
+During the training phase, the CM Project Leader or designee(s) will provide the 
+following: 
+ Suitable classroom space with coverage to the radio system 
+ Training items necessary to conduct the training classes to include power point 
+projector, internet connectivity, white board with writing utensils, student 
+manuals, etc. 
+ Functional programmed portable radios (as appropriate) 
+ Functional consoles connected to the ARMER system (as appropriate) 
+ Refreshments and amenities as deemed appropriate 
+ Students familiar with adult learning concepts 
+ Students trained or familiar with NIMS/ICS concepts* 
+* All students should have completed basic NIMS courses. OTTC can provide NIMS 
+training if requested or required but is not included within this proposal. 
+ 
+D. Training Scope for Required Classes 
+OTTC provides training based on the general characteristics of the ARMER trunked 
+radio system concepts and functionality, including subscriber affiliation and system 
+functionality. ARMER is a Motorola system, and such items as scanning, priority 
+talkgroup traffic, duplex operations, etc. are based on Motorola product 
+functionality. Personnel attending will have an understanding of the basic 
+characteristics of equipment operations based on utilization of Motorola equipment 
+and system connected PSAP consoles. All entities are required to utilize only State 
+Radio Board and Regional Radio Board approved and authorized equipment. 
+ 
+1. ARMER Dispatcher 
+ Time required: 8 hours 
+RFP Requirements: “8 hour course of instruction for designated regional PSAP 
+personnel on the ARMER radio system.  Training shall provide students sufficient 
+education and training to allow for a basic level of understanding of the general 
+processes, standards, and procedures of the ARMER system as they relate to 
+PSAP functionality, interoperability, and incident command principles, as well as 
+hands-on functionality of the MCC 7500 console.  
+ 
+12 
+ 
+The training will also provide valuable insight on topics such as the status of 
+ARMER, “dispatch” best practices, SECB standards, as well as interoperability on 
+a trunked radio system.” 
+ On Target’s proposal and course curriculum meet these requirements, via the 
+outline provided below.   
+OTTC Syllabus/Outline of course:  
+A. ARMER System Overview        
+ Statewide and regional build-out  
+ Progress to date 
+ System Updates 
+B. 800 MHz Digital Trunked Radio System 
+ 
+ 
+ Trunking 101 
+ Coverage maps 
+ Reliability and redundancy 
+ System failures 
+ Talkgroups 
+ Governance 
+ Naming conventions 
+ Trunked resource allocation 
+ Conventional resource allocation 
+ Interoperability issues 
+ Policies and procedures 
+ NIMS/ICS concepts  
+C. Console Operations  
+ Trunked Resources 
+ Talk Group priority elevation 
+ Repeat Inhibit 
+ Encrypted/Clear modes 
+ Paging and Civil Defense Sirens 
+ Multi-select 
+ Patching 
+ Emergency acknowledgement/Knock down 
+ AUX I/O 
+ All Mute 
+ Activity Log 
+ Alert Tones 
+ Private Call 
+ General/Quick transmit functions 
+ System Status 
+ Safety Switch 
+ 
+ 
+13 
+ 
+D. Scenario-based Exercises  
+ 
+ 
+ 
+ 
+ 
+       
+ Normal operations 
+ Critical incidents 
+E. Portable and Mobile Radio Operation 
+ 
+ Radio features and general operations 
+ Scan and Emergency 
+ Button and switch functions 
+ Menu items 
+ RSSI indicators 
+F. Course Prerequisites 
+ 
+PSAP Personnel 
+Training & MCC 
+7500/7100 
+Console 
+ICS 700 
+ICS 800 
+Radio 101 
+History of ARMER  
+Interoperability 101  
+Status Board 2.0 End User 
+MCC 7500 Dispatch Console Part 1 & 2  
+Dispatcher Training 
+ARMER Control Station Technology  
+Interoperability  
+2. ARMER Radio Trainer (Train the Trainer) Initial 
+ Time required: 8 to 16 hours 
+RFP Requirements: “Course Deliverables: Training presentation to be provided to 
+attendees for their use in delivering ARMER training. 1 or 2 Day ARMER end user 
+trainer course of instruction with the intent of certification of individuals to 
+deliver ARMER End User Training.  Training shall be designed to cover the 
+ARMER system, including basic characteristics and functionality.  The instruction 
+will also include subscriber functionality on the system.” 
+ On Target’s proposal and course curriculum meet these requirements, via the 
+outline provided below.   
+Syllabus/Outline of course:  
+A. ARMER System Overview        
+ History, concepts and governance 
+ Statewide and regional build-out  
+ Progress to date 
+ APCO Standards 
+B. 800 MHz Digital Trunked Radio System 
+ 
+ 
+ Radio 101, P25 Trunking 101 (recap) 
+ Coverage maps 
+14 
+ 
+ Reliability and redundancy 
+ System failures 
+ Fleet map design and layout 
+ Talk groups 
+ Governance 
+ Naming conventions 
+ Trunked resource allocation 
+ Conventional resource allocation 
+ Interoperability issues 
+ Policies and procedures 
+ NIMS/ICS concepts  
+C. Portable and Mobile Radio Operation 
+ 
+ Radio features 
+ Radio Operations 
+ Scan 
+ Emergency 
+ Button and switch functions 
+ Menu items 
+ RSSI indicators 
+ Accessories 
+ Basic operations 
+ Advanced features 
+ Maintenance 
+ Dispatcher console operations    
+D. Scenario-based Exercises  
+ 
+ 
+ 
+ 
+ 
+       
+ Normal operations 
+ Critical incidents 
+ Table top exercise 
+ Training for new trainers; basic introduction to perform effective training 
+ Class Participants lead training exercise 
+E. Effective Presentations 
+ Students are required to “reteach” various topics back to their peer group 
+to ensure good understanding of the subject matter, as well as verify their 
+capabilities and comfort level with the instruction process 
+F. Course Prerequisites 
+ 
+Trainer Training  
+(Initial) 
+ICS 700 
+ICS 800 
+Radio 101, Trunking 101 
+History of ARMER 
+Interoperability 101 
+ 
+ 
+ 
+15 
+ 
+3. ARMER Radio Trainer (Train the Trainer) Refresher 
+Time required: 8 hours 
+RFP Requirements: “Up to date Training Presentation to be provided to 
+attendees for their use in delivering ARMER training. 1-Day ARMER end user 
+trainer refresher course of instruction.  Training is designed to update the trainer 
+on the ARMER system, including basic characteristics and functionality.  The 
+instruction will also include, trainer networking including trainer learning 
+objectives question and answer session.” 
+ On Target’s proposal and course curriculum meet these requirements, via the 
+outline provided below.   
+Syllabus/Outline of course:  
+A. ARMER System Overview        
+ History and governance updates 
+ Statewide and regional updates 
+B. 800 MHz Digital Trunked Radio System 
+ 
+ 
+ Trunking 101 
+ Coverage maps 
+ Reliability and redundancy 
+ System failures 
+ Talkgroups 
+ Governance 
+ Naming conventions 
+ Trunked resource allocation 
+ Conventional resource allocation 
+ Interoperability issues 
+ Policies and procedures 
+ NIMS/ICS concepts  
+C. Portable and Mobile Radio Operation 
+ 
+ Radio features 
+ Radio Operations 
+ Scan 
+ Emergency 
+ Button and switch functions 
+ Menu items 
+ RSSI indicators 
+ Accessories 
+ Basic operations 
+ Advanced features 
+ Maintenance 
+ Dispatcher console operations    
+ 
+ 
+ 
+16 
+ 
+D. Scenario-based Exercises  
+ 
+ 
+ 
+ 
+ 
+       
+ Normal operations 
+ Critical incidents 
+ Table top exercises 
+ 
+ 
+ 
+E. Course Prerequisites 
+ 
+Trainer Training 
+(Refresher) 
+ICS 700 
+ICS 800 
+Radio 101 
+History of ARMER  
+Interoperability 101 
+4. ARMER System Administrator (Level 2) 
+Time required: 16-24 hours 
+RFP Requirements: “System Administration Training is for individuals who have 
+yet to be trained for ARMER system administration tasks and those who desire 
+refresher training.  Both classroom and hands-on system administration 
+functions will be utilized to accomplish training objectives.” 
+ On Target’s proposal and course curriculum meet these requirements, via the 
+outline provided below.   
+A. ARMER Trunking 101 
+ Smartzone 
+ Omnilink 
+ Basic system diagrams and hardware components 
+B. Radio Calls 
+a) Call Processing 
+i) Talkgroup 
+ii) Multigroup 
+iii) Agencygroup 
+iv) Emergency 
+(1) Tactical 
+(2) Revert 
+(3) Ruthless Preemption 
+(4) Top of Queue 
+v) Private Call 
+vi) Telephone Interconnect 
+C. Encryption 
+a. Modes 
+b. Operation 
+c. Common Key Reference 
+d. Key Variable Loader (KVL) Operations 
+ 
+ 
+17 
+ 
+D. Scanning 
+a. Priority Monitor  
+b. Requested Sites 
+c. Conventional Scan 
+d. Talkgroup Scan 
+e. Intelligent Priority 
+E. Call Alert vs Private Call 
+F. Roaming 
+a. Call Priority Levels 
+G. Basic MCC7500 Console Functionality 
+a. Talkgroup/Multigroup  Operations 
+b. Emergency Modes 
+c. Console Priority 
+d. Talk Over 
+e. Talk Under 
+f. Audio Interrupt 
+g. Audio Patch Operation 
+H. Logging 
+a. IP vs. Analog “Recorder vs. Logger” 
+b. Configuration 
+c. Archiving Interface Server 
+d. Firewalls 
+I. MCC7500E Consoles 
+a. Setup and Configuration 
+b. Hardware 
+c. AIM vs. USB 
+d. Peripherals 
+e. IRNI vs ORNI 
+f. PM setup  
+g. Networks 
+J. Private Radio Network Manager Overview 
+a. Hardware/Software Requirements 
+b. PC Running Windows 10 
+c. Network connection on RNI 
+d. ARMER Allowable Hardware and use policy  
+e. Standards 
+K. ARMER System ID and WACN  
+L. ARMER Naming Conventions 
+ 
+ 
+18 
+ 
+M. Motorola PRNM Suite of Applications 
+a. Provisioning Manager 
+b. System Historical Reports 
+c. Affiliation Display 
+d. ATIA Log Viewer 
+e. Dynamic Reports 
+f. Zone Historical Reports 
+g. Radio Control Manager (RCM) Reports 
+h. Radio Control Manager (RCM) 
+i. Radio Commands 
+ii. Dynamic Regrouping and Storm Plans 
+iii. Radio Checks 
+iv. Monitoring Status and Events 
+v. Inhibiting Radios 
+vi. Selector Locking Radios 
+vii. Passive Mode 
+viii. Zonewatch 
+i. Unified Event Manager (UEM) 
+j. License Manager 
+N. Provisioning Manager 
+a. Security Group Structure 
+b. System Partitioning 
+i. Login process 
+ii. Logout Process 
+iii. Creating and Applying Search Filters 
+iv. Exporting List Views 
+v. Sorting Views 
+vi. Profiles 
+vii. Usage 
+viii. Applications 
+ix. Distributing Changes 
+1. Status indication 
+x. Jobs view 
+c. Talkgroup Configuration 
+i. Add/Edit/Delete 
+ii. TG/MG Capabilities Profile configuration 
+iii. TG/MG Site Access Profiles 
+d. Multigroup Configuration 
+i. Add/Edit/Delete 
+e. Agencygroup Configuration 
+i. Add/Edit/Delete 
+f. Trunked Subscriber  Configuration  
+i. Add/Edit/Delete a Radio 
+ 
+ 
+19 
+ 
+g. Site Access Denial Methods 
+i. Talkgroup 
+ii. Radio 
+iii. Both 
+h. Batch Operations 
+i. Radio Capabilities Profiles 
+j. Radio Site Access Profiles 
+k. Encryption and CKR usage 
+l. Conventional Subscriber Configuration 
+i. MDC and ASTRO Conventional 
+1. Add/Edit/Delete  
+2. Alias 
+3. IDs 
+m. MCC7500 Console Systems 
+i. Operator Position Definitions/Parameters 
+ii. Modifying Console position fields 
+iii. Adding Security Group Objects 
+iv. Console TG/MG Capability Profiles 
+v. Console User Capability Profiles 
+vi. Encryption 
+n. CKR Structure 
+i. Encryption Algorithms 
+ii. System/Regional/Local  
+iii. Assignment to Resources 
+iv. Loading Keys in VPMs 
+o. Paging 
+i. Add/Edit/Delete 
+ii. Changing page names  
+iii. Changing page codes 
+p. Group Pages 
+q. Individual Pages 
+r. Timing 
+s. Pre-programmed pages; assigning page objects to channels 
+t. Auxiliary Input/Outputs (AUX I/Os) 
+i. Add/Edit/Delete 
+ii. Aux I/O Server 
+iii. Aux I/O Ports 
+iv. Change Names 
+v. Aux I/O Interlocked  Groups 
+u. Backup Dispatch Site Controller 
+ 
+ 
+20 
+ 
+v. Conventional Resource Channels 
+i. CCGWs; What are they and do I have any? 
+ii. 3 Types 
+iii. Add/Edit/Delete 
+iv. ARMER System requirements 
+v. Changing Names of Conventional Channels 
+vi. CCGW Port assignment Structure 
+w. Storm Plans 
+O. License Manager 
+a. Viewing Inventory 
+b. Viewing Logged in Users 
+c. Force Releasing Session Licenses from Other Users 
+P. Unified Event Manager (UEM) 
+a. Overview 
+b. Logging in 
+c. Viewing Status 
+d. Console Devices 
+e. Alarms Only displayed when active 
+f. Events-always displayed 
+g. Sending Commands 
+Q. Management Software 
+a. Configuration Service Software (CSS) 
+b. Installation and Usage 
+c. CSS into a VPM 
+d. CSS into a repeater 
+e. View logs 
+f. View status 
+R. Software Download Manager (SWDL) 
+a. Installation and Usage 
+S. Basic Network Troubleshooting 
+a. IP scheme 
+b. Consoles: 10.zone#.site#.device 
+c. Repeaters: 10.100+zone#.site#.device 
+d. Telnet 
+e. Viewing Links status using “sh wanc” 
+f. View Ethernet status using “sh -sys stat -pa 
+g. Ping 
+i. Difference between “Request Timed Out” and “Destination 
+Unreachable” 
+ii. Determine what Device is being Pinged with “-a” 
+ 
+ 
+ 
+21 
+ 
+T. Course Prerequisites 
+ 
+System Administer 
+(PRM) Training 
+Radio 101 
+History of ARMER 
+Interoperability 101 
+Dispatch Application Part 1 & 2 
+ 
+E. Budget and Cost Effectiveness 
+All training services are proposed as a fixed-price cost to the Region, regardless of class 
+attendance (as was OTTC previous policy for the Region).  The pricing for the individual 
+classes are provided below. Travel expenses are included in these costs.  
+ 
+Session Name 
+Session Time 
+Pricing 
+Trainer Training (Initial) 
+16 hours 
+(2 days) 
+$4,500 
+Trainer Training 
+(Refresher) 
+8 hours (1 day) 
+$2,300 
+PSAP Personnel Training 
+8 hours (1 day) 
+$2,400 
+ARMER Level 2 System 
+Administration 
+16 – 24 hours 
+$9,500 
+ 
+Note: Previous OTTC proposals had included a separate line item for the development of 
+curriculum for these classes. The current pricing for the Central Region has this work 
+incorporated into the class fees identified above.  
+ 
+Additional training and consulting services: Other services outside the scope of the work 
+identified in this RFP will be priced based on specific customer needs. OTTC’s standard rate 
+is $150 per hour plus usual travel expenses.  
+ 
+ 
+22 
+ 
+F. References 
+On Target Training and Consulting has provided training classes and programs for all 
+Regions within the State of Minnesota. Some of the most recent entities to receive services 
+from OTTC are as follows:  
+1. Central Minnesota Emergency Services Board  
+Attn: Micah Meyers 
+400 – 2nd Street South 
+St. Cloud, MN 56301 
+320-650-3365 
+Micah.Myers@ci.stcloud.mn.us 
+Recent (2019) Services provided:  
+ Tactical Dispatcher Training 
+ ARMER Level 2 System Administration 
+ ARMER Radio End-User Train-the-Trainer (Initial) 
+ ARMER Radio End-User Train-the-Trainer (Refresher) 
+ ARMER APX CPS Radio Programmer Training 
+2. Northeast Minnesota Emergency Services Board 
+Attn: Dewey Johnson 
+St. Louis County MN 
+100 N. 5th Ave. W.  
+Duluth, MN 55802 
+218-726-2936 
+JohnsonD@StLouisCountyMN.gov 
+Recent (2019) Services provided:  
+ ARMER Radio End-User Train-the-Trainer (Initial) 
+ PSAP Dispatch Personnel Training (Refresher) 
+3. Southeast Minnesota Emergency Services Board 
+Attn: Rich Hall 
+Freeborn County Emergency Management 
+411 Broadway South 
+Albert Lea, MN 56007 
+507-320-0146 
+Rich.hall@co.freeborn.mn.us 
+Recent (2019) Services provided:  
+ ARMER Radio End-User Train-the-Trainer (Initial) 
+ PSAP Dispatch Personnel Training (Refresher) 
+ ICS Communications Workshop  
+ 
+On Target Training & Consulting 
+ 
+23 
+Appendix A 
+On Target Training Staff Biographies 
+Steve Olson 
+Steve began working on the migration of all Lake County Law 
+Enforcement, EMS and Fire Services toward the Minnesota ARMER radio 
+system in 2010. During the ARMER migration, his duties included 
+representing the Lake County SO and the Northeast Region of 
+Minnesota in various committees including the Northeast Owners and 
+Operators, the Northeast Emergency Services Board and the Statewide 
+NextGen 911 committee. 
+Steve is currently the Jail Administrator/PSAP Manager and ARMER Local 
+System Administrator for the Lake County Sheriff’s Office. As the Local System Administrator, 
+Steve is responsible for the maintenance and programming of all 600 ARMER Radio System 
+Subscribers/Radios in Lake County as well as the training of 20 local entities personnel on 
+ARMER System and subscriber funct1onallty. In addition to the ARMER 800 MHZ digital 
+subscribers, Steve is also maintaining and programming narrow band VHF radios for 3 local 
+entities. 
+Steve's training includes Communications Unit Leader, Communications Unit Technician, 
+Communications Center Manager and Incident Tactical Dispatcher. He has served as COML for 
+two full scale Coast Guard exercises including Operation Down Under in the summer of 2011 
+and Operation Peeking Duck in the summer of 2013. He has received formal training as a 
+Communications Unit Leader instructor at the Emergency Management Institute in 
+Emmetsburg, Maryland. 
+ 
+ 
+ 
+On Target Training & Consulting 
+ 
+24 
+On Target Training Staff Biographies 
+David Theis 
+David Theis is a recently-retired Senior Systems Technologist with 
+Motorola Solutions, a worldwide communications and electronics 
+corporation based in Chicago, IL. David had been employed by 
+Motorola for 37 years serving in several roles ranging from a Field 
+Technical Representative, Systems Integration Manager, Systems 
+Engineer, and Systems Technologist. In his most recent role as a 
+Systems Technologist, David was responsible for integrating local, 
+regional, and statewide communications system solutions for public 
+safety users and utility customers throughout the United States.   
+He has been the primary Motorola Systems Technologist for ARMER since the system's 
+inception in 2003. He was also the lead System Technologist for the South Dakota Statewide 
+Radio system, the ORION system in Omaha Nebraska, plus many other ASTRO P25 systems. 
+Over his career, David has also been tasked to provide radio subscriber, console, and network 
+training to service shops as well as customers.  He currently is the Radio System Administrator 
+for the University of Minnesota. 
+His work-related history includes 8 years in the United States Air Force, 5 years with 
+Northwestern Bell, and Motorola. David has a degree from DeVry Institute of Technology in 
+Technical Management with emphasis in Information Technology. He is CompTIA certified in 
+networks, desktop hardware, and network security. He holds a General Class FCC license with 
+Radar endorsement and Technician Class Amateur Radio License.  
+ 
+ 
+ 
+On Target Training & Consulting 
+ 
+25 
+On Target Training Staff Biographies 
+Rowan Watkins 
+Rowan Watkins is currently the Radio Communications Analyst for 
+Cook County, Minnesota working in the MIS Department. Rowan has 
+been with Cook County since 2012 as his role of Radio 
+Communications Analyst. He is responsible for managing all aspects 
+of radio communication projects for Cook County including 
+identifying business needs, assessing impacts, estimating and 
+managing schedules and budgets, ensuring appropriateness of 
+technical specifications. His work also includes managing resources 
+of contractors and consultants, communication and training to affected stakeholders, and 
+defining future operational processes. 
+Additionally, Rowan provides oversight and management of all contracts and agreements 
+involving county owned communication towers and equipment. Rowan also functions as the 
+Cook County ARMER Local System Administrator, in which he is responsible for all County LMR 
+assets as well as for all agencies and entities operating under the Cook County ARMER 
+participation plan. Entities included in the Plan are nine fire departments, three ambulance 
+services, the Cook County Sheriff's Office, Cook County Search & Rescue, and multiple public 
+service entities. Rowan has completed training courses for Radio System Administration, Radio 
+Programming and Template Building, MCC 7000 Series Dispatch Consoles, and is a 
+Communications Unit Technician (COMT). 
+ 
+ 
+ 
+On Target Training & Consulting 
+ 
+26 
+On Target Training Staff Biographies 
+Randy Donahue 
+Raised in Southwest Minnesota, Randy graduated from Brewster 
+Public School, served in the US Air Force, and went on to earn his BA 
+Degree from Buena Vista University majoring in Criminal Justice and 
+Agency Administration. During his 34-year Law enforcement career 
+he received specialized training in computer science, electronics, 
+identity theft, and computer forensics. Randy completed the Texas 
+State Police Academy m 1984 and worked as a Deputy Sheriff with the 
+Navarro County Sheriff’s Office in Texas. Randy's professional 
+experience includes working in corporate security with Bally Gaming, serving with the 
+Humboldt City Police Department in Iowa, and Federal Protective Service in Iowa and Nevada. 
+Randy completed his law enforcement career as the Chief Deputy for the Murray County 
+Sheriff’s Office in Minnesota where his duties included oversight of the counties migration to 
+the State of Minnesota P25 ARMER radio system. Randy was also a member of the MN State 
+Internet Crimes Against Children Task Force, Southwest Emergency Services Board 
+representative to the Minnesota State Operations and Technical Committee, MN High Tech 
+Crime Investigators Association, National White-Collar Crime Center, and the Minnesota 
+Sheriff’s Association.  He is also active as a Federal and State licensed exotic animal dealer. 
+Randy is active as a consultant to law enforcement agencies on a wide variety of topics, and has 
+instructed classes on high-tech crime, public safety communications, exotic animal safety, and 
+many other law enforcement related topics. Randy is an FCC licensed Extra Class Amateur radio 
+operator and an NRA Certified Firearms Instructor. 
+On Target Training & Consulting 
+ 
+27 
+ 
+On Target Training Staff Biographies 
+Jason Matthias 
+Jason Matthias began his career in Emergency Communications 
+during his first semester of college as a part-time dispatcher with 
+the Ashland (WI) Police Department in 1996. In 1999, after 
+graduating from Northland College with a major in Sociology, he 
+accepted a full-time position with the Ashland Co Sheriff’s Office 
+where he helped build their first CAD system as well as develop a 
+comprehensive communications training program. In 2003 Jason 
+started his employment with the St. Louis County (SLC) 911 Center 
+as an Emergency Communications Specialist (ECS). In 2011 Jason 
+was promoted to a Lead ECS where he assisted in administering a 5-county CAD system as well 
+as train communications staff and end-users during SLC’s transition to the ARMER system. 
+Currently Jason is one of three Assistant Center Supervisors in the 911 Division where he 
+oversees the continuing education, policy and procedure, and quality assurance programs. He 
+is also the coordinator of the SLC Tactical Communications Team, working jointly with the SLC 
+and Duluth Tactical Response Teams. With his focus on the end user, he spends many of his 
+days working with the 185 agencies dispatched by St. Louis Co 911 on the day-to-day use of the 
+ARMER system. 
+ 
+ 
+ 
+On Target Training & Consulting 
+ 
+28 
+ 
+ 
+On Target Training Staff Biographies 
+David Pike 
+Dave is currently a Sergeant with the Mower County Sheriff’s Office in 
+Austin, MN. Dave started his career with Mower County (MN) in 1995 
+when he was hired as a Deputy Sheriff. Dave was promoted to Patrol 
+Sergeant and is responsible for supervising deputies in all aspects of 
+Law Enforcement. In 2006 Dave began assuming the responsibility for 
+department technology, which included hardware and software 
+configuration for the Sheriff’s Office. 
+ Dave serves as the ARMER Local System Administrator for the 
+Sheriff’s Office.  He began working on the migration of all Mower 
+County Law Enforcement and Emergency Services to the Minnesota ARMER radio system in 
+2012. As the Local System Administrator, Dave is responsible for the maintenance and 
+programming of the Dispatch Console and all 450 ARMER Radio System Subscribers/Radios in 
+Mower County, as well as training 18 departments on the ARMER System and its proper use.  
+Dave’s duties include representing the County in the Southeast Region of Minnesota on various 
+committees including the Southeast Radio Advisory Committee (RAC), Owners and Operators, 
+and Regional Logging Committee. In 2015, Dave was elected the SE RAC Chair. During this time, 
+Dave has represented the Southeast Region on various statewide committees and 
+workgroups.  
+In 1997, Dave joined the Brownsdale Volunteer Fire Department where he has preformed 
+countless hours as a firefighter. He has served as Fire Chief since 2000. In 2017, Dave became 
+an instructor for the Minnesota State College System as a Fire Training Instructor. Dave has 
+instructed over 20 departments in Leadership, Scene Safety, Hazardous Materials and General 
+Firefighting. 
+Dave’s training includes Communications Unit Leader, Communications Unit Technician, 
+Firefighter 1 and 2, Fire Officer 1, Fire Instructor 1 and 2.  
+ 
+ 
+ 
+On Target Training & Consulting 
+ 
+29 
+ 
+ 
+Appendix B 
+Complete List of On Target Training Services 
+ 
+In conjunction with the training services identified and requested in the RFP, On 
+Target Training and Consulting provides the following training services:  
+ 
+ Radio User Training (initial and refresher) 
+ Radio User “Train the Trainer” (initial and refresher) 
+ Radio 101 
+ MCC7500 Dispatch Personnel training (initial and refresher) 
+ MCC7500 Console Administrator training 
+ Non-user (Elected Official) training 
+ Motorola APX Mobile and Portable radio programming training 
+ Motorola APX radio programming basics 
+ Motorola radio programming services (Code plugs, Firmware) 
+ Radio Code Plug development 
+ Trunked radio system Fleetmap development 
+ ARMER System Level 2 System Administration Training 
+ ICS (Incident Command) principles, planning and workshop Training 
+ Tabletop Communications exercises  
+ COML Training 
+ CASM Utilization 
+ 
+ 
+ 
+Office of Statewide Radio 
+Communications 
+Project Title: Schedule for Updating VHF Interoperability Stations 
+Lead: Dave Pagel      Version: 2020-05-012 
+     Start Date: May 25, 2020 
+Goal: Implement the conversion of the 109 existing base stations (MTR2000’s) and 
+associated CCGW’s to support simplex multi-channel operation of all licensed VHF 
+Interoperability channels.  Ensure all MCC7500 consoles have conforming access. 
+Scope:  Below is the FINAL schedule for conversion of the MTR2000 bases and 
+associated CCGW’s.  The conversions at each VHF Interop site will proceed by RAC 
+region as shown in the schedule.  MnDOT radio technicians and engineers will make the 
+conversions within the time frame noted.  Once all updates at the VHF Interop sites 
+within that RAC region are completed, a notification of completion will be sent to the 
+county/city contacts.  The VHF Interop resources in all dispatch MCC7500 consoles 
+within that RAC region can then be updated per provided instructions. 
+Schedule:   FINAL schedule for conversion of MTR2000 bases and CCGW’s.   
+South Central RAC:   
+Start May 25, 2020 
+End June 5, 2020 
+MnDOT  
+Mankato Shop: 8 sites 
+ 
+------------------  ONE WEEK REVIEW PERIOD --------------------------------------------- 
+ 
+Southeast RAC:    
+Start June 15, 2020 
+ 
+End June 26, 2020 
+MnDOT: 
+Owatonna Shop: 8 sites  
+Rochester Shop: 6 sites 
+Southwest RAC:    
+Start June 29, 2020 
+End July 10, 2020 
+MnDOT  
+Windom Shop: 3 sites  
+Marshall Shop: 10 sites  
+Willmar Shop: 2 sites 
+Central RAC:   
+ 
+Start July 13, 2020  
+End July 24, 2020 
+MnDOT  
+Willmar: 9 sites        St. Cloud:  5 sites        Baxter: 3 sites        Detroit Lakes: 4 sites 
+Northwest RAC:    
+Start July 27, 2020  
+End August 7, 2020 
+MnDOT  
+Crookston: 3 sites        Thief River:  8 sites        Bemidji: 3 sites        Detroit Lakes: 6 sites 
+Northeast RAC:    
+Start August 10, 2020 
+End August 21, 2020 
+MnDOT  
+Baxter: 5 sites     Virginia: 7 sites     Gr Rapids: 4 sites     Bemidji: 3 sites     Duluth: 11 sites 
+ 
+Temporary Uplift of Regional 
+Interoperability Talkgroup Resources 
+ 
+June 4, 2020 
+ 
+In light of the recent protests and civil unrest occurring in the Twin Cities, there is a high demand for ARMER (Allied 
+Radio Matrix for Emergency Response) system talkgroup resources (local, regional and statewide) to support 
+response operations. 
+ 
+On June 3, the Minnesota Department of Public Safety division of Emergency Communication Networks (DPS-ECN) 
+facilitated the development of a master communications plan for the Twin Cities area.  This plan relied heavily on 
+regional ‘METAC’ talkgroups as well as statewide ‘STAC’ and ‘LTAC’ talkgroups. 
+ 
+In an effort to ensure that sufficient interoperable communication resources are available to greater Minnesota 
+public safety agencies, the DPS-ECN has collaborated with local, regional and state agency partners to expand the 
+coverage area of selected greater Minnesota regional interoperability talkgroups (known as NWs, NEs, CMs, SWs, SRs, 
+and SEs). 
+ 
+Effective immediately, and until further notice, the first five regional interoperability talkgroup resources (e.g. NW-2 
+through NW-6, SE-2 through SE-6, etc.) of each greater Minnesota region will be have the ability to access all ARMER 
+sites except the following Twin Cities metro area sites: 
+• 
+City Center (zone 1, site 1) 
+• 
+Dakota County (zone 1, site 3) 
+• 
+Hennepin County East (zone 2, site 1) 
+• 
+Hennepin County West (zone 2, site 2) 
+• 
+Lino Lakes (zone 1, site 2) 
+• 
+Minneapolis (zone 1, site 9) 
+• 
+North Branch (zone 1, site 6) 
+• 
+Norwood (zone 1, site 4) 
+• 
+Ramsey County (zone 2, site 3) 
+• 
+Washington County (zone 1, site 5) 
+ 
+The Twin Cities metro area sites were specifically excluded to protect them from inadvertent system loading. The 
+remaining regional interoperability talkgroups will maintain their legacy permissions of being able to access all ARMER 
+sites within their region plus one ring of sites surrounding the region.   
+ 
+Regional interoperability talkgroups should continue to be used as they always have been but may now also be used 
+in support of entities in neighboring region. As an example, law enforcement mutual aid from the northeast region 
+may use NE regional interoperability channels if called to the northwest region.   
+ 
+This added capability has technical limitations. Please note the following: 
+• 
+Dispatch centers are encouraged to engage your ARMER System Administrator now so that you understand 
+the implications of patching to another region’s interoperability talkgroup. 
+• 
+End users should not select a regional or statewide interoperability talkgroup to monitor radio traffic unless 
+they are actively involved in the response or have a clear operational need to do so. “Parking” on a talkgroup 
+“drags” communication to your local ARMER site. This can have an adverse effect on ARMER system 
+performance and inhibit the ability of responders to transmit critical information during an emergency. 
+ 
+The increased coverage areas of the regional interoperability talkgroups is temporary. The end date has not yet been 
+identified. Please share this document with dispatch personnel, technical personnel and end users. 
+ 
+If you have technical questions, please direct them to your local ARMER System Administrator. Please contact DPS-
+ECN ARMER Program Manager Jim Stromberg (james.stromberg@state.mn.us) with any unresolved questions.   
+ 
+ 
+ 
+CENTRAL MINNESOTA EMERGENCY SERVICES BOARD 
+   PHONE (320) 650 - 3320 
+FAX (320) 650 - 3410
+ 
+MEMORANDUM 
+To: 
+Dana Wahlberg, ECN 
+From: 
+Jeff Jelinski, CMESB Chair   
+Subject: 
+Representation on SECB Committees 
+Date: 
+April 9, 2020 
+The Central MN RAC currently holds the following positions on the SECB Committees 
+subcommittee of the Statewide Emergency Communications. We recognize the value and 
+importance of these committees and we are committed to supporting its work. 
+ 
+As chair of the Central MN ESB, I would like to designate CMNESB members listed below 
+to be appointed as the representatives for CMNESB to the SECB Committees listed below. 
+ 
+Currently the Central Region has the following representation on SECB Committees:  
+Committee 
+Delegate 
+Alternate 
+Land Mobile Radio 
+Kristen Lahr 
+Mike Henrion 
+Legislative 
+Micah Myers 
+Steve Schmitt 
+Steering 
+Kristen Lahr 
+Tina Lindquist 
+Finance 
+Micah Myers 
+Kristen Lahr 
+Grants Workgroup 
+Micah Myers 
+Shari Gieseke 
+Regional Grants 
+Coordinator/POC 
+Micah Myers 
+ 
+Interoperability  
+Micah Myers 
+Kristen Lahr 
+Interop COMU 
+Workgroup 
+Chief Dean Wrobbel 
+Brandon Larson 
+Interop STR 
+Workgroup 
+Douglas County 
+Brandon Larson as 
+Regional Coordinator 
+IPAWS 
+Patrick Waletzko 
+Erin Tufte 
+Wireless Broadband 
+& Applications 
+Brandon Larson 
+Mike Wisniewski 
+NG911 
+Jason Karlgaard 
+Sarah Booker 
+CAG 
+Brandon Larson 
+ 
+ 
+We feel that this would make a good discussion item for the regional quarterly meetings. 
+Thank you for your consideration in this matter. 
+ 
+Sincerely, 
+ 
+Jeff Jelinski 
+ 
+ 
+Assistant Commissioner West 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                         April 23, 2020 
+Chairman Statewide Emergency Communications Board 
+Minnesota Department of Public Safety  
+444 Cedar Street 
+Saint Paul, MN  55101 
+ 
+RE:  2021 Motorola SUAII Support Service 
+ 
+Dear Asst. Commissioner West: 
+ 
+In response to standard 4.12.0, MnDOT is submitting the calendar year 2021 Motorola System Software 
+Upgrade Agreement (SUAII) cost and agency cost shares.  
+ 
+A new SUA II contract has been negotiated with Motorola. The proposed contract with Motorola has a five year 
+term covering calendar years 2021-2025 with a total cost of $31.7M.  
+ 
+The Motorola System Upgrade Agreement (SUA II) contract provides for: 
+• 
+One on site dedicated field service technician 
+• 
+Technical Support Services 
+• 
+Security Update Services  
+• 
+SUA II System Software Subscription Agreement. This provides all Software and Hardware as 
+required per contract for upgrades and life cycle replacement, and professional services 
+required for both software and hardware implementation  
+ 
+A breakdown of the agency costs is attached. The attached breakdown provides the costs for the full 5 year term 
+of the contract. These cost are subject to change if an agency adds or removes equipment to/from the Motorola 
+system.  
+ 
+I’m seeking Board approval for MnDOT to enter into the SUAII contract with Motorola and approving that 
+MnDOT bill the local agencies annually for their shares of the cost.  
+ 
+Sincerely, 
+ 
+Tim Lee, Director 
+Office of Statewide Radio Communications 
+ 
+Cc. 
+Irene Fernando, Chair Steering Committee 
+ 
+Micah Myers, Chair Finance Committee 
+ 
+Dave Thompson, Chair Land Mobile Radio Committee 
+ 
+Dana Wahlberg, DPS-ECN 
+ 
+ARMER FIVE YEAR SERVICES AND SUA II PRICING 
+Support Services Brief Description of Services
+2021
+2022
+2023
+2024
+2025 Five Year Total
+Technical Support
+Technical Support is available 7 days a week, 24 hours 
+a day, as defined in Section X. The Motorola System 
+Support Center's staff will work with your local service 
+organization or technicians to handle questions 
+related to your Motorola 2-way communications 
+system. If the problem is beyond the scope of the 
+SSC's staff, they will contact key personnel who are 
+involved with the design, development, and 
+manufacture of your communication products for 
+resolution.
+ 
+ 
+ 
+ 
+ 
+ 
+Total Technical Support
+$148,759.00
+$158,040.00
+$167,490.00
+$177,135.00
+$186,964.00
+$838,388.00
+Dedicated FSO
+Motorola will provide one dedicated field service 
+technician, who is specifically trained and qualified to 
+support the MN Metro/ARMER Radio System.  The 
+assigned technician will expend his/her full 40-hour 
+workweek performing corrective maintenance on 
+appropriate project work assigned as agreed to by 
+Motorola and the System Owners with direction from 
+the MN Metro/ARMER System Administrator.
+ 
+ 
+ 
+ 
+ 
+ 
+Total Dedicated FSO 
+$235,286.00
+$239,992.00
+$244,791.00
+$249,700.00
+$254,689.00
+$1,224,458.00
+Security Update Service
+Security Update Service provides updates of the latest 
+anti-virus definition, intrusion signature files and OS 
+Patches that have been pre-tested on a Motorola test 
+system to ensure they do not interfere with radio 
+system functionality.  Pre-tested updates will be made 
+available as necessary, however, an outbreak of 
+malicious code that is deemed a significant threat to 
+the Astro 25 radio network will cause a priority test 
+cycle to occur which will release anti-virus definition 
+updates in a shorter cycle. 
+ 
+ 
+ 
+ 
+ 
+ 
+ Total Security Update Service 
+$61,072.00
+$62,904.00
+$64,791.00
+$66,735.00
+$68,737.00
+$324,239.00
+Services Total
+$445,117.00
+$460,936.00
+$477,072.00
+$493,570.00
+$510,390.00
+$2,387,085.00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SUA II
+Includes All Software and Hardware as required per 
+contract for upgrades and life cycle replacement, and 
+professional services required for both software and 
+hardware implementation. 
+SUA II Total 
+$5,793,155.00
+$5,826,843.00
+$5,861,542.00
+$5,897,282.00
+$5,934,093.00
+$29,312,915.00
+ 
+Annual Contract Totals
+$6,238,272.00 $6,287,779.00
+$6,338,614.00
+$6,390,852.00 $6,444,483.00
+$31,700,000.00
+*(From existing contract) Motorola will invoice the 
+State on a semi- annual basis (one invoice in advance 
+in January and one invoice in July of each year) and 
+payment is due within thirty (30) days of the invoice 
+date. 
+*Pricing  Based Upon Five Year Contract
+ 
+ 
+ 
+ 
+ 
+ 
+*Not a firm offer for sale till fully approved via MSI internal approval process and subject to change
+*Pricing Validity Based Upon Contract Execution 
+ by November 
+20, 2020
+ 
+ 
+ 
+ 
+*Price Based Upon Scope As Above Any Changes Would Adjust Pricing Of All Items 
+Motorola SUAII Cost  shares for 
+Calendar year 
+2021
+2022
+2023
+2024
+2025
+SUAII Contract Total: 
+$6,238,272.00
+$6,287,779.00
+$6,338,614.00
+$6,390,852.00
+$6,444,483.00
+These costrs are based on the system configuration as of April 2020. Subject to change if you add or remove equipment.
+ MESB
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+MESB
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Metro Transit
+$35,273.63
+$35,481.12
+$35,751.58
+$36,029.53
+$36,314.90
+HCMC
+$8,900.16
+$8,952.52
+$9,020.76
+$9,090.89
+$9,162.90
+MRCC East
+$6,260.47
+$6,297.30
+$6,345.30
+$6,394.63
+$6,445.28
+Edina
+$4,173.65
+$4,198.20
+$4,230.20
+$4,263.09
+$4,296.85
+MAC
+$6,587.50
+$6,626.25
+$6,676.76
+$6,728.67
+$6,781.96
+Ridgeview
+$5,053.55
+$5,083.27
+$5,122.02
+$5,161.84
+$5,202.72
+St Louis Park
+$4,173.65
+$4,198.20
+$4,230.20
+$4,263.09
+$4,296.85
+Bloomington
+$5,606.41
+$5,639.39
+$5,682.38
+$5,726.56
+$5,771.91
+Eden Prairie
+$18,680.23
+$18,790.11
+$18,933.34
+$19,080.53
+$19,231.66
+U of M
+$5,933.44
+$5,968.34
+$6,013.84
+$6,060.59
+$6,108.60
+Anoka County
+$87,609.94
+$88,125.28
+$88,797.04
+$89,487.38
+$90,196.16
+Carver County
+$30,494.32
+$30,673.69
+$30,907.51
+$31,147.80
+$31,394.50
+Chisago County
+$59,756.78
+$60,108.28
+$60,566.47
+$61,037.34
+$61,520.79
+Dakota County
+$100,201.77
+$100,791.18
+$101,559.49
+$102,349.04
+$103,159.70
+Hennepin County
+$284,852.76
+$286,528.34
+$288,712.48
+$290,957.03
+$293,261.56
+Isanti County
+$9,956.04
+$10,014.61
+$10,090.94
+$10,169.39
+$10,249.94
+Ramsey County
+$118,088.12
+$118,782.75
+$119,688.20
+$120,618.70
+$121,574.06
+Scott County
+$60,660.14
+$61,016.96
+$61,482.08
+$61,960.06
+$62,450.81
+Sherburne County
+$29,615.89
+$29,790.09
+$30,017.18
+$30,250.54
+$30,490.14
+Washington County
+$117,299.15
+$117,989.13
+$118,888.54
+$119,812.81
+$120,761.79
+Minneapolis
+$78,972.27
+$79,436.81
+$80,042.34
+$80,664.62
+$81,303.52
+Total
+$1,078,149.85
+$1,084,491.80
+$1,092,758.65
+$1,101,254.12
+$1,109,976.63
+State ( Includes any SW users)
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+ARMER Infrastructure (MnDOT)
+$4,144,534.09
+$4,181,725.21
+$4,216,506.21
+$4,252,246.22
+$4,288,938.35
+MnDOT
+$12,598.67
+$12,672.78
+$12,769.38
+$12,868.65
+$12,970.58
+State Patrol
+$54,857.21
+$55,179.90
+$55,600.52
+$56,032.78
+$56,476.59
+DOC 
+$90,223.23
+$90,753.95
+$91,445.74
+$92,156.68
+$92,886.60
+MSOP
+$16,643.26
+$16,741.16
+$16,868.78
+$16,999.92
+$17,134.57
+North Memorial
+$8,900.16
+$8,952.52
+$9,020.76
+$9,090.89
+$9,162.90
+Allina(Lakeview EMS, New River Ambulance)
+$14,179.55
+$14,262.96
+$14,371.68
+$14,483.41
+$14,598.13
+Mayo/Gold Cross
+$15,261.82
+$15,351.60
+$15,468.62
+$15,588.88
+$15,712.35
+Sanford
+$7,467.40
+$7,511.32
+$7,568.58
+$7,627.42
+$7,687.83
+Total
+$4,364,665.40
+$4,403,151.38
+$4,439,620.27
+$4,477,094.85
+$4,515,567.90
+Motorola SUAII Cost  shares for 
+Calendar year 
+2021
+2022
+2023
+2024
+2025
+SUAII Contract Total: 
+$6,238,272.00
+$6,287,779.00
+$6,338,614.00
+$6,390,852.00
+$6,444,483.00
+These costrs are based on the system configuration as of April 2020. Subject to change if you add or remove equipment.
+Central MN Region
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+CM Regional Equipment
+$3,846.62
+$3,869.25
+$3,898.74
+$3,929.05
+$3,960.17
+St Cloud
+$20,387.23
+$20,507.15
+$20,663.47
+$20,824.12
+$20,989.05
+Stearns County
+$56,109.60
+$56,439.65
+$56,869.88
+$57,312.01
+$57,765.95
+Benton County
+$5,003.68
+$5,033.12
+$5,071.48
+$5,110.91
+$5,151.39
+Wright County
+$32,456.49
+$32,647.41
+$32,896.27
+$33,152.02
+$33,414.60
+Kandiyohi County
+$18,278.41
+$18,385.92
+$18,526.08
+$18,670.10
+$18,817.98
+Meeker County
+$14,003.57
+$14,085.94
+$14,193.32
+$14,303.66
+$14,416.95
+Grant County
+$3,997.67
+$4,021.18
+$4,051.84
+$4,083.34
+$4,115.68
+Douglas County
+$10,258.14
+$10,318.48
+$10,397.14
+$10,477.97
+$10,560.96
+Stevens County
+$3,972.74
+$3,996.11
+$4,026.57
+$4,057.87
+$4,090.01
+Pope County
+$4,274.84
+$4,299.98
+$4,332.76
+$4,366.44
+$4,401.03
+Wadena County
+$3,293.75
+$3,313.12
+$3,338.38
+$3,364.33
+$3,390.98
+Otter Tail County
+$22,324.47
+$22,455.79
+$22,626.96
+$22,802.87
+$22,983.48
+Morrison County 
+$12,343.50
+$12,416.10
+$12,510.75
+$12,608.01
+$12,707.87
+Mille Lacs County
+$11,589.72
+$11,657.89
+$11,746.76
+$11,838.08
+$11,931.84
+Wilkin County
+$6,410.05
+$6,447.76
+$6,496.91
+$6,547.42
+$6,599.28
+Traverse County
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Big Stone County
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Todd County
+$4,500.68
+$4,527.15
+$4,561.66
+$4,597.12
+$4,633.54
+Swift County
+$6,410.05
+$6,447.76
+$6,496.91
+$6,547.42
+$6,599.28
+Total
+$239,461.19
+$240,869.76
+$242,705.86
+$244,592.74
+$246,530.04
+South East MN Region
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Olmsted County
+$28,835.71
+$29,005.33
+$29,226.43
+$29,453.65
+$29,686.93
+Rochester
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Goodhue County
+$40,072.00
+$40,307.72
+$40,614.97
+$40,930.73
+$41,254.92
+Wabasha County
+$5,154.73
+$5,185.05
+$5,224.58
+$5,265.20
+$5,306.90
+Winona County
+$14,204.48
+$14,288.03
+$14,396.95
+$14,508.88
+$14,623.79
+Houston County
+$3,620.78
+$3,642.08
+$3,669.84
+$3,698.37
+$3,727.66
+Fillmore County
+$4,274.84
+$4,299.98
+$4,332.76
+$4,366.44
+$4,401.03
+Mower County
+$12,922.76
+$12,998.78
+$13,097.86
+$13,199.69
+$13,304.24
+Freeborn County
+$20,614.53
+$20,735.79
+$20,893.86
+$21,056.29
+$21,223.07
+Dodge County
+$3,620.78
+$3,642.08
+$3,669.84
+$3,698.37
+$3,727.66
+Rice County
+$17,546.62
+$17,649.84
+$17,784.38
+$17,922.64
+$18,064.60
+Steele County
+$13,875.98
+$13,957.61
+$14,064.00
+$14,173.34
+$14,285.60
+Rice/Steel Dispatch
+$19,560.12
+$19,675.18
+$19,825.16
+$19,979.29
+$20,137.53
+Total
+$184,303.35
+$185,387.47
+$186,800.63
+$188,252.89
+$189,743.95
+Motorola SUAII Cost  shares for 
+Calendar year 
+2021
+2022
+2023
+2024
+2025
+SUAII Contract Total: 
+$6,238,272.00
+$6,287,779.00
+$6,338,614.00
+$6,390,852.00
+$6,444,483.00
+These costrs are based on the system configuration as of April 2020. Subject to change if you add or remove equipment.
+South Central MN Region
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Regional Radio Board
+$6,838.27
+$6,878.50
+$6,930.93
+$6,984.81
+$7,040.14
+McLeod County
+$12,469.62
+$12,542.96
+$12,638.58
+$12,736.83
+$12,837.72
+Hutchinson
+$3,293.75
+$3,313.12
+$3,338.38
+$3,364.33
+$3,390.98
+Sibley County
+$10,357.86
+$10,418.79
+$10,498.21
+$10,579.83
+$10,663.62
+Nicollet County
+$5,154.73
+$5,185.05
+$5,224.58
+$5,265.20
+$5,306.90
+LeSueur County
+$12,318.57
+$12,391.03
+$12,485.48
+$12,582.55
+$12,682.21
+Brown County
+$10,709.82
+$10,772.82
+$10,854.94
+$10,939.33
+$11,025.97
+Blue Earth County
+$8,121.45
+$8,169.23
+$8,231.50
+$8,295.49
+$8,361.20
+Watonwan Caounty
+$3,293.75
+$3,313.12
+$3,338.38
+$3,364.33
+$3,390.98
+Waseca County
+$18,628.90
+$18,738.48
+$18,881.32
+$19,028.11
+$19,178.82
+Martin County
+$3,947.81
+$3,971.03
+$4,001.30
+$4,032.41
+$4,064.35
+Faribault County
+$4,827.70
+$4,856.10
+$4,893.12
+$4,931.16
+$4,970.22
+Total
+$99,962.23
+$100,550.23
+$101,316.71
+$102,104.38
+$102,913.10
+South West MN Region
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+SW MN Emergency Communications Board
+$27,050.98
+$27,210.11
+$27,417.52
+$27,630.68
+$27,849.52
+Murray County
+$3,620.78
+$3,642.08
+$3,669.84
+$3,698.37
+$3,727.66
+Laq Qui Parle County
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Chippewa County
+$10,030.83
+$10,089.84
+$10,166.75
+$10,245.79
+$10,326.94
+Renville County
+$10,030.83
+$10,089.84
+$10,166.75
+$10,245.79
+$10,326.94
+Yellow Medicine County
+$10,357.86
+$10,418.79
+$10,498.21
+$10,579.83
+$10,663.62
+Redwood County
+$4,274.84
+$4,299.98
+$4,332.76
+$4,366.44
+$4,401.03
+Lincoln County
+$2,740.88
+$2,757.00
+$2,778.02
+$2,799.62
+$2,821.79
+Lyon County
+$10,684.89
+$10,747.74
+$10,829.67
+$10,913.86
+$11,000.31
+Pipestone County
+$3,947.81
+$3,971.03
+$4,001.30
+$4,032.41
+$4,064.35
+Cottonwood County
+$3,947.81
+$3,971.03
+$4,001.30
+$4,032.41
+$4,064.35
+Rock County
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Nobles County
+$3,947.81
+$3,971.03
+$4,001.30
+$4,032.41
+$4,064.35
+Jackson County
+$6,410.05
+$6,447.76
+$6,496.91
+$6,547.42
+$6,599.28
+Total
+$97,045.37
+$97,616.22
+$98,360.32
+$99,125.01
+$99,910.13
+Motorola SUAII Cost  shares for 
+Calendar year 
+2021
+2022
+2023
+2024
+2025
+SUAII Contract Total: 
+$6,238,272.00
+$6,287,779.00
+$6,338,614.00
+$6,390,852.00
+$6,444,483.00
+These costrs are based on the system configuration as of April 2020. Subject to change if you add or remove equipment.
+North East MN Region
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Itasca County
+$6,361.66
+$6,399.08
+$6,447.86
+$6,497.99
+$6,549.45
+Kanabec County
+$4,173.65
+$4,198.20
+$4,230.20
+$4,263.09
+$4,296.85
+Pine County
+$3,947.81
+$3,971.03
+$4,001.30
+$4,032.41
+$4,064.35
+Cass County
+$21,343.38
+$21,468.93
+$21,632.58
+$21,800.76
+$21,973.43
+Crow Wing County
+$17,397.04
+$17,499.38
+$17,632.77
+$17,769.85
+$17,910.60
+Atkin County
+$10,910.73
+$10,974.91
+$11,058.57
+$11,144.54
+$11,232.81
+Koochiching County
+$3,293.75
+$3,313.12
+$3,338.38
+$3,364.33
+$3,390.98
+Carlton County
+$5,908.51
+$5,943.27
+$5,988.57
+$6,035.13
+$6,082.93
+St Louis County
+$48,145.06
+$48,428.26
+$48,797.42
+$49,176.79
+$49,566.30
+City of Duluth
+$7,465.93
+$7,509.85
+$7,567.09
+$7,625.92
+$7,686.32
+Lake County
+$3,947.81
+$3,971.03
+$4,001.30
+$4,032.41
+$4,064.35
+Cook County
+$3,721.97
+$3,743.86
+$3,772.40
+$3,801.73
+$3,831.84
+Leech Lake Band of Ojibwe
+$3,620.78
+$3,642.08
+$3,669.84
+$3,698.37
+$3,727.66
+Total
+$140,238.08
+$141,062.99
+$142,138.28
+$143,243.32
+$144,377.88
+North West MN Region
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Hubbard County
+$3,947.81
+$3,971.03
+$4,001.30
+$4,032.41
+$4,064.35
+Polk County 
+$5,053.55
+$5,083.27
+$5,122.02
+$5,161.84
+$5,202.72
+Becker County
+$5,531.62
+$5,564.16
+$5,606.58
+$5,650.16
+$5,694.92
+Beltrami County
+$5,707.60
+$5,741.18
+$5,784.94
+$5,829.91
+$5,876.09
+White Earth
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Clearwater County
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Pennington
+$3,293.75
+$3,313.12
+$3,338.38
+$3,364.33
+$3,390.98
+RRRDC
+$10,208.28
+$10,268.33
+$10,346.60
+$10,427.04
+$10,509.62
+Clay County
+$703.92
+$708.06
+$713.46
+$719.00
+$724.70
+Cass County ND(Estimated)
+(Under warranty)
+$82,375.25
+$83,003.18
+$83,648.48
+$84,311.02
+Total
+$34,446.52
+$117,024.40
+$117,916.45
+$118,833.17
+$119,774.39
+ 
+ 
+ 
+ 
+Assistant Commissioner West 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                         April 23, 2020 
+Chairman Statewide Emergency Communications Board 
+Minnesota Department of Public Safety  
+444 Cedar Street 
+Saint Paul, MN  55101 
+ 
+RE:  FY 2021 MnDOT ARMER Operations and Maintenance Budget Estimate 
+ 
+Dear Asst. Commissioner West: 
+ 
+In an effort to meet the following requirements the estimated Fiscal Year 2021 MnDOT ARMER System 
+Backbone Maintenance and Operations Budget is attached.  
+ 
+MnDOT – DPS DECN Contract 93882:  
+ 
+8.2a MnDOT shall prepare and submit to DPS and the Board a proposed maintenance and repair budget plan for 
+the upcoming budget year and for each fiscal year of the state biennium by May 1 of each year. The 
+maintenance, repair and routine equipment replacement budget shall include normal recurring maintenance 
+costs and anticipated major repair or equipment replacement costs.  
+ 
+8.4 The budget shall identify funding levels provided for in MnDOT’s base budget, any restriction upon these 
+appropriations and amounts that are not presently funded. The budget and all relevant information shall be 
+presented to the Board.  
+ 
+I will be available at the Finance Committee and Board to answer any question on the estimated budget. 
+ 
+ 
+Sincerely, 
+ 
+Tim Lee, Director 
+Office of Statewide Radio Communications 
+1500 West County Road B2 
+Roseville, MN 55113 
+ 
+ 
+ 
+Cc. 
+Dana Wahlberg, DPS DECN 
+ 
+Micah Myers, Chair SECB Finance Committee 
+ 
+Office of Statewide Radio Communications 
+1500 West County Road B2 
+Roseville, MN 55113 
+ 
+April 22, 2020 
+ 
+Fiscal Year 2021 
+ARMER System Backbone Maintenance and Operations Budget  
+ 
+The annual report for the maintenance and operations budget of the ARMER system is presented to 
+the Department of Public Safety and the Statewide Radio Board through its Finance Committee by May 
+1st of each year.  
+The purpose of this report is to aid the Statewide Emergency Communications Board in its obligation to 
+oversee the implementation of the ARMER plan and ensure that the system is built, owned, operated, 
+and maintained in accordance with the ARMER plan.  
+ 
+ARMER Backbone Maintenance and Operations Revenue Sources 
+The following table summarizes the revenue sources that directly support ARMER backbone 
+maintenance and operations for the next fiscal year; FY 2021 (July 1, 2020 – June 30, 2021.)  
+Revenue Sources for ARMER Backbone Maintenance and Operations 
+Source 
+FY 2021 
+911 Fee Legislative Appropriation to MnDOT OSRC 
+ $                                       9,675,000.00  
+Trunk Highway Funds (ARMER Appropriation to OSRC)  $                                       1,300,000.00  
+Trunk Highway Funds (MnDOT Appropriation to 
+OSRC)* 
+ $                                       1,550,000.00  
+Tower Rental Lease Receipts (Estimated) 
+ $                                       1,200,000.00  
+Total  $                                     13,725,000.00  
+ 
+* Estimate of ARMER maintenance and operations expenses paid from TH Funds appropriated to 
+Statewide Radio Communications.  
+Note:  Minnesota Constitution dedicates Trunk Highway Funds to trunk highway purposes. The use of 
+these funds for ARMER system maintenance and operations is to support MnDOT and State Patrol use 
+of the ARMER system.  
+ 
+ARMER Expenditures (FY2019) 
+The last complete fiscal year, FY 2019, was used as a baseline for estimating the FY21 budget. The total 
+ARMER maintenance and operation expenditure for FY2019 was $13,924,712.74. The following table 
+shows the FY 2019 expenditures. 
+ARMER Maintenance & Operations Expenditures for FY 2019 
+Total ARMER Labor 
+ $                                                               5,812,917.05  
+Motorola SUAII (ARMER backbone share)* 
+ $                                                               2,955,316.07  
+Utilities 
+ $                                                               1,269,036.77  
+ARMER Facilities improvements 
+ $                                                               1,367,018.30  
+Parts/Repairs 
+ $                                                               1,721,463.11  
+Rent 
+ $                                                                   360,231.00  
+Office Other 
+ $                                                                   438,730.43  
+Total: 
+ $                                                             13,924,712.74  
+*The SUAII cost shown here is not the full cost of the SUAII, this is only the portion of the SUAII 
+paid from the ARMER Maintenance and Operations budget.  
+The following tables show a breakdown of the FY2019 labor, parts/services lines from the above table. 
+This show how the maintenance services are split around the different elements that make up the 
+ARMER system backbone.  
+Breakdown of FY 2019 ARMER Labor Expenditures  
+800 MHz system maintenance  
+ $                                                               2,086,158.29  
+Facilities maintenance 
+ $                                                               1,640,393.12  
+Microwave maintenance 
+ $                                                                   757,237.77  
+Radio Operation Center 
+ $                                                                   572,941.97  
+Partner Agency Support  
+ $                                                                   325,714.71  
+Overtime/Shift Diff/On call 
+ $                                                                   207,577.43  
+MnIT Embedded (Sys Admin) 
+ $                                                                   153,459.60  
+Interop maintenance 
+ $                                                                     30,597.31  
+FCC Licensing 
+ $                                                                     38,836.86  
+Total ARMER Labor 
+ $                                                               5,812,917.05  
+Breakdown of FY 2019 ARMER Parts/Services Expenditures  
+Facilities Maintenance Parts & Services 
+ $                                                                   440,466.91  
+800 MHz System Parts & Services 
+ $                                                                   879,571.11  
+Microwave Parts & Services 
+ $                                                                   401,276.98  
+Interop System Parts & Services 
+ $                                                                           148.11  
+Total Parts/services 
+ $                                                               1,721,463.11  
+ 
+ARMER Maintenance and operations proposed budget for Fiscal Years 2021 
+The FY21 proposed maintenance and operation budget is outlined in the table below. This proposed 
+budget is based on experience from previous budget years, planned facilities/equipment upgrades and 
+known increased operating costs. This budget plan assumes continued routine maintenance as 
+previous years. If a major equipment failure were to occur with costs beyond the routine budget we 
+would reevaluate and postpone any planned major facilities/equipment upgrades.   
+ARMER Operations & Maintenance Estimates 
+FY2021 
+  
+800 MHz system maintenance labor 
+ $                                 1,450,000.00    
+Facilities maintenance labor 
+ $                                 1,500,000.00    
+Microwave labor 
+ $                                     850,000.00    
+System Admin/ System Eng./Install Support Labor 
+ $                                     650,000.00    
+Radio Operation Center labor 
+ $                                     580,000.00    
+Partner Agency Support Labor 
+ $                                     325,000.00    
+Overtime/Shift Diff/On call 
+ $                                     210,000.00    
+MnIT Embedded (Sys Admin) 
+ $                                     300,000.00    
+Interop maintenance labor 
+ $                                     150,000.00    
+FCC Licensing 
+ $                                       35,000.00    
+Motorola SUAII (ARMER Backbone share) 
+ $                                 3,119,136.00  * 
+Utilities 
+ $                                 1,300,000.00    
+Facilities upgrades 
+ $                                     450,000.00    
+Microwave/backhaul upgrades 
+ $                                     300,000.00    
+Interop station replacements 
+ $                                       75,000.00    
+Facilities Maintenance Parts & Services 
+ $                                     400,000.00    
+800 MHz System Parts & Services 
+ $                                     880,000.00    
+Microwave Parts & Services 
+ $                                     450,000.00    
+Interop System Parts & Services 
+ $                                         5,000.00    
+Rent 
+ $                                     360,000.00    
+Test Equipment 
+ $                                       25,000.00    
+Vehicles 
+ $                                       90,000.00    
+Training 
+ $                                       50,000.00    
+Travel (In State) 
+ $                                       20,000.00    
+General Office Support, IT Support, Phones, etc. 
+ $                                     150,000.00    
+TOTAL 
+ $                               13,724,136.00    
+ 
+* FY21 ARMER Backbone Motorola SUAII cost increases beginning January 2021.  
+Statewide Radio Communications ARMER Maintenance Staffing 
+No major personnel changes are planned for this budget cycle, other than we are working to add a new 
+embedded MnIT employee to serve as a backup and assistant to the ARMER System Administrator. To 
+offset this position we will not backfill a future planned retirement in the office. 
+We continue to have personnel rotations as staff retire or move on. With this change over in staff we 
+will continue to have training costs to bring them up to speed on the ARMER system.  
+ 
+Planned major improvements and equipment replacements for FY20/21 
+The following equipment or facilities upgrades are planned in the FY20 budget: 
+• FY20 – Replace Thief River Falls tower 
+ 
+$600,000 
+Replace older tower and install new shelter at MnDOT facilities in Thief River Falls. 
+ 
+• FY20/21 – Upgrades to the Proteus microwave 
+$600,000 
+Purchase software upgrade licenses to the Proteus microwave radios. These upgrades are in 
+preparation for packet backhaul requirements of the ARMER network. 
+ 
+• FY21 – Interop system changes(if approved)  
+$150,000 labor charges 
+A workgroup of the LMR committee are working on a plan to update the VHF interop layer. This 
+plan when approved will require addition time to relicense and reprogram the interop base 
+radios. 
+ 
+• FY21 -  Interop station replacement  
+ 
+$75,000 
+ 
+Replace 8CALL and 8TAC1 station at City Center. These stations were installed in 2001 and have 
+become difficult to maintain.  
+ 
+• FY20 – Upgrade the metro area multiplexers 
+$450,000 
+Replace the lucent multiplexers in the metro area microwave loops. Equipment is getting older 
+and needs to be replaced. Replacement will support future microwave transport changes 
+planned in the metro system.  
+ 
+• FY21 – Purchase 4 radio equipment shelter  
+$450,000 
+Purchase new radio equipment shelters for Wolf Lake, Idington, Roosevelt and Little Fork. 
+ 
+• FY21 – Shelter installs  
+ 
+ 
+ 
+$150,000 
+Foundations, fencing, etc. for shelter installs at Wolf Lake and Idington.  
+ 
+ 
+Motorola SUAII 
+ 
+ 
+SUAII Calendar years 2021-2025 
+ 
+December 2020 is the end of the current Motorola support contract. Contract work is in process with 
+Motorola for the 2021-2015 contract. The negotiated price for the 2021-2025 contract is 
+$31,700,000.00. 
+ 
+ 
+SUAII Impact of future contract on ARMER Backbone Maintenance and operations budget 
+ 
+For FY 2021 the ARMER backbone maintenance and operations budget will have an estimated cost of 
+$3,119,136.00 towards the Motorola SUAII contract.  
+ 
+For FY 2022 and beyond the current ARMER backbone maintenance and operations budget can 
+support $3,650,000.00 annually towards the Motorola SUAII contract. This leaves an annual funding 
+gap in the MnDOT ARMER operating budget of $519,288 in FY22, $557,543 in FY23, $592,625 in FY24 
+and $629,062 in FY25. MnDOT is working with DPS-ECN to cover these funding gaps.  
+ 
+The following table shows the planned payments to Motorola. 
+ 
+  
+  
+  
+Motorola SUAII 
+Invoice 
+Payment 
+Funding source 
+ 
+FY 
+2020 
+ July 
+2019 
+Motorola SUAII Plus Contract - 
+Ends December 31, 2020        
+Contract Yearly Total 
+$10,066,132.42   (SUAII portion 
+$4,499,234.60  -  7.19 Hardware 
+portion $5,566,897.82) 
+ $    5,033,066.21   $ 3,952,911.76  
+Pass thru Billing from Local Agencies 
+ 
+ $ 1,080,154.45  
+Pass thru billing from DPS-ECN Contract 
+ 
+ 
+January 
+2020 
+ $    5,033,066.21   $ 3,041,387.19  
+MnDOT - OSRC Operating and Maintenance Budget 
+ 
+ $ 1,991,679.02  
+Pass thru billing from DPS-ECN Contract 
+ 
+FY 
+2021 
+ July 
+2020 
+ $    5,033,066.21   $ 3,952,911.76  
+Pass thru Billing from Local Agencies 
+ 
+ $ 1,080,154.45  
+Pass thru billing from DPS-ECN Contract (Contract  
+Ends 2020) 
+ 
+ 
+January 
+2021 
+New Motorola SUAII Contract 
+$31,700,000.00 over 5 calendar 
+years, 2021-2025. 
+ $    3,119,136.00   $ 3,119,136.00  
+MnDOT-OSRC Operating and Maintenance Budget 
+$3.12M from MnDOT OSRC 
+  
+  
+FY21 Operating Budget 
+FY 
+2022 
+ July 
+2021 
+ $    3,119,136.00   $ 2,093,737.91  
+Pass thru Billing from Local Agencies  
+ 
+ $ 1,025,398.09  
+MnDOT - OSRC Operating and Maintenance Budget 
+$3.65M from MnDOT OSRC 
+ 
+January 
+2022 
+ $    3,143,889.50   $ 2,624,601.91  
+MnDOT - OSRC Operating and Maintenance Budget 
+FY22 Operating Budget 
+ $    519,287.59      New Contract with DPS-ECN needed 
+ 
+FY 
+2023 
+ July 
+2022 
+ $    3,143,889.50   $ 2,106,053.79  
+Pass thru Billing from Local Agencies  
+ 
+ $ 1,037,835.71  
+MnDOT - OSRC Operating and Maintenance Budget 
+$3.65M from MnDOT OSRC 
+ 
+January 
+2023 
+ $    3,169,307.00   $ 2,612,164.29  
+MnDOT - OSRC Operating and Maintenance Budget 
+FY23 Operating Budget 
+ $    557,142.71      New Contract with DPS-ECN needed 
+ 
+FY 
+2024 
+ July 
+2023 
+ $    3,169,307.00   $ 2,122,107.79  
+Pass thru Billing from Local Agencies  
+ 
+ $ 1,047,199.21  
+MnDOT - OSRC Operating and Maintenance Budget 
+$3.65M from MnDOT OSRC 
+ 
+January 
+2024 
+ $    3,195,426.00   $ 2,602,800.79  
+MnDOT - OSRC Operating and Maintenance Budget 
+FY24 Operating Budget 
+ $    592,625.21      New Contract with DPS-ECN needed 
+ 
+FY 
+2025 
+ July 
+2024 
+ $    3,195,426.00   $ 2,138,605.78  
+Pass thru Billing from Local Agencies  
+ 
+ $ 1,056,820.22  
+MnDOT - OSRC Operating and Maintenance Budget 
+$3.65M from MnDOT OSRC 
+ 
+January 
+2025 
+ $    3,222,241.50   $ 2,593,179.78  
+MnDOT - OSRC Operating and Maintenance Budget 
+FY25 Operating Budget 
+ $    629,061.72      New Contract with DPS-ECN needed 
+ 
+FY 
+2026 
+ July 
+2025 
+ $    3,222,241.50   $ 2,155,544.65  
+Pass thru Billing from Local Agencies  
+ 
+ $ 1,066,696.85  
+MnDOT - OSRC Operating and Maintenance Budget 
+$1.1M + ?? from MnDOT-
+OSRC 
+ 
+January 
+2026 
+?? Contract 2026 and beyond ?? 
+ ?????  
+  
+  
+FY26 Operating Budget 
+  
+  
+?? - 2026 Contract 
+Motorola SUAII (Impact of future contract cont.) 
+In addition to the cost increase to the SUAII we have also been informed that the radio site and console 
+connections to the master sites will need to transition from T1 based to Ethernet. The estimated cost 
+to convert the transport is $2,000,000.00.  MnDOT OSRC engineering staff is current working with 
+MnIT to better define the network design and update this estimate. As we are working on the final 
+network we are also working on what the implementation plan and timeline will be. Depending on the 
+timeline we may be able to fit the costs into the MnDOT ARMER operations budget by delaying some 
+facility upgrade plans.  
+In addition the local agencies with Motorola connected equipment will need to convert their 
+connections to Ethernet. Options for converting this connect will vary agency by agency. For planning 
+purposes connected agencies should plan that every T1 they have for a console connection or a local 
+enhancement site connection will need to purchase T1 to Ethernet converters. A pair of RAD RiCi’s per 
+T1 is one option to accomplish this. We would estimate the cost of a pair of RAD RiCi’s to be about 
+$4000.   
+Once the details of the final network design are completed MnDOT will bring forward an ARMER 
+system plan change to the Board.  
+ 
+Long term facilities and equipment replacement plans 
+We have a number of towers that are on the air for ARMER that are old towers constructed in the 
+1950’s. These towers did not pass structural when we added the new ARMER equipment. But the level 
+of structural deficiency was not a risk that required immediate replacement. So we have held off on 
+replacement of these towers to see where we were in the ARMER construction budget to build what 
+we had in the approved plan.  These towers will not fit into the ARMER construction funds and will 
+need to be funded out of the Operations and Maintenance budget as it allows.  
+ 
+ 
+TOWER REPLACEMENTS  
+Freedhem 
+Replace tower/shelter 
+$600,000.00 
+Thief River Falls 
+Replace tower/shelter 
+$600,000.00 
+Viola 
+Replace tower 
+$600,000.00 
+Kimball 
+Replace tower 
+$600,000.00 
+Hoffman 
+Replace tower 
+$600,000.00 
+New London 
+Replace tower/shelter 
+$600,000.00 
+Woodland 
+Replace tower/shelter 
+$600,000.00 
+Littlefork 
+Replace tower/shelter 
+$600,000.00 
+Roosevelt 
+Replace tower/shelter 
+$600,000.00 
+Crookston 
+Replace Tower 
+$400,000.00 
+Wolf Lake 
+Replace Shelter 
+$140,000.00 
+Indington  
+Replace Shelter 
+$140,000.00 
+Geneva: Need to look at land purchase, new tower? 
+$500,000.00 
+Mapleton:  Find land and build new tower 
+$500,000.00 
+ 
+ 
+ 
+As it fits into the available maintenance budget we are also planning for: 
+• Tower Painting 
+• Tower inspections 
+• Tower guy wire tensioning/replacement 
+• Tower safety climbs 
+• Tower lighting system replacements 
+• HVAC replacements 
+• Replacing VHF interop stations (109 stations across the state that are 20(+) years old) 
+• Battery replacements 
+• Replenish spares inventory 
+• Replacement of older microwave radios 
+o Constellation microwave links (23 hops) 
+o CM6 microwave links (39 hops) 
+o Megastar microwave links (27 hops) 
+ 
+ 
+ 
+ 
+445 MINNESOTA STREET, SUITE 1725  •  SAINT PAUL, MINNESOTA 55101 
+PHONE: 651.201.7547  •  FAX: 651.296.2665  •  TTY: 651.282.6555 
+DPS.MN.GOV  •  SECB@STATE.MN.US 
+ 
+TO: 
+Allied Radio Matrix for Emergency Response (ARMER) 
+System Upgrade Agreement Stakeholders 
+FROM:  
+Assistant Commissioner Bruce West, SECB Chair 
+DATE:  
+April 9, 2020 
+SUBJECT: 
+ARMER 2021-2025 System Upgrade Agreement (SUA) Status 
+ 
+Minnesota’s land mobile radio system known as ARMER has been in service and has experienced 
+continual growth and improvement since 2002.  To keep the ARMER system current and to provide 
+predictable on-going costs, the state engaged in a System Upgrade Agreement (SUA) with ARMER’s 
+manufacturer, Motorola Solutions.  The current five-year SUA contract between the state and Motorola 
+expires 12/31/2020. 
+While the Minnesota Department of Transportation (MnDOT) owns the ARMER network “backbone” 
+and a majority of the infrastructure, many ARMER participant entities own network components 
+including local subsystem infrastructure and dispatch consoles.  The Department of Public Safety 
+division of Emergency Communication Networks (ECN) has primary responsibility for the majority of the 
+SUA financial cost.  However, all network component owners proportionally contribute toward SUA 
+costs and have a vested interest in the SUA contract. 
+MnDOT and ECN have been engaged in ongoing discussions with Motorola for the 2021 – 2025 SUA.  We 
+recently reached an agreement with Motorola which surpasses an offer that was previously shared with 
+ARMER stakeholders.  This has been a lengthy but productive process.  We are appreciative of the input, 
+guidance and support we received from our public safety partners during this process.   
+To recap, in late 2017 Motorola presented an initial budgetary proposal for the next five-year SUA in the 
+amount of $45M ($9M per year).  The state did not accept that offer as it included services beyond what 
+Minnesota requested or required.  In early 2018, Motorola produced a revised budgetary proposal 
+offering services in alignment with those of the current SUA at a cost of $33M ($6.6M per year).  While 
+ECN and MnDOT furthered discussions with Motorola, MnDOT calculated the tentative five-year SUA 
+cost to each network component owner based on their respective ownership proportion.  These 
+preliminary SUA costs were provided to all stakeholders in 2018 for their budgetary planning purposes. 
+Because ARMER is a statewide, shared system resource, it is essential that all ARMER network 
+component owners are in agreement with both the level of service and the associated cost to support 
+those services over the course of each Motorola contract. 
+In July 2018 and again in November 2018, ECN hosted informational meetings with statewide ARMER 
+stakeholders to review Motorola’s proposal.  ECN was provided with valuable feedback from individual 
+stakeholders as well as from the regional Emergency Communications/Services Boards (ECB/ESBs) 
+indicating Motorola’s $33M proposal for a five-year SUA lacked sufficient detail and justification for cost.  
+ECN was delegated with pursuing increased detail and improved pricing. 
+ECN initiated a Request for Proposal (RFP) in quarter four 2018 to secure professional and technical 
+consultants to support this important initiative.  In February 2019, ECN awarded a contract to Tusa 
+Consulting to assist in analyzing the scope and cost for the proposed SUA proposal.  The Tusa team met 
+Page 2 
+with ECN and ARMER stakeholders, as well as with MnDOT and with Motorola to become familiar with 
+the current SUA, to understand the specifics of the proposed SUA, as well as to perform a detailed 
+comparison and analysis between the current services and those being offered in the proposed SUA.  
+During this process, Tusa met with regional ECBs/ESBs to keep information flowing and communication 
+lines open, as well as to solicit their feedback.  Regular updates were provided during Land Mobile Radio 
+committee meetings, as well as Statewide Emergency Communication Board (SECB) meetings. 
+Thanks to the collaborative efforts of multiple partners, we have recently reached a tentative agreement 
+with Motorola.  Highlights of the five-year SUA for 2021-2025 include: 
+•
+Cost of $31.7M for five years.  Motorola priced year one at $6,238,272.00 and reflects a 1%
+increase each subsequent year.
+•
+Motorola will deliver two major upgrades during the five year period.
+•
+Motorola will discount subscriber radio pricing for the remainder of the existing subscriber 
+contract (beginning late-April 2020 and expires February 1, 2022).
+•
+Motorola will discontinue requiring old radios be traded in when negotiating large purchases 
+with pricing better than the state contract (allowing entities to donate old radios).
+•
+Motorola and MnDOT will continue to share system maintenance responsibilities similar to 
+existing practice.
+•
+The contract must be fully executed by November 20, 2020.
+Next steps are currently under way.  The Finance committee is expected to review the proposal and 
+make a recommendation to the SECB to approve it. MnDOT will begin work with the Minnesota 
+Department of Administration (MDA) to initiate a Single Source Justification RFP in accordance with 
+state procurement rules.  MDA will continue to support the contract negotiation process to ensure that 
+all terms and conditions are met.   
+Each ARMER network infrastructure owner has a contract with MnDOT defining their financial share of 
+the SUA cost.  MnDOT has prepared and distributed revised proportional stakeholder costs in 
+accordance with the SUA cost. ECN will engage in a contract with MnDOT to assume financial 
+responsibility for the remaining amount that exceeds MnDOT’s appropriated maintenance fund.  
+Once approved by the Department of Administration, the Motorola SUA for 2021-2025 will be formally 
+executed.  ECN and MnDOT have made a commitment to Motorola to make every effort to complete 
+this on or before November 20, 2020. 
+Thank you sincerely for your determination in working together to ensure that we have achieved a 
+successful outcome to this lengthy, but critically important initiative for public safety communications in 
+Minnesota.   
+If you have any questions about this process please contact either Tim Lee at MnDOT (651-234-7963) or 
+Jim Stromberg at ECN (651-201-7557). 
+ARMER SERVICES and SUA II PRICING 
+Detail/Description 
+2021 
+2022 
+2023 
+2024 
+2025 
+Five Year Total 
+ 
+TECHNICAL SUPPORT 
+Technical Support is available 7 days a week, 24 hours a day, as defined in Section X. The Motorola System Support Center's staff will work with your local service 
+organization or technicians to handle questions related to your Motorola 2-way communications system. If the problem is beyond the scope of the SSC's staff, 
+they will contact key personnel who are involved with the design, development, and manufacture of your communication products for resolution. 
+Total Technical Support 
+$148,759 
+$158,040 
+$167,490 
+$177,135 
+$186,964 
+$838,388 
+ 
+SERVICES 
+Dedicated FSO: Motorola will provide one dedicated field service technician, who is specifically trained and qualified to support the MN Metro/ARMER Radio 
+System. The assigned technician will expend his/her full 40-hour workweek performing corrective maintenance on appropriate project work assigned as agreed 
+to by Motorola and the System Owners with direction from the MN Metro/ARMER System Administrator. 
+Total Dedicated FSO 
+$235,286 
+$239,992 
+$244,791 
+$249,700 
+$254,689 
+$1,224,458 
+ 
+Security Update Service: Security Update Service provides updates of the latest anti-virus definition, intrusion signature files and OS Patches that have been 
+pre-tested on a Motorola test system to ensure they do not interfere with radio system functionality. Pre-tested updates will be made available as necessary, 
+however, an outbreak of malicious code that is deemed a significant threat to the Astro 25 radio network will cause a priority test cycle to occur which will 
+release anti-virus definition updates in a shorter cycle. 
+Total Security Update Service 
+$61,072 
+$62,904 
+$64,791 
+$66,735 
+$68,737 
+$324,239 
+ 
+Services Total 
+$445,117 
+$460,936 
+$477,072 
+$493,570.00 
+$510,390 
+$2,387,085 
+ 
+SOFTWARE 
+SUA II:  Includes All Software and Hardware as required per contract for upgrades and life cycle replacement, and professional services required for both software 
+and hardware implementation. 
+SUA II Total 
+$5,793,155 
+$5,826,843 
+$5,861,542 
+$5,897,282 
+$5,934,093 
+$29,312,915 
+ 
+Annual Contract Totals 
+$6,238,272 
+$6,287,779.00 
+$6,338,614 
+$6,390,852 
+$6,444,483 
+$31,700,000 
+ 
+Motorola SUAII Cost  shares for Calendar year 2021
+SUAII Contract Total: 
+$6,238,272.00
+ MESB
+Agency
+Infrastructure SUAII cost
+MESB
+$0.00
+Metro Transit
+$35,273.63
+HCMC
+$8,900.16
+MRCC East
+$6,260.47
+Edina
+$4,173.65
+MAC
+$6,587.50
+Ridgeview
+$5,053.55
+St Louis Park
+$4,173.65
+Bloomington
+$5,606.41
+Eden Prairie
+$18,680.23
+U of M
+$5,933.44
+Anoka County
+$87,609.94
+Carver County
+$30,494.32
+Chisago County
+$59,756.78
+Dakota County
+$100,201.77
+Hennepin County
+$284,852.76
+Isanti County
+$9,956.04
+Ramsey County
+$118,088.12
+Scott County
+$60,660.14
+Washington County
+$117,299.15
+Minneapolis
+$78,972.27
+Total
+$1,048,533.97
+State ( Includes any SW users)
+Agency
+Infrastructure SUAII cost
+ARMER Infrastructure (MnDOT)
+$4,144,534.09
+MnDOT
+$12,598.67
+State Patrol
+$54,857.21
+DOC 
+$90,223.23
+MSOP
+$16,643.26
+North Memorial
+$8,900.16
+Allina(Lakeview EMS, New River Ambulance)
+$14,179.55
+Mayo/Gold Cross
+$15,261.82
+Sanford
+$7,467.40
+Total
+$4,364,665.40
+Motorola SUAII Cost  shares for Calendar year 2021
+SUAII Contract Total: 
+$6,238,272.00
+Central MN Region
+SUAII
+Agency
+Infrastructure SUAII cost
+CM Regional Equipment
+$3,846.62
+St Cloud
+$20,387.23
+Stearns County
+$56,109.60
+Benton County
+$5,003.68
+Sherburne County
+$29,615.89
+Wright County
+$32,456.49
+Kandiyohi County
+$18,278.41
+Meeker County
+$14,003.57
+Grant County
+$3,997.67
+Douglas County
+$10,258.14
+Stevens County
+$3,972.74
+Pope County
+$4,274.84
+Wadena County
+$3,293.75
+Otter Tail County
+$22,324.47
+Morrison County 
+$12,343.50
+Mille Lacs County
+$11,589.72
+Wilkin County
+$6,410.05
+Traverse County
+$0.00
+Big Stone County
+$0.00
+Todd County
+$4,500.68
+Swift County
+$6,410.05
+Total
+$269,077.08
+South East MN Region
+SUAII
+Agency
+Infrastructure SUAII cost
+Olmsted County
+$28,835.71
+Rochester
+$0.00
+Goodhue County
+$40,072.00
+Wabasha County
+$5,154.73
+Winona County
+$14,204.48
+Houston County
+$3,620.78
+Fillmore County
+$4,274.84
+Mower County
+$12,922.76
+Freeborn County
+$20,614.53
+Dodge County
+$3,620.78
+Rice County
+$17,546.62
+Steele County
+$13,875.98
+Rice/Steel Dispatch
+$19,560.12
+Total
+$184,303.35
+Motorola SUAII Cost  shares for Calendar year 2021
+SUAII Contract Total: 
+$6,238,272.00
+South Central MN Region
+Agency
+Infrastructure SUAII cost
+Regional Radio Board
+$6,838.27
+McLeod County
+$12,469.62
+Hutchinson
+$3,293.75
+Sibley County
+$10,357.86
+Nicollet County
+$5,154.73
+LeSueur County
+$12,318.57
+Brown County
+$10,709.82
+Blue Earth County
+$8,121.45
+Watonwan Caounty
+$3,293.75
+Waseca County
+$18,628.90
+Martin County
+$3,947.81
+Faribault County
+$4,827.70
+Total
+$99,962.23
+South West MN Region
+Agency
+Infrastructure SUAII cost
+SW MN Emergency Communications Board
+$27,050.98
+Murray County
+$3,620.78
+Laq Qui Parle County
+$0.00
+Chippewa County
+$10,030.83
+Renville County
+$10,030.83
+Yellow Medicine County
+$10,357.86
+Redwood County
+$4,274.84
+Lincoln County
+$2,740.88
+Lyon County
+$10,684.89
+Pipestone County
+$3,947.81
+Cottonwood County
+$3,947.81
+Rock County
+$0.00
+Nobles County
+$3,947.81
+Jackson County
+$6,410.05
+Total
+$97,045.37
+Motorola SUAII Cost  shares for Calendar year 2021
+SUAII Contract Total: 
+$6,238,272.00
+North East MN Region
+Agency
+Infrastructure SUAII cost
+Itasca County
+$6,361.66
+Kanabec County
+$4,173.65
+Pine County
+$3,947.81
+Cass County
+$21,343.38
+Crow Wing County
+$17,397.04
+Atkin County
+$10,910.73
+Koochiching County
+$3,293.75
+Carlton County
+$5,908.51
+St Louis County
+$48,145.06
+City of Duluth
+$7,465.93
+Lake County
+$3,947.81
+Cook County
+$3,721.97
+Leech Lake Band of Ojibwe
+$3,620.78
+Total
+$140,238.08
+North West MN Region
+Agency
+Infrastructure SUAII cost
+Hubbard County
+$3,947.81
+Polk County 
+$5,053.55
+Becker County
+$5,531.62
+Beltrami County
+$5,707.60
+White Earth
+$0.00
+Clearwater County
+$0.00
+Pennington
+$3,293.75
+RRRDC
+$10,208.28
+Clay County
+$703.92
+Cass County ND
+$0.00 Under warrenty 2021
+Total
+$34,446.52
+$6,238,272.00
+This material is provided as general information and is not a substitute for legal advice. Consult your attorney for advice concerning specific situations. 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+145 University Ave. West 
+www.lmc.org 
+4/22/2020 
+Saint Paul, MN 55103-2044 
+(651) 281-1200 or (800) 925-1122 
+© 2020 All Rights Reserved 
+INFORMATION MEMO 
+Holding Public Hearings Remotely 
+ 
+ 
+The COVID-19 public health emergency and Gov. Walz’s Executive Order 20-20 (“Stay Home MN”) 
+requires city councils to make alternative meeting plans and still comply with the Open Meeting Law. 
+Consult the LMC information memo City Options for Meeting Remotely for a discussion of legal 
+requirements and technology options. At the same time, cities must comply with statutes, charter 
+provisions, and ordinances requiring public hearings for specific action items, such as land use 
+applications, street vacations, or special assessments. This memo suggests strategies for holding 
+public hearings while also using remote meeting technology. 
+RELEVANT LINKS: 
+I. 
+Steps for holding remote public hearings 
+ 
+Statutes, charter provisions, and ordinances that require public hearings 
+generally assume that the city council, or other city board, are meeting and 
+taking public comments in person. There is little direction on how to 
+conduct a public hearing when a city board meets remotely. 
+ 
+When meeting remotely, cities have flexibility in how they will take public 
+comments. Cites can take comments prior to and during the hearing. Cites 
+can require those wishing to address the council during the hearing to sign 
+up prior to the hearing. 
+ 
+This memo provides some suggestions for taking public comments while 
+holding remote public hearings. For specific advice, cities should work 
+closely with their city attorney. 
+ 
+A. Before the public hearing 
+ 
+1. 
+Identify the law that requires a public hearing 
+ 
+Public hearing requirements are found in state statutes, home rule charter 
+provisions, and city ordinances. Cities should consult those sources directly 
+to find the specific procedural requirements that apply for the public hearing 
+in question. 
+Minn. Stat. § 412.851. 
+Here are some actions that require public hearings: 
+Minn. Stat. § 414.033, subd. 
+2b. 
+Minn. Stat. § 429.031, subd. 
+1. 
+Minn. Stat. § 429.061. 
+ 
+Minn. Stat. § 444.18, subd. 3. 
+• Street vacation. 
+• Annexation by ordinance.  
+• Local improvement projects that will be paid for with special 
+assessments. 
+• When special assessments are made to property. 
+• Purchase and improvement of waterworks, sewers, drains, and storm 
+sewers by storm sewer improvement districts.  
+RELEVANT LINKS: 
+League of Minnesota Cities Information Memo:  
+ 
+4/22/2020  
+Holding Public Hearings Remotely 
+ 
+Page 2 
+ 
+ 
+Minn. Stat. § 469.003, subd. 
+2. 
+ 
+Minn. Stat. § 469.093, subd. 
+1. 
+ 
+Minn. Stat. § 469.065, subd. 
+2. 
+Minn. Stat. § 469.105, subd. 
+2. 
+Minn. Stat. § 469.107, subd. 
+2. 
+ 
+Minn. Stat. § 340A.602. 
+Minn. Stat. § 275.065, subd. 
+6. 
+Minn. Stat. § 462.357, subd. 
+3. 
+Minn. Stat. § 462.358, subd. 
+3b. 
+Minn. Stat. § 462.3595, subd. 
+2. 
+Minn. Stat. § 410.12, subd. 7. 
+Minn. Stat. § 462.355, subd. 
+4. 
+• Adoption of a housing redevelopment authority (HRA) enabling 
+resolution.  
+• Adoption of an economic development authority (EDA) enabling 
+resolution.  
+• Sale of port authority land.  
+• Sale of EDA land. 
+• Increase of levy for an EDA. 
+• Continuation of a municipal liquor store after a net loss for two 
+of three consecutive years. 
+• Truth-in-Taxation Law processes. 
+• Adoption or amendment of a zoning ordinance. 
+• Subdivision applications. 
+• Granting of a conditional use permit.  
+• Adoption of a charter amendment by ordinance. 
+• Certain interim ordinances. 
+ 
+ 
+Take note of any notice requirements in the applicable statute, charter 
+provision, or ordinance. Common notice requirements are publishing and/or 
+mailing notice for a specified period prior to the hearing. 
+ 
+Also take note of any timing requirements in the statute, charter provision, 
+or ordinance. There may be a deadline for the city council or commission to 
+act. 
+Minn. Stat. § 15.99, subd. 
+2(a). 
+Minn. Stat. 462.358, subd. 
+3b. 
+ 
+For written requests related to zoning and other land use applications, cities 
+generally have 60 days to make a decision. For subdivision applications, 
+cities generally have 120 days to make a decision on the preliminary plat. 
+Public hearings are required on these issues. Keep this in mind when 
+scheduling hearings. If the city does not act by the deadline, the application 
+may be automatically approved. 
+Minn. Stat. § 13D.021. 
+Cities must follow all the requirements of the Open Meeting Law to hold a 
+public hearing by telephone or other electronic means. The LMC 
+information memo City Options for Meeting Remotely covers these 
+requirements and provides template documents the city can use to establish 
+the authority to meet remotely. It also provides background information on 
+different technology solutions for remote meetings. 
+ 
+2. 
+Provide notice of hearing 
+ 
+First, check the applicable statute, charter provision, or ordinance to find out 
+the type and method of public notice. Sometimes, specific content is 
+required in the notice. 
+ 
+Notice should also include the following, per the Open Meeting Law: 
+RELEVANT LINKS: 
+League of Minnesota Cities Information Memo:  
+ 
+4/22/2020  
+Holding Public Hearings Remotely 
+ 
+Page 3 
+ 
+Minn. Stat. 13D.021, subd. 4. 
+• The regular meeting location. 
+• The fact that some members may participate by telephone or other 
+electronic means. 
+• All of the information necessary for the public to monitor the 
+meeting from a remote location. This could be a call-in line, access 
+code, link, or password that will allow them to monitor the meeting. 
+ 
+Notices should contain clear and complete information on how the city will 
+accept public comments and any deadlines for submitting pre-hearing 
+comments. All methods the city chooses for accepting comments should be 
+clearly communicated to the public. 
+ 
+Consider methods of notice beyond what is legally required. Cities can use 
+the city website, newsletters, email subscription lists, or social media to 
+provide notice. This ensures that more residents get notice of the hearing and 
+have the ability to comment, if desired. 
+ 
+3. 
+Taking comments before the hearing 
+ 
+State laws generally don’t provide a specified way of handling public 
+comments. 
+ 
+ 
+Cities should consider taking public comments prior to the public hearing. 
+Several methods of comment can be made available, including mail, email, 
+or voicemail. The methods should be communicated in the public notice. 
+ 
+Consider a deadline for submitting comments prior to the date of hearing. 
+That way, staff have time to prepare and distribute comments to 
+councilmembers in time for consideration before the hearing. This may 
+provide a cleaner method of taking comment, as the council will have all 
+comments available to it before the hearing begins. 
+ 
+All comments received should be attached to the public record and 
+maintained by the city pursuant to its records retention schedule. 
+ 
+If it is preferred to hold hearings in person, cities can consider rescheduling 
+or delaying public hearings that are not urgent or subject to any deadlines for 
+action. It is assumed cities will be able to hold in-person public hearings 
+once the pandemic ends. 
+ 
+B. Holding the public hearing 
+ 
+1. 
+Taking comments during the hearing 
+ 
+In addition to taking comments prior the hearing, a city board should also 
+provide a method to receive public comments during the hearing. Good 
+meeting management is essential to ensure an orderly presentation of 
+comments to the council. 
+RELEVANT LINKS: 
+League of Minnesota Cities Information Memo:  
+ 
+4/22/2020  
+Holding Public Hearings Remotely 
+ 
+Page 4 
+ 
+ 
+During the hearing, a staff person controlling the meeting technology 
+platform can control who can talk at what time, and call on persons as they 
+come up on the agenda to speak. 
+ 
+Alternatively, the city board can require that those wishing to make 
+comments during the meeting make an appointment to do so. The staff 
+person controlling the meeting technology then gives those persons a 
+number to call or an invitation to join the meeting at a certain time. The staff 
+person can also call on persons based on their appointments. 
+ 
+Minn. Stat. 13D.021, subd. 4. 
+ 
+If time allows, a city can continue a public hearing to a future time. Doing so 
+will allow additional time for the public to provide input based on the 
+information presented at the original hearing. 
+ 
+2. 
+Making a good record 
+ 
+All comments received prior to the hearing should be distributed to 
+councilmembers or board members and made part of the public hearing 
+record. Cities may want to acknowledge receipt of comments made prior to 
+the hearing to ensure that people know their comments were received. 
+ 
+During the meeting, presiding officers may want to reiterate that all 
+comments received prior to the hearing were distributed to all 
+councilmembers. All comments received during the hearing should be 
+distributed to all councilmembers. 
+ 
+All comments received should be maintained in the city’s records and 
+maintained per the city’s records retention schedule. Comments will likely 
+be classified as public data per the Minnesota Government Data Practices 
+Act. Cities should have an orderly process for collecting and maintaining all 
+comments in the event someone makes a data request for this information. 
+ 
+II. Conclusion 
+ 
+Cities are still required to have public hearings when required by state law, 
+charter provision, or ordinance. Cities should ensure that they comply with 
+all notice requirements of the law that mandates the public hearing as well as 
+the Open Meeting Law. Notices should also include all of the information 
+needed for residents to make comments regarding the public hearing. 
+ 
+Cities should be guided by the goals of providing as much notice as possible 
+and flexibility in the methods by which they will receive public comments 
+for the hearing. 
+ 
+From:
+Gieseke, Shari
+To:
+Micah Myers; Larson, Brandon; Lahr, Kristen
+Subject:
+Teams Chat Moderator to help with Attendance and Voting?
+Date:
+Friday, June 5, 2020 9:42:34 AM
+Attachments:
+image013.png
+image014.png
+O&O Role Call - May 2020.pdf
+Users Role Call - May 2020.pdf
+image001.png
+image002.png
+image003.png
+image008.png
+Central Region, I have a couple of observations and requests for virtual meetings going forward. Assigning a Teams Chat
+Moderator would alleviate most of my concerns.
+ 
+Chat does not appear in Teams Recordings
+FYI: I am not finding a way for ‘Chat’ to appear in the meeting recordings. The meeting recording is what we would
+supply for a Data Request. I read that ‘Chat’ has to be exported by Admins, so the Regional Coordinator team would
+have to escalate such requests to IT Techs.
+ 
+REQUEST: Attendance Standard Policy
+Voiced on the Recording = Attendance
+Can we make it a policy going forward that for people to be counted in the meetings (especially that count towards the
+Attendance Standard) that someone has to voice on the recording that those individuals are on? If everything is voiced
+in the meeting recording, then we would have a complete recording for data purposes.
+ 
+Voiced on the Recording = Roll Call Voting Response
+If the Committee member is making their vote via Chat, then a moderator should be speaking their vote on the
+recording. I do not think it is safe for myself to go back to the Chat window to try to guess the time of the vote when the
+corresponding question is not written in Chat.
+ 
+Non-Committee Members confirming a Committee member’s attendance
+FYI, Stephanie has two accounts where she has said the Committee members are on when she’s not a Committee
+member on those Committees. I’m curious what the Robert’s Rules responsibilities are for a Committee member
+regarding their attendance.
+ 
+REQUEST: Teams Chat Moderator
+Can we please assign a Teams Chat Moderator? Every webinar that I have been on has a moderator who asks the
+questions from Chat. It has not been working super well to have the active meeting participants responsible to watch
+Chat (See Chat images below). I cannot be trying to do four things at the same time trying to listen and type a meeting
+while reading and thinking about Chat. We already have a situation where the recording did not get started on time, so I
+must be focused on my job of recording the minutes. I would suggest the Vice Chairs monitor the Chat, or assign
+someone else if they are busy with meeting responsibilities.
+ 
+These individuals were missed from the Chair’s Roll Call (Attached):
+Stephanie, a non-member was chatting at 10:04 a.m. that Josh Case was on, but Stephanie first voiced that Josh Case
+was on during Guest Roll Call, so it did not make the User’s Roll Call list.
+ 
+Jody was not voiced on Roll Call, but the group “discovered” that she was on 39 minutes into the meeting when Ace
+typed in Chat:
+ 
+I saw Tina’s Chat and I announced Jon during Guest Roll Call, so he did make the Roll Call list.
+ 
+Shari Gieseke
+I.T. Admin Support Technician
+400 2nd St. So.
+St. Cloud, MN  56301
+(320) 650-3301
+shari.gieseke@ci.stcloud.mn.us
+ 
+ 
+For the latest COVID-19 information visit https://www.ci.stcloud.mn.us/COVID19
+ 
+ 
+ 
+ 
+From: Lahr, Kristen <Kristen.Lahr@co.stearns.mn.us> 
+Sent: Thursday, May 21, 2020 3:45 PM
+To: Gieseke, Shari <Shari.Gieseke@ci.stcloud.mn.us>; Micah Myers <Micah.Myers@ci.stcloud.mn.us>
+Cc: Larson, Brandon <Brandon.Larson@ci.stcloud.mn.us>
+Subject: RE: NG911 too ---RE: O&O/User 2020 Membership Lists for Roll Call
+ 
+The Sender "Lahr, Kristen" is external to the St. Cloud email system.  Use caution when replying and opening
+attachments/hyperlinks.  St. Cloud IT Dept.
+I think we can believe them.   For the most part they are both in the same room when this happens. 
+I really think that most people just don’t enjoy speaking on conference calls.   It’s hard and
+awkward and people do their best.   We can always tighten things up as we go if we see a need. 
+ 
+No sweat if I’m over ruled on this though.
+ 
+Kristen Lahr
+o:  320.259.3727 | m:  320.290.9151
+ 
+From: Gieseke, Shari <Shari.Gieseke@ci.stcloud.mn.us> 
+Sent: Thursday, May 21, 2020 3:05 PM
+To: Lahr, Kristen <Kristen.Lahr@co.stearns.mn.us>; Micah Myers <Micah.Myers@ci.stcloud.mn.us>
+Cc: Larson, Brandon <Brandon.Larson@ci.stcloud.mn.us>
+Subject: NG911 too ---RE: O&O/User 2020 Membership Lists for Roll Call
+ 
+I’m listening to the NG911 Committee call and I’m thinking the same incident occurred. It really sounds like it was
+CENTRAL MN OWNERS AND OPERATORS COMMITTEE
+Current Membership (5/14/2020)
+Name
+Title
+Agency/Company
+Status
+Present
+Members and Alternates
+Larson, Brandon
+Radio Programmer
+City of St. Cloud
+Delegate
+Myers, Micah
+IT Director
+City of St. Cloud
+Alternate
+Fraley, Julie
+Divisions Supervisor
+Benton County
+Delegate
+Burski, John
+Network & Systems Administrator
+Benton County
+Alternate
+Brown, Mark
+Sheriff
+Big Stone County
+Delegate
+Kandiyohi County
+See Kandiyohi County Rep
+Big Stone County
+Alternate
+Egan, Tom
+Communications Supervisor
+Douglas County
+Delegate
+Smith, Kevin
+Dispatcher
+Douglas County
+Alternate
+Wendt, Jason
+System Admin/Dispatch/Records
+Grant County
+Delegate
+Combs, Jon
+Chief Deputy
+Grant County
+Alternate
+Bonnema, Ace
+Emergency Mngmt Deputy Director
+Kandiyohi County
+Delegate
+Norstegard, Jody
+Communication Supervisor
+Kandiyohi County
+Alternate
+Cruze, Brian
+Sheriff
+Meeker County
+Delegate
+Celander, Randy
+Communication Specialist
+Meeker County
+Alternate
+Beckstrom, Andy
+PSAP Manager
+Mille Lacs County
+Delegate
+Erikson, Bret
+Sheriff Deputy
+Mille Lacs County
+Alternate
+Ingram-MacKissock, Victoria Emer Mgt/Comm Supervisor
+Morrison County
+Delegate
+Holman, Jane
+Lead Dispatcher
+Morrison County
+Alternate
+Karlgaard, Jason
+Dispatch Supervisor
+Otter Tail County
+Delegate
+Vandyke, Keith
+Administrative Lt
+Otter Tail County
+Alternate
+Page 1
+CENTRAL MN OWNERS AND OPERATORS COMMITTEE
+Current Membership (5/14/2020)
+Name
+Title
+Agency/Company
+Status
+Present
+Members and Alternates (Continued)
+Brecht, Nathan
+Chief Deputy
+Pope County
+Delegate
+Riley, Tim
+Sheriff
+Pope County
+Alternate
+Kristen Lahr
+System Support Specialist
+Stearns County
+Delegate
+Lieser, Mary
+Public Safety Services Supervisor
+Stearns County
+Alternate
+Greiner, Dona
+Emergency Mngmt Director
+Stevens County
+Delegate
+Koehler, Brian
+Dispatch Manager
+Stevens County
+Alternate
+McGeary, Bill
+Emergency Manager
+Swift County
+Delegate
+Holtz, John
+Sheriff
+Swift County
+Alternate
+Booker, Sarah
+Dispatch Supervisor
+Todd County
+Delegate
+Wisniewski, Michael
+Emergency Mgmt/MIS
+Todd County
+Alternate
+Siegel, Lynn
+Emergency Manager
+Traverse County
+Delegate
+Wright, Trevor
+Sheriff
+Traverse County
+Alternate
+Wheeler, Tyler
+Emergency Manager
+Wadena County
+Delegate
+Savaloja, Bryan
+Deputy
+Wadena County
+Alternate
+Fiedler, Rick
+Sheriff
+Wilkin County
+Delegate
+Porter, Billijo
+PSAP Manager
+Wilkin County
+Alternate
+Hansen, Seth
+Deputy Director of EM
+Wright County
+Delegate
+Dubois, Haley
+Dispatch Supervisor
+Wright County
+Alternate
+Page 2
+CENTRAL MN USER COMMITTEE  (JOINT WITH OWNERS AND OPERATORS)
+Current Membership (Revised 5/14/2020)
+PLEASE REVIEW YOUR INFORMATION, MAKE ANY CHANGES IF NECESSARY AND INITIAL UNDER "PRESENT" COLUMN.
+IF YOU ARE NOT ON THE LIST, PLEASE ADD YOUR NAME AND INFORMA
+ 
+ 
+ 
+ 
+Entity
+Name
+Title
+Agency
+Representing
+Discipline
+Present
+MEMBERS
+Wrobbel, Dean
+Fire Chief
+St. Cloud Fire Department
+City of St. Cloud
+Fire Service
+Furan Super,Jennifer Assoc. Director of Public Safety
+St. Cloud State University
+City of St. Cloud
+Public Safety
+Zabinski, Tom
+Public Works Maintenance Superviso
+St. Cloud Public Works
+City of St. Cloud
+Public Works
+Williams, Steve
+IT and Data Manager
+Metro Bus
+City of St. Cloud
+Transit Authority
+Schmidt, Jaime
+Security & Safety Supervisor
+CentraCare St. Cloud HospitaCity of St. Cloud
+EMS
+Fraley, Julie
+Divisions Supervisor
+Benton County Sheriff's OfficBenton County
+Law Enf.
+Beise, Perry
+Police Chief
+Sauk Rapids Police
+Benton County
+Law Enf.
+Fleming, Jason
+Fire Marshall
+Sauk Rapids Fire
+Benton County
+Fire Service
+OPEN
+Benton County
+OPEN
+Benton County
+Brown, Mark
+Sheriff
+Big Stone County
+Big Stone County
+Law Enf.
+Maatz, John
+Deputy Sheriff
+Big Stone County
+Big Stone County
+Law Enf.
+Kandiyohi County
+See Kandiyohi County Rep
+Kandiyohi County
+Big Stone County
+Dispatch
+OPEN
+Big Stone County
+OPEN
+Big Stone County
+Henrion, Mike
+Dispatcher
+Douglas County
+Douglas County
+Dispatch
+Smith, Kevin
+Dispatcher
+Douglas County
+Douglas County
+Dispatch
+CENTRAL MN USER COMMITTEE  (JOINT WITH OWNERS AND OPERATORS)
+Current Membership (Revised 5/14/2020)
+PLEASE REVIEW YOUR INFORMATION, MAKE ANY CHANGES IF NECESSARY AND INITIAL UNDER "PRESENT" COLUMN.
+IF YOU ARE NOT ON THE LIST, PLEASE ADD YOUR NAME AND INFORMA
+ 
+ 
+ 
+ 
+Entity
+Name
+Title
+Agency
+Representing
+Discipline
+Present
+MEMBERS
+OPEN
+Douglas County
+OPEN 
+Douglas County
+OPEN
+Douglas County
+Lindquist, Tina
+Grant County Emergency Manager
+Grant County
+Grant County
+EM
+Wendt, Jason
+Dispatcher/Records
+Grant County
+Grant County
+Dispatch
+Grant County
+Grant County
+OPEN
+Grant County
+Norstegard, Jody
+Communications Supervisor
+Kandiyohi County Sheriff's OKandiyohi County
+Dispatch
+Bonnema, Ace
+Emergency Mngmt Deputy Director Kandiyohi County Emerg Mg Kandiyohi County
+Emerg Mgmt
+Pattison, Keith
+EMS
+Carris Health
+Kandiyohi County
+EMS
+Hanson, Frank
+Fire/EMS
+Willmar Fire Department
+Kandiyohi County
+Fire Service
+Felt, Jim
+Police/EMS
+Willmar Police Department
+Kandiyohi County
+Law Enf.
+Celander, Randy
+Communications Specialist
+Meeker County
+Meeker County
+Technical
+Christianson, Rich
+Dispatcher
+Meeker County
+Meeker County
+Dispatcher
+Miller, Sara
+Detective
+Meeker County Sheriff's OfficMeeker County
+Law Enf.
+CENTRAL MN USER COMMITTEE  (JOINT WITH OWNERS AND OPERATORS)
+Current Membership (Revised 5/14/2020)
+PLEASE REVIEW YOUR INFORMATION, MAKE ANY CHANGES IF NECESSARY AND INITIAL UNDER "PRESENT" COLUMN.
+IF YOU ARE NOT ON THE LIST, PLEASE ADD YOUR NAME AND INFORMA
+ 
+ 
+ 
+ 
+Entity
+Name
+Title
+Agency
+Representing
+Discipline
+Present
+MEMBERS
+Case, Josh
+Deputy
+Litchfield Fire
+Meeker County
+Law Enf.
+OPEN
+Meeker County
+Hunt, Brad
+Captain/Jail Admin
+Mille Lacs County
+Mille Lacs County
+Law Enf.
+Erickson, Bret
+Sheriff's Deputy
+Mille Lacs County
+Mille Lacs County
+Law Enf.
+Beckstrom, Andy
+PSAP Manager
+Mille Lacs County
+Mille Lacs County
+Dispatch
+OPEN
+Mille Lacs County
+OPEN
+Mille Lacs County
+Ingram-MacKissock, Victoria Emergency Mgt/Communications SuMorrison County
+Morrison County
+Emerg Mgmt
+Holman, Jane
+Lead Dispatcher
+Morrison County
+Morrison County
+Dispatch
+Boone, Pat
+Fire Emergency Service's CoordinatoCamp Ripley
+Morrison County
+EMS
+Nieman, Mike
+Fire Chief
+Little Falls Fire
+Morrison County
+Fire Service
+Seelen, Craig
+Police Officer
+Little Falls Police Dept
+Morrison County
+Law Enf.
+Karlgaard, Jason
+Dispatch Supervisor
+Otter Tail County
+Otter Tail County
+Dispatch
+Lange, Michael
+Deputy Sheriff
+Otter Tail County
+Otter Tail County
+Law Enf.
+Ebeling, Mark
+Director of EMS
+Perham Health
+Otter Tail County
+EMS
+Picchiarini, Marco
+Dispatcher
+Otter Tail County
+Otter Tail County
+Dispatch
+CENTRAL MN USER COMMITTEE  (JOINT WITH OWNERS AND OPERATORS)
+Current Membership (Revised 5/14/2020)
+PLEASE REVIEW YOUR INFORMATION, MAKE ANY CHANGES IF NECESSARY AND INITIAL UNDER "PRESENT" COLUMN.
+IF YOU ARE NOT ON THE LIST, PLEASE ADD YOUR NAME AND INFORMA
+ 
+ 
+ 
+ 
+Entity
+Name
+Title
+Agency
+Representing
+Discipline
+Present
+MEMBERS
+OPEN
+Otter Tail County
+Law Enf.
+Riley, Tim
+Sheriff
+Pope County
+Pope County
+Law Enf.
+Brecht, Nathan
+Chief Deputy
+Pope County
+Pope County
+Law Enf.
+OPEN
+Pope County
+OPEN
+Pope County
+OPEN
+Pope County
+McIntyre, Paul
+Chair of Committee
+Mayo Clinic Ambulance
+Stearns County
+EMS
+Lahr, Kristen
+System Support Specialist
+Stearns County
+Stearns County
+Technical
+Hughes, Jim
+Police Chief
+Sartell Police
+Stearns County
+Law Enf.
+Tufte, Erin
+Emergency Manager
+Stearns County
+Stearns County
+Emerg Mgmt
+Burke, Michele
+Stearns County Sheriff's Office
+Stearns County
+Stearns County
+PSAP
+Dingman, Jason
+Sheriff
+Stevens County Sheriff's Offic
+Stevens County
+Law Enf.
+Greiner, Dona
+Emergency Mgmt Director
+Stevens County Sheriff's Offic
+Stevens County
+Emerg Mgmt
+Koehler, Brian
+Dispatch Manager
+University of Morris
+Stevens County
+Dispatch
+Fischer, Josh
+Ambulance Director
+Stevens County Ambulance SStevens County
+EMS
+Howe, Justin
+Morris Police Department
+Stevens County
+Fire Service
+CENTRAL MN USER COMMITTEE  (JOINT WITH OWNERS AND OPERATORS)
+Current Membership (Revised 5/14/2020)
+PLEASE REVIEW YOUR INFORMATION, MAKE ANY CHANGES IF NECESSARY AND INITIAL UNDER "PRESENT" COLUMN.
+IF YOU ARE NOT ON THE LIST, PLEASE ADD YOUR NAME AND INFORMA
+ 
+ 
+ 
+ 
+Entity
+Name
+Title
+Agency
+Representing
+Discipline
+Present
+MEMBERS
+Holtz, John
+Sheriff
+Swift County Sheriff's Office Swift County
+Law Enf.
+Lee, Rob
+Swift County IT
+Swift County IT
+Swift County
+IT
+McGeary, Bill
+Emergency Manager
+Swift County EMS
+Swift County
+EM
+Schreck, Mark
+Benson Fire
+Swift County
+Fire Service
+OPEN
+Swift County
+Booker, Sarah
+Dispatch Supervisor
+Todd County Sheriff's Office Todd County
+Dispatch
+Wisniewski, Michae Emergency Manager
+Todd County Emergency ManTodd County
+Emerg Mgmt
+Todd County
+Todd County
+Todd County
+Siegel, Lynn
+Emergency Manager
+Traverse County
+Traverse County
+Emerg. Mgr.
+Wright, Trevor
+Sheriff
+Traverse County
+Traverse County
+Law Enf.
+Bock, Lee
+Wheaton FD
+Traverse County
+Fire Service
+OPEN
+Traverse County
+OPEN
+Traverse County
+Savaloja, Bryan
+Sergeant
+Wadena County Sheriff's OffiWadena County
+Law Enf.
+CENTRAL MN USER COMMITTEE  (JOINT WITH OWNERS AND OPERATORS)
+Current Membership (Revised 5/14/2020)
+PLEASE REVIEW YOUR INFORMATION, MAKE ANY CHANGES IF NECESSARY AND INITIAL UNDER "PRESENT" COLUMN.
+IF YOU ARE NOT ON THE LIST, PLEASE ADD YOUR NAME AND INFORMA
+ 
+ 
+ 
+ 
+Entity
+Name
+Title
+Agency
+Representing
+Discipline
+Present
+MEMBERS
+Wheeler, Tyler
+Deputy
+Wadena County Sheriff's OffiWadena County
+Law Enf.
+Weniger, Donald
+Firefighter
+Verndale Fire Department
+Wadena County
+Fire Service/EMS
+OPEN
+Wadena County
+OPEN 
+Wadena County
+Fiedler, Rick
+Sheriff
+Wilkin County Sheriff's Offic Wilkin County
+Law Enf.
+Porter, Billijo
+PSAP Manager
+Wilkin County   
+Wilkin County
+Law Enf.
+OPEN
+Wilkin County
+OPEN
+Wilkin County
+OPEN
+Wilkin County
+Hansen, Seth
+Deputy Director of EM
+Wright County Sheriff's OfficWright County
+Emerg. Mgr.
+Dubois, Haley
+Dispatch Supervisor
+Wright County Sheriff's OfficWright County
+Dispatch
+Ward, Richard
+Deputy Director of EM
+Wright County Sheriff's OfficWright County
+Emerg. Mgr.
+Nevala, Richard
+Dispatcher 
+Wright County Sheriff's OfficWright County
+Dispatch
+Vanlith, Bob
+Wright County
+Fire Service
+Greater Minnesota Regional Radio Board  
+Statewide Radio Board Member Selection 
+SECB Standard 8.1.0 
+Approval 11/30/2017 
+ 
+1 
+Allied Radio Matrix for Emergency Response  
+Standards, Protocols, Procedures 
+ 
+ 
+Document Section 8 
+Miscellaneous 
+Status: Complete 
+ 
+SECB Standard Number 
+GOV-3 
+Legacy Standard Number 
+8.1.0 
+Standard Title 
+Greater Minnesota Regional 
+ESB/ECB Statewide 
+Emergency Communications 
+Board Member Selection 
+Date Established 
+10/01/2010 
+SECB Approval: 11/30/2017 
+Replaces Document Dated 
+01/24/201108/10/2017 
+Date Revised/Reviewed 
+08/10/201705/04/2020 
+ 
+1.  Purpose or Objective 
+ 
+The purpose of this standard is to define the process for selecting a regional radio 
+representative to serve on the Statewide Emergency Communications Board (SECB) 
+representing Regional Emergency Services/Emergency Communications Boards (ESB/ECBs) 
+in greater Minnesota. 
+ 
+2.  Technical Background 
+ 
+ Capabilities 
+ Constraints 
+ 
+3.  Operational Context 
+ 
+The formation of the SECB included a member intended to represent rRegional ESB/ECBs in 
+Greater Minnesota. The SECB is charged with coordinating the appointment process to ensure 
+representation from throughout the state. 
+ 
+All regions of the state have been defined; rRegional ESB/ECBs are established and functioning 
+providing regional governance in every region. The following list includes the defined regions 
+in Greater Minnesota, their membership, and date of organization. 
+ 
+Greater Minnesota Region  
+                              Represents  
+   Formed: 
+Central Minnesota Regional ESB 
+ 
+        19 counties & 1 city 
+ June 7, 2007 
+Northwest Minnesota Regional ECB 
+        14 counties & 1 city 
+February 8, 2008 
+Southeast Minnesota Regional ECB                      11 counties & 1 city         April 16, 2008 
+Southwest Minnesota Regional ECB                     13 counties & 2 cities     September 18, 2008 
+South Central Minnesota Regional ECB               10 counties & 2 cities     September 30, 2008 
+Northeast Minnesota Regional ECB                      11 counties & 4 cities     December 17, 2008 
+ 
+Greater Minnesota Regional Radio Board  
+Statewide Radio Board Member Selection 
+SECB Standard 8.1.0 
+Approval 11/30/2017 
+ 
+2 
+The Central Minnesota Regional ESB was the first Regional Radio Board formed.  They 
+appointed a member and alternate to serve on the SECB in June 2007. After all regions 
+constituted boards, regional leadership from Greater Minnesota began discussions to create a 
+process for the rotation of representation to ensure that all regions of the state had equal and 
+appropriate opportunity to serve on the SECB representing the interests of Greater Minnesota. 
+This standard has been approved by the Regional Advisory Committees (RACs) and Regional 
+ESB/ECBs representing all regions in Greater Minnesota. 
+ 
+4.  Recommended Protocol/ Standard 
+ 
+The Regional ESB/ECBs in Greater Minnesota will have the responsibility to select both 
+alternate and primary SECB representatives in rotation, based on seniority by date of their 
+Board’s formation.  
+ 
+• In year one, the senior Board shall select a member to serve as a member of the SECB. 
+The next senior Board shall select a member to serve as alternate.  
+• In year two, the alternate from the previous year would serve as an SECB member 
+representing Greater Minnesota ESB/ECBs, and the next senior board would select a 
+member to serve as an alternate. 
+  
+If an alternate is not available to serve for any reason (i.e., Regional ESB/ECB term expiration, 
+resignation, etc.) the appointing Regional ESB/ECB is responsible for appointing a member 
+to serve. An ESB/ECB may select, by majority vote, to waive their right to serve.  
+ 
+If a Regional ESB/ECB representing a Greater Minnesota region determines not to appoint 
+an alternate for their appointment period, the next Board in rotation shall make the 
+appointment. The Board waiving their right to serve shall again be considered for service on 
+the next full rotation of the seniority list. The rotation will continue until all Boards selecting 
+to serve have had the opportunity. When the least senior Board has completed the selection 
+process, the next selection shall start again at the top of the list. 
+ 
+Since the Central Minnesota Regional ECB has appointed a member to serve since its 
+formation, this process will start with the next senior Regional ESB/ECB for the first rotation.  
+ 
+5.  Recommended Procedure 
+ 
+ The schedule defining the rotation of appointments to serve as a member and alternate 
+of the SECB representing ESB/ECBs in Greater Minnesota shall be: 
+ 
+ 
+Greater Minnesota Regional Radio Board  
+Statewide Radio Board Member Selection 
+SECB Standard 8.1.0 
+Approval 11/30/2017 
+ 
+3 
+Service 
+Year 
+Service 
+Year 
+Service 
+Year 
+Primary 
+Appointment 
+Alternate 
+Appointment 
+20102028 20162034 
+2022 
+Central 
+Northwest 
+20112029 20172035 
+2023 
+Northwest 
+Southeast 
+20122030 20182036 
+2024 
+Southeast 
+Southwest 
+20132031 20192037 
+2025 
+Southwest 
+South Central 
+20142032 
+2020 
+2026 
+South Central 
+Northeast 
+20152033 
+2021 
+2027 
+Northeast 
+Central 
+ 
+ 
+ The term of service as an SECB member or alternate representing Greater Minnesota 
+Regional ESB/ECBs shall be one year, commencing with the first meeting in January and 
+ending with the last meeting in December, or until replaced by a duly- appointed 
+replacement, in accordance with this SECB Standard.  
+ 
+ The chair of the Regional ESB/ECB responsible for the appointment of a primary 
+member to serve on the SECB representing Greater Minnesota Regional ESB/ECBs shall 
+notify the chair of the SECB of the appointment. The notification shall include all contact 
+information required to ensure proper and adequate notification of meeting schedules, 
+location, agendas, and other required and relevant information. The Chair of the 
+Regional ESB/ECB shall make every reasonable effort to ensure notification is 
+completed no later than December 15 of the year prior to the appointment year. 
+ 
+ The chair of the Regional ESB/ECB responsible for the appointment of an alternate to 
+serve on the SECB representing Greater Minnesota Regional ESB/ECBs shall notify the 
+chair of the SECB of the appointment. The notification shall include all contact 
+information required to ensure proper and adequate notification of meeting schedules, 
+location, agendas, and other required and relevant information. The chair of the 
+Regional ESB/ECB shall make every reasonable effort to ensure notification is 
+completed no later than December 15 of the year prior to the appointment year. 
+ 
+ The chair of the Regional ESB/ECB responsible for the appointment of a member or 
+alternate to serve on the SECB representing Greater Minnesota Regional ESB/ECBs 
+where the Regional ESB/ECB has waived its right to appoint shall notify the Chair of the 
+SECB no later than December 15 of the year prior to the appointment year. The Chair of 
+the SECB shall notify the Chair of the next Regional ESB/ECB in rotation and coordinate 
+their appointment process to ensure timely and effective appointment of replacements. 
+ 
+ The SECB shall extend or adjust the schedule in this standard as required by expiration 
+or waiver of appointment. 
+Greater Minnesota Regional Radio Board  
+Statewide Radio Board Member Selection 
+SECB Standard 8.1.0 
+Approval 11/30/2017 
+ 
+4 
+6.  Management 
+ 
+The SECB is responsible for the management of this process. 
+DATE:        May 6, 2020 
+TO:             All RAC Chairs 
+FROM:       Cathy Anderson, Standards & Training Coordinator 
+RE:              Standard for consideration 
+The Standards workgroup has reviewed the following standard and recommended that each region review it 
+and provide their feedback before it goes to the Steering Committee.   
+PLEASE INCLUDE IT IN YOUR NEXT REGIONAL MEETING (RAC, O/O, Users, etc.) AND LET ME KNOW THE 
+OUTCOME, INCLUDING ANY FEEDBACK, FROM YOUR REGION AS SOON AS POSSIBLE.  TARGET DATE IS MAY 
+31, BUT LET ME KNOW IF YOUR REGION WILL NOT BE MEETING IN MAY (or if they already met).   
+8.1.0 – Greater Minnesota Regional ESB / ECB Statewide Emergency Communications Board Member 
+Selection 
+This standard explains how selection occurs for regional representatives and defines their rotation of 
+appointments to serve as a member and alternate of the SECB.  
+The workgroup’s changes include:  
+ 
+Purpose / Objective: 
+• Removed the word radio, as regional boards are no longer exclusively for radio and have a broader 
+spectrum of SECB standards.  
+ 
+Operational Context: 
+• Removed the “Represents” column so as not to have to make changes every time a region adds or 
+loses an entity.  Additionally, if listing, it should be consistent with the signatories on each region’s JPA 
+and would have to list them all. 
+• Workgroup felt it is not necessary to know how many are represented and that this particular historical 
+information is not needed.   
+• The Workgroup felt it was important to call out that this standard goes to regions prior to going to the 
+SECB.  
+ 
+Recommended Procedure: 
+• Service Year table was updated based on scheduled rotation through 2037.  

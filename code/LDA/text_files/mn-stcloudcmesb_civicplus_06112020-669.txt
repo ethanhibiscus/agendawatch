@@ -1,0 +1,957 @@
+Central Minnesota  
+Next Generation 9-1-1 Committee 
+Thursday, June 11, 2020 – 10:00 a.m. 
+Conference Call 
+Conference Call Bridge: 1-800-430-1833, Access 2557200# 
+Agenda 
+ 
+1. Call to Order 
+2. Roll Call and Introductions  
+3. Approval of Agenda (P1) 
+4. Approval of Minutes from May 14, 2020 Meeting (P2-8) 
+ 
+5. Communications 
+ 
+6. Reports  
+a. ECN Update (View Monthly Update) 
+1. Resources and Documents from ECN for use in PSAP Facilities in Latest News on MNECB.org 
+2. Rapid Deploy (Update) 
+b. Statewide NG911 Committee  
+1. Telephone CPR Statewide Operational Standard (P9-14) 
+c. Statewide NG911 GIS Work Group 
+1. Who are the Central Region Workgroup Representative(s)? 
+ 
+7. General Discussion  
+a. Text to 9-1-1 Go Live (P15) 
+b. NG911 Grant (Update) 
+c. Planned conversion of VLAW31 stations (P16-20) 
+d. Regional Interoperability Talkgroups Uplifted (P21) 
+e. Training Opportunities 
+    1. COOP Tabletop Exercise – September 17, 2020 (Register) 
+ 
+8. Other Issues    
+10.  Upcoming Meetings 
+a. July 9, 2020 – Conference Call  
+11.  Adjournment  
+12. PSAP Roundtable Discussion 
+ 
+ 
+ 
+ 
+ 
+Due to the Governor's Stay Safe Order during the Coronavirus pandemic, Central Region meetings may be conducted 
+under Minnesota Statute 13D.021 – Meetings by Telephone or Other Electronic Means. 
+ 
+ 
+1 
+Central MN 
+Next Generation 9-1-1 Committee Meeting 
+Thursday, May 14, 2020 – 10:00 AM 
+ 
+ 
+NG911 COMMITTEE MEMBERS/ALTERNATES PRESENT 
+1. 
+Joyce Zika & Julia Fraley – Benton County 
+2. 
+Jody Norstegard – Kandiyohi County 
+3. 
+Becky Howell – Meeker County 
+4. 
+Victoria Ingram – Morrison County 
+5. 
+Michele Burke & Mary Lieser – Stearns County 
+6. 
+Brian Koehler – Stevens County 
+7. 
+Tracy Koosman & Sheriff John Holtz – Swift County 
+8. 
+Sarah Booker – Todd County  
+9. 
+Erika Pennar & Bryan Savaloja – Wadena County 
+10. 
+Billijo Porter – Wilkin County 
+11. 
+Haley Dubois & Richard Nevala – Wright County 
+ 
+NG911 COMMITTEE MEMBERS/ALTERNATES ABSENT: 
+12. 
+City of St. Cloud 
+13. 
+Big Stone 
+14. 
+Douglas  
+15. 
+Grant  
+16. 
+Mille Lacs  
+17. 
+Otter Tail 
+18. 
+Pope 
+19. 
+Traverse  
+ 
+GUESTS: 
+1. 
+Brandon Larson, O&O Vice Chair – City of St. Cloud 
+2. 
+Kristen Lahr, O&O Chair – Stearns County 
+3. 
+Stephanie Johnson, EMAC Chair – Meeker County 
+4. 
+Andy Beckstrom – Mille Lacs County 
+5. 
+Caitlin Christenson – Stevens County, GIS 
+6. 
+Chelsey Bagent – Swift County, GIS 
+7. 
+Cathy Anderson – ECN, Standards/Training Coordinator  
+8. 
+Dan Craigie – ECN, 9-1-1 Program Manager 
+9. 
+Leslie Sticht – ECN, 9-1-1 Technical Engineer  
+10. 
+Steve Tait – ECN, Southern RIC 
+ 
+CALL TO ORDER: 
+Meeting called to order by NG911 Vice Chair Sarah Booker at 10:00 a.m. 
+ 
+INTRODUCTIONS:  
+Introductions were conducted. There was a quorum for the NG911 Committee.  
+ 
+APPROVAL OF AGENDA 
+Morrison County made a motion to approve the NG911 Committee Agenda. Wilkin County seconded, 
+motion carried. 
+ 
+ 
+ 
+2 
+APPROVAL OF MINUTES 
+Wright County made a motion to approve the April 9, 2020 NG911 Committee minutes. Morrison 
+County seconded, motion carried. 
+ 
+Communications 
+None.  
+ 
+REPORTS: 
+ECN Update 
+Tait thanked the PSAPs in the Central Region for their ongoing engagement communicating and 
+coordinating with ECN on the COVID-19 acts you are experiencing. Deputy Director Clark compiles 
+and sends that to DPS leadership on a daily basis. There has been a lot of discussion in this group, 
+and other regions, on Executive Order 20-34 and how ineffective it has been. Just for a little 
+perspective, yesterday’s sitrep provided to the EOC had 58 current addresses that are active that we 
+provided PSAPs. We added 289, we took off 231. Had 486 long term care addresses we provided. 
+We have got 40 PSAPs that have received residential addresses and 52 PSAPs that have received 
+long-term care facility addresses. Everybody has been very frustrated with the low number of 
+addresses compared to total number of cases. Director Wahlberg sent out an FAQ document on 
+Friday that explained the process, what ECN’s roles and responsibilities are, and what MDH’s roles 
+and responsibilities are and how they collect the data.   
+ 
+Craigie spoke briefly about the Verizon outage last week. The morning of May 7th for sure three 
+Central Region PSAPs (Todd, Otter Tail and Douglas) reported some strange issues with 9-1-1 calls. 
+They were reporting individuals were not able to call in. After quite a bit of exhaustive trouble-
+shooting we are still looking for answers. We have at least narrowed it down that there was very 
+likely an internal issue at Verizon. We have opened a trouble ticket with their partner Comtech and at 
+Verizon. It came through as a nation-wide issue. It lasted approximately an hour. We are still 
+gathering some information. There does seem to be an incident that occurred where an individual 
+was trying to call 911, but could not get a hold of somebody and there might be an attributable death 
+to that. They are investigating. Really interesting part of that call was it came in as a Sprint call, 
+because the dialer could not get Verizon, it roamed onto Sprint. PSAP thought it was Sprint. So, that 
+took us down a rabbit hole. There is still some investigation going on. 
+ 
+1. Alex Tech Training Module Access to Change  
+Anderson sent out a GovDelivery, as of about 8:02 a.m. tomorrow morning the URL is going to be 
+changing. The same list that got the GovDelivery for this before will be getting the information 
+tomorrow. It is going to make it substantially more simple to get into this. Anderson has seen a 
+mock-up of the site. It is nice, you just click on the URL and you are right in there. They have the 
+modules laid out pretty easy to find. You are not going to need to remember any kind of a user 
+name, password. It is secured. They still have the same security level with the site, it is through 
+Alex Tech. There will not be any post credits allowed, or allocated, for any of these anymore. 
+Based on the last 3 years, nobody has gone in looking for post credits. Or, if they have, they have 
+clicked on it and stayed in a maximum of 30 seconds and then clicked out. Alex Tech cannot do 
+that. If the post board came and said can you tell us how long a person was in, did they really get 
+these credits, they would not be able to substantiate that claim. Based on that it is only 0.5 credit, in 
+talking to some other cops, there are other ways people can get post credits. We do not have to 
+worry about changing passwords every six months. It is only going to be shared with public safety 
+or other people that have modules in there that have a need. If you are a PSAP Manager or 
+supervisor and you get my emails you will get this information. It will go out to Sheriffs, Police 
+Chiefs as well. If you do not get it and you want to know the URL just send Anderson an email. 
+You will still be able to print a page indicating you have finished a module. It is no longer in 
+certificate form, but it will tell you that you passed a quiz.  
+ 
+ 
+3 
+REPORTS: (Continued 
+ECN Update (Continued) 
+Statewide NG911 Committee (Continued) 
+1. Telephone CPR Statewide Operational Standard 
+Anderson reported the workgroup still was working on it. We have kind of a final draft with just a 
+couple of pieces Chair Pankonie is trying to get information on so we can finish that. It will be 
+discussed at the next statewide meeting. If you can make that next Wednesday they will be 
+discussing that and other applicable items regarding the training portion. Anybody that is looking 
+to get trained, RQI, they are affiliated with the Heart Association, they do plan to get out free T-
+CPR training that will include certification and book cards for your computer that you would be 
+able to walk people through. Right now, the only ones we know that are charging that has a 
+specific portion for only T-CPR is PowerPhone. You can also use them. That does cost. There is 
+reimbursement available for that, but not for EMD, just for the T-CPR portions. This will be talked 
+about at length on the next meeting next Wednesday.  
+ 
+Statewide NG911 GIS Work Group 
+1. Workgroup Representative(s) for the Central Region 
+Swift County GIS reported we have not had any meetings, but they have requested everybody send in 
+their current GIS data, so they can do the new reviews and see where everyone is at before we start 
+work with the federal grant.  
+ 
+GENERAL DISCUSSION 
+a. Text-to-911 Go Live 
+Vice Chair Booker reported we included the preliminary schedule that we originally had. 
+Many of us have been pushed back quite a ways. Has anybody completed their transition, or 
+are currently in the process of it? For the Motorola Vesta customers has anyone received a 
+new schedule date? Kandiyohi County will go on June 20th.   
+ 
+b. NG911 Grant – GIS Grant Award  
+Vice Chair Booker reported the award information is in the packet. Booker asked are we 
+waiting on anyone for the Addendums yet? Shari reported we just received the last of them 
+yesterday. It has been turned back to ECN to continue getting the grant agreement in process.  
+ 
+c. Rapid Deploy 
+1. ECN Support of PSAP Continuity of Operations Efforts Memo 
+Sticht explained we are offering a unique opportunity due to the current pandemic situation 
+to add a tool to your current toolbox. Right now, you have the ability to transfer radio calls, 
+and transfer a call to another county should you need to abandon. But what you do not get 
+is address information to that next county. This tool we are offering to support everybody 
+on a trial basis is called Rapid Deploy. It is a location information tool. It is a very simple 
+set-up, and it is a very intuitive web-based device. It is immediately available. It uses the 
+GIS layer the counties have already put together in preparation for the NG911. This is an 
+awesome way to see your work in action and very much take advantage of the changes you 
+need to make to make it more friendly for the PSAP. This is a trial, a 6-month pilot project. 
+Everybody has the opportunity to join in and if the team checks it out and decides it is a 
+worthwhile effort we will continue the services. ECN will be taking care of the costs. The 
+tool itself does not integrate in any current CAD system, it is also not integrated with CJIS. 
+Those are intentionally separated so if at the end of this 6 months trial you decide maybe 
+this is not something you want to continue you are not unwinding. If it is something you 
+decide you want to continue, then you have the opportunity to develop the tool into an even 
+more in-depth useful system for you and your system. And we will also get that CJIS 
+connection taken care of, so it is that much easier for everybody.  
+ 
+ 
+4 
+GENERAL DISCUSSION (Continued) 
+c. Rapid Deploy (Continued) 
+1. ECN Support of PSAP Continuity of Operations Efforts Memo (Continued) 
+Tait added the goal is to provide a more robust continuity tool for the regions to use. As 
+Sticht mentioned, we are really good in our current continuity efforts to transfer calls to a 
+neighboring PSAP. We do that unfortunately on a very regular basis. This is geared more 
+towards that long-term outage. Where right now your PSAP is down for what we usually 
+count in hours. But, what if we have a PSAP that goes down for days and we are 
+transferring dispatch responsibilities to another PSAP? Having the ability to map and locate 
+that 9-1-1 caller and have a list of available resources to respond to that emergency is the 
+gap we are trying to fill with this Rapid Deploy project. If anything comes out of this 
+discussion, whether the region adopts it, or not, it is just really important to have that 
+regional discussion on what would it look like if we had several PSAPs go down in the 
+region for an extended period of time due to a COVID-type situation and how would we 
+manage our operations? Just starting that conversation is a success, and if you want to 
+adopt this tool to support those efforts, then it is even more successful. We laid out May 
+15th as a deadline, but there is some flexibility there. Our next step here is to open this up 
+for some discussion and see what the region thinks.  
+ 
+2. Determine agencies that want to participate 
+Vice Chair Booker reported we did have Shari send out a Doodle Poll to determine some 
+interests ahead of this meeting. Of the 16 agencies that weighed-in, Stearns County was the 
+only one that indicated any interest. The sheriffs had some discussion at their meeting. We 
+did not hear from Grant and Mille Lacs County, but the rest of the region did respond to us 
+and the overwhelming majority is a “no.” Booker asked Sheriff Holtz to speak to the 
+Sheriff’s side. Sheriff Holtz responded some of us sheriffs have talked a little about it. On 
+Sheriff Holtz’s side, at this time we have enough fires going on we do not need to start 
+another new one to try to learn part of it. And also, some of the sheriffs are already set for 
+back-ups and stuff like that. Booker explained in discussing with our sheriff, he is pretty 
+much of the same opinion. We have some additional things already set-up for our back-up 
+and he did not feel that it would be especially valuable to us at this point.  
+ 
+Sticht wanted to mention she is hearing some conversation through other channels that 
+perhaps there is some interest. This is not an all or nothing situation. If there are a few 
+PSAPs in the region that do wish to participate Sticht will make sure they get set-up and 
+folks can watch and decide to opt-in later. This situation right now with the discount is due 
+to the pandemic and the funding we have available, also due to the pandemic, is not going 
+to be something that lasts forever, so the opportunity is something that is out there. The leg 
+work is being done so there is no heavy lift and no cost to any of the PSAPs.   
+ 
+Vice Chair Booker stated with Stearns County interested in participating is that an issue to 
+just have one if the region does not participate as a whole? Sticht replied those that are 
+interested will get the configuration and the equipment installed and they will be able to 
+have it. If some others decide that they wish not to participate because they do not want to 
+have additional tools, that is up to them. We may come and ask you to do an export from 
+your current CAD system, so that we can load your data just in case something does 
+happen that you do have at least the partial ability to use the services whenever necessary.  
+ 
+Lieser reiterated our interest is very strong and we truly hope we can move forward. It 
+sounds like we certainly can. We want to make sure since we are that interested and willing 
+to do whatever we need to do to participate, we want that to happen.  
+ 
+ 
+ 
+5 
+GENERAL DISCUSSION (Continued) 
+c. Rapid Deploy (Continued) 
+3. Determine agencies that want to be the regional COOP PSAP 
+4. Identify Rapid Deploy Regional Representative  
+Vice Chair Booker asked are we going to need to identify the representative if we only 
+have Stearns County participating? Tait replied he did not think it requires a motion from 
+the Committee; a verbal agreement that Stearns is interested is enough for us to move 
+forward. Tait asked would anybody from the Committee be interested in monitoring the 
+status of the project statewide, so you can report back to this committee, RAC and ESB as 
+the project moves down the road? Or would you rather have Tait or Sticht dial in and give a 
+report? Wright County would appreciate some sort of report periodically on the progress, 
+so she can give updated information to her Sheriff. Tait can provide that as part of the 
+Committee meeting. Tait thinks it is really important to pay attention to what is going on 
+across the state, so that the Central Region is aligned with what everybody else is doing and 
+adopt some best practices that another region learns something good, or bad, on a project. 
+ 
+5. Discuss next steps and MOU 
+Vice Chair Booker stated as far as next steps if Lieser will just reach out to Sticht directly 
+on your agency’s behalf. If there are other agencies that become interested, or have some 
+additional questions or interest, we will just reach out to Sticht at this point.  
+ 
+d. Training Opportunities  
+1. COOP Tabletop Exercise – September 17, 2020 
+COOP Tabletop Exercise is September 17th at Kandiyohi County. There is a registration 
+link if anyone is interested in sending anyone from your agency. Anderson reported we had 
+the planning meeting yesterday via WebEx. Normally those are all in-person. Not an ideal 
+way to hold that but it did work. We had about 25 people on the call. There is still time to 
+register. They identified about 5-6 scenarios the group wants to facilitate, or to build a 
+process around for the actual tabletop exercise. The next meeting is going to be the final 
+planning meeting on August 6. It is either going to be in-person in St. Paul, or via WebEx 
+depending on the status of everything. If you want to get into this send Anderson an email.  
+ 
+e. COVID-19 Weekly Situation Reports PSAP Roundtable Discussion 
+Vice Chair Booker reported this would be our roundtable discussion time. Tait had touched 
+on Executive Order 20-34 in his report. Is there anyone experiencing any issues we need to 
+discuss today? Lieser from Stearns County asked are there any other agencies doing anything 
+with masking of their employees? Whether it is required, or optional, and what type? Todd 
+County is not. Lieser explained Stearns County is implementing a modified 12-hour teams 
+schedule as of next week. Running for 8 weeks thru July 17th. Which just gives us more of a 
+team concept. We are also going to be doing prescreening of employees upon arriving to 
+work. Wright County asked what will your prescreening look like? Lieser replied the 
+prescreening is going to fall in-line with what our jail is currently doing. Our jail sergeants 
+are going to be doing the screening for us. They will go up to the jail and in their lobby area 
+they get asked the three questions by the jail sergeant, then they have their temperature taken. 
+It literally takes seconds unless they answer ‘yes’ to a question. What we are highly 
+encouraging, as is the jail, that anybody who has any of those symptoms is calling us ahead 
+of time just like if they would be calling in sick to at least ask us what our thoughts are on 
+that before they are just showing up. That will start next Saturday. The jail seems to have 
+gotten good about doing it and their employees are fine with it. We are not really anticipating 
+any problems, just something new for them to get used to doing.  
+ 
+ 
+ 
+ 
+6 
+GENERAL DISCUSSION (Continued) 
+e. COVID-19 Weekly Situation Reports PSAP Roundtable Discussion (Continued) 
+A county asked can you explain what your schedule is going to look like? Lieser replied it is 
+going to be 6 a.m. to 6 p.m. and then 6 p.m. to 6 a.m. We wanted to be able to keep PTO. The 
+sheriff wanted to be able to still allow them to have some PTO. Right now, their PTO was 
+actually wiped clean for those dates May 23-July 17th. We gave them one week to submit 
+PTO requests for those weeks on a  seniority basis, after that it is first come first serve. We 
+have enough employees, or worked in enough employees, to allow for one possibly two to be 
+off depending on the time of day.  
+ 
+A county asked what was the feedback from staff were they on board and recognized the 
+need for it? Lieser replied we did it at a staff meeting, because we wanted everybody in-
+person. We have been asked for a few years in the past to try a 12-hour schedule and we just 
+never had enough employees to make that happen. There are a fair amount of them that are 
+excited it is actually happening and they get to try it. We have not heard a ton of negative 
+things, there might be we are just not hearing, but we are kind of anxious to get it rolling now 
+that we have got it figured out.  
+ 
+A county asked for your schedule, are they working so many days and they have a long 
+stretch off? Lieser replied it is 2on-2off, 3on-2off, so never more than 3, some 2’s, they get 
+every other weekend of Friday-Saturday-Sunday. Then there is one 8-hour day in there every 
+2 weeks.  
+ 
+Tait reported Dan Craigie sent out guidance on bringing vendors into your PSAP to do 
+installs, maintenance, etc. Even though we are opening things back up the threat is still there. 
+Tait appreciates everybody being proactive on the PPE and the monitoring. That also extends 
+to the vendors that are coming in. We have a lot of call handling activity going on in the 
+region. We do not know where those vendors have been on their last trip or how sanitary they 
+are. Tait would encourage you to put your vendors to task and make sure they are not 
+introducing any COVID into your PSAP, and requiring them to adhere to any PPE or 
+screening you think is appropriate.  
+ 
+Tait sent out a report on COVID impacts from a national perspective. It was a real short 
+document produced by NENA. It has some high-level trends and patterns they are seeing 
+from PSAPs across the country. Important to pay attention to this, we are in this for the long 
+haul. We can relax on a few things, but we also need to remain vigilant on others. We have 
+not had to shut down a PSAP yet, but hopefully we do not see that day coming in the next 
+year or few months.  
+ 
+1. PSAP Roundtable on May 21st  
+Vice Chair Booker stated our next roundtable is schedule for next week on May 21st. That 
+does conflict with O&O. We have the option to cancel or reschedule it for a different time. 
+Tait would recommend cancelling and maybe we go to email reporting. Tait can send out an 
+email asking the region if there are issues and report that back to ECN. That might be more 
+convenient for everybody. We are all kind of tapped out with conference calls and WebExs 
+at this point. Booker can agree with that. Wright County motioned to cancel. Stearns County 
+seconded. Roll call vote: Benton – yes; Kandiyohi – yes; Meeker – Johnson reported yes for 
+Howell; Morrison – yes; Stearns – yes; Stevens – yes; Swift – yes; Todd – yes; Wadena – 
+yes; Wilkin – yes; Wright – yes. Booker stated we will be cancelling our PSAP roundtable 
+discussion for the 21st. We will take it back up on the 28th.  
+ 
+ 
+ 
+ 
+7 
+OTHER ISSUES 
+None. 
+ 
+  
+UPCOMING MEETINGS 
+a. June 11, 2020 – Conference Call  
+ 
+ADJORNMENT: 
+Wilkin County made a motion to adjourn the meeting. Swift County seconded, and the motion was 
+carried unanimously at 10:43 a.m. 
+ 
+Minutes by Shari Gieseke. 
+ 
+1 
+ 
+Standard 9 1 1 - 3 
+Telephone CPR Statewide Operational Standard 
+Purpose  
+The purpose of this standard is to define Public Safety Answering Point (PSAP) responsibilities for 
+compliance with Minnesota Statute 403.03, 911 Services To Be Provided, which addresses PSAP 
+Telephone Cardiopulmonary (T-CPR) Resuscitation Programs.  
+This standard re-states the legislation in a manner that clearly shows the PSAPs compliance options.   
+Statement of Standard 
+In accordance with Minnesota Statute 403.03, Subd 2, on or before July 1, 2021, every public safety 
+answering point must maintain a telephone cardiopulmonary resuscitation program in one of two ways.  
+OPTION 1: Providing each 911 Telecommunicator with training in cardiopulmonary resuscitation  
+ Training (minimum requirements) 
+ 
+a) Use evidence-based protocol or script for providing T-CPR instructions that 
+has been recommended by an academic institution or a nationally recognized 
+organization specializing in medical dispatch – AND if the PSAP has a medical 
+director, it is approved by that medical director. 
+b) Appropriate continuing education as determined by protocol supplier in Option 
+1(a) – AND approved by medical director as in part (a). 
+OPTION 2: Transferring callers to another PSAP with 911 telecommunicators that have received 
+training in cardiopulmonary resuscitation.  
+ Training (minimum requirements) 
+a) Use an evidence-based protocol for the identification of a person in need of CPR 
+b) Provide each 911 Telecommunicator with appropriate training AND continuing 
+education to identify a person in need of cardiopulmonary resuscitation through 
+the use of an evidence-based protocol; and 
+c) Ensure that any PSAP to which calls are transferred uses 911 
+Telecommunicators who meet training requirements under Option 1. 
+ 
+Quality Assurance 
+o Each PSAP shall conduct ongoing quality assurance (QA) of its T-CPR program.  
+ 
+ 
+2 
+ 
+Monitoring and Enforcing 
+o The Statewide Emergency Communications Board (SECB) shall adopt protocols to 
+ensure that operators of every PSAP comply with Minnesota State Statute 403.03, Subd. 
+2. 
+a) By July 1, 2021, each Minnesota primary PSAP shall submit a letter indicating 
+which option they are choosing for compliance to their appropriate Regional 
+Emergency Communications/Services Board (ECB/ESB).  
+b) Each PSAP will maintain their own records of compliance. 
+c) If the PSAP changes their compliance option, they will submit a letter outlining 
+the change to their appropriate ECB/ESB.  
+Liability Exemption  
+o If a caller refuses or is otherwise unwilling or unable to provide CPR or receive T-CPR 
+instruction, the 911 Telecommunicator is not required to provide CPR instruction and is 
+immune from civil liability for any damages resulting from the fact that such instruction 
+was not provided. 
+ 
+o Telephone-CPR instruction is a general duty to the public rather than a special duty 
+owed to individuals, and a 911 Telecommunicator must exercise judgement and 
+discretion in performing actions including but not limited to: 
+a) determining whether a particular situation requires instituting the T-CPR 
+program. 
+b) determining whether a caller refuses or is otherwise unable or unwilling to 
+provide CPR or receive T-CPR instruction. 
+c)  using and appropriately adapting an evidence-based protocol or script for 
+providing T-CPR instruction based on individual callers and emergency 
+situations presented by callers. 
+d) determining when to transfer a caller to another PSAP with 911 
+telecommunicators that have received training in CPR.  
+Authority 
+The Statewide Emergency Communications Board (SECB) Next Generation 9-1-1 Committee (NG9-
+1-1) is responsible for the oversight of the standard.  
+The appropriate Regional Emergency Services/Communications Boards (ECS/ECBs) will be 
+responsible for ensuring compliance of this standard.  
+Document History 
+Created & Approved:   
+ 
+1 
+ 
+Addendum to Standard 9 1 1 - 3 
+ 
+This addendum, including frequently asked questions, will help further guide PSAPs in choosing a 
+telephone-CPR option and comply with the legislation. The NG9-1-1 Committee is providing this 
+information to assist PSAPs in determining their direction for training and is not recommending a 
+specific training provider.  
+TRAINING 
+No-Cost T-CPR training:  
+ Currently waiting on Resuscitation Quality Improvement (RQI) Program / American Heart 
+Association (AHA), who is creating a free, basic T-CPR online program that will include 
+certification.  PSAPs choosing this training will also be able to utilize CPR (Adult, Child, and 
+Infant/Preemie) pre-arrival protocol cards developed by RQI’s group of medical directors.   
+ 
+Fee-Based Training:   
+ PowerPhone 
+ T-CPR Certification using PowerPhone’s CACH CPR tool: $229 per person. 
+ CACH CPR works on a Microsoft platform that is a significant advance from traditional 
+flip cards. 
+ CACH T-CPR protocol licenses (electronic protocol card): $998 for two computers and 
+includes T-CPR training for two telecommunicators. Each additional telecommunicator 
+training: $159. Each additional CACH T-CPR protocol license: $399.  Each T-CPR 
+protocol license annual maintenance: $39.90. 
+ Training is delivered in an interactive online format with the equivalent to four hours of 
+classroom training. 
+ Certification in T-CPR meets all of the American Heart Association (AHA) best 
+practices and is valid for two years/24 months.  
+ EMD Certification through PowerPhone includes T-CPR.   
+ Pricing structure subject to change: please contact to confirm and register. 
+ Contact: Pam Visel, Account Manager, pam@powerphone.com, 203-350-0338. 
+ 
+ International Academy of Emergency Dispatch (IAED) 
+Will be gathering information.  Priority Dispatch uses IAED’s training material.  
+ 
+ APCO IntelliCom (formerly APCO MEDS) 
+ Full EMD online training: per person, member price - $419, non-member - $439 
+ Recertification: per person, every two years (submit 12 certified education credits/year) 
+- $30  
+ Flip cards:  paper & electronic guidecards - $529 - $729 (each? Group? Set?)  
+ Racks/Binder Set: member price - $329, non-member $419 
+ 
+2 
+ 
+ IntelliCom Electronic Software: $5000 each position ($1000 annual maintenance per 
+position, plus one-time cost $10,000 - $20,000 for implementation) 
+ Proxy Server, as needed: $3,000 
+ Contact: Shellie Johnson, Sales Rep., johnsonsh@apcointl.org, 386-944-2471. 
+ 
+FUNDING 
+Funds are available in the amount of $188,000 for 2020 and $118,000 for 2021 to reimburse training 
+costs for T-CPR.  Procedures are yet to be determined; however, if you feel you want funding 
+reimbursement, reach out to your regional grants coordinator, who can connect with ECN.  It is 
+unknown if there will be funds available specifically for T-CPR training reimbursement after 2021. 
+QUALITY ASSURANCE (QA) 
+The statute does not set criteria for QA other than conducting ongoing QA of your T-CPR program. As 
+such, each PSAP will be responsible for creating their own QA program specific to T-CPR by July 1, 
+2021.   
+FAQ’S                      
+ 
+1. Quality Assurance (QA) – How do we do it for T-CPR calls?  
+There is no formal recommendation for a QA procedure. PSAPs may look to other PSAPs for ideas, 
+obtain guidelines from their T-CPR vendor, create their own protocol, or seek advice from their 
+secondary (EMS) PSAP, as well as a medical director.   
+The NG9-1-1 Committee will continue to follow any industry best practices on T-CPR QA guidelines 
+and communicate those out to the PSAPs and regions when applicable.  
+2.  How long will training take? 
+Most, if not all, free basic trainings should take four hours or less.  Trainings that incur a cost may take 
+longer.  
+3.  Do my Telecommunicators need to be CPR certified? 
+No. The statute requires that they only receive T-CPR training. However, the training your PSAP 
+chooses may include certification of some kind. 
+4.  What if our PSAP is already fully EMD certified?  
+You already comply with the statute, and no further action is necessary as long as you remain in 
+compliance.   
+5.   Our PSAP already transfers all medical calls to a secondary EMS PSAP that complies with 
+the statute. Do we need to do anything else?  
+ 
+3 
+ 
+It is highly recommended that Telecommunicators still take T-CPR training in case a situation arises 
+where they have to provide T-CPR pre-arrival instructions. Technical issues with regard to call 
+transfers are not included in Subdivision 4, Liability Exemption, of the statute.  
+6.   If our PSAP is only going to transfer cardiac arrest calls to a secondary, EMS PSAP (as 
+opposed to transferring other medicals), do we still need T-CPR training? 
+See Option 2(b) of this Standard, “Provide each 911 telecommunicator with appropriate training…”   
+Every Telecommunicator should be able to recognize cardiac arrest and provide T-CPR pre-arrival 
+instructions in the event a transfer to the EMS PSAP fails for some reason.    
+ 
+7.  If my PSAP does not have a medical director, do we need one?   
+No.   
+8.  What if my PSAP wants to become full EMD-certified? 
+There are fee-based vendors who will provide EMD training. 
+9.  How often do we need to re-take T-CPR training? 
+That is not determined in the statute, but the recommendation is to follow training protocol guidelines 
+(usually every two years for CPR). 
+10.  Secondary PSAP EMS Services 
+The statute requires PSAPs to ensure that secondary (EMS) PSAP or PSAPs they are transferring their 
+T-CPR calls to are also following statutory T-CPR guidelines.  
+The secondary PSAPs / emergency medical dispatch service providers will submit letters to each 
+regional RAC chair indicating they are in compliance with the statute. This information would Pbe 
+retained by each respective region for any primary PSAP in that region who will receive T-CPR 
+assistance from one or more of the secondary EMS PSAPs.  
+11.  Is there anywhere else to look for information about T-CPR?  
+NENA is creating a committee to develop a T-CPR policy, which will offer guidance to states and 
+PSAPs passing CPR legislation for compliance.   
+Additional resources: 
+CPR LifeLinks is another reference - 911.gov: 
+https://www.911.gov/project_dispatcherassistedtelephonecpr.html 
+ProCPR   
+American Health Care Academy 
+ 
+4 
+ 
+Emergency Care & Safety Institute 
+ 
+12.  What if the caller’s safety will be compromised by performing T-CPR? 
+The statute does not specifically address this issue; however, the telecommunicator should determine 
+whether scene safety would allow for CPR to be performed when a patient is not safely accessible.  
+13.   What is the definition of a 911 telecommunicator as it relates to the statute?  
+Statue 403.02, Subd.17(c), 911 Telecommunicator.  “911 telecommunicator” means a person 
+employed by a public safety answering point (PSAP), an emergency medical dispatch service provider, 
+or both, who is qualified to answer incoming emergency telephone calls or provide for the appropriate 
+emergency response either directly or through communication with the appropriate public safety 
+answering point.  (2019) 
+ 
+ 
+ 
+14.   Is there funding available for training, regardless of whether my PSAP becomes T-CPR 
+trained or full EMD trained?  
+Yes. There are funds available for reimbursement in 2020 and 2021.  It is unknown if funding will be 
+available after 2021. If you are looking to use these funds, make your interest known to your regional 
+grants and/or regional NG911 representative(s).  
+Central Region
+Text-to-911 Status
+Go Live 
+Go Live 
+Go Live
+Go Live
+Project Status
+County
+Text-to-911 Status
+Year 2018
+Year 2019
+Year 2020
+Year 2021
+Benton County
+Working on a firewall issue.
+8/7/2018
+Live
+Live
+Went live on August 7th
+Big Stone County
+Uses Kandiyohi County for all 911. See Kandiyohi County.
+2018
+Douglas County
+Signed a contract with Airbus.
+2018
+Will have a Hosted 911 system before the end of the year.
+Grant County
+Working with vendor (quote received)
+2018
+Goal to go live end of 2018 or early 2019
+Kandiyohi County
+Going to go live later this year? 
+2018
+2020
+Go Live planned for June 20, 2020 
+Meeker County
+Last meeting with Sheriff Cruze-
+>
+Contract
+>
+Contracting with Mille Lacs County for 2019.
+Mille Lacs County
+Regional Text-to-911 PSAP
+2017
+Live
+Morrison County
+Working on upgrade. 
+>
+>
+>
+Unknown start date.
+Otter Tail County
+Goal to take their own texts by end of 2018.
+2018
+2020
+Goal to go live summer of 2020
+Pope County
+Working with vendor (quote received)
+2018
+Goal to go live end of 2018 or early 2019
+Stearns County
+Received Board approval. Working with CenturyLink
+2018
+1/31/2019
+Live
+Goal to go live in November
+Stevens County
+Working with vendor (quote received)
+2018
+Goal to go live end of 2018 or early 2019
+Swift County
+May choose to have Kandiyohi take their text messages
+2018
+Later this year or early 2019
+Todd County
+Contract signed. 
+2018
+Tentative Go-Live by end of 2018.
+Traverse County
+Will continue to contract with Mille Lacs County
+>
+Contract
+2020
+Starting 2020.
+Wadena County
+Reviewing proposals from vendors hope to sign in 6-8 wks
+2018
+Goal to go live end of 2018.
+Wilkin County
+Working with vendor. Plan to take our own Text-to-911.
+>
+2019
+Plan is to be live in January 2019.
+Wright County
+Received quote. Need to get final schedule.
+2018
+1/7/2019
+Live
+Went Direct SIP in July.
+17
+14
+14
+4
+TOTALS
+Revised 5/14/2020
+ 
+Office of Statewide Radio 
+Communications 
+Project Title:  
+ 
+VHF Interop Consolidation 
+Lead: Dave Pagel      Version: 2020-05-14      Start Date: February 2020 
+Goal: Implement the conversion of the 109 existing base stations (MTR2000’s) to 
+support simplex multi-channel operation of all licensed VHF Interoperability channels 
+via tone-remote signaling from console positions throughout the state. 
+Scope:  Develop a rollout procedure and schedule for the OSRC radio shops as well as a 
+notification process for all console positions affected by this change in VHF Interop 
+resources.  Work with DPS and DECN to ensure dispatchers are provided summary 
+information regarding access to these modified resources and the updated protocol for 
+VHF conventional resources in Minnesota.  Implement all base station and CCGW 
+changes as well as any console resource configurations for MnDOT and State Patrol 
+Team:  
+MnDOT-OSRC Engineering:   
+1. Develop codeplug for all MTR2000 stations.  Assumption is that all current 
+VLAW31 stations can accept the new codeplug and will not need modification. 
+2. Develop and implement a rollout process for programming each of 109 sites. 
+3. Develop console update implementation plan for State Patrol Dispatch. 
+4. Implement console update procedure and schedule for all greater Minnesota 
+PSAPs with ARMER MCC 7500 consoles. 
+5. Define the future disposition of all equipment related to the Variable 
+Frequency (VFS) stations and Motobridge equipment. 
+ 
+MnDOT OSRC Radio Shops:   
+1. Convert Interop (VLAW31) station (MTR2000) utilizing the developed codeplug  
+ 
+MnDOT RE1s:   
+1. Reconfigure CCGW at each of the 109 sites.   
+2. Ensure expected operation through reconfiguration of MCC7500 console 
+resources as each MTR2000/CCGW has been reprogrammed.   
+3. Reconfigure the State Patrol MCC7500 consoles per agreed-upon plan with the 
+State Patrol. 
+ 
+Tasks: 
+ 
+Development 
+☒  Develop typical codeplug for typical MTR2000 station and test tone-remote 
+control through CCGW from MCC 7500 consoles.  Tested in Waters Edge, Duluth 
+and St. Cloud. 
+☒  Communicate the necessary modifications to the typical codeplug for use in 
+the NW and NE regions where several National Interop frequencies are not 
+licensed due to the original objections from Canada.  NE region as many stations 
+requiring special modification of the channel line-up; NW region has two 
+(Washkish and Roosevelt). 
+☐  IN PROGRESS …. Create an accounting of all state and local (MCC7500) 
+consoles affected.  Contact participating console owners and their radio service 
+providers to ensure readiness for scheduled changeover by RAC region and Patrol 
+District. 
+☒  FINAL …. Develop rollout plan and schedule to convert all sites by Patrol 
+District and RAC region  
+☒  FINAL …. Develop plan for conversion of State Patrol dispatch consoles with 
+Tim Boyer and Jim Stromberg 
+ 
+Deployment 
+☐  Rollout MTR2000 codeplugs and reconfigure CCGW’s, notify console owners 
+ 
+☐ SC RAC 
+☐ SE RAC 
+☐ SW RAC 
+☐ Cen RAC 
+☐ NW RAC 
+☐ NE RAC 
+ 
+☐  Remove Motobridge equipment, XTL2500 VHF radios and power supplies 
+ 
+☐  Auction off Motobridge equipment and the XTL2500 VHF radios 
+ 
+ 
+Update 03-03-2020: MTR2000 codeplug created/tested at using spare  
+ 
+ 
+ 
+ 
+base and MCC 7500 console in the ROC 
+Update 03-31-2020: Confirmed procedure to update resource  
+ 
+ 
+ 
+ 
+configuration within MCC 7500 consoles (Duluth);  
+ 
+ 
+ 
+ 
+first notification to RAC chairs and request for  
+ 
+ 
+ 
+ 
+contacts 
+Update 04-09-2020: first notification of draft implementation schedule to 
+RE1’s and RMS’s 
+Update 04-16-2020: second notification of draft implementation schedule 
+to RE1’s and RMS’s 
+Update 04-27-2020:   second notification to RAC chairs with draft 
+implementation schedule 
+Update 05-12-2020: notification of final implementation schedule to 
+MnDOT personnel 
+Update 05-14-2020: notification of final implementation schedule to RAC 
+chairs 
+Update 06-15-2020: 
+ 
+Appendix A:   
+ 
+Appendix B:   
+ 
+Office of Statewide Radio 
+Communications 
+Project Title: Schedule for Updating VHF Interoperability Stations 
+Lead: Dave Pagel      Version: 2020-05-012 
+     Start Date: May 25, 2020 
+Goal: Implement the conversion of the 109 existing base stations (MTR2000’s) and 
+associated CCGW’s to support simplex multi-channel operation of all licensed VHF 
+Interoperability channels.  Ensure all MCC7500 consoles have conforming access. 
+Scope:  Below is the FINAL schedule for conversion of the MTR2000 bases and 
+associated CCGW’s.  The conversions at each VHF Interop site will proceed by RAC 
+region as shown in the schedule.  MnDOT radio technicians and engineers will make the 
+conversions within the time frame noted.  Once all updates at the VHF Interop sites 
+within that RAC region are completed, a notification of completion will be sent to the 
+county/city contacts.  The VHF Interop resources in all dispatch MCC7500 consoles 
+within that RAC region can then be updated per provided instructions. 
+Schedule:   FINAL schedule for conversion of MTR2000 bases and CCGW’s.   
+South Central RAC:   
+Start May 25, 2020 
+End June 5, 2020 
+MnDOT  
+Mankato Shop: 8 sites 
+ 
+------------------  ONE WEEK REVIEW PERIOD --------------------------------------------- 
+ 
+Southeast RAC:    
+Start June 15, 2020 
+ 
+End June 26, 2020 
+MnDOT: 
+Owatonna Shop: 8 sites  
+Rochester Shop: 6 sites 
+Southwest RAC:    
+Start June 29, 2020 
+End July 10, 2020 
+MnDOT  
+Windom Shop: 3 sites  
+Marshall Shop: 10 sites  
+Willmar Shop: 2 sites 
+Central RAC:   
+ 
+Start July 13, 2020  
+End July 24, 2020 
+MnDOT  
+Willmar: 9 sites        St. Cloud:  5 sites        Baxter: 3 sites        Detroit Lakes: 4 sites 
+Northwest RAC:    
+Start July 27, 2020  
+End August 7, 2020 
+MnDOT  
+Crookston: 3 sites        Thief River:  8 sites        Bemidji: 3 sites        Detroit Lakes: 6 sites 
+Northeast RAC:    
+Start August 10, 2020 
+End August 21, 2020 
+MnDOT  
+Baxter: 5 sites     Virginia: 7 sites     Gr Rapids: 4 sites     Bemidji: 3 sites     Duluth: 11 sites 
+ 
+Temporary Uplift of Regional 
+Interoperability Talkgroup Resources 
+ 
+June 4, 2020 
+ 
+In light of the recent protests and civil unrest occurring in the Twin Cities, there is a high demand for ARMER (Allied 
+Radio Matrix for Emergency Response) system talkgroup resources (local, regional and statewide) to support 
+response operations. 
+ 
+On June 3, the Minnesota Department of Public Safety division of Emergency Communication Networks (DPS-ECN) 
+facilitated the development of a master communications plan for the Twin Cities area.  This plan relied heavily on 
+regional ‘METAC’ talkgroups as well as statewide ‘STAC’ and ‘LTAC’ talkgroups. 
+ 
+In an effort to ensure that sufficient interoperable communication resources are available to greater Minnesota 
+public safety agencies, the DPS-ECN has collaborated with local, regional and state agency partners to expand the 
+coverage area of selected greater Minnesota regional interoperability talkgroups (known as NWs, NEs, CMs, SWs, SRs, 
+and SEs). 
+ 
+Effective immediately, and until further notice, the first five regional interoperability talkgroup resources (e.g. NW-2 
+through NW-6, SE-2 through SE-6, etc.) of each greater Minnesota region will be have the ability to access all ARMER 
+sites except the following Twin Cities metro area sites: 
+• 
+City Center (zone 1, site 1) 
+• 
+Dakota County (zone 1, site 3) 
+• 
+Hennepin County East (zone 2, site 1) 
+• 
+Hennepin County West (zone 2, site 2) 
+• 
+Lino Lakes (zone 1, site 2) 
+• 
+Minneapolis (zone 1, site 9) 
+• 
+North Branch (zone 1, site 6) 
+• 
+Norwood (zone 1, site 4) 
+• 
+Ramsey County (zone 2, site 3) 
+• 
+Washington County (zone 1, site 5) 
+ 
+The Twin Cities metro area sites were specifically excluded to protect them from inadvertent system loading. The 
+remaining regional interoperability talkgroups will maintain their legacy permissions of being able to access all ARMER 
+sites within their region plus one ring of sites surrounding the region.   
+ 
+Regional interoperability talkgroups should continue to be used as they always have been but may now also be used 
+in support of entities in neighboring region. As an example, law enforcement mutual aid from the northeast region 
+may use NE regional interoperability channels if called to the northwest region.   
+ 
+This added capability has technical limitations. Please note the following: 
+• 
+Dispatch centers are encouraged to engage your ARMER System Administrator now so that you understand 
+the implications of patching to another region’s interoperability talkgroup. 
+• 
+End users should not select a regional or statewide interoperability talkgroup to monitor radio traffic unless 
+they are actively involved in the response or have a clear operational need to do so. “Parking” on a talkgroup 
+“drags” communication to your local ARMER site. This can have an adverse effect on ARMER system 
+performance and inhibit the ability of responders to transmit critical information during an emergency. 
+ 
+The increased coverage areas of the regional interoperability talkgroups is temporary. The end date has not yet been 
+identified. Please share this document with dispatch personnel, technical personnel and end users. 
+ 
+If you have technical questions, please direct them to your local ARMER System Administrator. Please contact DPS-
+ECN ARMER Program Manager Jim Stromberg (james.stromberg@state.mn.us) with any unresolved questions.   
