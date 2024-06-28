@@ -1,7 +1,9 @@
 """Stub."""
+from transformers import RobertaConfig, RobertaModel, RobertaForMaskedLM
 from models.doc_similarity_pl_template import DocEmbeddingTemplate
 from utils import argparse_init
 from utils import switch_functions
+
 
 
 class TransformersBase(DocEmbeddingTemplate):
@@ -12,9 +14,7 @@ class TransformersBase(DocEmbeddingTemplate):
     This is a template for future document templates using transformers.
     """
 
-    def __init__(
-        self, hparams,
-    ):
+    def __init__(self, hparams):
         super(TransformersBase, self).__init__(hparams)
         (self.config_class, self.model_class, self.tokenizer_class,) = switch_functions.choose_model_class_configuration(
             self.hparams.arch, self.hparams.base_model_name
@@ -36,7 +36,7 @@ class TransformersBase(DocEmbeddingTemplate):
             )
         self.hparams.tokenizer_pad_id = self.tokenizer.pad_token_id
         self.model = self.model_class.from_pretrained(
-            self.hparams.config_name, from_tf=bool(".ckpt" in self.hparams.config_name), config=self.config, hparams=self.hparams
+            self.hparams.config_name, from_tf=bool(".ckpt" in self.hparams.config_name), config=self.config, hparams=self.hparams, attn_implementation="eager", ignore_mismatched_sizes=True
         )
 
     @staticmethod

@@ -211,7 +211,7 @@ def visualize_lda_model(lda_model, dictionary, doc_term_matrix, output_dir, num_
     pyLDAvis.save_html(vis_data, os.path.join(output_dir, f'lda_visualization_{num_topics}_topics.html'))
 
 def main_training():
-    text_dir = './text_files'
+    text_dir = '../data/text_files'
     output_dir = 'train_output'
     
     # Load data from the text directory

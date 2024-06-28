@@ -1,8 +1,6 @@
 import argparse
-import sys
 import os
 from argparse import ArgumentDefaultsHelpFormatter
-
 
 def str2intlist(v):
     if v.isdigit():
@@ -10,8 +8,7 @@ def str2intlist(v):
     try:
         return [int(dig) for dig in v.split("_")]
     except Exception as e:
-        raise argparse.ArgumentTypeError('Excpected int or "4_4"')
-
+        raise argparse.ArgumentTypeError('Expected int or "4_4"')
 
 def str2bool(v):
     if isinstance(v, bool):
@@ -23,19 +20,7 @@ def str2bool(v):
     else:
         raise argparse.ArgumentTypeError("Boolean value expected.")
 
-
 def default_arg_parser(description="", conflict_handler="resolve", parents=[], is_lowest_leaf=False):
-    """
-        Generate the default parser - Helper for readability
-        
-        Args:
-            description (str, optional): name of the parser - usually project name. Defaults to ''.
-            conflict_handler (str, optional): whether to raise error on conflict or resolve(take last). Defaults to 'resolve'.
-            parents (list, optional): [the name of parent argument managers]. Defaults to [].
-        
-        Returns:
-            [type]: [description]
-        """
     description = (
         parents[0].description + description
         if len(parents) != 0 and parents[0] is not None and parents[0].description is not None
@@ -51,7 +36,7 @@ def default_arg_parser(description="", conflict_handler="resolve", parents=[], i
 
     return parser
 
-def get_non_default(parsed,parser):
+def get_non_default(parsed, parser):
     non_default = {
         opt.dest: getattr(parsed, opt.dest)
         for opt in parser._option_string_actions.values()
@@ -59,7 +44,6 @@ def get_non_default(parsed,parser):
     }
     return non_default
 
-    
 def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     TASK_OPTIONS = ["document_similarity"]
 
@@ -69,18 +53,17 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     task_name = parser.parse_known_args()[0].task_name
 
     DATASET_OPTIONS = {
-        "document_similarity": ["video_games", "wines",],
+        "document_similarity": ["video_games", "wines"],
     }
     parser.add_argument(
         "--dataset_name",
         type=str,
         default=DATASET_OPTIONS[task_name][0],
         choices=DATASET_OPTIONS[task_name],
-        help="The dataset to evalute on",
+        help="The dataset to evaluate on",
     )
     dataset_name = dataset_name or parser.parse_known_args()[0].dataset_name
 
-    ## General learning parameters
     parser.add_argument(
         "--train_batch_size", default={"document_similarity": 32}[task_name], type=int, help="Number of samples in batch",
     )
@@ -100,7 +83,6 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     )
     parser.add_argument("--weight_decay", default=5e-3, help="weight decay")
 
-    ## Input Output parameters
     parser.add_argument(
         "--default_root_dir", default=os.path.join(os.getcwd(), "output", task_name), help="The path to store this run output",
     )
@@ -109,40 +91,24 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
 
     parser.add_argument("--seed", type=int, default=42, help="random seed for initialization")
 
-    ### Model Parameters
     parser.add_argument(
         "--arch", "--architecture", default={"document_similarity": "SDR"}[task_name], help="Architecture",
     )
-
     architecture = arch or parser.parse_known_args()[0].arch
 
     parser.add_argument("--accumulate_grad_batches", default=1, type=int)
 
-    ### Auxiliary parameters
-    parser.add_argument("--gpus", default=1, type=str, help="gpu count")
+    parser.add_argument("--accelerator", default="gpu", type=str, help="Accelerator type (cpu, gpu, tpu, etc.)")
+    parser.add_argument("--devices", default=1, type=int, help="Number of devices to train on")
     parser.add_argument("--num_data_workers", default=0, type=int, help="for parallel data load")
     parser.add_argument("--overwrite_data_cache", type=str2bool, nargs="?", const=True, default=False)
-
     parser.add_argument("--train_val_ratio", default=0.90, type=float, help="The split ratio of the data")
-    parser.add_argument(
-        "--limit_train_batches", default=10000, type=int,
-    )
-
-    parser.add_argument(
-        "--train_log_every_n_steps", default=50, type=int,
-    )
-    parser.add_argument(
-        "--val_log_every_n_steps", default=1, type=int,
-    )
-    parser.add_argument(
-        "--test_log_every_n_steps", default=1, type=int,
-    )
-
-
+    parser.add_argument("--limit_train_batches", default=10000, type=int)
+    parser.add_argument("--train_log_every_n_steps", default=50, type=int)
+    parser.add_argument("--val_log_every_n_steps", default=1, type=int)
+    parser.add_argument("--test_log_every_n_steps", default=1, type=int)
     parser.add_argument("--resume_from_checkpoint", default=None, type=str, help="Path to reload pretrained weights")
-    parser.add_argument(
-        "--metric_to_track", default=None, help="which parameter to track on saving",
-    )
+    parser.add_argument("--metric_to_track", default=None, help="which parameter to track on saving")
     parser.add_argument("--val_batch_size", default=8, type=int)
     parser.add_argument("--test_batch_size", default=1, type=int)
     parser.add_argument("--test_only", type=str2bool, nargs="?", const=True, default=False)
@@ -152,4 +118,3 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
         "task_name": task_name,
         "architecture": architecture,
     }
-

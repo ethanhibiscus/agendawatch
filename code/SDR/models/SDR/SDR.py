@@ -22,7 +22,6 @@ import json
 
 
 class SDR(TransformersBase):
-
     """
     Author: Dvir Ginzburg.
 
@@ -206,14 +205,14 @@ class SDR(TransformersBase):
         )
 
         return parser
-
+    
     def prepare_data(self):
         block_size = (
             self.hparams.block_size
             if hasattr(self.hparams, "block_size")
             and self.hparams.block_size > 0
-            and self.hparams.block_size < self.tokenizer.max_len
-            else self.tokenizer.max_len
+            and self.hparams.block_size < self.tokenizer.model_max_length
+            else self.tokenizer.model_max_length
         )
         self.train_dataset = WikipediaTextDatasetParagraphsSentences(
             tokenizer=self.tokenizer,

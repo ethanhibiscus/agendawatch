@@ -22,12 +22,11 @@ class DocEmbeddingTemplate(LightningModule):
         self, hparams,
     ):
         super(DocEmbeddingTemplate, self).__init__()
-        self.hparams = hparams
+        self.save_hyperparameters(hparams)
         self.hparams.hparams_dir = extract_model_path_for_hyperparams(self.hparams.default_root_dir, self)
         self.losses = {}
         self.tracks = {}
         self.hparams.mode = "val"
-
 
     def forward(self, data):
         """
@@ -40,6 +39,8 @@ class DocEmbeddingTemplate(LightningModule):
         Lightning calls this inside the training loop with the 
         data from the training dataloader passed in as `batch`.
         """
+
+        
         self.losses = {}
         self.tracks = {}
         self.hparams.batch_idx = batch_idx
@@ -120,11 +121,10 @@ class DocEmbeddingTemplate(LightningModule):
         if self.current_epoch % 10 == 0:
             self.logger.experiment.add_text("Profiler", self.trainer.profiler.summary(), global_step=self.global_step)
 
-
     def on_test_epoch_end(self) -> None:
         self.on_epoch_end_generic()
 
-    def validation_epoch_end(self, outputs):
+    def on_validation_epoch_end(self, outputs):
         self.on_epoch_end_generic()
 
     # ---------------------
@@ -204,4 +204,3 @@ class DocEmbeddingTemplate(LightningModule):
         parser.add_argument("--with_same_series", type=argparse_init.str2bool, nargs="?", const=True, default=True)
 
         return parser
-

@@ -1,3 +1,4 @@
+from transformers import BertPreTrainedModel, RobertaConfig, RobertaModel, RobertaForMaskedLM, AutoConfig
 from argparse import ArgumentParser
 import logging
 import math
@@ -9,11 +10,7 @@ from torch.nn import CrossEntropyLoss
 from torch.nn.functional import gelu
 from pytorch_metric_learning import miners, losses, reducers
 
-from transformers.configuration_roberta import RobertaConfig
-from transformers.modeling_bert import BertLayerNorm, BertPreTrainedModel
-from transformers.modeling_roberta import RobertaModel, RobertaLMHead
 from pytorch_metric_learning.distances import CosineSimilarity
-
 
 class SimilarityModeling(BertPreTrainedModel):
     config_class = RobertaConfig
@@ -24,10 +21,10 @@ class SimilarityModeling(BertPreTrainedModel):
         self.hparams = hparams
         config.output_hidden_states = True
 
-        self.roberta = RobertaModel(config)
-        self.lm_head = RobertaLMHead(config)
+        self.roberta = RobertaModel.from_pretrained("roberta-base", config=config, attn_implementation="eager", ignore_mismatched_sizes=True)
+        self.lm_head = RobertaForMaskedLM.from_pretrained("roberta-base", config=config, attn_implementation="eager", ignore_mismatched_sizes=True)
         self.init_weights()
-
+        
         if self.hparams.metric_for_similarity == "cosine":
             self.metric = CosineSimilarity()
             pos_margin, neg_margin = 1, 0
@@ -54,7 +51,7 @@ class SimilarityModeling(BertPreTrainedModel):
             self.similarity_loss_func = losses.TripletMarginLoss(margin=1, distance=self.metric)
 
     def get_output_embeddings(self):
-        return self.lm_head.decoder
+        return self.lm_head.lm_head.decoder
 
     @staticmethod
     def mean_mask(features, mask):
@@ -80,6 +77,12 @@ class SimilarityModeling(BertPreTrainedModel):
         run_mlm=True,
     ):
         if run_mlm:
+            print(f"input_ids shape: {input_ids.shape if input_ids is not None else 'None'}")
+            print(f"attention_mask shape: {attention_mask.shape if attention_mask is not None else 'None'}")
+            print(f"token_type_ids shape: {token_type_ids.shape if token_type_ids is not None else 'None'}")
+            print(f"position_ids shape: {position_ids.shape if position_ids is not None else 'None'}")
+            print(f"head_mask shape: {head_mask.shape if head_mask is not None else 'None'}")
+            print(f"inputs_embeds shape: {inputs_embeds.shape if inputs_embeds is not None else 'None'}")
             outputs = list(
                 self.roberta(
                     input_ids,
