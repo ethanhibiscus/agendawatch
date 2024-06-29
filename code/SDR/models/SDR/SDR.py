@@ -36,23 +36,30 @@ class SDR(TransformersBase):
 
 
     def forward_train(self, batch):
-        inputs, labels = transformer_utils.mask_tokens(batch[0].clone().detach(), self.tokenizer, self.hparams)
-
+        device = batch[0].device  # Get the device of the batch tensor
+        inputs, labels, attention_mask = transformer_utils.mask_tokens(batch[0].clone().detach().to(device), self.tokenizer, self.hparams)
+        
+        # Debug print to check the shape of inputs, labels, and attention_mask
+        print(f"forward_train: inputs shape {inputs.shape}, labels shape {labels.shape}, attention_mask shape {attention_mask.shape}")
+        
+        # Ensure the inputs are in the correct shape (batch_size, sequence_length)
+        if len(inputs.shape) != 2:
+            raise ValueError(f"forward_train: inputs shape must be (batch_size, sequence_length), got {inputs.shape}")
+        
         outputs = self.model(
             inputs,
+            attention_mask=attention_mask,
             masked_lm_labels=labels,
-            non_masked_input_ids=batch[0],
-            sample_labels=batch[-1],
+            non_masked_input_ids=batch[0].to(device),  # Ensure batch is on the same device
+            sample_labels=batch[-1].to(device),  # Ensure labels are on the same device
             run_similarity=True,
             run_mlm=True,
         )
-
         self.losses["mlm_loss"] = outputs[0]
-        self.losses["d2v_loss"] = (outputs[1] or 0)  * self.hparams.sim_loss_lambda # If no similarity loss we ignore
-
+        self.losses["d2v_loss"] = (outputs[1] or 0) * self.hparams.sim_loss_lambda  # If no similarity loss we ignore
+        
         tracked = self.track_metrics(input_ids=inputs, outputs=outputs, is_train=self.hparams.mode == "train", labels=labels,)
         self.tracks.update(tracked)
-
         return
 
     def forward_val(self, batch):

@@ -1,0 +1,1815 @@
+Contents of ./SDR/__init__.py:
+
+================================================================================
+
+Contents of ./SDR/sdr_main.py:
+import os
+import logging
+import torch
+from pytorch_lightning import Trainer, seed_everything
+from pytorch_lightning.callbacks import ModelCheckpoint, Callback
+from pytorch_lightning.loggers import TensorBoardLogger
+from pytorch_lightning.profilers import SimpleProfiler
+from argparse import ArgumentParser
+from utils.pytorch_lightning_utils.pytorch_lightning_utils import load_params_from_checkpoint
+from utils.pytorch_lightning_utils.callbacks import RunValidationOnStart
+from utils import switch_functions
+from utils.argparse_init import default_arg_parser, init_parse_argparse_default_params
+
+logging.basicConfig(level=logging.INFO)
+
+class PrintCallback(Callback):
+    def on_train_start(self, trainer, pl_module):
+        print("Training is started!")
+    def on_train_end(self, trainer, pl_module):
+        print("Training is done.")
+
+def main():
+    """Initialize all the parsers, before training init."""
+    parser = default_arg_parser()
+    parser = add_trainer_args(parser)  # Add Trainer args manually
+    parser = default_arg_parser(description="docBert", parents=[parser])
+
+    eager_flags = init_parse_argparse_default_params(parser)
+    model_class_pointer = switch_functions.model_class_pointer(eager_flags["task_name"], eager_flags["architecture"])
+    parser = model_class_pointer.add_model_specific_args(parser, eager_flags["task_name"], eager_flags["dataset_name"])
+
+    hyperparams = parser.parse_args()
+    main_train(model_class_pointer, hyperparams, parser)
+
+def add_trainer_args(parser):
+    parser.add_argument("--accelerator", type=str, default="gpu", help="Type of accelerator to use, e.g. 'cpu', 'gpu'.")
+    parser.add_argument("--devices", type=int, default=1, help="Number of devices to use.")
+    parser.add_argument("--max_epochs", type=int, default=50, help="Number of epochs to train.")
+    parser.add_argument("--gpus", type=int, default=None, help="Number of GPUs to use.")
+    parser.add_argument("--gradient_clip_val", type=float, default=0.0, help="Value for gradient clipping.")
+    parser.add_argument("--limit_train_batches", type=float, default=1.0, help="Percentage of training data to use.")
+    parser.add_argument("--limit_val_batches", type=float, default=1.0, help="Percentage of validation data to use.")
+    parser.add_argument("--limit_test_batches", type=float, default=1.0, help="Percentage of test data to use.")
+    parser.add_argument("--check_val_every_n_epoch", type=int, default=1, help="Check validation every n epochs.")
+    parser.add_argument("--accumulate_grad_batches", type=int, default=1, help="Accumulate gradients every n batches.")
+    return parser
+
+def main_train(model_class_pointer, hparams, parser):
+    """Initialize the model, call training loop."""
+    seed_everything(hparams.seed)
+
+    if hparams.resume_from_checkpoint not in [None, '']:
+        hparams = load_params_from_checkpoint(hparams, parser)
+
+    model = model_class_pointer(hparams)
+
+    logger = TensorBoardLogger(save_dir=model.hparams.hparams_dir, name='', default_hp_metric=False)
+    logger.log_hyperparams(model.hparams, metrics={model.hparams.metric_to_track: 0})
+    print(f"\nLog directory:\n{model.hparams.hparams_dir}\n")
+
+    checkpoint_callback = ModelCheckpoint(
+        save_top_k=3,
+        save_last=True,
+        mode="min" if "acc" not in hparams.metric_to_track else "max",
+        monitor=hparams.metric_to_track,
+        dirpath=os.path.join(model.hparams.hparams_dir),
+        filename="{epoch}",
+        verbose=True,
+    )
+
+    trainer = Trainer(
+        num_sanity_val_steps=2,
+        gradient_clip_val=hparams.gradient_clip_val,
+        callbacks=[RunValidationOnStart(), PrintCallback(), checkpoint_callback],
+        logger=logger,
+        max_epochs=hparams.max_epochs,
+        accelerator=hparams.accelerator,
+        devices=hparams.devices,
+        limit_val_batches=hparams.limit_val_batches,
+        limit_train_batches=hparams.limit_train_batches,
+        limit_test_batches=hparams.limit_test_batches,
+        check_val_every_n_epoch=hparams.check_val_every_n_epoch,
+        profiler=SimpleProfiler(),
+        accumulate_grad_batches=hparams.accumulate_grad_batches,
+        reload_dataloaders_every_n_epochs=1,
+    )
+
+    if not hparams.test_only:
+        trainer.fit(model, ckpt_path=hparams.resume_from_checkpoint)
+    else:
+        if hparams.resume_from_checkpoint is not None:
+            model = model.load_from_checkpoint(hparams.resume_from_checkpoint, hparams=hparams, map_location=torch.device("cpu"))
+        trainer.test(model)
+
+if __name__ == "__main__":
+    main()
+================================================================================
+
+Contents of ./SDR/utils/model_utils.py:
+import os
+from datetime import datetime
+
+
+def extract_model_path_for_hyperparams(start_path, model):
+    relevant_hparams = {}
+    for key in [
+        "arch",
+        "dataset_name",
+        "test_only"
+    ]:
+        if hasattr(model.hparams, key):
+            relevant_hparams[key] = eval(f"model.hparams.{key}")
+
+    path = os.path.join(start_path, *["{}_{}".format(key, val) for key, val in relevant_hparams.items()])
+    
+    dt_string = datetime.now().strftime("%d_%m_%Y-%H_%M_%S")
+    path = os.path.join(path, dt_string)
+
+    os.makedirs(path, exist_ok=True)
+
+    return path
+================================================================================
+
+Contents of ./SDR/utils/switch_functions.py:
+from models.SDR.similarity_modeling import SimilarityModeling
+import torch
+import transformers
+from transformers import get_linear_schedule_with_warmup
+from torch import optim
+
+
+def model_class_pointer(task_name, arch):
+    """Get pointer to class base on flags.
+    Arguments:
+        task_name {str} -- the task name, node clasification etc
+        arch {str} -- recobert, etc
+    Raises:
+        Exception: If unknown task,dataset
+
+    Returns:
+        torch.nn.Module -- The module to train on
+
+    """
+
+    if task_name == "document_similarity":
+        if arch == "SDR":
+            from models.SDR.SDR import SDR
+
+            return SDR
+    raise Exception("Unkown task")
+
+
+def choose_optimizer(params, network_parameters):
+    """
+    Choose the optimizer from params.optimizer flag
+
+    Args:
+        params (dict): The input flags
+        network_parameters (dict): from net.parameters()
+
+    Raises:
+        Exception: If not matched optimizer
+    """
+    if params.optimizer == "adamW":
+        optimizer = transformers.AdamW(network_parameters, lr=params.lr,)
+    elif params.optimizer == "sgd":
+        optimizer = torch.optim.SGD(network_parameters, lr=params.lr, weight_decay=params.weight_decay, momentum=0.9,)
+    else:
+        raise Exception("No valid optimizer provided")
+    return optimizer
+
+
+def choose_scheduler(scheduler_name, optimizer, warmup_steps, params):
+
+    if scheduler_name == "linear_with_warmup":
+        return get_linear_schedule_with_warmup(optimizer, num_warmup_steps=warmup_steps, num_training_steps=params.max_epochs)
+    elif scheduler_name == "cosine_annealing_lr":
+        return optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=10, eta_min=0,)
+
+    else:
+        raise Exception("No valid optimizer provided")
+
+
+from transformers import (
+    RobertaConfig,
+    RobertaTokenizer,
+    get_linear_schedule_with_warmup,
+)
+
+
+def choose_model_class_configuration(arch, base_model_name):
+    MODEL_CLASSES = {
+        "SDR_roberta": (RobertaConfig, SimilarityModeling, RobertaTokenizer),
+    }
+    return MODEL_CLASSES[f"{arch}_{base_model_name}"]
+
+================================================================================
+
+Contents of ./SDR/utils/__init__.py:
+
+================================================================================
+
+Contents of ./SDR/utils/metrics_utils.py:
+def simple_accuracy(preds, labels):
+    return (preds == labels).mean()
+
+================================================================================
+
+Contents of ./SDR/utils/argparse_init.py:
+import argparse
+import os
+from argparse import ArgumentDefaultsHelpFormatter
+
+def str2intlist(v):
+    if v.isdigit():
+        return [int(v)]
+    try:
+        return [int(dig) for dig in v.split("_")]
+    except Exception as e:
+        raise argparse.ArgumentTypeError('Expected int or "4_4"')
+
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ("yes", "true", "t", "y", "1"):
+        return True
+    elif v.lower() in ("no", "false", "f", "n", "0"):
+        return False
+    else:
+        raise argparse.ArgumentTypeError("Boolean value expected.")
+
+def default_arg_parser(description="", conflict_handler="resolve", parents=[], is_lowest_leaf=False):
+    description = (
+        parents[0].description + description
+        if len(parents) != 0 and parents[0] is not None and parents[0].description is not None
+        else description
+    )
+    parser = argparse.ArgumentParser(
+        description=description,
+        add_help=is_lowest_leaf,
+        formatter_class=ArgumentDefaultsHelpFormatter,
+        conflict_handler=conflict_handler,
+        parents=parents,
+    )
+
+    return parser
+
+def get_non_default(parsed, parser):
+    non_default = {
+        opt.dest: getattr(parsed, opt.dest)
+        for opt in parser._option_string_actions.values()
+        if hasattr(parsed, opt.dest) and opt.default != getattr(parsed, opt.dest)
+    }
+    return non_default
+
+def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
+    TASK_OPTIONS = ["document_similarity"]
+
+    parser.add_argument(
+        "--task_name", type=str, default="document_similarity", choices=TASK_OPTIONS, help="The task to solve",
+    )
+    task_name = parser.parse_known_args()[0].task_name
+
+    DATASET_OPTIONS = {
+        "document_similarity": ["video_games", "wines"],
+    }
+    parser.add_argument(
+        "--dataset_name",
+        type=str,
+        default=DATASET_OPTIONS[task_name][0],
+        choices=DATASET_OPTIONS[task_name],
+        help="The dataset to evaluate on",
+    )
+    dataset_name = dataset_name or parser.parse_known_args()[0].dataset_name
+
+    parser.add_argument(
+        "--train_batch_size", default={"document_similarity": 32}[task_name], type=int, help="Number of samples in batch",
+    )
+    parser.add_argument(
+        "--max_epochs", default={"document_similarity": 50}[task_name], type=int, help="Number of epochs to train",
+    )
+    parser.add_argument(
+        "-lr", default={"document_similarity": 2e-5}[task_name], type=float, help="Learning rate",
+    )
+
+    parser.add_argument("--optimizer", default="adamW", help="Optimizer to use")
+    parser.add_argument(
+        "--scheduler",
+        default="linear_with_warmup",
+        choices=["linear_with_warmup", "cosine_annealing_lr"],
+        help="Scheduler to use",
+    )
+    parser.add_argument("--weight_decay", default=5e-3, help="weight decay")
+
+    parser.add_argument(
+        "--default_root_dir", default=os.path.join(os.getcwd(), "output", task_name), help="The path to store this run output",
+    )
+    output_dir = parser.parse_known_args()[0].default_root_dir
+    os.makedirs(output_dir, exist_ok=True)
+
+    parser.add_argument("--seed", type=int, default=42, help="random seed for initialization")
+
+    parser.add_argument(
+        "--arch", "--architecture", default={"document_similarity": "SDR"}[task_name], help="Architecture",
+    )
+    architecture = arch or parser.parse_known_args()[0].arch
+
+    parser.add_argument("--accumulate_grad_batches", default=1, type=int)
+
+    parser.add_argument("--accelerator", default="gpu", type=str, help="Accelerator type (cpu, gpu, tpu, etc.)")
+    parser.add_argument("--devices", default=1, type=int, help="Number of devices to train on")
+    parser.add_argument("--num_data_workers", default=0, type=int, help="for parallel data load")
+    parser.add_argument("--overwrite_data_cache", type=str2bool, nargs="?", const=True, default=False)
+    parser.add_argument("--train_val_ratio", default=0.90, type=float, help="The split ratio of the data")
+    parser.add_argument("--limit_train_batches", default=10000, type=int)
+    parser.add_argument("--train_log_every_n_steps", default=50, type=int)
+    parser.add_argument("--val_log_every_n_steps", default=1, type=int)
+    parser.add_argument("--test_log_every_n_steps", default=1, type=int)
+    parser.add_argument("--resume_from_checkpoint", default=None, type=str, help="Path to reload pretrained weights")
+    parser.add_argument("--metric_to_track", default=None, help="which parameter to track on saving")
+    parser.add_argument("--val_batch_size", default=8, type=int)
+    parser.add_argument("--test_batch_size", default=1, type=int)
+    parser.add_argument("--test_only", type=str2bool, nargs="?", const=True, default=False)
+
+    return {
+        "dataset_name": dataset_name,
+        "task_name": task_name,
+        "architecture": architecture,
+    }
+
+================================================================================
+
+Contents of ./SDR/utils/torch_utils.py:
+import numpy as np
+import torch
+import numbers
+
+def mean_non_pad_value(tensor, axis, pad_value=0):
+    mask = tensor != pad_value
+    tensor[~mask] = 0
+    tensor_mean = (tensor * mask).sum(dim=axis) / (mask.sum(dim=axis))
+
+    ignore_mask = (mask.sum(dim=axis)) == 0
+    tensor_mean[ignore_mask] = pad_value
+    return tensor_mean
+
+
+def to_numpy(tensor):
+    """Wrapper around .detach().cpu().numpy() """
+    if isinstance(tensor, torch.Tensor):
+        return tensor.detach().cpu().numpy()
+    elif isinstance(tensor, np.ndarray):
+        return tensor
+    elif isinstance(tensor, numbers.Number):
+        return np.array(tensor)
+    else:
+        raise NotImplementedError
+
+================================================================================
+
+Contents of ./SDR/utils/logging_utils.py:
+class Unbuffered(object):
+    """
+    Create buffer that dumps stdout to file.
+    
+    Example: sys.stdout = Unbuffered(open(path + '_output','w'))
+    """
+
+    def __init__(self, stream):
+        self.stream = stream
+
+    def write(self, data):
+        self.stream.write(data)
+        self.stream.flush()
+
+    def writelines(self, datas):
+        self.stream.writelines(datas)
+        self.stream.flush()
+
+    def __getattr__(self, attr):
+        return getattr(self.stream, attr)
+
+================================================================================
+
+Contents of ./SDR/utils/pytorch_lightning_utils/__init__.py:
+
+================================================================================
+
+Contents of ./SDR/utils/pytorch_lightning_utils/callbacks.py:
+from pytorch_lightning.callbacks import Callback
+from pytorch_lightning.trainer.trainer import Trainer
+
+
+class RunValidationOnStart(Callback):
+    def __init__(self):
+        pass
+
+    def on_train_start(self, trainer: Trainer, pl_module):
+        return trainer.run_evaluation()
+
+================================================================================
+
+Contents of ./SDR/utils/pytorch_lightning_utils/pytorch_lightning_utils.py:
+"""Diagnose your system and show basic information
+
+This server mainly to get detail info for better bug reporting.
+
+"""
+
+import os
+import platform
+import re
+import sys
+from argparse import Namespace
+
+import numpy
+import tensorboard
+import torch
+import tqdm
+from utils.argparse_init import get_non_default
+
+sys.path += [os.path.abspath(".."), os.path.abspath(".")]
+import pytorch_lightning  # noqa: E402
+
+LEVEL_OFFSET = "\t"
+KEY_PADDING = 20
+
+
+def run_and_parse_first_match(run_lambda, command, regex):
+    """Runs command using run_lambda, returns the first regex match if it exists"""
+    rc, out, _ = run_lambda(command)
+    if rc != 0:
+        return None
+    match = re.search(regex, out)
+    if match is None:
+        return None
+    return match.group(1)
+
+
+def get_running_cuda_version(run_lambda):
+    return run_and_parse_first_match(run_lambda, "nvcc --version", r"V(.*)$")
+
+
+def info_system():
+    return {
+        "OS": platform.system(),
+        "architecture": platform.architecture(),
+        "version": platform.version(),
+        "processor": platform.processor(),
+        "python": platform.python_version(),
+    }
+
+
+def info_cuda():
+    return {
+        "GPU": [torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())],
+        # 'nvidia_driver': get_nvidia_driver_version(run_lambda),
+        "available": torch.cuda.is_available(),
+        "version": torch.version.cuda,
+    }
+
+
+def info_packages():
+    return {
+        "numpy": numpy.__version__,
+        "pyTorch_version": torch.__version__,
+        "pyTorch_debug": torch.version.debug,
+        "pytorch-lightning": pytorch_lightning.__version__,
+        "tensorboard": tensorboard.__version__,
+        "tqdm": tqdm.__version__,
+    }
+
+
+def nice_print(details, level=0):
+    lines = []
+    for k in sorted(details):
+        key = f"* {k}:" if level == 0 else f"- {k}:"
+        if isinstance(details[k], dict):
+            lines += [level * LEVEL_OFFSET + key]
+            lines += nice_print(details[k], level + 1)
+        elif isinstance(details[k], (set, list, tuple)):
+            lines += [level * LEVEL_OFFSET + key]
+            lines += [(level + 1) * LEVEL_OFFSET + "- " + v for v in details[k]]
+        else:
+            template = "{:%is} {}" % KEY_PADDING
+            key_val = template.format(key, details[k])
+            lines += [(level * LEVEL_OFFSET) + key_val]
+    return lines
+
+
+def main():
+    details = {
+        "System": info_system(),
+        "CUDA": info_cuda(),
+        "Packages": info_packages(),
+    }
+    lines = nice_print(details)
+    text = os.linesep.join(lines)
+    print(text)
+
+def load_params_from_checkpoint(hparams, parser):
+    path = hparams.resume_from_checkpoint
+    hparams_model = Namespace(**torch.load(path,map_location=torch.device('cpu'))['hyper_parameters'])
+    hparams_model.max_epochs = hparams_model.max_epochs + 30
+    for k,v in get_non_default(hparams,parser).items():
+        setattr(hparams_model,k,v)
+    hparams_model.gpus = hparams.gpus
+    for key in vars(hparams):
+        if(key not in vars(hparams_model)):
+            setattr(hparams_model,key,getattr(hparams,key,None))
+    hparams = hparams_model
+    return hparams
+
+if __name__ == "__main__":
+    main()
+
+================================================================================
+
+Contents of ./SDR/models/doc_similarity_pl_template.py:
+import collections
+from utils.torch_utils import to_numpy
+from pytorch_lightning import _logger as log
+from pytorch_lightning.core import LightningModule
+import torch
+from utils import argparse_init
+from utils import switch_functions
+from utils.model_utils import extract_model_path_for_hyperparams
+from subprocess import Popen
+import pandas as pd
+
+
+class DocEmbeddingTemplate(LightningModule):
+
+    """
+    Author: Dvir Ginzburg.
+
+    This is a template for future document templates using pytorch lightning.
+    """
+
+    def __init__(
+        self, hparams,
+    ):
+        super(DocEmbeddingTemplate, self).__init__()
+        self.save_hyperparameters(hparams)
+        self.hparams.hparams_dir = extract_model_path_for_hyperparams(self.hparams.default_root_dir, self)
+        self.losses = {}
+        self.tracks = {}
+        self.hparams.mode = "val"
+
+    def forward(self, data):
+        """
+        forward function for the doc similarity network
+        """
+        raise NotImplementedError()
+
+    def training_step(self, batch, batch_idx, mode="train"):
+        """
+        Lightning calls this inside the training loop with the 
+        data from the training dataloader passed in as `batch`.
+        """
+
+        
+        self.losses = {}
+        self.tracks = {}
+        self.hparams.batch_idx = batch_idx
+        self.hparams.mode = mode
+        self.batch = batch
+
+        batch = self(batch)
+
+        self.tracks[f"tot_loss"] = sum(self.losses.values()).mean()
+
+        all = {k: to_numpy(v) for k, v in {**self.tracks, **self.losses}.items()}
+        getattr(self, f"{mode}_logs", None).append(all)
+        self.log_step(all)
+
+        output = collections.OrderedDict({"loss": self.tracks[f"tot_loss"]})
+        return output
+
+    def validation_step(self, batch, batch_idx, mode="val"):
+        """Lightning calls this inside the validation loop with the data from the validation dataloader passed in as `batch`."""
+
+        return self.training_step(batch, batch_idx, mode=mode)
+
+    def log_step(self, all):
+        if not (
+            getattr(self.hparams, f"{self.hparams.mode}_batch_size")
+            % (getattr(self.hparams, f"{self.hparams.mode}_log_every_n_steps"))
+            == 0
+        ):
+            return
+        for k, v in all.items():
+            if v.shape != ():
+                v = v.sum()
+            self.logger.experiment.add_scalar(f"{self.hparams.mode}_{k}_step", v, global_step=self.global_step)
+
+    def test_step(self, batch, batch_idx):
+        return self.validation_step(batch, batch_idx, mode="test")
+
+    def on_validation_epoch_start(self):
+        self.val_logs = []
+        self.hparams.mode = "val"
+
+    def on_train_epoch_start(self):
+        self.hparams.current_epoch = self.current_epoch
+        self.train_logs = []
+        self.hparams.mode = "train"
+
+    def on_test_epoch_start(self):
+        self.test_logs = []
+        self.hparams.mode = "test"
+
+    def on_epoch_end_generic(self):
+        if self.trainer.running_sanity_check:
+            return
+        logs = getattr(self, f"{self.hparams.mode}_logs", None)
+
+        self.log_dict(logs, prefix=self.hparams.mode)
+
+    def log_dict(self, logs, prefix):
+        dict_of_lists = pd.DataFrame(logs).to_dict("list")
+        for lst in dict_of_lists:
+            dict_of_lists[lst] = list(filter(lambda x: not pd.isnull(x), dict_of_lists[lst]))
+        for key, lst in dict_of_lists.items():
+            s = 0
+            for item in lst:
+                s += item.sum()
+            name = f"{prefix}_{key}_epoch"
+            val = s / len(lst)
+            self.logger.experiment.add_scalar(name, val, global_step=self.global_step)
+            if self.hparams.metric_to_track == name:
+                self.log(name, torch.tensor(val))
+
+    def on_train_epoch_end(self, outputs) -> None:
+        self.on_epoch_end_generic()
+
+    def on_validation_epoch_end(self) -> None:
+        if self.trainer.running_sanity_check:
+            return
+        if self.current_epoch % 10 == 0:
+            self.logger.experiment.add_text("Profiler", self.trainer.profiler.summary(), global_step=self.global_step)
+
+    def on_test_epoch_end(self) -> None:
+        self.on_epoch_end_generic()
+
+    def on_validation_epoch_end(self, outputs):
+        self.on_epoch_end_generic()
+
+    # ---------------------
+    # TRAINING SETUP
+    # ---------------------
+    def configure_optimizers(self):
+        """
+        Return whatever optimizers and learning rate schedulers you want here.
+
+        At least one optimizer is required.
+        """
+        no_decay = ["bias", "LayerNorm.weight"]
+        optimizer_grouped_parameters = [
+            {
+                "params": [p for n, p in self.model.named_parameters() if not any(nd in n for nd in no_decay)],
+                "weight_decay": self.hparams.weight_decay,
+            },
+            {"params": [p for n, p in self.model.named_parameters() if any(nd in n for nd in no_decay)], "weight_decay": 0.0},
+        ]
+
+        optimizer = switch_functions.choose_optimizer(self.hparams, optimizer_grouped_parameters)
+        scheduler = switch_functions.choose_scheduler(
+            self.hparams.scheduler, optimizer, warmup_steps=0, params=self.hparams
+        )
+
+        return [optimizer], [scheduler]
+
+    def dataloader(self):
+        """
+        Returns the relevant dataloader (called once per training).
+        
+        Args:
+            train_val_test (str, optional): Define which dataset to choose from. Defaults to 'train'.
+        
+        Returns:
+            Dataset
+        """
+        raise NotImplementedError()
+
+    def prepare_data(self):
+        """
+        Here we upload the data, called once, all the mask and train, eval split.
+
+        Returns:
+           Tuple of datasets: train,val and test dataset splits
+        """
+        raise NotImplementedError()
+
+    def train_dataloader(self):
+        log.info("Training data loader called.")
+        return self.dataloader(mode="train")
+
+    def val_dataloader(self):
+        log.info("Validation data loader called.")
+        return self.dataloader(mode="val")
+
+    def test_dataloader(self):
+        log.info("Test data loader called.")
+        return self.dataloader(mode="test")
+
+    @staticmethod
+    def add_model_specific_args(parser, task_name, dataset_name, is_lowest_leaf=False):
+        """
+        Static function to add all arguments that are relevant only for this module
+
+        Args:
+            parent_parser (ArgparseManager): The general argparser
+        
+        Returns:
+            ArgparseManager : The new argparser
+        """
+        parser.add_argument(
+            "--test_sample_size", default=-1, type=int, help="The number of samples to eval recos on. (-1 is all)"
+        )
+        parser.add_argument("--top_k_size", default=-1, type=int, help="The number of top k correspondences. (-1 is all)")
+
+        parser.add_argument("--with_same_series", type=argparse_init.str2bool, nargs="?", const=True, default=True)
+
+        return parser
+
+================================================================================
+
+Contents of ./SDR/models/transformer_utils.py:
+from typing import Tuple
+import torch
+from transformers import PreTrainedTokenizer
+
+
+def mask_tokens(inputs: torch.Tensor, tokenizer: PreTrainedTokenizer, args) -> Tuple[torch.Tensor, torch.Tensor]:
+    """ Prepare masked tokens inputs/labels for masked language modeling: 80% MASK, 10% random, 10% original. """
+
+    if tokenizer.mask_token is None:
+        raise ValueError(
+            "This tokenizer does not have a mask token which is necessary for masked language modeling. Remove the --mlm flag if you want to use this tokenizer."
+        )
+
+    labels = inputs.clone()
+    # We sample a few tokens in each sequence for masked-LM training (with probability args.mlm_probability defaults to 0.15 in Bert/RoBERTa)
+    probability_matrix = torch.full(labels.shape, args.mlm_probability, device=labels.device)
+    special_tokens_mask = [tokenizer.get_special_tokens_mask(val, already_has_special_tokens=True) for val in labels.tolist()]
+    probability_matrix.masked_fill_(torch.tensor(special_tokens_mask, dtype=torch.bool, device=labels.device), value=0.0)
+    if tokenizer._pad_token is not None:
+        padding_mask = labels.eq(tokenizer.pad_token_id)
+        probability_matrix.masked_fill_(padding_mask, value=0.0)
+    masked_indices = torch.bernoulli(probability_matrix).bool()
+    if (~masked_indices).all():
+        masked_indices = ~masked_indices  # If we choose to not learn anything - learn everything
+    labels[~masked_indices] = -100  # We only compute loss on masked tokens
+
+    # 80% of the time, we replace masked input tokens with tokenizer.mask_token ([MASK])
+    indices_replaced = torch.bernoulli(torch.full(labels.shape, 0.8, device=labels.device)).bool() & masked_indices
+    inputs[indices_replaced] = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)
+
+    # 10% of the time, we replace masked input tokens with random word
+    indices_random = (
+        torch.bernoulli(torch.full(labels.shape, 0.5, device=labels.device)).bool() & masked_indices & ~indices_replaced
+    )
+    random_words = torch.randint(len(tokenizer), labels.shape, dtype=torch.long, device=labels.device)
+    inputs[indices_random] = random_words[indices_random]
+
+    # The rest of the time (10% of the time) we keep the masked input tokens unchanged
+    return inputs, labels
+
+
+================================================================================
+
+Contents of ./SDR/models/transformers_base.py:
+"""Stub."""
+from transformers import RobertaConfig, RobertaModel, RobertaForMaskedLM
+from models.doc_similarity_pl_template import DocEmbeddingTemplate
+from utils import argparse_init
+from utils import switch_functions
+
+
+
+class TransformersBase(DocEmbeddingTemplate):
+
+    """
+    Author: Dvir Ginzburg.
+
+    This is a template for future document templates using transformers.
+    """
+
+    def __init__(self, hparams):
+        super(TransformersBase, self).__init__(hparams)
+        (self.config_class, self.model_class, self.tokenizer_class,) = switch_functions.choose_model_class_configuration(
+            self.hparams.arch, self.hparams.base_model_name
+        )
+        if self.hparams.config_name:
+            self.config = self.config_class.from_pretrained(self.hparams.config_name, cache_dir=None)
+        elif self.hparams.arch_or_path:
+            self.config = self.config_class.from_pretrained(self.hparams.arch_or_path)
+        else:
+            self.config = self.config_class()
+        if self.hparams.tokenizer_name:
+            self.tokenizer = self.tokenizer_class.from_pretrained(self.hparams.tokenizer_name)
+        elif self.hparams.arch_or_path:
+            self.tokenizer = self.tokenizer_class.from_pretrained(self.hparams.arch_or_path)
+        else:
+            raise ValueError(
+                "You are instantiating a new {} tokenizer. This is not supported, but you can do it from another script, save it,"
+                "and load it from here, using --tokenizer_name".format(self.tokenizer_class.__name__)
+            )
+        self.hparams.tokenizer_pad_id = self.tokenizer.pad_token_id
+        self.model = self.model_class.from_pretrained(
+            self.hparams.config_name, from_tf=bool(".ckpt" in self.hparams.config_name), config=self.config, hparams=self.hparams, attn_implementation="eager", ignore_mismatched_sizes=True
+        )
+
+    @staticmethod
+    def add_model_specific_args(parent_parser, task_name, dataset_name, is_lowest_leaf=False):
+        parser = DocEmbeddingTemplate.add_model_specific_args(parent_parser, task_name, dataset_name, is_lowest_leaf=False)
+        parser.add_argument(
+            "--mlm",
+            type=argparse_init.str2bool,
+            nargs="?",
+            const=True,
+            default=True,
+            help="Train with masked-language modeling loss instead of language modeling.",
+        )
+
+        parser.add_argument(
+            "--mlm_probability", type=float, default=0.15, help="Ratio of tokens to mask for masked language modeling loss",
+        )
+        parser.add_argument(
+            "--base_model_name", type=str, default="roberta", help="The underliying BERT-like model this arc.",
+        )
+        base_model_name = parser.parse_known_args()[0].base_model_name
+        if base_model_name in ["roberta", "tnlr"]:
+            default_config, default_tokenizer = "roberta-large", "roberta-large"
+        elif base_model_name in ["bert", "tnlr3"]:
+            default_config, default_tokenizer = "bert-large-uncased", "bert-large-uncased"
+        elif base_model_name == "longformer":
+            default_config, default_tokenizer = "allenai/longformer-base-4096", "allenai/longformer-base-4096"
+            parser.set_defaults(batch_size=2)
+        parser.add_argument(
+            "--config_name",
+            type=str,
+            default=default_config,
+            help="Optional pretrained tokenizer name or path if not the same as model_name_or_path. If both are None, initialize a new tokenizer.",
+        )
+        parser.add_argument(
+            "--tokenizer_name",
+            default=default_tokenizer,
+            type=str,
+            help="Optional pretrained tokenizer name or path if not the same as model_name_or_path. If both are None, initialize a new tokenizer.",
+        )
+
+        parser.add_argument("--max_grad_norm", default=1.0, type=float, help="Max gradient norm.")
+
+        parser.set_defaults(lr=2e-5, weight_decay=0)
+
+        arch, mlm = parser.parse_known_args()[0].arch, parser.parse_known_args()[0].mlm
+        if arch in ["bert", "roberta", "distilbert", "camembert", "recoberta", "recoberta_cosine"] and not mlm:
+            raise ValueError(
+                "BERT and RoBERTa-like models do not have LM heads but masked LM heads. They must be run using the --mlm "
+                "flag (masked language modeling)."
+            )
+
+        return parser
+
+================================================================================
+
+Contents of ./SDR/models/reco/recos_utils.py:
+import os
+import sys
+
+import torch
+import pickle
+import numpy as np
+
+from sklearn.preprocessing import normalize
+
+
+def index_amp(lst, k):
+    try:
+        return lst.index(k) if k in lst else lst.index(k.replace("&", "&amp;"))
+    except:
+        return
+
+
+def sim_matrix(a, b, eps=1e-8):
+    """
+    Similarity matrix
+    """
+    a_n, b_n = a.norm(dim=1)[:, None], b.norm(dim=1)[:, None]
+    a_norm = a / torch.max(a_n, eps * torch.ones_like(a_n))
+    b_norm = b / torch.max(b_n, eps * torch.ones_like(b_n))
+    sim_mt = torch.mm(a_norm, b_norm.transpose(0, 1))
+    return sim_mt
+
+
+================================================================================
+
+Contents of ./SDR/models/reco/hierarchical_reco.py:
+import json
+from data.data_utils import get_gt_seeds_titles
+from models.reco.wiki_recos_eval.eval_metrics import evaluate_wiki_recos
+from utils.torch_utils import mean_non_pad_value, to_numpy
+from models.reco.recos_utils import index_amp, sim_matrix
+import numpy as np
+import torch
+from tqdm import tqdm
+import pickle
+from sklearn.preprocessing import normalize
+
+
+def vectorize_reco_hierarchical(all_features, titles,gt_path, output_path=""):
+    gt = pickle.load(open(gt_path, "rb"))
+    to_reco_indices = [index_amp(titles, title) for title in gt.keys()]
+    to_reco_indices = list(filter(lambda title: title != None, to_reco_indices))
+    sections_per_article = np.array([len(article) for article in all_features])
+    sections_per_article_cumsum = np.array([0,] + [len(article) for article in all_features]).cumsum()
+    features_per_section = [sec for article in all_features for sec in article]
+    features_per_section_torch = [torch.from_numpy(feat) for feat in features_per_section]
+    features_per_section_padded = torch.nn.utils.rnn.pad_sequence(
+        features_per_section_torch, batch_first=True, padding_value=torch.tensor(float("nan"))
+    ).cuda()
+
+    num_samples, max_after_pad = features_per_section_padded.shape[:2]
+
+    flattened = features_per_section_padded.reshape(-1, features_per_section_padded.shape[-1])
+
+    recos = []
+    for i in tqdm(to_reco_indices):
+        if i > len(all_features):
+            print(f"GT title {titles[i]} was not evaluated")
+            continue
+
+        to_reco_flattened = features_per_section_padded[
+            sections_per_article_cumsum[i] : sections_per_article_cumsum[i + 1]
+        ].reshape(-1, features_per_section_padded.shape[-1])
+
+        sim = sim_matrix(to_reco_flattened, flattened)
+        reshaped_sim = sim.reshape(
+            sections_per_article_cumsum[i + 1] - sections_per_article_cumsum[i], max_after_pad, num_samples, max_after_pad
+        )
+        sim = reshaped_sim.permute(0, 2, 1, 3)
+        sim[sim.isnan()] = float("-Inf")
+        score_mat = sim.max(-1)[0]
+        score = mean_non_pad_value(score_mat, axis=-1, pad_value=torch.tensor(float("-Inf")).cuda())
+
+        score_per_article = torch.split(score.t(), sections_per_article.tolist(), dim=0)
+        score_per_article_padded = torch.nn.utils.rnn.pad_sequence(
+            score_per_article, batch_first=True, padding_value=float("-Inf")
+        ).permute(0, 2, 1)
+        score_per_article_padded[torch.isnan(score_per_article_padded)] = float("-Inf")
+        par_score_mat = score_per_article_padded.max(-1)[0]
+        par_score = mean_non_pad_value(par_score_mat, axis=-1, pad_value=float("-Inf"))
+
+        recos.append((i, to_numpy(par_score.argsort(descending=True)[1:])))
+
+    examples = [[None, title] for title in titles]  # reco_utils compatibale
+    _, mpr, _, mrr, _, hit_rate = evaluate_wiki_recos(recos, output_path, gt_path, examples=examples)
+    metrics = {"mrr": mrr, "mpr": mpr, "hit_rates": hit_rate}
+    return recos, metrics
+
+
+================================================================================
+
+Contents of ./SDR/models/reco/__init__.py:
+
+================================================================================
+
+Contents of ./SDR/models/reco/wiki_recos_eval/eval_metrics.py:
+import pickle
+import numpy as np
+from tqdm import tqdm
+from pathlib import Path
+import sys
+from utils.logging_utils import Unbuffered
+import json
+
+
+def evaluate_wiki_recos(recos, output_path, gt_path, examples):
+    original_stdout = sys.stdout
+    sys.stdout = Unbuffered(open(f"{output_path}_reco_scores", "w"))
+    dataset_as_dict = {sample[1]: sample for sample in examples}
+    recos_as_dict = {reco[0]: reco for reco in recos}
+    names_to_id = {sample[1]: idx for idx, sample in enumerate(examples)}
+    titles = [ex[1] for ex in examples]
+
+    article_recos_per_article = pickle.load(open(gt_path, "rb"))
+
+    percentiles, mpr = calculate_mpr(recos_as_dict, article_recos_per_article, dataset_as_dict, names_to_id, titles=titles)
+    recepricals, mrr = calculate_mrr(recos_as_dict, article_recos_per_article, dataset_as_dict, names_to_id, titles=titles)
+    hit_rates, hit_rate = calculate_mean_hit_rate(
+        recos_as_dict,
+        article_recos_per_article,
+        dataset_as_dict,
+        names_to_id,
+        rate_thresulds=[5, 10, 50, 100, 1000],
+        titles=titles,
+    )
+
+    metrics = {"mrr": float(mrr), "mpr": float(mpr), **{f"hit_rate_{rate[0]}": float(rate[1]) for rate in hit_rate}}
+    print(json.dumps(metrics, indent=2))
+
+    sys.stdout = original_stdout
+    return percentiles, mpr, recepricals, mrr, hit_rates, hit_rate
+
+
+def calculate_mpr(
+    input_recommandations, article_article_gt, dataset, names_to_id, sample_size=-1, popular_titles=None, titles=[]
+):
+    percentiles = []
+    for reco_idx in tqdm(input_recommandations):
+        wiki_title = titles[reco_idx]
+        curr_gts, text = [], []
+        recommandations = input_recommandations[reco_idx][1]
+        if wiki_title not in article_article_gt:
+            continue
+        for gt_title in article_article_gt[wiki_title].keys():
+            lookup = gt_title.replace("&", "&amp;") if "amp;" not in gt_title and gt_title not in names_to_id else gt_title
+            if lookup not in names_to_id:
+                print(f"{lookup} not in names_to_id")
+                continue
+            recommended_idx_ls = np.where(recommandations == names_to_id[lookup])[0]
+            if recommended_idx_ls.shape[0] == 0:
+                continue
+            curr_gts.append(recommended_idx_ls[0])
+            percentiles.extend((recommended_idx_ls[0] / len(recommandations),) * article_article_gt[wiki_title][gt_title])
+            text.append("gt: {}    gt place: {}".format(gt_title, recommended_idx_ls[0]))
+
+        if len(curr_gts) > 0:
+            print(
+                "title: {}\n".format(wiki_title)
+                + "\n".join(text)
+                + "\ntopk: {}\n\n\n".format([titles[reco_i] for reco_i in recommandations[:10]])
+            )
+
+    percentiles = percentiles if percentiles != [] else [0]
+    print("percentiles_mean:{}\n\n\n\n".format(sum(percentiles) / len(percentiles)))
+    return percentiles, sum(percentiles) / len(percentiles)
+
+
+def calculate_mrr(
+    input_recommandations, article_article_gt, dataset, names_to_id, sample_size=-1, popular_titles=None, titles=[]
+):
+    """
+        input_recommandations - list of [] per title the order of all titles recommended with it
+        article_article_gt - dict of dicts, each element is a sample, and all the gt samples goes with it and the count each sample
+        sample_size - the amount of candidates to calculate the MPR on
+    """
+    recepricals = []
+    for reco_idx in tqdm(input_recommandations):
+        wiki_title = titles[reco_idx]
+        text = []
+        recommandations = input_recommandations[reco_idx][1]
+        top = len(input_recommandations)
+        for gt_title in article_article_gt[wiki_title].keys():
+            lookup = gt_title.replace("&", "&amp;") if "amp;" not in gt_title and gt_title not in names_to_id else gt_title
+            if lookup not in names_to_id:
+                print(f"{lookup} not in names_to_id")
+                continue
+            recommended_idx_ls = np.where(recommandations == names_to_id[lookup])[0]
+            if recommended_idx_ls.shape[0] > 0 and recommended_idx_ls[0] < top:
+                top = recommended_idx_ls[0]
+            if recommended_idx_ls.shape[0] == 0:
+                continue
+            text.append("gt: {}    gt place: {} ".format(gt_title, recommended_idx_ls[0]))
+
+        if top == 0:
+            top = 1
+
+        if len(text) > 0:
+            recepricals.append(1 / (top))
+            text.append(f"\n receprical: {recepricals[-1]}")
+            print(
+                "title: {}\n".format(wiki_title)
+                + "\n".join(text)
+                + "\ntopk: {}\n\n\n".format([titles[reco_i] for reco_i in recommandations[:10]])
+            )
+
+    recepricals = recepricals if recepricals != [] else [0]
+    print(f"Recepricle mean:{sum(recepricals) / len(recepricals)}")
+    print(f"Recepricals \n {recepricals}")
+    return recepricals, sum(recepricals) / len(recepricals)
+
+
+def calculate_mean_hit_rate(
+    input_recommandations,
+    article_article_gt,
+    dataset,
+    names_to_id,
+    sample_size=-1,
+    popular_titles=None,
+    rate_thresulds=[100],
+    titles=[],
+):
+    mean_hits = [[] for i in rate_thresulds]
+    for reco_idx in tqdm(input_recommandations):
+        wiki_title = titles[reco_idx]
+        curr_gts, text = [], []
+        hit_by_rate = [0 for i in rate_thresulds]
+        recommandations = input_recommandations[reco_idx][1]
+        for gt_title in article_article_gt[wiki_title].keys():
+
+            lookup = gt_title.replace("&", "&amp;") if "amp;" not in gt_title and gt_title not in names_to_id else gt_title
+            if lookup not in names_to_id:
+                print(f"{lookup} not in names_to_id")
+                continue
+            recommended_idx_ls = np.where(recommandations == names_to_id[lookup])[0]
+            for thr_idx, thresuld in enumerate(rate_thresulds):
+                if recommended_idx_ls.shape[0] != 0 and recommended_idx_ls[0] < thresuld:
+                    hit_by_rate[thr_idx] += 1
+            text.append(f"gt: {gt_title}    gt place: {recommended_idx_ls}")
+
+        if len(text) > 0:
+            for thr_idx, thresuld in enumerate(rate_thresulds):
+                print(
+                    f"title: {wiki_title} Hit rate at {thresuld}: {hit_by_rate[thr_idx]} \n \n {''.join(text)} \n topk: {[titles[reco_i] for reco_i in recommandations[:10]]}\n\n\n"
+                )
+                hit_mean = hit_by_rate[thr_idx] / len(article_article_gt[wiki_title].keys()) if hit_by_rate[thr_idx] > 0 else 0
+                mean_hits[thr_idx].append(hit_mean)
+
+    mean_hits = mean_hits if mean_hits != [[] for rate_thresuld in rate_thresulds] else [[0] for rate_thresuld in rate_thresulds]
+    mean_hit = [sum(mean_hit) / len(mean_hit) for mean_hit in mean_hits]
+    mean_hits_with_thresuld = [(thresuld, mean) for (thresuld, mean) in zip(*[rate_thresulds, mean_hit])]
+    print(f"Hit rate mean:{mean_hits_with_thresuld}")
+    return mean_hits, mean_hits_with_thresuld
+
+================================================================================
+
+Contents of ./SDR/models/reco/wiki_recos_eval/__init__.py:
+
+================================================================================
+
+Contents of ./SDR/models/SDR/SDR.py:
+from data.datasets import (
+    WikipediaTextDatasetParagraphsSentences,
+    WikipediaTextDatasetParagraphsSentencesTest,
+)
+from utils.argparse_init import str2bool
+from models.SDR.SDR_utils import MPerClassSamplerDeter
+from data.data_utils import get_gt_seeds_titles, reco_sentence_collate, reco_sentence_test_collate
+from functools import partial
+import os
+from models.reco.hierarchical_reco import vectorize_reco_hierarchical
+from utils.torch_utils import to_numpy
+from models.transformers_base import TransformersBase
+from models.doc_similarity_pl_template import DocEmbeddingTemplate
+from utils import switch_functions
+from models import transformer_utils
+import numpy as np
+import torch
+from utils import metrics_utils
+from pytorch_metric_learning.samplers import MPerClassSampler
+from torch.utils.data.dataloader import DataLoader
+import json
+
+
+class SDR(TransformersBase):
+    """
+    Author: Dvir Ginzburg.
+
+    SDR model (ACL IJCNLP 2021)
+    """
+
+    def __init__(
+        self, hparams,
+    ):
+        """Stub."""
+        super(SDR, self).__init__(hparams)
+
+
+    def forward_train(self, batch):
+        inputs, labels = transformer_utils.mask_tokens(batch[0].clone().detach(), self.tokenizer, self.hparams)
+
+        outputs = self.model(
+            inputs,
+            masked_lm_labels=labels,
+            non_masked_input_ids=batch[0],
+            sample_labels=batch[-1],
+            run_similarity=True,
+            run_mlm=True,
+        )
+
+        self.losses["mlm_loss"] = outputs[0]
+        self.losses["d2v_loss"] = (outputs[1] or 0)  * self.hparams.sim_loss_lambda # If no similarity loss we ignore
+
+        tracked = self.track_metrics(input_ids=inputs, outputs=outputs, is_train=self.hparams.mode == "train", labels=labels,)
+        self.tracks.update(tracked)
+
+        return
+
+    def forward_val(self, batch):
+        self.forward_train(batch)
+
+    def test_step(self, batch, batch_idx):
+        section_out = []
+        for section in batch[0]:  # batch=1 for test
+            sentences=[]
+            sentences_embed_per_token = [
+                self.model(
+                    sentence.unsqueeze(0), masked_lm_labels=None, run_similarity=False
+                )[5].squeeze(0)
+                for sentence in section[0][:8]
+            ]
+            for idx, sentence in enumerate(sentences_embed_per_token):
+                sentences.append(sentence[: section[2][idx]].mean(0))  # We take the non-padded tokens and mean them
+            section_out.append(torch.stack(sentences))
+        return (section_out, batch[0][0][1][0])  # title name
+
+    def forward(self, batch):
+        eval(f"self.forward_{self.hparams.mode}")(batch)
+
+    @staticmethod
+    def track_metrics(
+        outputs=None, input_ids=None, labels=None, is_train=True, batch_idx=0,
+    ):
+        mode = "train" if is_train else "val"
+
+        trackes = {}
+        lm_pred = np.argmax(outputs[3].cpu().detach().numpy(), axis=2)
+        labels_numpy = labels.cpu().numpy()
+        labels_non_zero = labels_numpy[np.array(labels_numpy != -100)] if np.any(labels_numpy != -100) else np.zeros(1)
+        lm_pred_non_zero = lm_pred[np.array(labels_numpy != -100)] if np.any(labels_numpy != -100) else np.ones(1)
+        lm_acc = torch.tensor(
+            metrics_utils.simple_accuracy(lm_pred_non_zero, labels_non_zero), device=outputs[3].device,
+        ).reshape((1, -1))
+
+        trackes["lm_acc_{}".format(mode)] = lm_acc.detach().cpu()
+
+        return trackes
+
+    def test_epoch_end(self, outputs, recos_path=None):
+        if self.trainer.checkpoint_callback.last_model_path == "" and self.hparams.resume_from_checkpoint is None:
+            self.trainer.checkpoint_callback.last_model_path = f"{self.hparams.hparams_dir}/no_train"
+        elif(self.hparams.resume_from_checkpoint is not None):
+            self.trainer.checkpoint_callback.last_model_path = self.hparams.resume_from_checkpoint
+        if recos_path is None:
+            save_outputs_path = f"{self.trainer.checkpoint_callback.last_model_path}_FEATURES_NumSamples_{len(outputs)}"
+
+            if isinstance(outputs[0][0][0], torch.Tensor):
+                outputs = [([to_numpy(section) for section in sample[0]], sample[1]) for sample in outputs]
+            torch.save(outputs, save_outputs_path)
+            print(f"\nSaved to {save_outputs_path}\n")
+
+            titles = popular_titles = [out[1][:-1] for out in outputs]
+            idxs, gt_path = list(range(len(titles))), ""
+
+            section_sentences_features = [out[0] for out in outputs]
+            popular_titles, idxs, gt_path = get_gt_seeds_titles(titles, self.hparams.dataset_name)
+
+            self.hparams.test_sample_size = (
+                self.hparams.test_sample_size if self.hparams.test_sample_size > 0 else len(popular_titles)
+            )
+            idxs = idxs[: self.hparams.test_sample_size]
+
+            recos, metrics = vectorize_reco_hierarchical(
+                all_features=section_sentences_features,
+                titles=titles,
+                gt_path=gt_path,
+                output_path=self.trainer.checkpoint_callback.last_model_path,
+            )
+            metrics = {
+                "mrr": float(metrics["mrr"]),
+                "mpr": float(metrics["mpr"]),
+                **{f"hit_rate_{rate[0]}": float(rate[1]) for rate in metrics["hit_rates"]},
+            }
+            print(json.dumps(metrics, indent=2))
+            for k, v in metrics.items():
+                self.logger.experiment.add_scalar(k, v, global_step=self.global_step)
+
+            recos_path = os.path.join(
+                os.path.dirname(self.trainer.checkpoint_callback.last_model_path),
+                f"{os.path.basename(self.trainer.checkpoint_callback.last_model_path)[:-5]}"
+                f"_numSamples_{self.hparams.test_sample_size}",
+            )
+            torch.save(recos, recos_path)
+            print("Saving recos in {}".format(recos_path))
+
+            setattr(self.hparams, "recos_path", recos_path)
+        return
+
+    def dataloader(self, mode=None):
+        if mode == "train":
+            sampler = MPerClassSampler(
+                self.train_dataset.labels,
+                2,
+                batch_size=self.hparams.train_batch_size,
+                length_before_new_iter=(self.hparams.limit_train_batches) * self.hparams.train_batch_size,
+            )
+
+            loader = DataLoader(
+                self.train_dataset,
+                num_workers=self.hparams.num_data_workers,
+                sampler=sampler,
+                batch_size=self.hparams.train_batch_size,
+                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer,),
+            )
+
+        elif mode == "val":
+            sampler = MPerClassSamplerDeter(
+                self.val_dataset.labels,
+                2,
+                length_before_new_iter=self.hparams.limit_val_indices_batches,
+                batch_size=self.hparams.val_batch_size,
+            )
+
+            loader = DataLoader(
+                self.val_dataset,
+                num_workers=self.hparams.num_data_workers,
+                sampler=sampler,
+                batch_size=self.hparams.val_batch_size,
+                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer,),
+            )
+
+        else:
+            loader = DataLoader(
+                self.test_dataset,
+                num_workers=self.hparams.num_data_workers,
+                batch_size=self.hparams.test_batch_size,
+                collate_fn=partial(reco_sentence_test_collate, tokenizer=self.tokenizer,),
+            )
+        return loader
+
+    @staticmethod
+    def add_model_specific_args(parent_parser, task_name, dataset_name, is_lowest_leaf=False):
+        parser = TransformersBase.add_model_specific_args(parent_parser, task_name, dataset_name, is_lowest_leaf=False)
+        parser.add_argument("--hard_mine", type=str2bool, nargs="?", const=True, default=True)
+        parser.add_argument("--metric_loss_func", type=str, default="ContrastiveLoss")  # TripletMarginLoss #CosineLoss
+        parser.add_argument("--sim_loss_lambda", type=float, default=0.1)
+        parser.add_argument("--limit_tokens", type=int, default=64)
+        parser.add_argument("--limit_val_indices_batches", type=int, default=500)
+        parser.add_argument("--metric_for_similarity", type=str, choices=["cosine", "norm_euc"], default="cosine")
+
+        parser.set_defaults(
+            check_val_every_n_epoch=1,
+            batch_size=32,
+            accumulate_grad_batches=2,
+            metric_to_track="train_mlm_loss_epoch",
+        )
+
+        return parser
+    
+    def prepare_data(self):
+        block_size = (
+            self.hparams.block_size
+            if hasattr(self.hparams, "block_size")
+            and self.hparams.block_size > 0
+            and self.hparams.block_size < self.tokenizer.model_max_length
+            else self.tokenizer.model_max_length
+        )
+        self.train_dataset = WikipediaTextDatasetParagraphsSentences(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="train",
+        )
+        self.val_dataset = WikipediaTextDatasetParagraphsSentences(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="val",
+        )
+        self.val_dataset.indices_map = self.val_dataset.indices_map[: self.hparams.limit_val_indices_batches]
+        self.val_dataset.labels = self.val_dataset.labels[: self.hparams.limit_val_indices_batches]
+
+        self.test_dataset = WikipediaTextDatasetParagraphsSentencesTest(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="test",
+        )
+
+
+================================================================================
+
+Contents of ./SDR/models/SDR/similarity_modeling.py:
+from transformers import BertPreTrainedModel, RobertaConfig, RobertaModel, RobertaForMaskedLM, AutoConfig
+from argparse import ArgumentParser
+import logging
+import math
+from pytorch_metric_learning.distances.lp_distance import LpDistance
+
+import torch
+import torch.nn as nn
+from torch.nn import CrossEntropyLoss
+from torch.nn.functional import gelu
+from pytorch_metric_learning import miners, losses, reducers
+
+from pytorch_metric_learning.distances import CosineSimilarity
+
+class SimilarityModeling(BertPreTrainedModel):
+    config_class = RobertaConfig
+    base_model_prefix = "roberta"
+
+    def __init__(self, config, hparams):
+        super().__init__(config)
+        self.hparams = hparams
+        config.output_hidden_states = True
+
+        self.roberta = RobertaModel.from_pretrained("roberta-base", config=config, attn_implementation="eager", ignore_mismatched_sizes=True)
+        self.lm_head = RobertaForMaskedLM.from_pretrained("roberta-base", config=config, attn_implementation="eager", ignore_mismatched_sizes=True)
+        self.init_weights()
+        
+        if self.hparams.metric_for_similarity == "cosine":
+            self.metric = CosineSimilarity()
+            pos_margin, neg_margin = 1, 0
+            neg_margin = -1 if (getattr(self.hparams, "metric_loss_func", "ContrastiveLoss") == "CosineLoss") else 0
+        elif self.hparams.metric_for_similarity == "norm_euc":
+            self.metric = LpDistance(normalize_embeddings=True, p=2)
+            pos_margin, neg_margin = 0, 1
+
+        self.reducer = reducers.DoNothingReducer()
+        if self.hparams.hard_mine:
+            self.miner_func = miners.MultiSimilarityMiner()
+        else:
+            self.miner_func = miners.BatchEasyHardMiner(
+                pos_strategy=miners.BatchEasyHardMiner.ALL,
+                neg_strategy=miners.BatchEasyHardMiner.ALL,
+                distance=CosineSimilarity(),
+            )
+
+        if getattr(self.hparams, "metric_loss_func", "ContrastiveLoss") in ["ContrastiveLoss", "CosineLoss"]:
+            self.similarity_loss_func = losses.ContrastiveLoss(
+                pos_margin=pos_margin, neg_margin=neg_margin, distance=self.metric
+            )  # |np-sp|_+ + |sn-mn|_+ so for cossim we do pos_m=1 and neg_m=0
+        else:
+            self.similarity_loss_func = losses.TripletMarginLoss(margin=1, distance=self.metric)
+
+    def get_output_embeddings(self):
+        return self.lm_head.lm_head.decoder
+
+    @staticmethod
+    def mean_mask(features, mask):
+        return (features * mask.unsqueeze(-1)).sum(1) / mask.sum(-1, keepdim=True)
+
+    def forward(
+        self,
+        input_ids=None,
+        sample_labels=None,
+        samples_idxs=None,
+        track_sim_dict=None,
+        non_masked_input_ids=None,
+        attention_mask=None,
+        token_type_ids=None,
+        position_ids=None,
+        head_mask=None,
+        inputs_embeds=None,
+        masked_lm_labels=None,
+        labels=None,
+        output_hidden_states=False,
+        return_dict=False,
+        run_similarity=False,
+        run_mlm=True,
+    ):
+        if run_mlm:
+            print(f"input_ids shape: {input_ids.shape if input_ids is not None else 'None'}")
+            print(f"attention_mask shape: {attention_mask.shape if attention_mask is not None else 'None'}")
+            print(f"token_type_ids shape: {token_type_ids.shape if token_type_ids is not None else 'None'}")
+            print(f"position_ids shape: {position_ids.shape if position_ids is not None else 'None'}")
+            print(f"head_mask shape: {head_mask.shape if head_mask is not None else 'None'}")
+            print(f"inputs_embeds shape: {inputs_embeds.shape if inputs_embeds is not None else 'None'}")
+            outputs = list(
+                self.roberta(
+                    input_ids,
+                    attention_mask=attention_mask,
+                    token_type_ids=token_type_ids,
+                    position_ids=position_ids,
+                    head_mask=head_mask,
+                    inputs_embeds=inputs_embeds,
+                    output_hidden_states=output_hidden_states,
+                    return_dict=return_dict,
+                )
+            )
+            sequence_output = outputs[0]
+            prediction_scores = self.lm_head(sequence_output)
+            outputs = (prediction_scores, None, sequence_output)  # Add hidden states and attention if they are here
+
+            #######
+            # MLM
+            #######
+            masked_lm_loss = torch.zeros(1, device=prediction_scores.device).float()
+
+            if (masked_lm_labels is not None and (not (masked_lm_labels == -100).all())) and self.hparams.mlm:
+                loss_fct = CrossEntropyLoss()
+                masked_lm_loss = loss_fct(prediction_scores.view(-1, self.config.vocab_size), masked_lm_labels.view(-1))
+            else:
+                masked_lm_loss = 0
+        else:
+            outputs = (
+                torch.zeros([*input_ids.shape, 50265]).to(input_ids.device).float(),
+                None,
+                torch.zeros([*input_ids.shape, 1024]).to(input_ids.device).float(),
+            )
+            masked_lm_loss = torch.zeros(1)[0].to(input_ids.device).float()
+
+        #######
+        # Similarity
+        #######
+        if run_similarity:
+            non_masked_outputs = self.roberta(
+                non_masked_input_ids,
+                attention_mask=attention_mask,
+                token_type_ids=token_type_ids,
+                position_ids=position_ids,
+                head_mask=head_mask,
+                inputs_embeds=inputs_embeds,
+                output_hidden_states=output_hidden_states,
+                return_dict=return_dict,
+            )
+            non_masked_seq_out = non_masked_outputs[0]
+
+            meaned_sentences = non_masked_seq_out.mean(1)
+            miner_output = list(self.miner_func(meaned_sentences, sample_labels))
+
+            sim_loss = self.similarity_loss_func(meaned_sentences, sample_labels, miner_output)
+            outputs = (masked_lm_loss, sim_loss, torch.zeros(1)) + outputs
+        else:
+            outputs = (
+                masked_lm_loss,
+                torch.zeros(1)[0].to(input_ids.device).float(),
+                torch.zeros(1)[0].to(input_ids.device).float(),
+            ) + outputs
+
+        return outputs
+
+================================================================================
+
+Contents of ./SDR/models/SDR/SDR_utils.py:
+from pytorch_metric_learning.samplers.m_per_class_sampler import MPerClassSampler
+import torch
+from torch.utils.data.sampler import Sampler
+from pytorch_metric_learning.utils import common_functions as c_f
+
+# modified from
+# https://raw.githubusercontent.com/bnulihaixia/Deep_metric/master/utils/sampler.py
+class MPerClassSamplerDeter(MPerClassSampler):
+    """
+    At every iteration, this will return m samples per class. For example,
+    if dataloader's batchsize is 100, and m = 5, then 20 classes with 5 samples
+    each will be returned
+    """
+
+    def __init__(self, labels, m, batch_size=None, length_before_new_iter=100000):
+        super(MPerClassSamplerDeter, self).__init__(labels, m, batch_size, int(length_before_new_iter))
+        self.shuffled_idx_list = None
+
+    def __iter__(self):
+        idx_list = [0] * self.list_size
+        i = 0
+        num_iters = self.calculate_num_iters()
+        if self.shuffled_idx_list is None:
+            for _ in range(num_iters):
+
+                c_f.NUMPY_RANDOM.shuffle(self.labels)
+                if self.batch_size is None:
+                    curr_label_set = self.labels
+                else:
+                    curr_label_set = self.labels[: self.batch_size // self.m_per_class]
+                for label in curr_label_set:
+                    t = self.labels_to_indices[label]
+                    idx_list[i : i + self.m_per_class] = c_f.safe_random_choice(t, size=self.m_per_class)
+                    i += self.m_per_class
+            self.shuffled_idx_list = idx_list
+        return iter(self.shuffled_idx_list)
+
+================================================================================
+
+Contents of ./SDR/data/datasets.py:
+import ast
+from data.data_utils import get_gt_seeds_titles, raw_data_link
+import nltk
+from torch.utils.data import Dataset
+from transformers import PreTrainedTokenizer
+import os
+import pickle
+import numpy as np
+from tqdm import tqdm
+import torch
+import json
+import csv
+import sys
+from models.reco.recos_utils import index_amp
+
+
+nltk.download("punkt")
+
+
+class WikipediaTextDatasetParagraphsSentences(Dataset):
+    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):
+        self.hparams = hparams
+        cached_features_file = os.path.join(
+            f"data/datasets/cached_proccessed/{dataset_name}",
+            f"bs_{block_size}_{dataset_name}_{type(self).__name__}_tokenizer_{str(type(tokenizer)).split('.')[-1][:-2]}_mode_{mode}",
+        )
+        self.cached_features_file = cached_features_file
+        os.makedirs(os.path.dirname(cached_features_file), exist_ok=True)
+
+        raw_data_path = self.download_raw(dataset_name)
+
+        all_articles = self.save_load_splitted_dataset(mode, cached_features_file, raw_data_path)
+
+        self.hparams = hparams
+
+        max_article_len,max_sentences, max_sent_len = int(1e6), 16, 10000
+        block_size = min(block_size, tokenizer.max_len_sentences_pair) if tokenizer is not None else block_size
+        self.block_size = block_size
+        self.tokenizer = tokenizer
+
+        if os.path.exists(cached_features_file) and (self.hparams is None or not self.hparams.overwrite_data_cache):
+            print("\nLoading features from cached file %s", cached_features_file)
+            with open(cached_features_file, "rb") as handle:
+                self.examples, self.indices_map = pickle.load(handle)
+        else:
+            print("\nCreating features from dataset file at ", cached_features_file)
+
+            self.examples = []
+            self.indices_map = []
+
+            for idx_article, article in enumerate(tqdm(all_articles)):
+                this_sample_sections = []
+                title, sections = article[0], ast.literal_eval(article[1])
+                valid_sections_count = 0
+                for section_idx, section in enumerate(sections):
+                    this_sections_sentences = []
+                    if section[1] == "":
+                        continue
+                    valid_sentences_count = 0
+                    title_with_base_title = "{}:{}".format(title, section[0])
+                    for sent_idx, sent in enumerate(nltk.sent_tokenize(section[1][:max_article_len])[:max_sentences]):
+                        tokenized_desc = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(json.dumps(sent[:max_sent_len])))[
+                            :block_size
+                        ]
+                        this_sections_sentences.append(
+                            (
+                                tokenized_desc,
+                                len(tokenized_desc),
+                                idx_article,
+                                valid_sections_count,
+                                valid_sentences_count,
+                                sent[:max_sent_len],
+                            ),
+                        )
+                        self.indices_map.append((idx_article, valid_sections_count, valid_sentences_count))
+                        valid_sentences_count += 1
+                    this_sample_sections.append((this_sections_sentences, title_with_base_title))
+                    valid_sections_count += 1
+                self.examples.append((this_sample_sections, title))
+
+            print("\nSaving features into cached file %s", cached_features_file)
+            with open(cached_features_file, "wb") as handle:
+                pickle.dump((self.examples, self.indices_map), handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+        self.labels = [idx_article for idx_article, _, _ in self.indices_map]
+
+    def save_load_splitted_dataset(self, mode, cached_features_file, raw_data_path):
+        proccessed_path = f"{cached_features_file}_EXAMPLES"
+        if not os.path.exists(proccessed_path):
+            all_articles = self.read_all_articles(raw_data_path)
+            indices = list(range(len(all_articles)))
+            if mode != "test":
+                train_indices = sorted(
+                    np.random.choice(indices, replace=False, size=int(len(all_articles) * self.hparams.train_val_ratio))
+                )
+                val_indices = np.setdiff1d(list(range(len(all_articles))), train_indices)
+                indices = train_indices if mode == "train" else val_indices
+
+            articles = []
+            for i in indices:
+                articles.append(all_articles[i])
+            all_articles = articles
+            pickle.dump(all_articles, open(proccessed_path, "wb"))
+            print(f"\nsaved dataset at {proccessed_path}")
+        else:
+            all_articles = pickle.load(open(proccessed_path, "rb"))
+        setattr(self.hparams, f"{mode}_data_file", proccessed_path)
+        return all_articles
+
+    def read_all_articles(self, raw_data_path):
+        csv.field_size_limit(sys.maxsize)
+        with open(raw_data_path, newline="") as f:
+            reader = csv.reader(f)
+            all_articles = list(reader)
+        return all_articles[1:]
+
+    def download_raw(self, dataset_name):
+        raw_data_path = f"data/datasets/{dataset_name}/raw_data"
+        os.makedirs(os.path.dirname(raw_data_path), exist_ok=True)
+        if not os.path.exists(raw_data_path):
+            os.system(f"wget -O {raw_data_path} {raw_data_link(dataset_name)}")
+        return raw_data_path
+
+    def __len__(self):
+        return len(self.indices_map)
+
+    def __getitem__(self, item):
+        idx_article, idx_section, idx_sentence = self.indices_map[item]
+        sent = self.examples[idx_article][0][idx_section][0][idx_sentence]
+
+        return (
+            torch.tensor(self.tokenizer.build_inputs_with_special_tokens(sent[0]), dtype=torch.long,)[
+                : self.hparams.limit_tokens
+            ],
+            self.examples[idx_article][1],
+            self.examples[idx_article][0][idx_section][1],
+            sent[1],
+            idx_article,
+            idx_section,
+            idx_sentence,
+            item,
+            self.labels[item],
+        )
+
+class WikipediaTextDatasetParagraphsSentencesTest(WikipediaTextDatasetParagraphsSentences):
+    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="test"):
+        super().__init__(tokenizer, hparams, dataset_name, block_size, mode=mode)
+
+    def __len__(self):
+        return len(self.examples)
+
+    def __getitem__(self, item):
+        sections = []
+        for idx_section, section in enumerate(self.examples[item][0]):
+            sentences = []
+            for idx_sentence, sentence in enumerate(section[0]):
+                sentences.append(
+                    (
+                        torch.tensor(self.tokenizer.build_inputs_with_special_tokens(sentence[0]), dtype=torch.long,),
+                        self.examples[item][1],
+                        section[1],
+                        sentence[1],
+                        item,
+                        idx_section,
+                        idx_sentence,
+                        item,
+                        self.labels[item],
+                    )
+                )
+            sections.append(sentences)
+        return sections
+
+
+================================================================================
+
+Contents of ./SDR/data/__init__.py:
+
+================================================================================
+
+Contents of ./SDR/data/data_utils.py:
+import pickle
+from typing import List
+import torch
+from torch.nn.utils.rnn import pad_sequence
+
+
+def get_gt_seeds_titles(titles=None, dataset_name="wines"):
+    idxs = None
+    gt_path = f"data/datasets/{dataset_name}/gt"
+    popular_titles = list(pickle.load(open(gt_path, "rb")).keys())
+    if titles != None:
+        idxs = [titles.index(pop_title) for pop_title in popular_titles if pop_title in titles]
+    return popular_titles, idxs, gt_path
+
+
+def reco_sentence_test_collate(examples: List[torch.Tensor], tokenizer):
+    examples_ = []
+    for example in examples:
+        sections = []
+        for section in example:
+            if section == []:
+                continue
+            sections.append(
+                (
+                    pad_sequence([i[0] for i in section], batch_first=True, padding_value=tokenizer.pad_token_id),
+                    [i[2] for i in section],
+                    [i[3] for i in section],
+                    [i[4] for i in section],
+                    [i[5] for i in section],
+                    [i[6] for i in section],
+                    [i[7] for i in section],
+                    torch.tensor([i[8] for i in section]),
+                )
+            )
+        examples_.append(sections)
+    return examples_
+
+
+def reco_sentence_collate(examples: List[torch.Tensor], tokenizer):
+    return (
+        pad_sequence([i[0] for i in examples], batch_first=True, padding_value=tokenizer.pad_token_id),
+        [i[2] for i in examples],
+        [i[3] for i in examples],
+        [i[4] for i in examples],
+        [i[5] for i in examples],
+        [i[6] for i in examples],
+        [i[7] for i in examples],
+        torch.tensor([i[8] for i in examples]),
+    )
+
+
+def raw_data_link(dataset_name):
+    if dataset_name == "wines":
+        return "https://zenodo.org/record/4812960/files/wines.txt?download=1"
+    if dataset_name == "video_games":
+        return "https://zenodo.org/record/4812962/files/video_games.txt?download=1"
+
+================================================================================
+

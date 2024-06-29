@@ -37,6 +37,9 @@ def reco_sentence_test_collate(examples: List[torch.Tensor], tokenizer):
 
 
 def reco_sentence_collate(examples: List[torch.Tensor], tokenizer):
+    batch = pad_sequence([i[0] for i in examples], batch_first=True, padding_value=tokenizer.pad_token_id)
+    # Debug print to check the shape of the batch
+    print(f"reco_sentence_collate: batch shape {batch.shape}")
     return (
         pad_sequence([i[0] for i in examples], batch_first=True, padding_value=tokenizer.pad_token_id),
         [i[2] for i in examples],

@@ -77,28 +77,39 @@ class SimilarityModeling(BertPreTrainedModel):
         run_mlm=True,
     ):
         if run_mlm:
+            # Debug prints to check shapes
             print(f"input_ids shape: {input_ids.shape if input_ids is not None else 'None'}")
             print(f"attention_mask shape: {attention_mask.shape if attention_mask is not None else 'None'}")
             print(f"token_type_ids shape: {token_type_ids.shape if token_type_ids is not None else 'None'}")
             print(f"position_ids shape: {position_ids.shape if position_ids is not None else 'None'}")
             print(f"head_mask shape: {head_mask.shape if head_mask is not None else 'None'}")
             print(f"inputs_embeds shape: {inputs_embeds.shape if inputs_embeds is not None else 'None'}")
-            outputs = list(
-                self.roberta(
-                    input_ids,
-                    attention_mask=attention_mask,
-                    token_type_ids=token_type_ids,
-                    position_ids=position_ids,
-                    head_mask=head_mask,
-                    inputs_embeds=inputs_embeds,
-                    output_hidden_states=output_hidden_states,
-                    return_dict=return_dict,
-                )
-            )
-            sequence_output = outputs[0]
-            prediction_scores = self.lm_head(sequence_output)
-            outputs = (prediction_scores, None, sequence_output)  # Add hidden states and attention if they are here
 
+            if input_ids is not None:
+                print(f"Expected input shape (batch_size, sequence_length), got {input_ids.shape}")
+                if len(input_ids.shape) != 2:
+                    raise ValueError(f"Input shape must be (batch_size, sequence_length), got {input_ids.shape}")
+
+            # Pass the correct shape to the lm_head
+            outputs = self.roberta(
+                input_ids=input_ids,
+                attention_mask=attention_mask,
+                token_type_ids=token_type_ids,
+                position_ids=position_ids,
+                head_mask=head_mask,
+                inputs_embeds=inputs_embeds,
+                output_hidden_states=output_hidden_states,
+                return_dict=return_dict,
+            )
+            
+            sequence_output = outputs[0]
+            print("got past sequence_output")
+            print(sequence_output.shape)
+
+            prediction_scores = self.lm_head(sequence_output)
+            print("got past prediction_scores")
+            outputs = (prediction_scores, None, sequence_output)
+            
             #######
             # MLM
             #######
@@ -122,7 +133,7 @@ class SimilarityModeling(BertPreTrainedModel):
         #######
         if run_similarity:
             non_masked_outputs = self.roberta(
-                non_masked_input_ids,
+                input_ids=non_masked_input_ids,
                 attention_mask=attention_mask,
                 token_type_ids=token_type_ids,
                 position_ids=position_ids,
@@ -146,3 +157,4 @@ class SimilarityModeling(BertPreTrainedModel):
             ) + outputs
 
         return outputs
+
