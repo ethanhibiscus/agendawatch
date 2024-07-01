@@ -16,14 +16,26 @@ from models.reco.recos_utils import index_amp
 
 nltk.download("punkt")
 
+
 class CustomTextDataset(Dataset):
     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, block_size, mode="train"):
         self.hparams = hparams
         self.tokenizer = tokenizer
         self.block_size = block_size
+        self.mode = mode
 
         raw_data_path = os.path.join("data", "text_files")
-        self.examples, self.indices_map = self.process_data(raw_data_path)
+        cached_data_path = os.path.join("data", f"cached_{mode}_data.pkl")
+        
+        if os.path.exists(cached_data_path) and not hparams.overwrite_data_cache:
+            with open(cached_data_path, 'rb') as f:
+                self.examples, self.indices_map = pickle.load(f)
+            print(f"Loaded cached data from {cached_data_path}")
+        else:
+            self.examples, self.indices_map = self.process_data(raw_data_path)
+            with open(cached_data_path, 'wb') as f:
+                pickle.dump((self.examples, self.indices_map), f)
+            print(f"Saved processed data to {cached_data_path}")
 
     def process_data(self, raw_data_path):
         examples = []
