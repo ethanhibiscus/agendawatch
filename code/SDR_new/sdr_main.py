@@ -55,6 +55,7 @@ def main_train(model_class_pointer, hparams,parser):
             verbose=True,
         ),
         logger=logger,
+        precision=16,
         max_epochs=hparams.max_epochs,
         gpus=hparams.gpus,
         distributed_backend="dp",

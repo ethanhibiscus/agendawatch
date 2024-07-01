@@ -82,7 +82,7 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
 
     ## General learning parameters
     parser.add_argument(
-        "--train_batch_size", default={"document_similarity": 16}[task_name], type=int, help="Number of samples in batch",
+        "--train_batch_size", default={"document_similarity": 12}[task_name], type=int, help="Number of samples in batch",
     )
     parser.add_argument(
         "--max_epochs", default={"document_similarity": 50}[task_name], type=int, help="Number of epochs to train",
@@ -143,7 +143,7 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     parser.add_argument(
         "--metric_to_track", default=None, help="which parameter to track on saving",
     )
-    parser.add_argument("--val_batch_size", default=8, type=int)
+    parser.add_argument("--val_batch_size", default=3, type=int)
     parser.add_argument("--test_batch_size", default=1, type=int)
     parser.add_argument("--test_only", type=str2bool, nargs="?", const=True, default=False)
 

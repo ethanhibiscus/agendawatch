@@ -19,7 +19,7 @@ from utils import metrics_utils
 from pytorch_metric_learning.samplers import MPerClassSampler
 from torch.utils.data.dataloader import DataLoader
 import json
-from data.custom_dataset import CustomTextDataset
+
 
 class SDR(TransformersBase):
 
@@ -34,8 +34,6 @@ class SDR(TransformersBase):
     ):
         """Stub."""
         super(SDR, self).__init__(hparams)
-        self.block_size = hparams.block_size if hasattr(hparams, 'block_size') else self.tokenizer.model_max_length
-        self.prepare_data()
 
 
     def forward_train(self, batch):
@@ -149,62 +147,45 @@ class SDR(TransformersBase):
         return
 
     def dataloader(self, mode=None):
-        num_workers = 8 
-
-        if self.hparams.dataset_name == "custom_dataset":
-            if mode == "train":
-                dataset = CustomTextDataset(self.tokenizer, self.hparams, self.block_size, mode="train")
-            elif mode == "val":
-                dataset = CustomTextDataset(self.tokenizer, self.hparams, self.block_size, mode="val")
-            else:
-                dataset = CustomTextDataset(self.tokenizer, self.hparams, self.block_size, mode="test")
-            
-            loader = DataLoader(
-                dataset,
-                num_workers=num_workers,
-                batch_size=self.hparams.train_batch_size if mode == "train" else self.hparams.val_batch_size,
-                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer),
+        if mode == "train":
+            sampler = MPerClassSampler(
+                self.train_dataset.labels,
+                2,
+                batch_size=self.hparams.train_batch_size,
+                length_before_new_iter=(self.hparams.limit_train_batches) * self.hparams.train_batch_size,
             )
+
+            loader = DataLoader(
+                self.train_dataset,
+                num_workers=self.hparams.num_data_workers,
+                sampler=sampler,
+                batch_size=self.hparams.train_batch_size,
+                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer,),
+            )
+
+        elif mode == "val":
+            sampler = MPerClassSamplerDeter(
+                self.val_dataset.labels,
+                2,
+                length_before_new_iter=self.hparams.limit_val_indices_batches,
+                batch_size=self.hparams.val_batch_size,
+            )
+
+            loader = DataLoader(
+                self.val_dataset,
+                num_workers=self.hparams.num_data_workers,
+                sampler=sampler,
+                batch_size=self.hparams.val_batch_size,
+                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer,),
+            )
+
         else:
-            if mode == "train":
-                sampler = MPerClassSampler(
-                    self.train_dataset.labels,
-                    2,
-                    batch_size=self.hparams.train_batch_size,
-                    length_before_new_iter=(self.hparams.limit_train_batches) * self.hparams.train_batch_size,
-                )
-
-                loader = DataLoader(
-                    self.train_dataset,
-                    num_workers=self.hparams.num_data_workers,
-                    sampler=sampler,
-                    batch_size=self.hparams.train_batch_size,
-                    collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer,),
-                )
-
-            elif mode == "val":
-                sampler = MPerClassSamplerDeter(
-                    self.val_dataset.labels,
-                    2,
-                    length_before_new_iter=self.hparams.limit_val_indices_batches,
-                    batch_size=self.hparams.val_batch_size,
-                )
-
-                loader = DataLoader(
-                    self.val_dataset,
-                    num_workers=self.hparams.num_data_workers,
-                    sampler=sampler,
-                    batch_size=self.hparams.val_batch_size,
-                    collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer,),
-                )
-
-            else:
-                loader = DataLoader(
-                    self.test_dataset,
-                    num_workers=self.hparams.num_data_workers,
-                    batch_size=self.hparams.test_batch_size,
-                    collate_fn=partial(reco_sentence_test_collate, tokenizer=self.tokenizer,),
-                )
+            loader = DataLoader(
+                self.test_dataset,
+                num_workers=self.hparams.num_data_workers,
+                batch_size=self.hparams.test_batch_size,
+                collate_fn=partial(reco_sentence_test_collate, tokenizer=self.tokenizer,),
+            )
         return loader
 
     @staticmethod
@@ -234,48 +215,28 @@ class SDR(TransformersBase):
             and self.hparams.block_size < self.tokenizer.max_len
             else self.tokenizer.max_len
         )
+        self.train_dataset = WikipediaTextDatasetParagraphsSentences(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="train",
+        )
+        self.val_dataset = WikipediaTextDatasetParagraphsSentences(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="val",
+        )
+        self.val_dataset.indices_map = self.val_dataset.indices_map[: self.hparams.limit_val_indices_batches]
+        self.val_dataset.labels = self.val_dataset.labels[: self.hparams.limit_val_indices_batches]
 
-        if self.hparams.dataset_name == "custom":
-            self.train_dataset = CustomTextDataset(
-                tokenizer=self.tokenizer,
-                data_dir=self.hparams.data_dir,
-                block_size=block_size,
-                mode="train",
-            )
-            self.val_dataset = CustomTextDataset(
-                tokenizer=self.tokenizer,
-                data_dir=self.hparams.data_dir,
-                block_size=block_size,
-                mode="val",
-            )
-            self.test_dataset = CustomTextDataset(
-                tokenizer=self.tokenizer,
-                data_dir=self.hparams.data_dir,
-                block_size=block_size,
-                mode="test",
-            )
-        else:
-            self.train_dataset = WikipediaTextDatasetParagraphsSentences(
-                tokenizer=self.tokenizer,
-                hparams=self.hparams,
-                dataset_name=self.hparams.dataset_name,
-                block_size=block_size,
-                mode="train",
-            )
-            self.val_dataset = WikipediaTextDatasetParagraphsSentences(
-                tokenizer=self.tokenizer,
-                hparams=self.hparams,
-                dataset_name=self.hparams.dataset_name,
-                block_size=block_size,
-                mode="val",
-            )
-            self.val_dataset.indices_map = self.val_dataset.indices_map[: self.hparams.limit_val_indices_batches]
-            self.val_dataset.labels = self.val_dataset.labels[: self.hparams.limit_val_indices_batches]
+        self.test_dataset = WikipediaTextDatasetParagraphsSentencesTest(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="test",
+        )
 
-            self.test_dataset = WikipediaTextDatasetParagraphsSentencesTest(
-                tokenizer=self.tokenizer,
-                hparams=self.hparams,
-                dataset_name=self.hparams.dataset_name,
-                block_size=block_size,
-                mode="test",
-            )

@@ -202,6 +202,10 @@ class DocEmbeddingTemplate(LightningModule):
         parser.add_argument("--top_k_size", default=-1, type=int, help="The number of top k correspondences. (-1 is all)")
 
         parser.add_argument("--with_same_series", type=argparse_init.str2bool, nargs="?", const=True, default=True)
+        
+        parser.add_argument("--train_batch_size", default=16, type=int, help="Number of samples in batch")
+
+        parser.add_argument("--accumulate_grad_batches", default=2, type=int, help="Accumulate gradients over multiple batches")
 
         return parser
 
