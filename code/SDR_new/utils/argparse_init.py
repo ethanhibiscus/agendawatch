@@ -69,12 +69,15 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     task_name = parser.parse_known_args()[0].task_name
 
     DATASET_OPTIONS = {
-        "document_similarity": ["video_games", "wines", "custom_dataset"], 
+        "document_similarity": ["video_games", "wines",],
     }
-
-    parser.add_argument('--dataset_name', type=str, required=True, choices=['video_games', 'wines', 'custom_dataset'], help='Dataset name')
-    parser.add_argument('--data_dir', type=str, required=True, help='Data directory')
-    parser.add_argument('--block_size', type=int, default=512, help='Block size')
+    parser.add_argument(
+        "--dataset_name",
+        type=str,
+        default=DATASET_OPTIONS[task_name][0],
+        choices=DATASET_OPTIONS[task_name],
+        help="The dataset to evalute on",
+    )
     dataset_name = dataset_name or parser.parse_known_args()[0].dataset_name
 
     ## General learning parameters
@@ -116,7 +119,7 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     parser.add_argument("--accumulate_grad_batches", default=1, type=int)
 
     ### Auxiliary parameters
-    parser.add_argument("--gpus", default=1, type=str, help="gpu count")
+    parser.add_argument("--gpus", default=4, type=str, help="gpu count")
     parser.add_argument("--num_data_workers", default=8, type=int, help="for parallel data load")
     parser.add_argument("--overwrite_data_cache", type=str2bool, nargs="?", const=True, default=False)
 

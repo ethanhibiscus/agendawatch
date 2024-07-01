@@ -119,7 +119,7 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     parser.add_argument("--accumulate_grad_batches", default=1, type=int)
 
     ### Auxiliary parameters
-    parser.add_argument("--gpus", default=4, type=str, help="gpu count")
+    parser.add_argument("--gpus", default=1, type=str, help="gpu count")
     parser.add_argument("--num_data_workers", default=8, type=int, help="for parallel data load")
     parser.add_argument("--overwrite_data_cache", type=str2bool, nargs="?", const=True, default=False)
 

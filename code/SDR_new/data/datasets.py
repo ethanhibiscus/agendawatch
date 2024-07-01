@@ -17,6 +17,55 @@ from models.reco.recos_utils import index_amp
 nltk.download("punkt")
 
 
+class CustomTextDataset(Dataset):
+    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, block_size, mode="train"):
+        self.hparams = hparams
+        self.tokenizer = tokenizer
+        self.block_size = block_size
+
+        raw_data_path = os.path.join("data", "text_files")
+        self.examples, self.indices_map = self.process_data(raw_data_path)
+
+    def process_data(self, raw_data_path):
+        examples = []
+        indices_map = []
+
+        for idx_article, filename in enumerate(os.listdir(raw_data_path)):
+            file_path = os.path.join(raw_data_path, filename)
+            with open(file_path, 'r') as f:
+                content = json.load(f)
+            title = content["Title"]
+            sections = content["Sections"]
+
+            for section_idx, section in enumerate(sections):
+                section_title = section[0]
+                section_text = section[1]
+                sentences = section_text.split('.')  # Split text into sentences
+
+                for sent_idx, sentence in enumerate(sentences):
+                    tokenized_sentence = self.tokenizer.convert_tokens_to_ids(self.tokenizer.tokenize(sentence))[:self.block_size]
+                    examples.append(
+                        (
+                            torch.tensor(self.tokenizer.build_inputs_with_special_tokens(tokenized_sentence), dtype=torch.long),
+                            title,
+                            section_title,
+                            len(tokenized_sentence),
+                            idx_article,
+                            section_idx,
+                            sent_idx,
+                            len(examples)
+                        )
+                    )
+                    indices_map.append((idx_article, section_idx, sent_idx))
+
+        return examples, indices_map
+
+    def __len__(self):
+        return len(self.indices_map)
+
+    def __getitem__(self, idx):
+        return self.examples[idx]
+
 class WikipediaTextDatasetParagraphsSentences(Dataset):
     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):
         self.hparams = hparams

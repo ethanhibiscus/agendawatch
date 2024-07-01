@@ -19,7 +19,6 @@ from utils import metrics_utils
 from pytorch_metric_learning.samplers import MPerClassSampler
 from torch.utils.data.dataloader import DataLoader
 import json
-from data.custom_dataset import CustomTextDataset 
 
 
 class SDR(TransformersBase):
@@ -216,44 +215,28 @@ class SDR(TransformersBase):
             and self.hparams.block_size < self.tokenizer.max_len
             else self.tokenizer.max_len
         )
-        self.block_size = block_size
+        self.train_dataset = WikipediaTextDatasetParagraphsSentences(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="train",
+        )
+        self.val_dataset = WikipediaTextDatasetParagraphsSentences(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="val",
+        )
+        self.val_dataset.indices_map = self.val_dataset.indices_map[: self.hparams.limit_val_indices_batches]
+        self.val_dataset.labels = self.val_dataset.labels[: self.hparams.limit_val_indices_batches]
 
-        if self.hparams.dataset_name == 'custom_dataset':
-            self.train_dataset = CustomTextDataset(
-                tokenizer=self.tokenizer,
-                data_dir='path/to/train_data',
-                block_size=block_size,
-            )
-            self.val_dataset = CustomTextDataset(
-                tokenizer=self.tokenizer,
-                data_dir='path/to/val_data',
-                block_size=block_size,
-            )
-            self.test_dataset = CustomTextDataset(
-                tokenizer=self.tokenizer,
-                data_dir='path/to/test_data',
-                block_size=block_size,
-            )
-        else:
-            self.train_dataset = WikipediaTextDatasetParagraphsSentences(
-                tokenizer=self.tokenizer,
-                hparams=self.hparams,
-                dataset_name=self.hparams.dataset_name,
-                block_size=block_size,
-                mode="train",
-            )
-            self.val_dataset = WikipediaTextDatasetParagraphsSentences(
-                tokenizer=self.tokenizer,
-                hparams=self.hparams,
-                dataset_name=self.hparams.dataset_name,
-                block_size=block_size,
-                mode="val",
-            )
-            self.test_dataset = WikipediaTextDatasetParagraphsSentencesTest(
-                tokenizer=self.tokenizer,
-                hparams=self.hparams,
-                dataset_name=self.hparams.dataset_name,
-                block_size=block_size,
-                mode="test",
-            )
+        self.test_dataset = WikipediaTextDatasetParagraphsSentencesTest(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="test",
+        )
 
