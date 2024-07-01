@@ -264,7 +264,7 @@ def main_training():
     visualize_token_representations(processed_corpus, output_dir)
     
     # Hyperparameters
-    passes = 15
+    passes = 25
     coherence_scores = {}
     
     # Train LDA model for different numbers of topics

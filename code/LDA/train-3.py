@@ -227,14 +227,15 @@ def main_training():
     visualize_token_representations(processed_corpus, 'train_results_all')
     
     # Hyperparameters
-    passes = 15
+    passes = 20
     coherence_scores_dict = {}
-    lambda_values = [0.1, 0.2, 0.25, 0.3, 0.35, 0.4, 0.5, 0.75 ,0.9]
+    lambda_values = 0.3
+    #lambda_values = [0.1, 0.2, 0.25, 0.3, 0.35, 0.4, 0.5, 0.75 ,0.9]
     for lambda_value in lambda_values:
         coherence_scores_dict[lambda_value] = {}
 
     # Train LDA model for different numbers of topics and lambda values
-    for num_topics in range(2, 10):
+    for num_topics in range(10, 12):
         for lambda_value in lambda_values:
             print(f"Training LDA model with {num_topics} topics and lambda={lambda_value}...")
             lda_model, dictionary, doc_term_matrix = train_lda_model(processed_corpus, num_topics, passes, alpha=lambda_value)
