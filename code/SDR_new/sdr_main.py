@@ -17,7 +17,7 @@ from pytorch_lightning.loggers import TensorBoardLogger
 def main():
     """Initialize all the parsers, before training init."""
     parser = default_arg_parser()
-    parser = Trainer.add_argparse_args(parser)  # Bug in PL
+    parser = Trainer.add_argparse_args(parser)
     parser = default_arg_parser(description="docBert", parents=[parser])
 
     eager_flags = init_parse_argparse_default_params(parser)
@@ -25,7 +25,7 @@ def main():
     parser = model_class_pointer.add_model_specific_args(parser, eager_flags["task_name"], eager_flags["dataset_name"])
 
     hyperparams = parser.parse_args()
-    main_train(model_class_pointer, hyperparams,parser)
+    main_train(model_class_pointer, hyperparams, parser)
 
 
 def main_train(model_class_pointer, hparams,parser):

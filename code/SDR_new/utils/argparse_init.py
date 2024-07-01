@@ -69,15 +69,11 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     task_name = parser.parse_known_args()[0].task_name
 
     DATASET_OPTIONS = {
-        "document_similarity": ["video_games", "wines",],
+        "document_similarity": ["video_games", "wines", "custom_dataset"], 
     }
-    parser.add_argument(
-        "--dataset_name",
-        type=str,
-        default=DATASET_OPTIONS[task_name][0],
-        choices=DATASET_OPTIONS[task_name],
-        help="The dataset to evalute on",
-    )
+
+    parser.add_argument('--dataset_name', type=str, required=True, choices=['video_games', 'wines', 'custom_dataset'], help='Dataset name')
+    parser.add_argument('--data_dir', type=str, required=True, help='Data directory')
     dataset_name = dataset_name or parser.parse_known_args()[0].dataset_name
 
     ## General learning parameters
