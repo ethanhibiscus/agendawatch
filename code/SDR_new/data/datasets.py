@@ -32,15 +32,20 @@ class CustomTextDataset(Dataset):
 
         for idx_article, filename in enumerate(os.listdir(raw_data_path)):
             file_path = os.path.join(raw_data_path, filename)
+            print(f"Processing file: {file_path}")  # Add this line to log the file being processed
             with open(file_path, 'r') as f:
-                content = json.load(f)
-            title = content["Title"]
-            sections = content["Sections"]
+                try:
+                    content = f.read()
+                except Exception as e:
+                    print(f"Error reading file {file_path}: {e}")
+                    continue
+
+            title = filename  # Use the filename as the title for simplicity
+            sections = content.split('\n\n')  # Split content into sections based on double newlines
 
             for section_idx, section in enumerate(sections):
-                section_title = section[0]
-                section_text = section[1]
-                sentences = section_text.split('.')  # Split text into sentences
+                section_title = f"Section {section_idx}"  # Give a generic title to each section
+                sentences = section.split('.')  # Split section text into sentences
 
                 for sent_idx, sentence in enumerate(sentences):
                     tokenized_sentence = self.tokenizer.convert_tokens_to_ids(self.tokenizer.tokenize(sentence))[:self.block_size]
