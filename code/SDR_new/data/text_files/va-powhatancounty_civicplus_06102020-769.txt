@@ -1,0 +1,404 @@
+1 of 2 
+www.powhatanva.gov 
+ 
+ 
+ 
+AGENDA 
+POWHATAN COUNTY BOARD OF SUPERVISORS 
+WORKSHOP MEETING 
+JUNE 10, 2020 
+6:30 PM CALL TO ORDER 
+ 
+ 
+This meeting is being held electronically in accord with Virginia Code Section 15.2-1413. 
+The meeting is accessible by: 
+ 
+If you would like to participate in the meeting, go to https://us02web.zoom.us/j/83998792911 by 
+computer or smartphone with the Zoom app.   
+ 
+or by phone, dial: +1 301 715 8592  or +1 312 626 6799  or +1 929 205 6099  or +1 253 215 8782  
+or +1 346 248 7799  or +1 669 900 6833    
+ 
+Type Webinar ID: 839 987 929 11 
+ 
+Or iPhone one-tap :  
+ US: +13017158592,,83998792911#  or +13126266799,,83998792911#  
+ 
+ **During the public comment period, you may raise your hand using the zoom controls on your 
+screen or press *9 on your phone.  Visit the Zoom Help Center for more information.  
+ 
+If you would like to watch in real-time, use this link: http://powhatanva.gov/432/Live-Stream-of-
+Powhatan-County-Meetings  
+ 
+If you would like to watch the meeting at your convenience after June 2nd use this link:  
+http://powhatanva.gov/433/County-Meetings-and-Workshop-Videos-On-D  
+ 
+Public comments may also be submitted to administration@powhatanva.gov.  Any comments 
+received up until 5:00 PM, June 1, 2020 shall be entered into the meeting minutes. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 of 2 
+www.powhatanva.gov 
+1.       Call to Order 
+a. Identify Board members physically and/or electronically present 
+ 
+b. Identify opportunities for the public to access and participate in 
+the electronic meeting 
+ 
+ 
+2.       Pledge of Allegiance 
+ 
+ 
+3.       Invocation  
+ 
+ 
+4.       Requests to Postpone Agenda Items and Additions, Deletions or 
+Changes in the Order of Presentation 
+ 
+ 
+5.       Formal Approval of Agenda 
+ 
+ 
+6. 
+Public Comment (time limit 3 minutes per individual/5 minutes per 
+group, 30 minutes total time limit that can be extended by the Board) 
+ 
+ 
+7.   
+New Business  
+ 
+ 
+a. 
+ 
+Discussion on Broadband facilitated by Dr. Christopher Ali 
+Page  
+ 
+ 
+ 
+ 
+9. 
+County Attorney Comments 
+ 
+ 
+10.       County Administrator Comments 
+ 
+ 
+11.       Board Comments 
+ 
+ 
+12.       Adjournment 
+ 
+ 
+8. 
+Public Comment (time limit 3 minutes per individual/5 minutes per 
+group, 30 minutes total time limit that can be extended by the Board) 
+ 
+ 
+ 
+1 
+Everything you wanted to know about (rural) broadband (but were afraid to ask) 
+Memo prepared for Powhatan County, Virginia 
+ 
+Christopher Ali, PhD 
+Associate Professor 
+Department of Media Studies 
+University of Virginia 
+ 
+1) What is broadband? 
+“Broadband” is short-hand for an “always-on,” high-speed internet connection provided by a 
+company known as an “internet service provider” (ISP).1 We say “always-on” to differentiate 
+contemporary internet connections from the dial-up era of the 1990s, when a user had to dial a 
+telephone number through their computer to connect. Today, the internet comes to us 
+uninterrupted and we cannot get “booted off” if someone lifts up a phone receiver. We say 
+“high-speed” connection because not all internet connections are technically broadband (see 
+below for more on this point). Currently, the Federal Communications Commission (FCC), the 
+federal agency in charge of telecommunications, defines a broadband connection as one with a 
+minimum download speed of 25 megabits per second (mbps) and a minimum upload speed of 3 
+megabits per second (commonly depicted as “25/3”).2 At this speed, someone could stream a 
+Netflix movie, while another user on the same network could post Instagram content and 
+neither would experience any buffering (slow down). Many people have faster internet 
+connections than the minimum threshold. The average fixed download speed in the United 
+States in 2018 was 96.25mbps, while the average upload speed was 32.88mbps.3 
+ 
+2) Why is broadband important? 
+A high-speed home internet connection is no longer a luxury, it is a necessity. This is particularly 
+the case as more and more services, from government forms and documents, to homework, 
+and commerce, gravitate on-line only. For Americans living in rural communities and who might 
+be separated from major cities by a lengthy drive, broadband can mean leveling the economic 
+and academic playing fields. It allows people to telecommute/telework, allows for 
+telemedicine, and for rural students to take college-prep and AP courses if not offered at their 
+local high school.  
+ 
+There are 6 pillars of rural broadband:  
+1) Economic development: This includes broadband for business, employment, and real 
+estate. Studies demonstrate that broadband is linked to income growth and slowed 
+                                                     
+ 
+1 The Congressional Research Service (CRS) defines broadband as:  
+provided by a series of technologies (e.g. cable, telephone, wire, fiber, satellite, mobile, fixed wireless) that gives 
+users the ability to send and receive data at volumes and speeds necessary to support a number of applications 
+including voice communications, entertainment, telemedicine, distance education, telework, ecommerce, civic 
+engagement, public safety, and energy conservation. (CRS, 2019) 
+2 https://www.fcc.gov/reports-research/reports/broadband-progress-reports/2019-broadband-deployment-report 
+3 https://www.speedtest.net/reports/united-states/2018/ 
+ 
+ 
+2 
+unemployment rates, and even higher salaries.4 Broadband is crucial in a firms’ decision 
+to locate or re-locate to a rural community.5 The Fiber to the Home (FTTH) Council also 
+estimates that a fiber-optic connection can raise a home’s value by 3.1%.6 
+2) Rural Education: Upwards of 70% of teachers assign homework online, but 15% of 
+school-age children lack broadband access.7 FCC Commissioner Jessica Rosenworcel has 
+called this “the new homework gap.”8 
+3) Telehealth: Rural communities suffer from a lack of doctors and health centers. A high-
+speed broadband connection can mean the difference between driving to a health 
+center or meeting with a healthcare professional virtually at home. This is particularly 
+important during a health crisis such as COVID-19.9 
+4) Civic Engagement: Broadband access has been proven to improve civic engagement and 
+voter turnout.10 
+5) Public Safety: First responders need access to broadband as much as civilians do. 
+FirstNet is America’s public safety broadband network and is exclusively managed and 
+operated by AT&T. Unfortunately, FirstNet is not available everywhere.11 
+6) Quality of Life: Broadband can improve quality of life and encourage young people to 
+visit and stay in rural communities.12  
+ 
+3) What is the problem? 
+There are three major problems with broadband in rural America: many people do not have 
+access, we do not know who has access, and it is expensive to roll out. In the first regard, the 
+FCC estimates that 26.4% of rural America, or 16.9 million people, lack access to a broadband 
+connection of 25/3. 13  This has been proven to be a highly conservative estimate because of 
+the way the FCC collects broadband data. The second point is that more accurate studies 
+suggest the FCC’s estimates could be off by upwards of 50%.14 A 2017 study by Microsoft, for 
+instance, found that half of all Americans, or 162.8 million people, lack access to broadband.15 
+Third, many companies are hesitant to roll out broadband to rural America because of a 
+perceived lack of return on investment.16  
+ 
+                                                     
+ 
+4https://www.sciencedirect.com/science/article/abs/pii/S0308596114000949?via%3Dihub; 
+https://www.ers.usda.gov/publications/pub-details/?pubid=46215 
+5 https://business.unl.edu/outreach/bureau-of-business-research/academic-research/documents/kim/broadband.pdf 
+6 https://www.fiberbroadband.org/blog/study-shows-home-values-up-3.1-with-access-to-fiber 
+7 https://www.pewresearch.org/fact-tank/2018/10/26/nearly-one-in-five-teens-cant-always-finish-their-homework-because-
+of-the-digital-divide/ 
+8 https://www.fcc.gov/document/commr-rosenworcel-new-homework-gap-data 
+9 https://www.reuters.com/article/us-health-telemedicine-rural-internet/until-broadband-access-improves-telemedicine-wont-
+help-rural-communities-idUSKCN1SQ29W 
+10 https://www.tandfonline.com/doi/abs/10.1080/15575330.2016.1212910 
+11 https://muninetworks.org/content/nc-broadband-matters-public-safety-needs-broadband-maximum-effect 
+12 https://connectednation.org/blog/2019/09/26/lack-of-internet-access-holds-rural-communities-students-back/ 
+13 https://www.fcc.gov/reports-research/reports/broadband-progress-reports/2019-broadband-deployment-report 
+14 https://broadbandnow.com/research/fcc-underestimates-unserved-by-50-percent; 
+https://www.rural.palegislature.us/publications_broadband.html 
+15 https://blogs.microsoft.com/on-the-issues/2019/04/08/its-time-for-a-new-approach-for-mapping-broadband-data-to-better-
+serve-americans/ 
+16 https://fas.org/sgp/crs/misc/R46108.pdf 
+ 
+ 
+3 
+4) Can’t I just use my phone? 
+Not all broadband connections are created equal, and your phone’s internet connection is not a 
+replacement for a fixed connection. There are six ways Americans access the internet plus two 
+technologies in development. Before we begin, it is important to note that even if you have wi-
+fi in your home, you probably still have a fixed, wired connection. There is an important 
+difference between wi-fi and your cell phone, which we see below. 
+ 
+Digital Subscriber Line or DSL is the most common type of connection in rural America.17 This is 
+the connection provided by a traditional telephone company like AT&T, Verizon, CenturyLink, 
+Windstream or Frontier. While relatively ubiquitous, a DSL connection struggles with speed and 
+network congestion. It has a median download and upload speed of 10/1, and the more people 
+who use the network, the slower it will get.18 More than this, the signal degrades after about 3 
+miles, so the further away you live from an access point, the slower your connection will be.  
+ 
+Cable is the most prominent broadband technology in urban communities, along with most 
+towns, and county seats. A cable broadband connection is available to 88.2% of American 
+households.19 It is provided by a traditional cable company like Comcast (Xfinity), Charter, or 
+Cox. It uses a coaxial cable to connect you to the internet. The benefit of cable is that it is 
+pretty fast (a median of 400/20).20 The problems are that it is only available in dense areas, and 
+it suffers from network congestion (the more people online at the same time, the slower 
+everyone’s service will be).  
+ 
+Fiber is considered the “gold-standard” of broadband connections. It is incredibly fast 
+(1000/1000 or 1gigabit per second/1 gigabit per second). A fiber optic cable is a glass filament 
+that transmits data through light pulses. Fiber can be provided by any company, large and 
+small, including AT&T and Verizon (Fios), and Ting. Many telephone and electric cooperatives, 
+like Central Virginia Electric Cooperative (CVEC), are rolling out fiber to rural America.21 CVEC’s 
+fiber optic broadband is called “Firefly.”22 Fiber can handle a near unlimited amount of data 
+and users, but the problem is that it is expensive to lay down (about $27,000 per mile), and as 
+such many companies do not want to invest in its deployment without a guaranteed return on 
+investment – something that is difficult to achieve in rural America. 
+ 
+Fixed wireless, provided by a wireless internet service provider (WISP) is a wireless internet 
+connection that originates with a tower that transmits connectivity to the user using radio 
+waves. Often times, the tower itself is connected to the network (or another tower) using a 
+fiber or DSL wire, but sometimes through a microwave transmission. Fixed wireless has proven 
+beneficial for rural and remote America because one tower can transmit a signal as far as 10 
+                                                     
+ 
+17 https://pcrd.purdue.edu/files/media/008-A-Look-at-Broadband-Access-Providers-and-Technology.pdf 
+18 https://pcrd.purdue.edu/files/media/008-A-Look-at-Broadband-Access-Providers-and-Technology.pdf 
+19 https://pcrd.purdue.edu/files/media/008-A-Look-at-Broadband-Access-Providers-and-Technology.pdf 
+20 https://pcrd.purdue.edu/files/media/008-A-Look-at-Broadband-Access-Providers-and-Technology.pdf 
+21 https://muninetworks.org/content/rural-cooperatives-page 
+22 https://www.dailyprogress.com/news/local/million-grant-will-aid-rural-broadband-expansion/article_58771dd0-d8fa-512b-
+8eb3-e32acd503ac5.html 
+ 
+ 
+4 
+miles.23 WISPs include Wisper, Rise, King Street, and Agile. Some WISPs, like MonkeyBrains in 
+San Francisco, even operate in major cities.  Many ISPs are using fixed wireless as an interim 
+solution before complete fiber-to-the-home deployment because a fiber optic cable can be 
+connected to a tower and the signal transmitted wirelessly. The drawbacks of fixed wireless 
+include potentially slower service, the need for line-of-sight, network congestion, inclement 
+weather, and equipment costs.24  
+ 
+Satellite internet, provided by either ViaSat or Hughes, is available to roughly 99% of the 
+American population. Many in rural America subscribe to satellite internet. The problem is that 
+satellite connections are notoriously slow (around 2/1.3), and are plagued by high prices, low 
+data caps (meaning that you cannot use a lot of data-intensive applications), high latency 
+(meaning a lot of lag between transmission and reception) and weather disruptions.25 Many 
+have argued that satellite should not be included in the list of viable broadband technologies 
+but the FCC has disagreed.26  
+ 
+Mobile broadband is available to the 81% of the population who own a smartphone. This 
+service is provided by any of the mobile providers such as AT&T, Verizon, T-Mobile/Sprint, US 
+Cellular, Boost, etc… Only 71% of rural Americans have a smartphone, however.27 While 
+convenience is certainly a factor, mobile broadband is not a substitute for a fixed connection.28 
+4G availability (the speed necessary to stream video) is not universally available, and most 
+phones come with either data caps or data throttling.29 Data caps become more severe if trying 
+to turn a phone into a “hotspot” to connect other devices. This is troubling with for the 20% of 
+rural Americans who access the internet solely with their mobile device. 
+ 
+5G is the next generation of mobile connectivity, capable of supporting multiple devices and 
+users with blazing fast upload and download speeds. The “G” in 5G refers to generation, with 
+every generation of mobile connectivity we can do more, from texting (2G) to emails and text-
+based surfing (3G) to streaming video (4G LTE) to connecting our entire homes to the internet 
+(5G). Currently, 5G is only being rolled out in selective areas – densely packed (and wealthy) 
+urban centers.30 In addition, not all 5G is equal.31 To access the high speeds mentioned in 
+advertisements, one needs a 5G enabled phone and a provider using so called “high band” 
+frequencies (also known as millimeter waves). These radio waves can handle an incredible 
+amount of information at incredible speeds (1gig/1gig), but they cannot travel far (only 800-
+1500 feet).32 As such they require signal repeaters called “small cells.” Because so many small 
+                                                     
+ 
+23 https://broadbandnow.com/report/wisps-real-heroes-bridging-digital-divide/ 
+24 https://broadbandnow.com/report/wisps-real-heroes-bridging-digital-divide/ 
+25 https://www.dailyyonder.com/fccs-blurry-vision-satellite-broadband/2018/03/26/ 
+26 https://ilsr.org/wp-content/uploads/2018/09/fact-sheet-satellite-not-broadband.pdf 
+27 https://www.pewresearch.org/internet/fact-sheet/mobile/ 
+28 https://www.vice.com/en_us/article/mbpw3q/fcc-chair-cell-data-is-not-broadband-internet 
+29 https://www.vice.com/en_us/article/pa77y9/fcc-says-wireless-carriers-lie-about-coverage-40-of-the-time 
+30 https://www.theverge.com/2020/1/10/21060133/verizon-5g-home-rollout-delay-again-equipment 
+31 https://arstechnica.com/information-technology/2019/12/t-mobile-touts-nationwide-5g-that-fails-to-cover-130-million-
+americans/ 
+32 https://ilsr.org/wp-content/uploads/2019/08/fact-sheet-5G-pocket-guide.pdf 
+ 
+ 
+5 
+cells need to be deployed and require a fiber optic connection, and because of their high cost 
+and the sparse population, this type of 5G is not feasible for rural America. Low-band 
+frequencies, such as those used by T-Mobile, are considered 5G, and travel further than high-
+band, but from the user’s perspective, it will only be a small upgrade from their 4G 
+connection.33 
+ 
+Low Earth Orbital Satellites (LEOs) are being touted as the next generation of connectivity by 
+companies like SpaceX and Amazon.34 In theory, these satellites, which sit closer to earth than 
+traditional satellites, can deliver fiber-like speeds with minimal latency, compared to their 
+geostationary counterparts. This is all still in development, however, and its success and 
+applicability to rural America is yet to be determined.  
+ 
+5) Why don’t I have broadband? 
+According to the Pew Foundation, 24% of rural Americans say access to fast, reliable broadband 
+is a major problem in their communities.35 There are many reasons why rural Americans do not 
+have broadband. The foremost of these is that broadband is simply unavailable where they live. 
+This is because private providers refuse to connect these communities or to upgrade their 
+connections because of a perceived lack of return on investment. Where broadband is 
+available, many rural Americans do not have competition in providers.36 Moreover, where 
+broadband is available in rural areas, only 63% of people actually subscribe, suggesting a gap 
+between access and adoption.37 Cost is also major factor. The least dense areas of the United 
+States pay upwards of 37% more for broadband than the densest centers.38 The lowest income 
+households tend not have a home broadband subscription39 citing price as the problem.40  
+ 
+6) How do I get broadband? 
+In the absence of a provider offering high-performance broadband in your area, many rural 
+communities have turned to their electric or telephone cooperative.41 Almost all of the 260 
+telephone cooperatives across the country offer broadband, while over 100 of the 900+ electric 
+cooperatives do so.42 Hundreds of communities have also started funding their own broadband 
+projects. A few have also become ISPs in their own right, while other municipalities and 
+counties have funded or partially funded their broadband networks and then let ISPs manage 
+                                                     
+ 
+33 https://arstechnica.com/information-technology/2019/12/t-mobile-touts-nationwide-5g-that-fails-to-cover-130-million-
+americans/ 
+34 https://www.theverge.com/2019/4/4/18295310/amazon-project-kuiper-satellite-internet-low-earth-orbit-facebook-spacex-
+starlink 
+35 https://www.pewresearch.org/fact-tank/2018/09/10/about-a-quarter-of-rural-americans-say-access-to-high-speed-internet-
+is-a-major-problem/ 
+36 https://www.techdirt.com/articles/20180731/10103540335/report-highlights-how-us-telcos-abandoned-rural-american-
+broadband.shtml 
+37 https://www.pewresearch.org/fact-tank/2019/05/31/digital-gap-between-rural-and-nonrural-america-persists/ 
+38 https://broadbandnow.com/research/digital-divide-broadband-pricing-state-zip-income-2019 
+39 https://www.pewresearch.org/fact-tank/2019/05/07/digital-divide-persists-even-as-lower-income-americans-make-gains-in-
+tech-adoption/ 
+40 https://www.pewresearch.org/fact-tank/2019/04/22/some-americans-dont-use-the-internet-who-are-they/ 
+41 https://muninetworks.org/content/rural-cooperatives-page 
+42 https://muninetworks.org/content/rural-cooperatives-page 
+ 
+ 
+6 
+and operate the network.43 Unfortunately, at least 19 states have either prohibited or inhibited 
+municipalities from funding and operating broadband networks.44 
+ 
+7) What’s next? 
+In 2019, the FCC announced a $20.4 billion fund for rural broadband deployment.45 This 
+program comes with some hurdles, including the prohibition of communities who have 
+received state and/or USDA Re-connect grants and loans from participating.46 Dozens of US 
+senators are protesting this restrictive decision.47 It also is not clear how much this fund will 
+help in the deployment of next generation connectivity, like fiber.48 
+ 
+The FCC has also announced the creation of a new $5 billion rural 5G fund. This is in addition to 
+the $1.4 billion in loans and grants for rural broadband deployment offered by USDA. 
+Communities, however, should first determine their local broadband needs and options before 
+applying for these funds to make sure they are competitive. There are a number of terrific 
+organizations that can help with these broadband plans and community assessments.49  
+ 
+Members of rural communities and counties should also consider speaking with their Boards of 
+Supervisors to encourage the development of a broadband plan, and to look into public-private 
+partnerships with incumbent ISPs, cooperatives, and/or competitive network builders. Many 
+states have begun to permit cooperatives to offer broadband, which expands the number of 
+providers dramatically. Virginia is a state that has some inhibitions against municipalities 
+funding broadband projects, but has no prohibitions or inhibitions against cooperatives doing 
+so. Community members should also consider speaking with their state and federal 
+representatives to make sure that their interests are being met in federal policies, such as 
+broadband mapping.50  
+ 
+There is no “cookie-cutter” solution to the rural-urban digital divide. Instead, it will take an all-
+hands-on-deck approach that must begin and end with communities themselves.   
+ 
+ 
+Contact info: 
+Christopher Ali, PhD 
+cali@virginia.edu 
+@ali_christopher  
+267-582-0022 
+                                                     
+ 
+43 https://muninetworks.org/communitymap 
+44 https://broadbandnow.com/report/municipal-broadband-roadblocks/ 
+45 https://www.fcc.gov/auction/904 
+46 https://www.publicknowledge.org/press-release/last-minute-change-to-fcc-rural-broadband-fund-may-ban-grants-for-
+millions-of-unconnected-americans/ 
+47 https://www.gillibrand.senate.gov/imo/media/doc/3.9.2020_Gillibrand_Schumer_Letter_FCC_final.pdf 
+48 https://www.benton.org/blog/thoughts-rural-broadband-subsidies-new-decade 
+49 https://nextcenturycities.org 
+50 https://www.multichannel.com/news/senate-passes-broadband-data-
+act?utm_source=sendgrid&utm_medium=email&utm_campaign=Newsletters 
