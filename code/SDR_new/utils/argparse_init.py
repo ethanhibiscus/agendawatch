@@ -94,10 +94,10 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
         default=512,
         help="Block size for tokenization",
     )
-    
+
     ## General learning parameters
     parser.add_argument(
-        "--train_batch_size", default={"document_similarity": 32}[task_name], type=int, help="Number of samples in batch",
+        "--train_batch_size", default={"document_similarity": 16}[task_name], type=int, help="Number of samples in batch",
     )
     parser.add_argument(
         "--max_epochs", default={"document_similarity": 50}[task_name], type=int, help="Number of epochs to train",

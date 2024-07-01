@@ -149,6 +149,8 @@ class SDR(TransformersBase):
         return
 
     def dataloader(self, mode=None):
+        num_workers = 8 
+
         if self.hparams.dataset_name == "custom_dataset":
             if mode == "train":
                 dataset = CustomTextDataset(self.tokenizer, self.hparams, self.block_size, mode="train")
@@ -159,7 +161,7 @@ class SDR(TransformersBase):
             
             loader = DataLoader(
                 dataset,
-                num_workers=self.hparams.num_data_workers,
+                num_workers=num_workers,
                 batch_size=self.hparams.train_batch_size if mode == "train" else self.hparams.val_batch_size,
                 collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer),
             )
