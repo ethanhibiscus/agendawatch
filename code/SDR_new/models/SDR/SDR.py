@@ -34,6 +34,8 @@ class SDR(TransformersBase):
     ):
         """Stub."""
         super(SDR, self).__init__(hparams)
+        self.block_size = hparams.block_size if hasattr(hparams, 'block_size') else self.tokenizer.model_max_length
+        self.prepare_data()
 
 
     def forward_train(self, batch):

@@ -87,6 +87,13 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
         default="./data/text_files",
         help="Directory containing the custom dataset text files",
     )
+
+    parser.add_argument(
+        "--block_size",
+        type=int,
+        default=512,
+        help="Block size for tokenization",
+    )
     
     ## General learning parameters
     parser.add_argument(
