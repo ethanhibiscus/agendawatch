@@ -45,6 +45,7 @@ def main_train(model_class_pointer, hparams,parser):
     trainer = pytorch_lightning.Trainer(
         num_sanity_val_steps=2,
         gradient_clip_val=hparams.max_grad_norm,
+        accumulate_grad_batches=hparams.accumulate_grad_batches,
         callbacks=[RunValidationOnStart()],
         checkpoint_callback=ModelCheckpoint(
             save_top_k=3,
@@ -55,6 +56,7 @@ def main_train(model_class_pointer, hparams,parser):
             verbose=True,
         ),
         logger=logger,
+        precision=16,
         max_epochs=hparams.max_epochs,
         gpus=hparams.gpus,
         distributed_backend="dp",
