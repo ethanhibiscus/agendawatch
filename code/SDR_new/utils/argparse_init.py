@@ -80,6 +80,14 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     )
     dataset_name = dataset_name or parser.parse_known_args()[0].dataset_name
 
+    # Add the new data_dir argument
+    parser.add_argument(
+        "--data_dir",
+        type=str,
+        default="./data/text_files",
+        help="Directory containing the custom dataset text files",
+    )
+    
     ## General learning parameters
     parser.add_argument(
         "--train_batch_size", default={"document_similarity": 32}[task_name], type=int, help="Number of samples in batch",

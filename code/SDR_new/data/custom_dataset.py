@@ -1,15 +1,9 @@
-import os
-import torch
-from torch.utils.data import Dataset
-from transformers import PreTrainedTokenizer
-from nltk.tokenize import sent_tokenize
-
 class CustomTextDataset(Dataset):
-    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, data_dir, block_size, mode="train"):
+    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, block_size, mode="train"):
         self.hparams = hparams
         self.tokenizer = tokenizer
         self.block_size = block_size
-        self.data_dir = data_dir
+        self.data_dir = hparams.data_dir  # Use data_dir from hparams
         self.mode = mode
         
         self.examples = []

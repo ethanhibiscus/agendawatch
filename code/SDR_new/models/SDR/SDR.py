@@ -149,11 +149,11 @@ class SDR(TransformersBase):
     def dataloader(self, mode=None):
         if self.hparams.dataset_name == "custom_dataset":
             if mode == "train":
-                dataset = CustomTextDataset(self.tokenizer, self.hparams, './data/text_files', self.block_size, mode="train")
+                dataset = CustomTextDataset(self.tokenizer, self.hparams, self.block_size, mode="train")
             elif mode == "val":
-                dataset = CustomTextDataset(self.tokenizer, self.hparams, './data/text_files', self.block_size, mode="val")
+                dataset = CustomTextDataset(self.tokenizer, self.hparams, self.block_size, mode="val")
             else:
-                dataset = CustomTextDataset(self.tokenizer, self.hparams, './data/text_files', self.block_size, mode="test")
+                dataset = CustomTextDataset(self.tokenizer, self.hparams, self.block_size, mode="test")
             
             loader = DataLoader(
                 dataset,
