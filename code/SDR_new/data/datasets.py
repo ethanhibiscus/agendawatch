@@ -16,7 +16,6 @@ from models.reco.recos_utils import index_amp
 
 nltk.download("punkt")
 
-
 class CustomTextDataset(Dataset):
     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, block_size, mode="train"):
         self.hparams = hparams
@@ -30,15 +29,15 @@ class CustomTextDataset(Dataset):
         examples = []
         indices_map = []
 
-        for idx_article, filename in enumerate(os.listdir(raw_data_path)):
+        file_list = os.listdir(raw_data_path)
+        for idx_article, filename in enumerate(tqdm(file_list, desc="Processing files")):
             file_path = os.path.join(raw_data_path, filename)
-            print(f"Processing file: {file_path}")  # Add this line to log the file being processed
-            with open(file_path, 'r') as f:
-                try:
+            try:
+                with open(file_path, 'r') as f:
                     content = f.read()
-                except Exception as e:
-                    print(f"Error reading file {file_path}: {e}")
-                    continue
+            except Exception as e:
+                print(f"Error reading file {file_path}: {e}")
+                continue
 
             title = filename  # Use the filename as the title for simplicity
             sections = content.split('\n\n')  # Split content into sections based on double newlines
@@ -70,6 +69,7 @@ class CustomTextDataset(Dataset):
 
     def __getitem__(self, idx):
         return self.examples[idx]
+
 
 class WikipediaTextDatasetParagraphsSentences(Dataset):
     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):

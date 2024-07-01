@@ -39,18 +39,17 @@ class SDR(TransformersBase):
 
     def forward_train(self, batch):
         inputs, labels = transformer_utils.mask_tokens(batch[0].clone().detach(), self.tokenizer, self.hparams)
-
+        
         outputs = self.model(
             inputs,
             masked_lm_labels=labels,
             non_masked_input_ids=batch[0],
-            sample_labels=batch[-1],
             run_similarity=True,
             run_mlm=True,
         )
 
         self.losses["mlm_loss"] = outputs[0]
-        self.losses["d2v_loss"] = (outputs[1] or 0)  * self.hparams.sim_loss_lambda # If no similarity loss we ignore
+        self.losses["d2v_loss"] = (outputs[1] or 0) * self.hparams.sim_loss_lambda # If no similarity loss we ignore
 
         tracked = self.track_metrics(input_ids=inputs, outputs=outputs, is_train=self.hparams.mode == "train", labels=labels,)
         self.tracks.update(tracked)
@@ -86,11 +85,8 @@ class SDR(TransformersBase):
 
         trackes = {}
         lm_pred = np.argmax(outputs[3].cpu().detach().numpy(), axis=2)
-        labels_numpy = labels.cpu().numpy()
-        labels_non_zero = labels_numpy[np.array(labels_numpy != -100)] if np.any(labels_numpy != -100) else np.zeros(1)
-        lm_pred_non_zero = lm_pred[np.array(labels_numpy != -100)] if np.any(labels_numpy != -100) else np.ones(1)
         lm_acc = torch.tensor(
-            metrics_utils.simple_accuracy(lm_pred_non_zero, labels_non_zero), device=outputs[3].device,
+            (lm_pred == input_ids.cpu().numpy()).mean(), device=outputs[3].device,
         ).reshape((1, -1))
 
         trackes["lm_acc_{}".format(mode)] = lm_acc.detach().cpu()
