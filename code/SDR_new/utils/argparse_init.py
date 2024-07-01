@@ -74,6 +74,7 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
 
     parser.add_argument('--dataset_name', type=str, required=True, choices=['video_games', 'wines', 'custom_dataset'], help='Dataset name')
     parser.add_argument('--data_dir', type=str, required=True, help='Data directory')
+    parser.add_argument('--block_size', type=int, default=512, help='Block size')
     dataset_name = dataset_name or parser.parse_known_args()[0].dataset_name
 
     ## General learning parameters
