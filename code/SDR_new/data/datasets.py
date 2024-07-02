@@ -16,7 +16,6 @@ from models.reco.recos_utils import index_amp
 
 nltk.download("punkt")
 
-
 class CustomTextDataset(Dataset):
     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, block_size, mode="train"):
         self.hparams = hparams
@@ -25,17 +24,28 @@ class CustomTextDataset(Dataset):
         self.mode = mode
 
         raw_data_path = os.path.join("data", "text_files")
+        processed_data_path = os.path.join("data", "processed_data.pkl")
         cached_data_path = os.path.join("data", f"cached_{mode}_data.pkl")
-        
+
         if os.path.exists(cached_data_path) and not hparams.overwrite_data_cache:
             with open(cached_data_path, 'rb') as f:
                 self.examples, self.indices_map = pickle.load(f)
             print(f"Loaded cached data from {cached_data_path}")
         else:
-            self.examples, self.indices_map = self.process_data(raw_data_path)
+            if not os.path.exists(processed_data_path) or hparams.overwrite_data_cache:
+                examples, indices_map = self.process_data(raw_data_path)
+                with open(processed_data_path, 'wb') as f:
+                    pickle.dump((examples, indices_map), f)
+                print(f"Saved processed data to {processed_data_path}")
+            else:
+                with open(processed_data_path, 'rb') as f:
+                    examples, indices_map = pickle.load(f)
+                print(f"Loaded processed data from {processed_data_path}")
+
+            self.examples, self.indices_map = self.split_data(examples, indices_map, mode)
             with open(cached_data_path, 'wb') as f:
                 pickle.dump((self.examples, self.indices_map), f)
-            print(f"Saved processed data to {cached_data_path}")
+            print(f"Saved {mode} data to {cached_data_path}")
 
     def process_data(self, raw_data_path):
         examples = []
@@ -76,11 +86,28 @@ class CustomTextDataset(Dataset):
 
         return examples, indices_map
 
+    def split_data(self, examples, indices_map, mode):
+        np.random.seed(self.hparams.seed)
+        indices = np.arange(len(examples))
+        np.random.shuffle(indices)
+
+        split_idx = int(len(indices) * self.hparams.train_val_ratio)
+        if mode == "train":
+            selected_indices = indices[:split_idx]
+        else:
+            selected_indices = indices[split_idx:]
+
+        split_examples = [examples[i] for i in selected_indices]
+        split_indices_map = [indices_map[i] for i in selected_indices]
+
+        return split_examples, split_indices_map
+
     def __len__(self):
         return len(self.indices_map)
 
     def __getitem__(self, idx):
         return self.examples[idx]
+
 
 
 class WikipediaTextDatasetParagraphsSentences(Dataset):
