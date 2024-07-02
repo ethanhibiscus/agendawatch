@@ -69,14 +69,14 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     task_name = parser.parse_known_args()[0].task_name
 
     DATASET_OPTIONS = {
-        "document_similarity": ["video_games", "wines",],
+        "document_similarity": ["video_games", "wines", "custom_dataset"],
     }
     parser.add_argument(
         "--dataset_name",
         type=str,
         default=DATASET_OPTIONS[task_name][0],
         choices=DATASET_OPTIONS[task_name],
-        help="The dataset to evalute on",
+        help="The dataset to evaluate on",
     )
     dataset_name = dataset_name or parser.parse_known_args()[0].dataset_name
 
@@ -138,7 +138,6 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
         "--test_log_every_n_steps", default=1, type=int,
     )
 
-
     parser.add_argument("--resume_from_checkpoint", default=None, type=str, help="Path to reload pretrained weights")
     parser.add_argument(
         "--metric_to_track", default=None, help="which parameter to track on saving",
@@ -152,4 +151,3 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
         "task_name": task_name,
         "architecture": architecture,
     }
-
