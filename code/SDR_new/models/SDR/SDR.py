@@ -165,12 +165,7 @@ class SDR(TransformersBase):
             )
 
         elif mode == "val":
-            sampler = MPerClassSamplerDeter(
-                self.val_dataset.labels,
-                2,
-                length_before_new_iter=self.hparams.limit_val_indices_batches,
-                batch_size=self.hparams.val_batch_size,
-            )
+            sampler = RandomSampler(self.val_dataset)  # Use RandomSampler for validation
 
             loader = DataLoader(
                 self.val_dataset,
