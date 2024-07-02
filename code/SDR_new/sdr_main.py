@@ -1,50 +1,36 @@
-"""Top level file, parse flags and call trining loop."""
 import os
 from utils.pytorch_lightning_utils.pytorch_lightning_utils import load_params_from_checkpoint
 import torch
 from pytorch_lightning.profiler.profilers import SimpleProfiler
 from utils.pytorch_lightning_utils.callbacks import RunValidationOnStart
 from utils import switch_functions
-import pytorch_lightning
+import pytorch_lightning as pl
 from pytorch_lightning import Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint
 from utils.argparse_init import default_arg_parser, init_parse_argparse_default_params
 import logging
+from pytorch_lightning.loggers import TensorBoardLogger
+from models.SDR.SDR import SDR
 
 logging.basicConfig(level=logging.INFO)
-from pytorch_lightning.loggers import TensorBoardLogger
 
 def main():
-    """Initialize all the parsers, before training init."""
     parser = default_arg_parser()
-    parser = Trainer.add_argparse_args(parser)  # Bug in PL
-    parser = default_arg_parser(description="docBert", parents=[parser])
+    parser = Trainer.add_argparse_args(parser)
+    parser = SDR.add_model_specific_args(parser)
+    args = parser.parse_args()
 
-    eager_flags = init_parse_argparse_default_params(parser)
-    model_class_pointer = switch_functions.model_class_pointer(eager_flags["task_name"], eager_flags["architecture"])
-    parser = model_class_pointer.add_model_specific_args(parser, eager_flags["task_name"], eager_flags["dataset_name"])
-
-    hyperparams = parser.parse_args()
-    main_train(model_class_pointer, hyperparams,parser)
-
+    main_train(SDR, args, parser)
 
 def main_train(model_class_pointer, hparams, parser):
-    pytorch_lightning.utilities.seed.seed_everything(seed=hparams.seed)
+    pl.utilities.seed.seed_everything(seed=hparams.seed)
 
     if hparams.resume_from_checkpoint not in [None, '']:
         hparams = load_params_from_checkpoint(hparams, parser)
 
     model = model_class_pointer(hparams)
-
-    logger = TensorBoardLogger(save_dir=model.hparams.hparams_dir, name='', default_hp_metric=False)
-    logger.log_hyperparams(model.hparams, metrics={model.hparams.metric_to_track: 0})
-    print(f"\nLog directory:\n{model.hparams.hparams_dir}\n")
-
-    train_dataset = CustomTextDataset(directory=hparams.data_dir, tokenizer=model.tokenizer, block_size=hparams.block_size)
-    train_loader = DataLoader(train_dataset, batch_size=hparams.train_batch_size, shuffle=True, num_workers=4)
-
-    val_dataset = CustomTextDataset(directory=hparams.data_dir, tokenizer=model.tokenizer, block_size=hparams.block_size)
-    val_loader = DataLoader(val_dataset, batch_size=hparams.val_batch_size, shuffle=False, num_workers=4)
+    
+    logger = TensorBoardLogger(save_dir=hparams.default_root_dir, name='')
 
     trainer = Trainer(
         num_sanity_val_steps=2,
@@ -55,7 +41,7 @@ def main_train(model_class_pointer, hparams, parser):
             save_last=True,
             mode="min" if "acc" not in hparams.metric_to_track else "max",
             monitor=hparams.metric_to_track,
-            filepath=os.path.join(model.hparams.hparams_dir, "{epoch}"),
+            dirpath=os.path.join(hparams.default_root_dir, "{epoch}"),
             verbose=True,
         ),
         logger=logger,
@@ -73,12 +59,11 @@ def main_train(model_class_pointer, hparams, parser):
     )
     
     if not hparams.test_only:
-        trainer.fit(model, train_loader, val_loader)
+        trainer.fit(model)
     else:
         if hparams.resume_from_checkpoint is not None:
-            model = model.load_from_checkpoint(hparams.resume_from_checkpoint, hparams=hparams, map_location=torch.device(f"cpu"))
+            model = model_class_pointer.load_from_checkpoint(hparams.resume_from_checkpoint, hparams=hparams, map_location=torch.device('cpu'))
         trainer.test(model)
 
 if __name__ == "__main__":
     main()
-

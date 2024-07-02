@@ -1,26 +1,3 @@
-from data.datasets import (
-    WikipediaTextDatasetParagraphsSentences,
-    WikipediaTextDatasetParagraphsSentencesTest,
-)
-from utils.argparse_init import str2bool
-from models.SDR.SDR_utils import MPerClassSamplerDeter
-from data.data_utils import get_gt_seeds_titles, reco_sentence_collate, reco_sentence_test_collate
-from functools import partial
-import os
-from models.reco.hierarchical_reco import vectorize_reco_hierarchical
-from utils.torch_utils import to_numpy
-from models.transformers_base import TransformersBase
-from models.doc_similarity_pl_template import DocEmbeddingTemplate
-from utils import switch_functions
-from models import transformer_utils
-import numpy as np
-import torch
-from utils import metrics_utils
-from pytorch_metric_learning.samplers import MPerClassSampler
-from torch.utils.data.dataloader import DataLoader
-import json
-
-
 from data.datasets import CustomTextDataset
 from transformers import RobertaModel, RobertaConfig, RobertaTokenizer, RobertaForMaskedLM
 from torch.utils.data import DataLoader
@@ -138,8 +115,7 @@ class SDR(LightningModule):
         return ranked_indices
 
     @staticmethod
-    def add_model_specific_args(parent_parser):
-        parser = parent_parser.add_argument_group("SDR")
+    def add_model_specific_args(parser):
         parser.add_argument("--data_dir", type=str, help="Path to the text files directory")
         parser.add_argument("--block_size", type=int, default=512, help="Maximum input sequence length")
         parser.add_argument("--projection_dim", type=int, default=128, help="Dimension of the projection head")
@@ -152,4 +128,4 @@ class SDR(LightningModule):
         parser.add_argument("--train_batch_size", type=int, default=16, help="Training batch size")
         parser.add_argument("--val_batch_size", type=int, default=16, help="Validation batch size")
         parser.add_argument("--test_batch_size", type=int, default=16, help="Test batch size")
-        return parent_parser
+        return parser
