@@ -15,36 +15,37 @@ from models.reco.recos_utils import index_amp
 import random
 
 nltk.download("punkt")
-
 class CustomTextDataset(Dataset):
-    def __init__(self, directory, tokenizer: PreTrainedTokenizer, block_size: int):
+    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):
+        self.hparams = hparams
         self.tokenizer = tokenizer
         self.block_size = block_size
+
         self.examples = []
-        self.labels = []
         self.indices_map = []
 
-        files = [os.path.join(directory, f) for f in os.listdir(directory) if f.endswith('.txt')]
-
-        for idx, file in enumerate(files):
-            with open(file, 'r', encoding='utf-8') as f:
-                text = f.read()
-
-            paragraphs = text.split('\n\n')
-            for p_idx, paragraph in enumerate(paragraphs):
-                sentences = nltk.sent_tokenize(paragraph)
-                for s_idx, sentence in enumerate(sentences):
-                    tokenized_text = tokenizer.encode(sentence, add_special_tokens=True, truncation=True, max_length=block_size)
-                    self.examples.append(tokenized_text)
-                    self.labels.append(idx)
-                    self.indices_map.append((idx, p_idx, s_idx))
+        text_files_dir = './text_files'
+        for filename in os.listdir(text_files_dir):
+            if filename.endswith('.txt'):
+                with open(os.path.join(text_files_dir, filename), 'r') as file:
+                    text = file.read()
+                    paragraphs = text.split('\n\n')
+                    for p_idx, paragraph in enumerate(paragraphs):
+                        sentences = nltk.sent_tokenize(paragraph)
+                        for s_idx, sentence in enumerate(sentences):
+                            tokenized_sentence = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(sentence))[:block_size]
+                            self.examples.append((tokenized_sentence, len(tokenized_sentence), p_idx, s_idx))
+                            self.indices_map.append((len(self.examples) - 1))
 
     def __len__(self):
-        return len(self.examples)
+        return len(self.indices_map)
 
-    def __getitem__(self, item):
-        return torch.tensor(self.examples[item], dtype=torch.long), self.labels[item]
-    
+    def __getitem__(self, idx):
+        example_idx = self.indices_map[idx]
+        tokenized_sentence, sent_len, p_idx, s_idx = self.examples[example_idx]
+        return torch.tensor(tokenized_sentence, dtype=torch.long), sent_len, p_idx, s_idx
+
+
 class WikipediaTextDatasetParagraphsSentences(Dataset):
     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):
         self.hparams = hparams

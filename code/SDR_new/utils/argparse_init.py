@@ -69,26 +69,26 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     task_name = parser.parse_known_args()[0].task_name
 
     DATASET_OPTIONS = {
-        "document_similarity": ["custom_dataset"],
+        "document_similarity": ["video_games", "wines",],
     }
     parser.add_argument(
         "--dataset_name",
         type=str,
         default=DATASET_OPTIONS[task_name][0],
         choices=DATASET_OPTIONS[task_name],
-        help="The dataset to evaluate on",
+        help="The dataset to evalute on",
     )
     dataset_name = dataset_name or parser.parse_known_args()[0].dataset_name
 
     ## General learning parameters
     parser.add_argument(
-        "--train_batch_size", default=16, type=int, help="Number of samples in batch",
+        "--train_batch_size", default={"document_similarity": 16}[task_name], type=int, help="Number of samples in batch",
     )
     parser.add_argument(
-        "--max_epochs", default=50, type=int, help="Number of epochs to train",
+        "--max_epochs", default={"document_similarity": 50}[task_name], type=int, help="Number of epochs to train",
     )
     parser.add_argument(
-        "-lr", default=2e-5, type=float, help="Learning rate",
+        "-lr", default={"document_similarity": 2e-5}[task_name], type=float, help="Learning rate",
     )
 
     parser.add_argument("--optimizer", default="adamW", help="Optimizer to use")
@@ -111,8 +111,10 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
 
     ### Model Parameters
     parser.add_argument(
-        "--arch", "--architecture", default="SDR", help="Architecture",
+        "--arch", "--architecture", default={"document_similarity": "SDR"}[task_name], help="Architecture",
     )
+
+    architecture = arch or parser.parse_known_args()[0].arch
 
     parser.add_argument("--accumulate_grad_batches", default=1, type=int)
 
@@ -136,6 +138,7 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
         "--test_log_every_n_steps", default=1, type=int,
     )
 
+
     parser.add_argument("--resume_from_checkpoint", default=None, type=str, help="Path to reload pretrained weights")
     parser.add_argument(
         "--metric_to_track", default=None, help="which parameter to track on saving",
@@ -144,16 +147,9 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     parser.add_argument("--test_batch_size", default=1, type=int)
     parser.add_argument("--test_only", type=str2bool, nargs="?", const=True, default=False)
 
-    ### Custom parameters
-    parser.add_argument("--data_dir", type=str, help="Path to the text files directory")
-    parser.add_argument("--block_size", type=int, default=512, help="Maximum input sequence length")
-    parser.add_argument("--contrastive_weight", type=float, default=0.1, help="Weight for the contrastive loss")
-    parser.add_argument("--projection_dim", type=int, default=128, help="Dimension of the projection head")
-
     return {
         "dataset_name": dataset_name,
         "task_name": task_name,
-        "architecture": "SDR",
+        "architecture": architecture,
     }
-
 
