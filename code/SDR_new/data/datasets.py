@@ -24,7 +24,7 @@ class CustomTextDataset(Dataset):
         self.examples = []
         self.indices_map = []
 
-        text_files_dir = './text_files'
+        text_files_dir = './data/text_files'  # Ensure this points to your dataset directory
         for filename in os.listdir(text_files_dir):
             if filename.endswith('.txt'):
                 with open(os.path.join(text_files_dir, filename), 'r') as file:
@@ -44,6 +44,7 @@ class CustomTextDataset(Dataset):
         example_idx = self.indices_map[idx]
         tokenized_sentence, sent_len, p_idx, s_idx = self.examples[example_idx]
         return torch.tensor(tokenized_sentence, dtype=torch.long), sent_len, p_idx, s_idx
+
 
 
 class WikipediaTextDatasetParagraphsSentences(Dataset):
