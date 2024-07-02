@@ -12,104 +12,39 @@ import json
 import csv
 import sys
 from models.reco.recos_utils import index_amp
-
+import random
 
 nltk.download("punkt")
 
 class CustomTextDataset(Dataset):
-    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, block_size, mode="train"):
-        self.hparams = hparams
+    def __init__(self, directory, tokenizer: PreTrainedTokenizer, block_size: int):
         self.tokenizer = tokenizer
         self.block_size = block_size
-        self.mode = mode
+        self.examples = []
+        self.labels = []
+        self.indices_map = []
 
-        raw_data_path = os.path.join("data", "text_files")
-        processed_data_path = os.path.join("data", "processed_data.pkl")
-        cached_data_path = os.path.join("data", f"cached_{mode}_data.pkl")
+        files = [os.path.join(directory, f) for f in os.listdir(directory) if f.endswith('.txt')]
 
-        if os.path.exists(cached_data_path) and not hparams.overwrite_data_cache:
-            with open(cached_data_path, 'rb') as f:
-                self.examples, self.indices_map = pickle.load(f)
-            print(f"Loaded cached data from {cached_data_path}")
-        else:
-            if not os.path.exists(processed_data_path) or hparams.overwrite_data_cache:
-                examples, indices_map = self.process_data(raw_data_path)
-                with open(processed_data_path, 'wb') as f:
-                    pickle.dump((examples, indices_map), f)
-                print(f"Saved processed data to {processed_data_path}")
-            else:
-                with open(processed_data_path, 'rb') as f:
-                    examples, indices_map = pickle.load(f)
-                print(f"Loaded processed data from {processed_data_path}")
+        for idx, file in enumerate(files):
+            with open(file, 'r', encoding='utf-8') as f:
+                text = f.read()
 
-            self.examples, self.indices_map = self.split_data(examples, indices_map, mode)
-            with open(cached_data_path, 'wb') as f:
-                pickle.dump((self.examples, self.indices_map), f)
-            print(f"Saved {mode} data to {cached_data_path}")
-
-    def process_data(self, raw_data_path):
-        examples = []
-        indices_map = []
-
-        file_list = os.listdir(raw_data_path)
-        for idx_article, filename in enumerate(tqdm(file_list, desc="Processing files")):
-            file_path = os.path.join(raw_data_path, filename)
-            try:
-                with open(file_path, 'r') as f:
-                    content = f.read()
-            except Exception as e:
-                print(f"Error reading file {file_path}: {e}")
-                continue
-
-            title = filename  # Use the filename as the title for simplicity
-            sections = content.split('\n\n')  # Split content into sections based on double newlines
-
-            for section_idx, section in enumerate(sections):
-                section_title = f"Section {section_idx}"  # Give a generic title to each section
-                sentences = section.split('.')  # Split section text into sentences
-
-                for sent_idx, sentence in enumerate(sentences):
-                    tokenized_sentence = self.tokenizer.convert_tokens_to_ids(self.tokenizer.tokenize(sentence))[:self.block_size]
-                    examples.append(
-                        (
-                            torch.tensor(self.tokenizer.build_inputs_with_special_tokens(tokenized_sentence), dtype=torch.long),
-                            title,
-                            section_title,
-                            len(tokenized_sentence),
-                            idx_article,
-                            section_idx,
-                            sent_idx,
-                            len(examples)
-                        )
-                    )
-                    indices_map.append((idx_article, section_idx, sent_idx))
-
-        return examples, indices_map
-
-    def split_data(self, examples, indices_map, mode):
-        np.random.seed(self.hparams.seed)
-        indices = np.arange(len(examples))
-        np.random.shuffle(indices)
-
-        split_idx = int(len(indices) * self.hparams.train_val_ratio)
-        if mode == "train":
-            selected_indices = indices[:split_idx]
-        else:
-            selected_indices = indices[split_idx:]
-
-        split_examples = [examples[i] for i in selected_indices]
-        split_indices_map = [indices_map[i] for i in selected_indices]
-
-        return split_examples, split_indices_map
+            paragraphs = text.split('\n\n')
+            for p_idx, paragraph in enumerate(paragraphs):
+                sentences = nltk.sent_tokenize(paragraph)
+                for s_idx, sentence in enumerate(sentences):
+                    tokenized_text = tokenizer.encode(sentence, add_special_tokens=True, truncation=True, max_length=block_size)
+                    self.examples.append(tokenized_text)
+                    self.labels.append(idx)
+                    self.indices_map.append((idx, p_idx, s_idx))
 
     def __len__(self):
-        return len(self.indices_map)
+        return len(self.examples)
 
-    def __getitem__(self, idx):
-        return self.examples[idx]
-
-
-
+    def __getitem__(self, item):
+        return torch.tensor(self.examples[item], dtype=torch.long), self.labels[item]
+    
 class WikipediaTextDatasetParagraphsSentences(Dataset):
     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):
         self.hparams = hparams

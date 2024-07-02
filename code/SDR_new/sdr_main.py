@@ -28,21 +28,25 @@ def main():
     main_train(model_class_pointer, hyperparams,parser)
 
 
-def main_train(model_class_pointer, hparams,parser):
-    """Initialize the model, call training loop."""
+def main_train(model_class_pointer, hparams, parser):
     pytorch_lightning.utilities.seed.seed_everything(seed=hparams.seed)
 
-    if(hparams.resume_from_checkpoint not in [None,'']):
+    if hparams.resume_from_checkpoint not in [None, '']:
         hparams = load_params_from_checkpoint(hparams, parser)
 
     model = model_class_pointer(hparams)
 
-
-    logger = TensorBoardLogger(save_dir=model.hparams.hparams_dir,name='',default_hp_metric=False)
+    logger = TensorBoardLogger(save_dir=model.hparams.hparams_dir, name='', default_hp_metric=False)
     logger.log_hyperparams(model.hparams, metrics={model.hparams.metric_to_track: 0})
     print(f"\nLog directory:\n{model.hparams.hparams_dir}\n")
 
-    trainer = pytorch_lightning.Trainer(
+    train_dataset = CustomTextDataset(directory=hparams.data_dir, tokenizer=model.tokenizer, block_size=hparams.block_size)
+    train_loader = DataLoader(train_dataset, batch_size=hparams.train_batch_size, shuffle=True, num_workers=4)
+
+    val_dataset = CustomTextDataset(directory=hparams.data_dir, tokenizer=model.tokenizer, block_size=hparams.block_size)
+    val_loader = DataLoader(val_dataset, batch_size=hparams.val_batch_size, shuffle=False, num_workers=4)
+
+    trainer = Trainer(
         num_sanity_val_steps=2,
         gradient_clip_val=hparams.max_grad_norm,
         callbacks=[RunValidationOnStart()],
@@ -55,7 +59,6 @@ def main_train(model_class_pointer, hparams,parser):
             verbose=True,
         ),
         logger=logger,
-        #precision=16,
         max_epochs=hparams.max_epochs,
         gpus=hparams.gpus,
         distributed_backend="dp",
@@ -66,16 +69,15 @@ def main_train(model_class_pointer, hparams,parser):
         profiler=SimpleProfiler(),
         accumulate_grad_batches=hparams.accumulate_grad_batches,
         reload_dataloaders_every_epoch=True,
-        # load
         resume_from_checkpoint=hparams.resume_from_checkpoint,
     )
-    if(not hparams.test_only):
-        trainer.fit(model)
+    
+    if not hparams.test_only:
+        trainer.fit(model, train_loader, val_loader)
     else:
-        if(hparams.resume_from_checkpoint is not None):
-            model = model.load_from_checkpoint(hparams.resume_from_checkpoint,hparams=hparams, map_location=torch.device(f"cpu"))
-    trainer.test(model)
-
+        if hparams.resume_from_checkpoint is not None:
+            model = model.load_from_checkpoint(hparams.resume_from_checkpoint, hparams=hparams, map_location=torch.device(f"cpu"))
+        trainer.test(model)
 
 if __name__ == "__main__":
     main()

@@ -19,201 +19,137 @@ from utils import metrics_utils
 from pytorch_metric_learning.samplers import MPerClassSampler
 from torch.utils.data.dataloader import DataLoader
 import json
+
+
 from data.datasets import CustomTextDataset
+from transformers import RobertaModel, RobertaConfig, RobertaTokenizer, RobertaForMaskedLM
+from torch.utils.data import DataLoader
+import torch.nn as nn
+import torch
+from pytorch_lightning import LightningModule
+import pytorch_lightning as pl
+from utils.argparse_init import str2bool
+from transformers import AdamW, get_linear_schedule_with_warmup
+import torch.nn.functional as F
 
 
-class SDR(TransformersBase):
+class SDR(LightningModule):
+    def __init__(self, hparams):
+        super(SDR, self).__init__()
+        self.save_hyperparameters(hparams)
 
-    """
-    Author: Dvir Ginzburg.
+        self.config = RobertaConfig.from_pretrained(hparams.config_name)
+        self.tokenizer = RobertaTokenizer.from_pretrained(hparams.tokenizer_name)
+        self.roberta = RobertaModel.from_pretrained(hparams.model_name_or_path, config=self.config)
 
-    SDR model (ACL IJCNLP 2021)
-    """
+        self.projection_head = nn.Linear(self.config.hidden_size, hparams.projection_dim)
+        self.lm_head = RobertaForMaskedLM.from_pretrained(hparams.model_name_or_path).lm_head
 
-    def __init__(
-        self, hparams,
-    ):
-        """Stub."""
-        super(SDR, self).__init__(hparams)
+        self.hparams = hparams
 
+    def forward(self, input_ids, attention_mask=None):
+        outputs = self.roberta(input_ids, attention_mask=attention_mask)
+        sequence_output = outputs[0]
+        pooled_output = sequence_output[:, 0]
+        embeddings = self.projection_head(pooled_output)
+        return embeddings
 
-    def forward_train(self, batch):
-        inputs, labels = transformer_utils.mask_tokens(batch[0].clone().detach(), self.tokenizer, self.hparams)
+    def training_step(self, batch, batch_idx):
+        inputs, labels = batch
+        embeddings = self(inputs)
 
-        outputs = self.model(
-            inputs,
-            masked_lm_labels=labels,
-            non_masked_input_ids=batch[0],
-            run_similarity=False,  # We set run_similarity to False since we don't have labels
-            run_mlm=True,
+        # MLM Loss
+        mlm_loss = self.compute_mlm_loss(inputs)
+
+        # Contrastive Loss
+        contrastive_loss = self.compute_contrastive_loss(embeddings, labels)
+
+        # Total Loss
+        total_loss = mlm_loss + self.hparams.contrastive_weight * contrastive_loss
+
+        self.log('train_loss', total_loss)
+        return total_loss
+
+    def compute_mlm_loss(self, inputs):
+        masked_inputs, labels = self.mask_tokens(inputs)
+        outputs = self.roberta(masked_inputs)
+        prediction_scores = self.lm_head(outputs[0])
+        mlm_loss = nn.CrossEntropyLoss()(prediction_scores.view(-1, self.config.vocab_size), labels.view(-1))
+        return mlm_loss
+
+    def compute_contrastive_loss(self, embeddings, labels):
+        cosine_sim = nn.CosineSimilarity(dim=-1)
+        labels = labels.view(-1, 1)
+        mask = torch.eq(labels, labels.T).float()
+        similarity_matrix = cosine_sim(embeddings.unsqueeze(1), embeddings.unsqueeze(0))
+        positive_pairs = similarity_matrix * mask
+        negative_pairs = similarity_matrix * (1 - mask)
+        contrastive_loss = -torch.log(positive_pairs + 1e-6).mean() + torch.log(negative_pairs + 1e-6).mean()
+        return contrastive_loss
+
+    def mask_tokens(self, inputs):
+        labels = inputs.clone()
+        probability_matrix = torch.full(labels.shape, self.hparams.mlm_probability)
+        special_tokens_mask = [
+            self.tokenizer.get_special_tokens_mask(val, already_has_special_tokens=True) for val in labels.tolist()
+        ]
+        probability_matrix.masked_fill_(torch.tensor(special_tokens_mask, dtype=torch.bool), value=0.0)
+        masked_indices = torch.bernoulli(probability_matrix).bool()
+        labels[~masked_indices] = -100
+
+        indices_replaced = torch.bernoulli(torch.full(labels.shape, 0.8)).bool() & masked_indices
+        inputs[indices_replaced] = self.tokenizer.convert_tokens_to_ids(self.tokenizer.mask_token)
+
+        indices_random = torch.bernoulli(torch.full(labels.shape, 0.1)).bool() & masked_indices & ~indices_replaced
+        random_words = torch.randint(len(self.tokenizer), labels.shape, dtype=torch.long)
+        inputs[indices_random] = random_words[indices_random]
+
+        return inputs, labels
+
+    def configure_optimizers(self):
+        optimizer = AdamW(self.parameters(), lr=self.hparams.lr, weight_decay=self.hparams.weight_decay)
+        scheduler = get_linear_schedule_with_warmup(
+            optimizer, num_warmup_steps=self.hparams.warmup_steps, num_training_steps=self.hparams.total_steps
         )
+        return [optimizer], [scheduler]
 
-        self.losses["mlm_loss"] = outputs[0]
+    def train_dataloader(self):
+        dataset = CustomTextDataset(directory=self.hparams.data_dir, tokenizer=self.tokenizer, block_size=self.hparams.block_size)
+        return DataLoader(dataset, batch_size=self.hparams.train_batch_size, shuffle=True, num_workers=4)
 
-        # No d2v_loss since we don't have sample_labels
-        self.losses["d2v_loss"] = torch.tensor(0.0).to(inputs.device)
+    def val_dataloader(self):
+        dataset = CustomTextDataset(directory=self.hparams.data_dir, tokenizer=self.tokenizer, block_size=self.hparams.block_size)
+        return DataLoader(dataset, batch_size=self.hparams.val_batch_size, shuffle=False, num_workers=4)
 
-        tracked = self.track_metrics(input_ids=inputs, outputs=outputs, is_train=self.hparams.mode == "train", labels=labels)
-        self.tracks.update(tracked)
+    def test_dataloader(self):
+        dataset = CustomTextDataset(directory=self.hparams.data_dir, tokenizer=self.tokenizer, block_size=self.hparams.block_size)
+        return DataLoader(dataset, batch_size=self.hparams.test_batch_size, shuffle=False, num_workers=4)
 
-        return
+    def compute_similarity(self, source_embedding, target_embeddings):
+        cosine_sim = nn.CosineSimilarity(dim=-1)
+        similarity_scores = cosine_sim(source_embedding.unsqueeze(0), target_embeddings)
+        return similarity_scores
 
-    def forward_val(self, batch):
-        self.forward_train(batch)
-
-    def test_step(self, batch, batch_idx):
-        section_out = []
-        for section in batch[0]:  # batch=1 for test
-            sentences=[]
-            sentences_embed_per_token = [
-                self.model(
-                    sentence.unsqueeze(0), masked_lm_labels=None, run_similarity=False
-                )[5].squeeze(0)
-                for sentence in section[0][:8]
-            ]
-            for idx, sentence in enumerate(sentences_embed_per_token):
-                sentences.append(sentence[: section[2][idx]].mean(0))  # We take the non-padded tokens and mean them
-            section_out.append(torch.stack(sentences))
-        return (section_out, batch[0][0][1][0])  # title name
-
-    def forward(self, batch):
-        eval(f"self.forward_{self.hparams.mode}")(batch)
+    def rank_documents(self, source_document, all_documents):
+        source_embedding = self(source_document)
+        target_embeddings = torch.stack([self(doc) for doc in all_documents])
+        similarity_scores = self.compute_similarity(source_embedding, target_embeddings)
+        ranked_indices = similarity_scores.argsort(descending=True)
+        return ranked_indices
 
     @staticmethod
-    def track_metrics(
-        outputs=None, input_ids=None, labels=None, is_train=True, batch_idx=0,
-    ):
-        mode = "train" if is_train else "val"
-
-        trackes = {}
-        lm_pred = np.argmax(outputs[3].cpu().detach().numpy(), axis=2)
-        lm_acc = torch.tensor(
-            (lm_pred == input_ids.cpu().numpy()).mean(), device=outputs[3].device,
-        ).reshape((1, -1))
-
-        trackes["lm_acc_{}".format(mode)] = lm_acc.detach().cpu()
-
-        return trackes
-
-    def test_epoch_end(self, outputs, recos_path=None):
-        if self.trainer.checkpoint_callback.last_model_path == "" and self.hparams.resume_from_checkpoint is None:
-            self.trainer.checkpoint_callback.last_model_path = f"{self.hparams.hparams_dir}/no_train"
-        elif(self.hparams.resume_from_checkpoint is not None):
-            self.trainer.checkpoint_callback.last_model_path = self.hparams.resume_from_checkpoint
-        if recos_path is None:
-            save_outputs_path = f"{self.trainer.checkpoint_callback.last_model_path}_FEATURES_NumSamples_{len(outputs)}"
-
-            if isinstance(outputs[0][0][0], torch.Tensor):
-                outputs = [([to_numpy(section) for section in sample[0]], sample[1]) for sample in outputs]
-            torch.save(outputs, save_outputs_path)
-            print(f"\nSaved to {save_outputs_path}\n")
-
-            titles = popular_titles = [out[1][:-1] for out in outputs]
-            idxs, gt_path = list(range(len(titles))), ""
-
-            section_sentences_features = [out[0] for out in outputs]
-            popular_titles, idxs, gt_path = get_gt_seeds_titles(titles, self.hparams.dataset_name)
-
-            self.hparams.test_sample_size = (
-                self.hparams.test_sample_size if self.hparams.test_sample_size > 0 else len(popular_titles)
-            )
-            idxs = idxs[: self.hparams.test_sample_size]
-
-            recos, metrics = vectorize_reco_hierarchical(
-                all_features=section_sentences_features,
-                titles=titles,
-                gt_path=gt_path,
-                output_path=self.trainer.checkpoint_callback.last_model_path,
-            )
-            metrics = {
-                "mrr": float(metrics["mrr"]),
-                "mpr": float(metrics["mpr"]),
-                **{f"hit_rate_{rate[0]}": float(rate[1]) for rate in metrics["hit_rates"]},
-            }
-            print(json.dumps(metrics, indent=2))
-            for k, v in metrics.items():
-                self.logger.experiment.add_scalar(k, v, global_step=self.global_step)
-
-            recos_path = os.path.join(
-                os.path.dirname(self.trainer.checkpoint_callback.last_model_path),
-                f"{os.path.basename(self.trainer.checkpoint_callback.last_model_path)[:-5]}"
-                f"_numSamples_{self.hparams.test_sample_size}",
-            )
-            torch.save(recos, recos_path)
-            print("Saving recos in {}".format(recos_path))
-
-            setattr(self.hparams, "recos_path", recos_path)
-        return
-
-    def dataloader(self, mode=None):
-        if mode == "train":
-            loader = DataLoader(
-                self.train_dataset,
-                num_workers=self.hparams.num_data_workers,
-                batch_size=self.hparams.train_batch_size,
-                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer,),
-            )
-
-        elif mode == "val":
-            loader = DataLoader(
-                self.val_dataset,
-                num_workers=self.hparams.num_data_workers,
-                batch_size=self.hparams.val_batch_size,
-                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer,),
-            )
-
-        else:
-            loader = DataLoader(
-                self.test_dataset,
-                num_workers=self.hparams.num_data_workers,
-                batch_size=self.hparams.test_batch_size,
-                collate_fn=partial(reco_sentence_test_collate, tokenizer=self.tokenizer,),
-            )
-        return loader
-
-    @staticmethod
-    def add_model_specific_args(parent_parser, task_name, dataset_name, is_lowest_leaf=False):
-        parser = TransformersBase.add_model_specific_args(parent_parser, task_name, dataset_name, is_lowest_leaf=False)
-        parser.add_argument("--hard_mine", type=str2bool, nargs="?", const=True, default=True)
-        parser.add_argument("--metric_loss_func", type=str, default="ContrastiveLoss")  # TripletMarginLoss #CosineLoss
-        parser.add_argument("--sim_loss_lambda", type=float, default=0.1)
-        parser.add_argument("--limit_tokens", type=int, default=64)
-        parser.add_argument("--limit_val_indices_batches", type=int, default=500)
-        parser.add_argument("--metric_for_similarity", type=str, choices=["cosine", "norm_euc"], default="cosine")
-
-        parser.set_defaults(
-            check_val_every_n_epoch=1,
-            batch_size=32,
-            accumulate_grad_batches=2,
-            metric_to_track="train_mlm_loss_epoch",
-        )
-
-        return parser
-
-    def prepare_data(self):
-        block_size = (
-            self.hparams.block_size
-            if hasattr(self.hparams, "block_size")
-            and self.hparams.block_size > 0
-            and self.hparams.block_size < self.tokenizer.max_len
-            else self.tokenizer.max_len
-        )
-        self.train_dataset = CustomTextDataset(
-            tokenizer=self.tokenizer,
-            hparams=self.hparams,
-            block_size=block_size,
-            mode="train",
-        )
-        self.val_dataset = CustomTextDataset(
-            tokenizer=self.tokenizer,
-            hparams=self.hparams,
-            block_size=block_size,
-            mode="val",
-        )
-        self.test_dataset = CustomTextDataset(
-            tokenizer=self.tokenizer,
-            hparams=self.hparams,
-            block_size=block_size,
-            mode="test",
-        )
-
+    def add_model_specific_args(parent_parser):
+        parser = parent_parser.add_argument_group("SDR")
+        parser.add_argument("--data_dir", type=str, help="Path to the text files directory")
+        parser.add_argument("--block_size", type=int, default=512, help="Maximum input sequence length")
+        parser.add_argument("--projection_dim", type=int, default=128, help="Dimension of the projection head")
+        parser.add_argument("--mlm_probability", type=float, default=0.15, help="Probability for masking tokens")
+        parser.add_argument("--contrastive_weight", type=float, default=0.1, help="Weight for the contrastive loss")
+        parser.add_argument("--lr", type=float, default=2e-5, help="Learning rate")
+        parser.add_argument("--weight_decay", type=float, default=0.01, help="Weight decay")
+        parser.add_argument("--warmup_steps", type=int, default=1000, help="Warmup steps for learning rate scheduler")
+        parser.add_argument("--total_steps", type=int, default=10000, help="Total training steps")
+        parser.add_argument("--train_batch_size", type=int, default=16, help="Training batch size")
+        parser.add_argument("--val_batch_size", type=int, default=16, help="Validation batch size")
+        parser.add_argument("--test_batch_size", type=int, default=16, help="Test batch size")
+        return parent_parser

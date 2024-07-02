@@ -13,37 +13,41 @@ def get_gt_seeds_titles(titles=None, dataset_name="wines"):
     return popular_titles, idxs, gt_path
 
 
+def reco_sentence_test_collate(examples: List[torch.Tensor], tokenizer):
+    examples_ = []
+    for example in examples:
+        sections = []
+        for section in example:
+            if section == []:
+                continue
+            sections.append(
+                (
+                    pad_sequence([i[0] for i in section], batch_first=True, padding_value=tokenizer.pad_token_id),
+                    [i[2] for i in section],
+                    [i[3] for i in section],
+                    [i[4] for i in section],
+                    [i[5] for i in section],
+                    [i[6] for i in section],
+                    [i[7] for i in section],
+                    torch.tensor([i[8] for i in section]),
+                )
+            )
+        examples_.append(sections)
+    return examples_
+
+
 def reco_sentence_collate(examples: List[torch.Tensor], tokenizer):
     return (
         pad_sequence([i[0] for i in examples], batch_first=True, padding_value=tokenizer.pad_token_id),
-        [i[1] for i in examples],  # Title
-        [i[2] for i in examples],  # Section Title
-        [i[3] for i in examples],  # Length of sentence
-        [i[4] for i in examples],  # idx_article
-        [i[5] for i in examples],  # idx_section
-        [i[6] for i in examples],  # idx_sentence
-        torch.tensor([i[7] for i in examples]),  # Item index
+        [i[2] for i in examples],
+        [i[3] for i in examples],
+        [i[4] for i in examples],
+        [i[5] for i in examples],
+        [i[6] for i in examples],
+        [i[7] for i in examples],
+        torch.tensor([i[8] for i in examples]),
     )
 
-def reco_sentence_test_collate(examples: List[torch.Tensor], tokenizer):
-    sections = []
-    for example in examples:
-        sentences = []
-        for sentence in example:
-            sentences.append(
-                (
-                    pad_sequence([i[0] for i in sentence], batch_first=True, padding_value=tokenizer.pad_token_id),
-                    [i[1] for i in sentence],  # Title
-                    [i[2] for i in sentence],  # Section Title
-                    [i[3] for i in sentence],  # Length of sentence
-                    [i[4] for i in sentence],  # idx_article
-                    [i[5] for i in sentence],  # idx_section
-                    [i[6] for i in sentence],  # idx_sentence
-                    torch.tensor([i[7] for i in sentence]),  # Item index
-                )
-            )
-        sections.append(sentences)
-    return sections
 
 def raw_data_link(dataset_name):
     if dataset_name == "wines":
