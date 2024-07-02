@@ -23,8 +23,9 @@ class CustomTextDataset(Dataset):
 
         self.examples = []
         self.indices_map = []
+        self.labels = []  # Fake labels
 
-        text_files_dir = './data/text_files'  # Ensure this points to your dataset directory
+        text_files_dir = './data/text_files'
         for filename in os.listdir(text_files_dir):
             if filename.endswith('.txt'):
                 with open(os.path.join(text_files_dir, filename), 'r') as file:
@@ -36,6 +37,7 @@ class CustomTextDataset(Dataset):
                             tokenized_sentence = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(sentence))[:block_size]
                             self.examples.append((tokenized_sentence, len(tokenized_sentence), p_idx, s_idx))
                             self.indices_map.append((len(self.examples) - 1))
+                            self.labels.append(0)  # Assign a fake label
 
     def __len__(self):
         return len(self.indices_map)
@@ -43,7 +45,7 @@ class CustomTextDataset(Dataset):
     def __getitem__(self, idx):
         example_idx = self.indices_map[idx]
         tokenized_sentence, sent_len, p_idx, s_idx = self.examples[example_idx]
-        return torch.tensor(tokenized_sentence, dtype=torch.long), sent_len, p_idx, s_idx
+        return torch.tensor(tokenized_sentence, dtype=torch.long), sent_len, p_idx, s_idx, self.labels[idx]  # Return the fake label
 
 
 

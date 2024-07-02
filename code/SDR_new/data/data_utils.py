@@ -43,10 +43,9 @@ def reco_sentence_collate(examples: List[torch.Tensor], tokenizer):
         [i[3] for i in examples],
         [i[4] for i in examples],
         [i[5] for i in examples],
-        [i[6] for i in examples],
-        [i[7] for i in examples],
-        torch.tensor([i[8] for i in examples]),
+        torch.tensor([i[6] for i in examples]),  # Fake labels
     )
+
 
 
 def raw_data_link(dataset_name):
