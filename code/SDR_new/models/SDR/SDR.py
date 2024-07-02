@@ -39,19 +39,21 @@ class SDR(TransformersBase):
 
     def forward_train(self, batch):
         inputs, labels = transformer_utils.mask_tokens(batch[0].clone().detach(), self.tokenizer, self.hparams)
-        
+
         outputs = self.model(
             inputs,
             masked_lm_labels=labels,
             non_masked_input_ids=batch[0],
-            run_similarity=True,
+            run_similarity=False,  # We set run_similarity to False since we don't have labels
             run_mlm=True,
         )
 
         self.losses["mlm_loss"] = outputs[0]
-        self.losses["d2v_loss"] = (outputs[1] or 0) * self.hparams.sim_loss_lambda # If no similarity loss we ignore
 
-        tracked = self.track_metrics(input_ids=inputs, outputs=outputs, is_train=self.hparams.mode == "train", labels=labels,)
+        # No d2v_loss since we don't have sample_labels
+        self.losses["d2v_loss"] = torch.tensor(0.0).to(inputs.device)
+
+        tracked = self.track_metrics(input_ids=inputs, outputs=outputs, is_train=self.hparams.mode == "train", labels=labels)
         self.tracks.update(tracked)
 
         return
