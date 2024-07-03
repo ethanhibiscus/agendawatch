@@ -16,9 +16,9 @@ from models.reco.recos_utils import index_amp
 
 nltk.download("punkt")
 class AgendaTextDataset(Dataset):
-    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):
+    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train", data_dir=None):
         self.hparams = hparams
-        self.data_dir = hparams.data_dir
+        self.data_dir = data_dir if data_dir else hparams.data_dir
         self.mode = mode
 
         cached_features_file = os.path.join(
