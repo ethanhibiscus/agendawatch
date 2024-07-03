@@ -16,77 +16,78 @@ from models.reco.recos_utils import index_amp
 
 nltk.download("punkt")
 class AgendaTextDataset(Dataset):
-    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):
+    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, data_dir, block_size, mode="train"):
         self.hparams = hparams
-        self.tokenizer = tokenizer
-        self.block_size = block_size
-        self.mode = mode
-        self.dataset_name = dataset_name
-
         cached_features_file = os.path.join(
-            f"data/datasets/cached_proccessed/{dataset_name}",
-            f"bs_{block_size}_{dataset_name}_{type(self).__name__}_tokenizer_{str(type(tokenizer)).split('.')[-1][:-2]}_mode_{mode}",
+            f"data/datasets/cached_proccessed/{data_dir}",
+            f"bs_{block_size}_{data_dir}_{type(self).__name__}_tokenizer_{str(type(tokenizer)).split('.')[-1][:-2]}_mode_{mode}",
         )
         self.cached_features_file = cached_features_file
         os.makedirs(os.path.dirname(cached_features_file), exist_ok=True)
 
-        raw_data_path = f"./data/text_files"  # Path to your text files
+        self.examples = []
+        self.indices_map = []
+        self.tokenizer = tokenizer
+        self.block_size = block_size
 
-        self.examples, self.indices_map = self.save_load_splitted_dataset(mode, cached_features_file, raw_data_path)
-        self.labels = [idx_article for idx_article, _, _ in self.indices_map]
-
-    def save_load_splitted_dataset(self, mode, cached_features_file, raw_data_path):
-        proccessed_path = f"{cached_features_file}_EXAMPLES"
-        if not os.path.exists(proccessed_path):
-            all_articles = self.read_all_articles(raw_data_path)
-            indices = list(range(len(all_articles)))
-            if mode != "test":
-                train_indices = sorted(
-                    np.random.choice(indices, replace=False, size=int(len(all_articles) * self.hparams.train_val_ratio))
-                )
-                val_indices = np.setdiff1d(list(range(len(all_articles))), train_indices)
-                indices = train_indices if mode == "train" else val_indices
-
-            articles = [all_articles[i] for i in indices]
-            pickle.dump(articles, open(proccessed_path, "wb"))
-            print(f"\nsaved dataset at {proccessed_path}")
+        if os.path.exists(cached_features_file) and (self.hparams is None or not self.hparams.overwrite_data_cache):
+            print(f"\nLoading features from cached file {cached_features_file}")
+            with open(cached_features_file, "rb") as handle:
+                self.examples, self.indices_map = pickle.load(handle)
         else:
-            articles = pickle.load(open(proccessed_path, "rb"))
-        setattr(self.hparams, f"{mode}_data_file", proccessed_path)
-        return articles
+            print(f"\nCreating features from dataset file at {cached_features_file}")
+            self.process_data(data_dir)
+            with open(cached_features_file, "wb") as handle:
+                pickle.dump((self.examples, self.indices_map), handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-    def read_all_articles(self, raw_data_path):
-        all_articles = []
-        for file_name in os.listdir(raw_data_path):
-            if file_name.endswith(".txt"):
-                with open(os.path.join(raw_data_path, file_name), 'r') as f:
-                    content = f.read()
-                    sections = content.split("\n\n")  # Assuming sections are separated by double newlines
-                    sections = [(str(idx), sec.strip()) for idx, sec in enumerate(sections) if sec.strip()]
-                    all_articles.append((file_name, sections))
-        return all_articles
+    def process_data(self, data_dir):
+        all_files = [os.path.join(data_dir, f) for f in os.listdir(data_dir) if f.endswith('.txt')]
+        for idx, file_path in enumerate(all_files):
+            with open(file_path, 'r') as file:
+                text = file.read()
+                paragraphs = text.split('\n\n')  # Assuming paragraphs are separated by double newlines
+                for paragraph in paragraphs:
+                    sentences = nltk.sent_tokenize(paragraph)
+                    tokenized_sentences = [self.tokenizer.convert_tokens_to_ids(self.tokenizer.tokenize(sent))[:self.block_size] for sent in sentences]
+                    self.examples.append((tokenized_sentences, file_path))
+                    self.indices_map.extend([(idx, i) for i in range(len(tokenized_sentences))])
 
     def __len__(self):
         return len(self.indices_map)
 
+    def __getitem__(self, idx):
+        file_idx, sent_idx = self.indices_map[idx]
+        tokenized_sentence = self.examples[file_idx][0][sent_idx]
+        return torch.tensor(self.tokenizer.build_inputs_with_special_tokens(tokenized_sentence), dtype=torch.long)
+    
+class AgendaTextDatasetTest(AgendaTextDataset):
+    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="test"):
+        super().__init__(tokenizer, hparams, dataset_name, block_size, mode=mode)
+
+    def __len__(self):
+        return len(self.examples)
+
     def __getitem__(self, item):
-        idx_article, idx_section, idx_sentence = self.indices_map[item]
-        sent = self.examples[idx_article][0][idx_section][0][idx_sentence]
-
-        return (
-            torch.tensor(self.tokenizer.build_inputs_with_special_tokens(sent[0]), dtype=torch.long,)[
-                : self.hparams.limit_tokens
-            ],
-            self.examples[idx_article][1],
-            self.examples[idx_article][0][idx_section][1],
-            sent[1],
-            idx_article,
-            idx_section,
-            idx_sentence,
-            item,
-            self.labels[item],
-        )
-
+        sections = []
+        for idx_section, section in enumerate(self.examples[item][0]):
+            sentences = []
+            for idx_sentence, sentence in enumerate(section[0]):
+                sentences.append(
+                    (
+                        torch.tensor(self.tokenizer.build_inputs_with_special_tokens(sentence[0]), dtype=torch.long,),
+                        self.examples[item][1],
+                        section[1],
+                        sentence[1],
+                        item,
+                        idx_section,
+                        idx_sentence,
+                        item,
+                        self.labels[item],
+                    )
+                )
+            sections.append(sentences)
+        return sections
+    
 class WikipediaTextDatasetParagraphsSentences(Dataset):
     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):
         self.hparams = hparams
