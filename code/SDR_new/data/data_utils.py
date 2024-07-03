@@ -4,13 +4,13 @@ import torch
 from torch.nn.utils.rnn import pad_sequence
 
 
-def get_gt_seeds_titles(titles=None, dataset_name="wines"):
+def get_gt_seeds_titles(titles=None, dataset_name="agenda"):
+    # Assuming titles are the file names
     idxs = None
     gt_path = f"data/datasets/{dataset_name}/gt"
-    popular_titles = list(pickle.load(open(gt_path, "rb")).keys())
-    if titles != None:
-        idxs = [titles.index(pop_title) for pop_title in popular_titles if pop_title in titles]
-    return popular_titles, idxs, gt_path
+    if titles is not None:
+        idxs = list(range(len(titles)))
+    return titles, idxs, gt_path
 
 
 def reco_sentence_test_collate(examples: List[torch.Tensor], tokenizer):

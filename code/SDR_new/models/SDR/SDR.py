@@ -19,6 +19,7 @@ from utils import metrics_utils
 from pytorch_metric_learning.samplers import MPerClassSampler
 from torch.utils.data.dataloader import DataLoader
 import json
+from data.datasets import AgendaTextDataset as DatasetClass
 
 
 class SDR(TransformersBase):
@@ -150,37 +151,41 @@ class SDR(TransformersBase):
         if mode == "train":
             sampler = MPerClassSampler(
                 self.train_dataset.labels,
-                4,
+                2,
                 batch_size=self.hparams.train_batch_size,
                 length_before_new_iter=(self.hparams.limit_train_batches) * self.hparams.train_batch_size,
             )
+
             loader = DataLoader(
                 self.train_dataset,
                 num_workers=self.hparams.num_data_workers,
                 sampler=sampler,
                 batch_size=self.hparams.train_batch_size,
-                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer),
+                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer,),
             )
+
         elif mode == "val":
             sampler = MPerClassSamplerDeter(
                 self.val_dataset.labels,
-                4,
+                2,
                 length_before_new_iter=self.hparams.limit_val_indices_batches,
                 batch_size=self.hparams.val_batch_size,
             )
+
             loader = DataLoader(
                 self.val_dataset,
                 num_workers=self.hparams.num_data_workers,
                 sampler=sampler,
                 batch_size=self.hparams.val_batch_size,
-                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer),
+                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer,),
             )
+
         else:
             loader = DataLoader(
                 self.test_dataset,
                 num_workers=self.hparams.num_data_workers,
                 batch_size=self.hparams.test_batch_size,
-                collate_fn=partial(reco_sentence_test_collate, tokenizer=self.tokenizer),
+                collate_fn=partial(reco_sentence_test_collate, tokenizer=self.tokenizer,),
             )
         return loader
 
@@ -211,14 +216,14 @@ class SDR(TransformersBase):
             and self.hparams.block_size < self.tokenizer.max_len
             else self.tokenizer.max_len
         )
-        self.train_dataset = WikipediaTextDatasetParagraphsSentences(
+        self.train_dataset = AgendaTextDataset(
             tokenizer=self.tokenizer,
             hparams=self.hparams,
             dataset_name=self.hparams.dataset_name,
             block_size=block_size,
             mode="train",
         )
-        self.val_dataset = WikipediaTextDatasetParagraphsSentences(
+        self.val_dataset = AgendaTextDataset(
             tokenizer=self.tokenizer,
             hparams=self.hparams,
             dataset_name=self.hparams.dataset_name,
@@ -228,11 +233,10 @@ class SDR(TransformersBase):
         self.val_dataset.indices_map = self.val_dataset.indices_map[: self.hparams.limit_val_indices_batches]
         self.val_dataset.labels = self.val_dataset.labels[: self.hparams.limit_val_indices_batches]
 
-        self.test_dataset = WikipediaTextDatasetParagraphsSentencesTest(
+        self.test_dataset = AgendaTextDataset(
             tokenizer=self.tokenizer,
             hparams=self.hparams,
             dataset_name=self.hparams.dataset_name,
             block_size=block_size,
             mode="test",
         )
-

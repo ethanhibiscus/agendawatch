@@ -10,6 +10,7 @@ from pytorch_lightning import Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint
 from utils.argparse_init import default_arg_parser, init_parse_argparse_default_params
 import logging
+from data.datasets import AgendaTextDataset as DatasetClass
 
 logging.basicConfig(level=logging.INFO)
 from pytorch_lightning.loggers import TensorBoardLogger
