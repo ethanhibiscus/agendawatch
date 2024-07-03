@@ -1,0 +1,6177 @@
+ 
+ 
+Central Region 
+Emergency Services Board – www.mnecb.org  
+Wednesday, June 10, 2020 – 1:00 P.M. 
+Microsoft Teams Meeting Link 
+Agenda  
+ 
+1. Call to Order with Pledge of Allegiance 
+2. Introductions 
+3. Approval of the Agenda (P1) 
+4. Approval of Minutes 
+a.  January 29, 2020 (P2-14) 
+b.   March 25, 2020 (P15-18) 
+5. Communications: 
+a. KDVBergan Audit Presentation (View Letter) (View Financial Statement) 
+b. MN Duty Officer Communication Resource (P19-30) 
+c. Tusa Contract Review (P31) 
+6.  Reports  
+a. SECB   
+1. MnDOT/ARMER/RIC Report (Update) 
+2. SECB (Micah Myers) (P32-35) 
+3. Finance Committee (Micah Myers) (P36-38) 
+4. Interoperability Committee (Micah Myers) (P39-40) 
+5. Wireless Broadband & Applications Committee (Brandon Larson) (P41) 
+6. Legislative Committee (Micah Myers) (P42) 
+7. Land Mobile Radio Committee (Kristen Lahr) (P43-48) 
+8. Regional Coordinator Report (View online)  
+b. EMS/Hospital Workgroup 
+c. Regional Leadership Group (Next Meeting July 27, 2020)   
+7. General Discussion and New Business 
+a. Executive Committee Reports & Items 
+1. 2020 SUA Cost Allocations (Update) (P49-71) 
+2. SECB Committee Appointments (Update) (P72) 
+b. RAC Report & Items 
+1. 2021 CMESB Draft Budget (P73-76) 
+2. SECB 2020-2021 & 2019 SHSP Grant (Update) 
+3. Standard 8.1 (P77-81) 
+c. O&O Report & Items 
+d. User Report & Items 
+e. EMAC Report & Items 
+1. Approval of 2020 SHSP Grant Application (P82-84) (Action Required) 
+f. 
+NG911 Report & Items 
+g. Logger Report & Items 
+1. Bylaws (P85-93) (Action Required) 
+2. Approval of Addition of non-Zone 4 talkgroups/Washington County (View online) 
+h.  Additional Agenda items 
+8.  Old Business 
+a. ECN Program Updates Newsletter (View online) 
+b. Attendance Update (P94) 
+c. Current Representative List (View online) 
+9.  Upcoming Meetings 
+a. July 29, 2020 (Final Budget Meeting) 
+10. 
+ Adjournment 
+ 
+Due to the Governor's Stay Safe Order during the Coronavirus pandemic, Central Region meetings may be conducted under 
+Minnesota Statute 13D.021 – Meetings by Telephone or Other Electronic Means. 
+ 
+ 
+- 1 - 
+CENTRAL REGION  
+EMERGENCY SERVICES BOARD (ESB) 
+Wednesday, January 29, 2020 – 1:00 p.m. 
+St. Cloud City Hall Conference Room #1, St. Cloud, MN 
+ 
+Members/Alternates Present: 
+1. Mike Conway – City of St. Cloud 
+2. Spencer Buerkle – Benton County 
+3. Erick Klepel– Big Stone County (via phone) 
+4. Charlie Meyer – Douglas County 
+5. Bill LaValley & Dwight Walvatne – Grant County 
+6. Rollie Nissen – Kandiyohi County 
+7. Steve Schmitt, Vice Chair – Meeker County 
+8. David Oslin – Mille Lacs County 
+9. Jeff Jelinski, Chair – Morrison County 
+10. John Lindquist – Otter Tail County (via phone) 
+11. Gordy Wagner – Pope County 
+12. Leigh Lenzmeier – Stearns County 
+13. Robert Kopitzke – Stevens County 
+14. Eric Rudningen– Swift County (via phone) 
+15. Gary Kneisl – Todd County 
+16. Kevin Leininger – Traverse County 
+17. Jon Kangas – Wadena County 
+18. Neal Folstad – Wilkin County 
+19. Charles Borrell – Wright County 
+ 
+Other Members/Alternates Present: 
+1. Micah Myers, Chair – Regional Advisory Committee (RAC) 
+2. Kristen Lahr, Chair & Brandon Larson, Vice Chair – Owners & Operators Committee (O&O) 
+3. Paul McIntyre, Chair – User Committee (Users) 
+4. Stephanie Johnson, Chair – Emergency Management Advisory Committee (EMAC) 
+5. Jason Karlgaard, Chair – NG911 Committee (NG911) (via phone) 
+6. Brandon Larson, Chair – Regional Logger Committee  
+ 
+Guests Present:  
+1. Chris Schultz – City of St. Cloud 
+2. Jon Combs – Grant County (via phone) 
+3. Lynn Siegel, EMAC Secretary – Traverse County 
+4. Seth Hansen – Wright County 
+5. Shawna Athman – Wright County  
+6. Tracey Fredrick – MESB  
+7. Steve Tait, RIC – ECN  
+8. Mike Kahl – Granite Electronics 
+9. Dennis Ward – Tusa Consulting 
+10. Norm Folger – Tusa Consulting 
+ 
+CALL TO ORDER: 
+Meeting called to order by Chair Jeff Jelinski at 1:00 p.m. followed by the Pledge of Allegiance. 
+Quorum reached with 19 of the 19 members present for the whole meeting. 
+ 
+INTRODUCTIONS: 
+Introductions were conducted. 
+ 
+- 2 - 
+APPROVAL OF AGENDA: 
+Stevens County moved to approve the agenda. Kandiyohi County seconded, motion carried. 
+ 
+APPROVAL OF MINUTES: 
+Wright County moved to approve the minutes from December 18, 2019. Wilkin County seconded, motion 
+carried. 
+ 
+COMMUNICATIONS: 
+Larson announced that Al Fjerstad who was a long-standing member and representative for Mille 
+Lacs County, he has probably been involved with the ARMER network since its inception when he 
+was employed down in Hennepin County Sheriff’s Office, has retired. We wish him all the best.  
+ 
+a. Election of Chair and Vice Chair 
+Wright County nominated Jeff Jelinski for Chair. Pope County seconded. Wilkin County 
+moved nominations cease. Wright County seconded. Chair Jelinski called the motion. 
+Motion passed.  
+ 
+Chair Jelinski opened it up for Vice Chair. Wright County moved Steve Schmitt from Meeker 
+County be our Vice Chair. Stevens County seconded. Jelinski called three times for other 
+nominations for Vice Chair. Jelinski stated nominations cease. Kandiyohi County moved to 
+cast the unanimous ballot for Steve Schmitt. Todd County seconded. Chair Jelinski called 
+the motion. Motion passed.  
+ 
+b. Tusa Consulting – Discussion on Motorola SUA Agreement 
+Dennis Ward explained he is a senior project manager with Tusa Consulting Services 
+assigned to help the state negotiate their next SUA with Motorola. Norm Folger is our senior 
+consultant; Folger used to work for Motorola for 37 years. Tusa Consulting Services is a 
+firm that has been in business since 1992. We help public safety implement public safety 
+radio systems all across the country. We have helped numerous customers negotiate SUA 
+agreements. This is the first of two meetings we are going to be having with you. The first 
+meeting is a high-level overview talking about the work we are currently embarking on, but 
+then this fall we are going to come back and talk about the work we accomplished.  
+ 
+Project Overview: Ward explained the State of MN has built out ARMER. You paved the 
+way for a lot of statewide radio systems and a lot of people look to MN as the gold standard 
+of how you do it. You are now in the process of maintaining it. The way you have been 
+doing that is you have had a 5-year contract with Motorola to make sure the system never 
+meets end of life. Every two years Motorola comes out with certain pieces of equipment, so 
+the system never does hit end of life and it is self-sustaining. The current SUA agreement 
+expires at the end of 2020. We are now in the process of preparing for the next 5-year 
+agreement. While MnDOT owns the ARMER backbone, and majority of the infrastructure, 
+there are many other entities that own subsystems and components. As a shared system, 
+ARMER relies on all infrastructure owners to upgrade their equipment. This requires all 
+parties be in an agreement and have funding secured before they can enter into another SUA 
+agreement on behalf of the ARMER owners.  
+ 
+Our Role and Process: Ward explained our role in this is to help negotiate what that 
+agreement is going to look like for the next five years. We collected all the information we 
+could from ECN and MnDOT. Our second step now is we are talking to as many 
+stakeholders as we can to understand their role in ARMER. This is an introductory meeting.  
+ 
+- 3 - 
+COMMUNICATIONS: (Continued) 
+b. Tusa Consulting – Discussion on Motorola SUA Agreement (Continued) 
+Ward has been asked to read, “These presentations may be at regularly scheduled ECB/ESB 
+meeting or part of a larger, annual planning meeting. In the event of an annual planning 
+meeting, SECB grant funds are available for use.”  
+ 
+Timeline and Deliverables: Ward explained we were asked to review the current SUA 
+(Task #1). The next task we have is to talk to all the owners we possibly can (Task #2). We 
+had a survey we circulated. We are trying to capture as much information as we can from 
+subsystem owners. The 3rd deliverable we have is we have been asked to take that current 
+agreement and compare it to the new negotiated agreement we are currently working on. 
+They want to know what is different, what has changed, what has been added to, what has 
+been subtracted, and how does each one of those changes impact the current agreement. 
+Task #4 is where we are negotiating with Motorola on what that new SUA is going to look 
+like. We have had multiple meetings in Chicago, Kansas City, and here in Minneapolis. We 
+are going to be spending a lot of time with Motorola over the next month and half in St. Paul 
+going through and negotiating this with ECN. Task #5 they have asked us to look at 
+software release dependencies. They want to know if somebody upgrades, and somebody 
+chooses not to upgrade, how does that impact the system? We have also been asked to look 
+at the impact of skipped upgrades (Task #6). We have also been asked to look at the new 
+SUA and its impact to SECB policy (Task #7). Task #8 we have been asked to look at cost 
+containment strategies. How can the state and local owners save money with their ARMER 
+investment? We have been asked to do a cost benefit analysis (Task #9). We have a 
+preliminary one we are doing and then there is a final one. We will have all work completed 
+and a final report presented by December 2nd (Task #10). 
+ 
+Folger was assigned a couple of tasks. Get into the contract and get to know what Motorola 
+said they were going to do. Let us analyze whether they did it. When we get the new 
+contract let us compare this new contract to what they said they were going to do and maybe 
+what they did not do. Task #1, Folger went into the several hundred-page contract and did a 
+point-by-point analysis for each sentence, paragraph, clause. Folger created a spreadsheet 
+showing who is responsible for doing that particular task. Folger started with the statement 
+of work, moved into the maintenance, the network monitoring and other sections of the 
+contract. Folgers submitted that to ECN. When we get the new contract we plan on taking 
+that and doing the exact same thing. What we might find is Motorola shaved some things off 
+their scope. They might be charging more.   
+ 
+Update on Current Analysis: Folgers explained some of the costing he got from Tim Lee 
+and the MnDOT folks. For 2019, MnDOT/ECN allocated a little over $10 million is what 
+the cost of the 2019 SUA was and the SUA2+ (that is equipment and services). Folgers 
+asked Tim Lee if he had the 2020 cost allocated yet, and Tim Lee had said we are going to 
+keep the costs the same for 2020, unless agencies brought on additional equipment. Pope 
+County asked did you negotiate contracts for Motorola in your career there? Folgers did.  
+ 
+Folgers explained MESB is allocated $83 grand. The Metro agencies contributed almost $3 
+million. The state users contributed $6 million of that $10 million. Folgers showed each of 
+the agencies and counties in the Central Region and what your allocated costs were for 2019 
+and what they will be again for 2020; $400K out of $10 million.  
+ 
+ 
+ 
+- 4 - 
+COMMUNICATIONS: (Continued) 
+b. Tusa Consulting – Discussion on Motorola SUA Agreement (Continued) 
+Update on Current Analysis: (Continued) 
+Jeff Jelinski asked for an idea as to the length of this contract and the past length of 
+contracts. Ward explained typically when Motorola enters into an SUA agreement, they like 
+to do a 10-year SUA. However, the procurement rules in MN limit agreements to 5 years. 
+Folger explained the current contract expires end of 2020 which is why Tusa Consulting has 
+been retained to start negotiation with Motorola. It is not up to Tusa to finalize these 
+negotiations. It is going to be up to ECN and the state, ARMER and perhaps MnDOT to do 
+the final negotiations with Motorola. But we are starting the process and trying to ink out 
+where they might be a little top heavy in their pricing. City of St. Cloud asked how much 
+business have we generated by being the “gold standard” for Motorola as a provider to other 
+organizations around the country? Folgers would think quite a bit. Motorola has the lion’s 
+share of the market. City of St. Cloud was looking from a perspective of negotiating the next 
+contract: How did we help you generate more business by using us as a reference? Folgers 
+responded Motorola is entitled to a fair margin on business, but that does not mean the State 
+of MN/ARMER should pay for the CEO’s yacht payments. If you are getting more services 
+that is a good thing, because if the price is going up, hopefully there are services that are 
+going to be thrown in. 
+ 
+Cost Containment Strategies: Ward explained the state has asked us to help identify cost 
+containment strategies for ARMER and ways they can save money. One of the strategies we 
+are employing is we are looking for duplication of services. We are comparing the statement 
+of work provided in the current SUA verses the statement of work the local owners have in 
+their agreements with either Motorola or with their local service shop. We suspect there are 
+some cases where the local owners are paying the service shop to do something MnDOT is 
+already doing. One of the things we are asking everybody for is copies of their agreements, 
+so we can find where there is a duplication of service. It will reduce the costs from the state 
+and local owners end.  
+ 
+Chair Jelinski asked are you guys calling on the phone, or physically going from county to 
+county asking for the information? Ward explained we are emailing people to set-up phone 
+interviews. ECN is arranging for us to come out and meet with all the different groups. 
+Stearns County asked how do you differentiate duplication from redundancy, because you 
+need redundancy in case a component fails. Ward replied the duplication comes down to if 
+you have a contract with the local service shop and they are going out PMing that tower. 
+Then MnDOT, with their agreement with Motorola, they are supposed to be going out to 
+that tower as well and PMing it. If Tim Lee’s group is out PMing that site, we are going to 
+ask the question back to Motorola did you guys go out and PM this as well. Then we are 
+going to make a recommendation that you can eliminate this, because the state is already do 
+this. Myers explained the ‘PM’ acronym was preventative maintenance. Myers added where 
+you have contracts where if that service you are contracting with is already in the master 
+contract then you should not be charged for that. It is not redundancy.  
+ 
+Cost Benefit Analysis: Ward explained we will be doing a cost benefit analysis and we will 
+be presenting it to SECB and each of the 7 regional Emergency Communications/Services 
+Boards and ARMER subsystem owners, managers groups. As part of that presentation we 
+will also review the final negotiated scope of work with Motorola and the SUA and talk 
+about what impacts that will have. Those presentations will take place this fall.  
+ 
+ 
+- 5 - 
+COMMUNICATIONS: (Continued) 
+b. Tusa Consulting – Discussion on Motorola SUA Agreement (Continued) 
+Cost Benefit Analysis: (Continued) 
+Stevens County asked is there a realistic option if we do not go with Motorola? Ward replied 
+there are options, but we are trying to maximize the cost. You could say we are not going to 
+sign up for this at all, we are just going to do a fix/break sort of contract with you and ride 
+this out. But then your whole network slowly deteriorates over time. Then at some point you 
+are going to have to make a big giant investment again. Folger explained Motorola has been 
+a good partner. We placed today’s value of your system at about $300 million. There is 
+some number that needs to be used and calculated to maintain a system of that value to the 
+benefit of the constituents.  
+ 
+Myers noted this is the handout we talked about this morning. There is another facet to this 
+separate of Motorola, but it has to be done in conjunction with Motorola, and that is work 
+MnDOT does. We are changing the connectivity path on the system. Our Finance 
+Committee, from the state-level, has asked MnDOT to look into that cost. There is going to 
+be a cost, we are going to have to do another component.  
+ 
+Wilkin County asked Motorola knows it is going to cost $300 million to go someplace else. 
+How does that impact their willingness to be profitable but not exorbitant? Ward replied that 
+is our role. Some of the things we leverage is we look at what other states have done and we 
+bring that to the table. Motorola wants to get as much money as they can, and the state wants 
+to prevent giving out as much money as they can. We feel pretty confident we are going to 
+be able to get them to come down on their price. Folger added what helps is if we can find 
+out what their costs are, and we can determine what their margin is with their sale price, and 
+together we can figure out what is a fair mark-up and margin and it should not be exorbitant. 
+Hansen asked what is their proposal right now? Ward explained we are actively involved in 
+those negotiations. Everything is staying the same for 2020. By the end of March, we are 
+going to have a good idea that we are going to be communicating to ECN and MnDOT what 
+that is going to be. Then they are going to start the process of rolling it out to everybody 
+across the state to let them know by the end of July. Myers explained there have been two 
+numbers Motorola presented before Tusa came on. If it did not change with the last number, 
+there is an increase, we are talking about $33 million is what they had in their number. It is 
+budgetary, and one of the constraints you have is we start setting our 2021 budget here 
+pretty quick. So that is why we are trying to get this information. They have a timeline to be 
+cognizant of. We can expect it to go up, but also that one we talked about with the MnDOT 
+components that have to go lock step with this, there are some numbers and we want to get it 
+out to the agencies so they know what they have to budget for.  
+ 
+Grant County asked being that we are in bed with the state on this and we are moving 
+forward with it, this competitive bidding process, this is not going to get dinged on our 
+audits, as far as on the county level, as far as the cost, is that ever going to surface? Myers 
+replied once they got the number from Tusa and Motorola they go through for the single-
+sourcing, they have to go through admin to go through and approve that, so there is a 
+process that deals with that, so it is not going to impact your audit on that one. This is a 
+Motorola system, it is not inter-changeable. You can put subscribers on this system, but the 
+core of this network is Motorola. This has a windows component to it on the back-end part 
+of the overall system. Microsoft is continually changing that. Myers explained this is an 
+exercise we do every 5 years. This is one of the most successful projects the state has ever 
+done.  
+ 
+- 6 - 
+COMMUNICATIONS: (Continued) 
+b. Tusa Consulting – Discussion on Motorola SUA Agreement (Continued) 
+Cost Benefit Analysis: (Continued) 
+Douglas County asked for the $33 million is the technology built in? Upgrades, you can 
+look at equipment that is depreciating out. Myers explained part of it is software, part of it is 
+hardware. Part of this agreement will be there is infrastructure that gets updated. That is one 
+of the things they are trying to get a handle on, what exactly are you going to include in that 
+5-year contract. Stevens County noted when he takes back his information about Emergency 
+Services Board and ARMER, his fellow Commissioners always say you can bring it back, 
+but the number is always going to go up. For emergencies, it is probably the way it has to 
+be, but counties have to watch the bottom-line also. Folger explained we have some cost 
+containment strategies and they are kind of proprietary right now. We have had half a dozen 
+meetings with Motorola. We are asking them to roll up their sleeves and sharpen their 
+pencils because $33 million may not be palatable. We have to find out if you are happy with 
+the services and if there are more services they are throwing in for that. Wilkin County 
+asked on the hardware side of it, is there an agreeable agreement reached on what the life of 
+each piece is? Ward replied we have had conversations where we have talked about their 
+product roadmap. There are so many pieces and components that make up the system. That 
+is some of the risk Motorola does take on with that SUA. If they are using a certain widget 
+in the system, and that widget is no longer being supported, it is up to them to upgrade the 
+system so that way it does not impact the system. It allows the system to be sustained 
+overtime. What this does is it keeps you at the current platform. As things need to be 
+replaced it is being replaced. As far as the roadmap, there are some things they cannot even 
+tell us on the roadmap that they do not even know, because it is a 3rd party item. It is the 3rd 
+party telling them suddenly we are no longer supporting this and then Motorola has to 
+scramble to find a workaround for that. They have a map to 2032 that shows the support and 
+the life cycle of all the different components of the system. Folgers explained it has been a 
+sticking point in the last few negotiations, that very reason is they cannot tell us, because 
+they do not know when the 3rd party vendors are going to be replacing their equipment, but 
+their reply back was the risk is on us for whatever price we end up. We are weighing that 
+constantly when they come back with something like that, because they could go time and 
+material.   
+ 
+REPORTS: 
+SECB: 
+1. MnDOT/ARMER/RIC Report: (Update) 
+RIC Report is available online. 
+ 
+2. SECB: (Micah Myers) 
+SECB met last Thursday. Director Walberg gave a report on the NG911 grants. There was a 9-1-
+1 outage on January 9th. That is the second one in less than a year. It was the same thing, it was a 
+break of a router. This impacted the Southeast part of the state. The notification process once 
+again was not the best. Rice-Steele PSAP used IPAWS, so they ended up getting a crawler that 
+went across TVs. It gave folks insight as to where they need to call when the 9-1-1 system was 
+down. How do you get your information out to your PSAPs, and how do PSAPs get that 
+information out to the general public? MnDOT gave a report that there are 3 sites left to build. 
+Those 3 sites that will be the original plan. MnDOT has 335 sites. With the local enhancements 
+there are 435 sites on the ARMER system right now. ECN is in the process of looking for a 
+financial coordinator position to fill.  
+ 
+ 
+- 7 - 
+REPORTS: (Continued) 
+SECB: (Continued) 
+3. Finance Committee: (Micah Myers) 
+Met two weeks ago. We went over the NG911 grant process. There are two components to the 
+NG911 Grant: GIS and CPE. The main focus on the CPE, there was a lot of confusion as to the 
+process and how this grant was going to be administered. There was believed to be a match, and 
+then there was not a match. Grants workgroup will be meeting tomorrow to go over the process. 
+There is a communication supposed to come out February 1st as to how the decision process, or 
+how those grants are going to be administered going forward, and the funding for that will be 
+made available on March 31st. One of the other things we talked about on the Finance call is 
+looking at creating a standard process for administering and handling the grants. We are already 
+talking about the current grant processes for this year with the SHSP/SECB grants. But, if we 
+are making these changes we need to get these standards in place. There was 3 proposals that 
+were approved. The rest are still under review. One of those that is under review is Central and 
+Metro Region.  
+ 
+4. Interoperability Committee: (Micah Myers) 
+Met last Tuesday. STR workgroup did a field trip to Hennepin County. They looked at their 
+SatCOW. There was some discussion as to how that SatCOW was acquired and whether, or 
+not, that is going to fall under the governance of the STR. There was a report from one of 
+Myer’s staffers who went to the ITLS course. Conventional Interoperability Plan, the 
+Central had weighed in on that. There were some concerns about the statement as to 
+required verses recommended, what needs to be in the consoles. Those changes were put 
+into the plan. Interoperability Committee approved and that was approved at SECB. SWIC 
+Stromberg is working on Interstate Interoperability Crosswalk and Best Practices Guide. 
+There are counties in the southern region working with the new Iowa state system that is 
+going in. Looking at how we interact with those borders. What he is looking for this 
+workgroup is to have someone who is technical savvy, but also looking at a PSAP manager. 
+We have two of those in our region that border other states, so we are going to reach out to 
+them. The example SWIC Stromberg gave was they walked into a dispatch center on the 
+Iowa side and these controls stations said ‘ARMER Do Not Touch’ and they said what are 
+those. They responded they did not know. There was some recognitions for some COMLs.  
+ 
+5. Wireless Broadband & Applications Committee: (Brandon Larson) 
+Verizon hosted a meeting where they gave everyone a tour of their main offices, and discussed 
+about their capabilities for assisting public safely with pre-planned and non-planned events. 
+Upcoming, we have a FirstNet users meeting for anyone. It is a closed door meeting that will be 
+held February 5th at St. Cloud MnDOT. There is movement forward on an RFP for a coverage 
+assessment tool. Thought process initially by ECN was to have an application any agency in the 
+state could put on their phone. They would activate it and then they could walk/drive around 
+their community and get the data for coverage on that carrier. State has sent out a wireless 
+broadband survey for everyone with a list of questions of how you are using broadband for 
+work. They have only received around 100 responses, and they are hoping to get 1,000. 
+ 
+6. Legislative Committee: (Micah Myers) 
+They were looking for a chair. When the session opens up, they are going to be bringing back 
+some of the changes to the 403 statute which is looking at giving DOC and Indian Affairs 
+Council a seat under the board. We have these committees and a governance in place, we need 
+to make sure we are participating in these. If there are decisions to be made about how our 
+governance our works. We will be represented on that committee, but Myers is hoping the other 
+folks that have their seats on that committee will be present to discuss the topics that are there.  
+ 
+- 8 - 
+REPORTS: (Continued) 
+SECB: (Continued) 
+6. Legislative Committee: (Micah Myers) (Continued) 
+Myers explained when Director Wahlberg asked are there any other items we should be bringing 
+forward, this is where we need from you guys, if there are things concerning communication like 
+what we saw with Tusa here and looking at these costing things and how we move forward. Or, 
+like the 9-1-1 outage we talked about. That was discussion Commissioner Jelinski had asked 
+some questions on was the outage due to lack of funding. What recourse do we have? We need 
+to get our voices there and bring that forward.  
+ 
+7. Land Mobile Radio Committee: (Kristen Lahr) 
+Met last week Tuesday. There were several plan amendments on the agenda. Cook County had 
+an outdoor BDA project. Clay County had a plan amendment to add some additional radio IDs 
+to their plan. Hubbard County had a plan amendment to change their connections from their 
+PSAP to the ARMER system. Gold Cross/Mayo Medical transport had a plan amendment to 
+officially do their name change to Mayo Clinic Ambulance and an addition of an MCC7500e, 
+and a talkgroup request to add an additional four talkgroups to their participation plan. All of 
+those plan amendments were approved. 
+ 
+8. Regional Coordinator Report 
+It is provided online. 
+ 
+EMS/Hospital Workgroup: (Paul McIntyre) 
+Our last hurdle was cleared up Monday. We do have access to the conference line now. They took the 
+link down to get the information for the EMS/Hospital group, changing the naming. They just have to 
+get that put back-up, so people can see that and sign-up for the information.   
+ 
+Regional Leadership Group (Next Meeting July 27, 2020):  
+Myers reported there was further information given on the 911 outage. ECN talked about the 
+projects they are working on and their need for additional staffing. We also talked about some of the 
+constraints we are having as we move stuff forward. The state is standing up and taking notice as a 
+result of the DHS and other issues. There are things that are not moving as quickly. Jim Jarvis from 
+the Feds gave a report. There is a slide Myers wants to present to the group. It goes with the 
+discussion we are having about the ongoing maintenance. Outputs and outcomes which we 
+traditionally are not measuring, but looking at what we are putting, when we talk about outputs 
+what are we spending on the system and are we getting desired outcomes? Jelinski brought in a 
+point to the discussion was are we telling our story. Does the general public know what your 
+frontline staff and what we do on a daily basis? That is something we need to get out. There is a 
+reason this stuff costs this. You need to be able to explain that. When we are looking at establishing 
+priorities it talked about one of the concerns or constraints we have as we go forward we take these 
+federal funds and 9-1-1 monies talking about diversion of fees. There was an acknowledgement of 
+that and that we are working to make sure those do not politicians going forward. They started 
+talking about the upcoming conference. They started doing the planning. The conference that for the 
+last 10 years we have had here in St. Cloud has been moved to St. Paul. They were planning for 
+what type of information you would like to see presented at that. Jelinski explained that Wednesday 
+is Commissioners Day. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+- 9 - 
+GENERAL DISCUSSION AND NEW BUSINESS 
+Executive Committee Reports and Items: 
+1. Website – ADA Issues 
+Myers stated per the recommendation of this board from our last meeting, Myers spoke to 
+Representative Westrom. He pointed Myers in the direction, because he did not have the answer. 
+Myers went to Mn.IT and several websites and did some significant research on it. One of the 
+things Myers was unable to establish is a definitive timeline that you have to be in compliance. 
+There has been a couple amendments, because this stems from an Act from 1973. In 1997, the 
+Federal Electronic and Information Technology Accessibility and Compliance Act was proposed 
+into legislation to correct shortcomings in it. The biggest issue they have is they do not have the 
+enforcement piece and they are letting the courts decide. Southern California was the first 
+government entity that got taken to task on this one. What happens when they take you, you are 
+not paying a suit to the plaintiff you are actually just paying the attorneys fees. For the attorneys 
+this is a cash cow to them. Do we want to be made an example of, or, are we doing it because we 
+have citizens that this impacts? We represent all. Disabilities, you may not have one now, but as 
+Myers said at the last meeting, as we get older our eyesight is going to go and you are going to 
+need these tools. We have partners in the website and we want to give them notification so we 
+can set our budget and move forward saying this is a recurring cost that is coming and explain to 
+them why we are doing this. There is not a definitive timeline you have to be in compliance. We 
+can be challenged at any point right now. Douglas County asked has not every county been 
+doing this with their own websites? Stevens County is working on it, it is a big project. Morrison 
+County is redoing their website and Jelinski will guarantee we will be ADA compliant. Pope 
+County did too and they are checking on that. Myers explained the City put our sites already on 
+this year, and we use the same vendor to do the Board’s website. We already have a proposal 
+from them. Myers would like to have the Board grant us permission to go ahead and move this 
+forward and then we will reach out to the other partners to let them know this is coming, so they 
+have a year. You have a couple of options. We have funding as part of our budget that can cover 
+this cost to move it forward right now, or, we wait and recoup. We are looking for the ability for 
+this group to give us permission to move this thing forward. Jelinski stated it is not an action 
+item on our agenda, but does not know why we do not make it an action item. Jelinski looked for 
+a motion. Stevens County moved the ADA website redo. Grant County stated and that motion 
+includes information back to the next meeting for verification? Stevens County replied he is 
+going to get ahold of the associates. We have to do it anyway. Douglas County seconded. Myers 
+stated to make sure we are clear on the motion. Does this motion give us to send the letter to our 
+partners agencies and wait, or are we looking at going ahead and entering into the contract? 
+Stevens County’s motion is to move ahead with it now, we will pay for it out of ours and you 
+will negotiate the payment from them. Jelinski added through that conversation we do need to 
+let our partners know what we are doing. Mille Lacs County asked should we be doing this by 
+consensus being it was not on the agenda to be approved? City of St. Cloud asked would the 
+motion be to amend the agenda to include this and make it an action item? Jelinski asked do we 
+simply direct Myers without a motion to move forward notifying our partners that this is the 
+direction we are going and there is probably a stronger than none possibility that the March 
+meeting of the Central Region we will probably moving forward with it. Myers stated this was a 
+holdover, this was an action item that was asked at the last meeting and we held it over for the 
+report, but the agenda does not state that so we can do that. Chair Jelinski would feel more 
+comfortable doing it that way. Meeker County stated make sure it will be an action item for next 
+meeting. City of St. Cloud stated it will be an action item, because we are not spending any 
+money off of this now. It has to be an action item to spend money, and we are not spending 
+money. Stevens County did rescind their motion. Jelinski assumed the second is rescinded at the 
+same time.  
+ 
+ 
+ 
+- 10 - 
+GENERAL DISCUSSION AND NEW BUSINESS (Continued) 
+Executive Committee Reports and Items: (Continued) 
+2. Central Region Concerns Letter 
+Myers and Jelinski met with Deputy Commissioner West last Thursday pre the SECB to discuss 
+the letter of concerns. We had a really good discussion. Now what we are looking for is the 
+follow-up going forward. If the process continues then it was not a good meeting. We are 
+confident that our message was heard.  
+ 
+3. Renewal of Regional Coordinator Contract 
+Myers stated on an annual process we go through our Regional Coordinator Contract that the 
+City of St. Cloud is contracted with the Board to deliver. One of the things we did come last 
+September and ask for was the addition of Dave Theis’ services to the Regional Coordinator 
+Contract. We would like to have that extend into the 2020 calendar year as long as there is 
+funding. If we exceed what we have in the funding, we would bring back if we need to take it 
+further. Myers pointed out from the Tusa Consulting meeting this morning there is an upgrade 
+that is coming in this calendar year it is version 19 that Dave’s expertise would be. Some of the 
+other members are looking at continuing to utilize his service, it has worked well. We have a 
+process we put in place that process will remain the same that the O&O/User Committee look at 
+the requests for his time and weigh-in on how that works. The contract value should remain the 
+same unless we have something where we are using Dave’s time way more than what we have 
+in the budget. And before we would do anything with that we would bring it back to the Board. 
+It is not going to change anything in the current budget process right now. Pope County moved 
+for the renewal of that contract. Mille Lacs County seconded. Motion passes.  
+ 
+4. SECB Committee Appointments 
+Myers reported this letter we typically send to ECN on an annual basis that reflects our 
+committee appointments to the state committees. NG911 Committee just held election of Chair 
+and Vice Chair and per the provisions in their Bylaw the Chair and the Vice Chair are the 
+delegates to the state NG911 Committee. There are three vacancies with Al Fjerstad leaving. We 
+will be looking to get those filled with our committees. This is just more of an update. Typically, 
+the ones you see vacant the Board would have to approve, but you have given the RAC the 
+authority to be able to approve that and report back to you in a timely fashion.  
+ 
+5. ESB Board and Committee Attendance 2019 
+Jelinski stated the attendance report is put in here every time for everybody’s information.  
+ 
+6. MN Public Safety Communications Conference 
+Myers showed the memo. This is typically the link that is provided from ECN it will be for 
+conference registration. That is not active yet. Here is what we have typically done in the past. 
+We are looking at reimbursing for meals that are not included in the conference. Then you have 
+also the hotel rate which we do not know. There are some unknowns. We want to get this out 
+because when the board meets next time the conference registration will already be open. We 
+want to be able to send this out to the membership once we know those unknowns like what the 
+conference rate is. It is not going to cost us anything additional out of our budget. In typical 
+years, our spending is about $5-6,000. We will have the grant dollars to cover it. The other one 
+we talked about is the mileage. Typically, we have in the past, if your agency provides mileage 
+reimbursement we did not include it. However, this conference is going to be down in the Twin 
+Cities and we did not know if you guys wanted to change that, or leave it as status quo. Benton 
+County stated it is part of each county’s duty to send the Commissioners. Stevens and Pope 
+Counties concurred. Myers stated then the ask for the group and we will look for this in a motion 
+that we continue to do the same conference reimbursement as we have in the past. Once we get 
+the information we will fill this in.  
+ 
+- 11 - 
+GENERAL DISCUSSION AND NEW BUSINESS (Continued) 
+Executive Committee Reports and Items: (Continued) 
+6. MN Public Safety Communications Conference (Continued) 
+Myers did not think we need to put a not-to-exceed amount, because we have the funding to 
+cover it. Jelinski stated it will be a contracted amount that ECN goes out to get like any other 
+conference. Myers added we normally allow you your 2 representatives on this committee and 4 
+members from your agency. However, prior to the conference we open it up and we give a set 
+date if you do not use all of your allocation and there is someone else that wants to send more 
+from their agency they would be able to. Is two weeks going to be enough time for an agency? 
+Lahr thought if an agency knows that they would like to send more than a total of 6 they usually 
+let Shari know and she can give them a head’s up when it gets close to that date. Myers stated 
+this is one that is always somewhat challenging, that is getting the proper receipts and 
+everything back for reimbursement that we will put into the grant. Myers added having your 
+agency pay for the hotel, so it is just one. Myers added one of the things we looked at for the 
+registration, we would take care of that so we would have one reimbursement, instead of waiting 
+for the other ones. Myers has to do some exploring to see if we can do that, but we are trying to 
+minimize the challenge of getting documentation for the reimbursement back. Jelinski stated we 
+need to have a motion to fund the room and the applicable meals that are attached with it. 
+Kandiyohi County moved. Todd County seconded. Motion passes.  
+ 
+RAC Report & Items: (Micah Myers) 
+1. SECB 2018-2019 Grant & 2018 SHSP Grant 
+Myers reported the RAC did not meet in January. The SECB grant is coming up. Each 
+participating region will get $25,000 for training. $875,000 for equipment. The details we 
+are working on getting that. The 2019 payable 2020 SHSP grant that is coming forward now 
+there is $25,000 also for training. And then there is $50,000 that 7 regions have to compete 
+for equipment. So, there is not a lot of money. One of the things we are looking at doing is 
+identifying our needs and setting a standard. The reason why there is so little bit of 
+equipment there is, because we had turnback but a lot of that was largely due in part that it 
+was training dollars and the folks could not do the training. If we are turning back money it 
+is hard to go back to HSEM and say we need more. One of the things that group will be 
+tasked with is putting together our grant priorities looking at what we are asking for to be 
+funded in that grant and give that information to the Deputy Commissioner, so when they 
+have that annual meeting he can convey what our needs are and we can look at getting more 
+funding into that SHSP grant. As for our call tomorrow, we are going to be establishing 
+some of the standards and doing some clarifications on the current NG911 Grant.   
+ 
+O&O Report & Items: (Kristen Lahr) 
+1.  CM Analyzer Hardware & Software Maintenance 
+At our January meeting the committee discussed an opportunity to renew our software 
+maintenance subscription for regional analyzer equipment. The subscription does provide 
+extended warranty which covers any hardware, software or warranty defects in the equipment. 
+And then also includes software updates that the company provides. As the equipment is 
+available for use by all members of the region, there was some strong support by the committee 
+to renew that subscription at a cost of $4,900. In the 2020 budget there is an allocation for CM 
+Analyzer maintenance. So, we do have the funding available in this budget year to renew this. 
+Lahr stated we are looking for approval from the board to renew the extended warranty and 
+software subscription. Benton County moves. Mille Lacs County seconded. Motion carried.  
+ 
+ 
+ 
+ 
+- 12 - 
+GENERAL DISCUSSION AND NEW BUSINESS (Continued) 
+User Report & Items: (Paul McIntyre) (Continued) 
+Paul McIntyre was voted Chair and Jim Hughes the Vice Chair.  
+1.  Request for Proposals – Training Provider 
+Lahr explained we have come to you for approval at some 2019 meetings our training roadmap 
+for the 2020 calendar year. With the change in ownership of our training provider On Target 
+Training and Consulting we felt it was pertinent that we put our training out for RFP for the 
+2020 calendar year to start that process over. You will find attached a draft Request for Proposal 
+to provide training courses for the 2020 calendar year. Myers is forwarding the proposal onto 
+legal for standard review. We are looking for approval to go ahead and publish this RFP for our 
+2020 training pending legal review. Wilkin County moved. Pope County seconded. Stevens 
+County asked are there a lot of vendors that do this kind of training? Lahr responded there are a 
+couple that have popped up in the general Central area and across the state. On Target has 
+changed hands, a new agency has taken that over. Motion carried.  
+ 
+EMAC Report & Items (Stephanie Johnson) 
+1.  Approval of Region 4 Contractor 
+Johnson explained we interviewed January 13th three applicants. We received four applicants, 
+one had to pull their application out due to personal reasons. We picked the top choice of 
+Preferred Response who is our current contractor. First request for board approval is to approve 
+the contract to be signed after it finalizes legal review. Stevens County moved. Meeker County 
+seconded. Motion carried. Second, Johnson is asking for board approval to approve the Board 
+Chair to sign that grant agreement once it becomes available so that our contractor can start 
+services before our March ESB meeting. Kandiyohi County moved. Grant County seconded. 
+Motion carried. 
+ 
+NG-911 Report & Items: (Jason Karlgaard) 
+Jason Karlgaard was elected Chair and Vice Chair was Jason Wendt of Grant County.  
+ 
+Logger Committee Report & Items: (Brandon Larson) 
+1.  2020 CMESB Budget Logger Revision 
+At your last meeting you approved to allow Stearns County to join as a member of the Logger. 
+We had already set our budget with the thought of 13 entities sharing the costs, and now we 
+have 14 entities sharing the costs. This is a request to make a budget adjustment in the 
+downward direction to just a little over $5,600/entity. Larson noted not everyone is a party to the 
+logger and called out the agencies that are a party. Wright County motioned to adjust the 
+contribution budget down. Stevens County seconded. Wright County asked are we charging for 
+the whole year, are we pro-rating? Larson explained, Stearns County came on at the beginning 
+of the year, so they are full ride. Myers noted we are in negotiation with another entity right now 
+which is outside the region. If they join, we will not pro-rate the balance of the year, they will 
+pay a full share. And then in 2021 we will make that adjustment if they do come on that is the 
+way the process works. Motion carried.  
+ 
+OLD BUSINESS: 
+a. ECN Program Updates Newsletter 
+View online.  
+b. Attendance Update 
+ 
+Myers reported our lowest is 83% and not that long ago we had some that were on the 
+border. The RIC had mentioned this at the regional quarterly that it is impressive that you 
+have minimal of 80% attendance. So, it is working. We have achieved what we want. We set 
+a precedence and maybe we will be a model for the rest of the state.  
+ 
+- 13 - 
+OLD BUSINESS: (Continued) 
+b. Attendance Update (Continued) 
+ 
+Mille Lacs County Commissioner would like to say a big ‘Thank You’ to Al Fjerstad for his 
+service to all of us in this room and what a loss it will be. It will be a huge loss for Mille 
+Lacs County. As you can look at the roster he served on many committees for us. Jelinski 
+added it is not only going to be a big loss for Mille Lacs County, but for this region it is 
+going to be tremendous.  
+ 
+c. Current Representative List 
+View online.  
+ 
+UPCOMING MEETINGS: 
+The next meeting will be held on March 25, 2020 in the City of St. Cloud Conference Room #1.  
+ 
+ADJOURNMENT: 
+Chair Jelinski made the executive motion to adjourn the meeting and the motion was carried 
+unanimously at 2:42 p.m. 
+ 
+Minutes recorded by Shari Gieseke. 
+ 
+ 
+ 
+ 
+- 1 - 
+CENTRAL REGION  
+EMERGENCY SERVICES BOARD (ESB) 
+Wednesday, March 25, 2020 – 1:00 p.m. 
+St. Cloud City Hall Conference Room #1, St. Cloud, MN 
+ 
+Members/Alternates Present: 
+1. Mike Conway – City of St. Cloud (via phone) 
+2. Steve Heinen – Benton County (via phone) 
+3. Erick Klepel– Big Stone County (via phone) 
+4. Charlie Meyer – Douglas County (via phone) 
+5. Bill LaValley – Grant County (via phone) 
+6. Rollie Nissen – Kandiyohi County (via phone) 
+7. Steve Schmitt, Vice Chair – Meeker County (via phone) 
+8. Genny Reynolds – Mille Lacs County (via phone) 
+9. Jeff Jelinski, Chair – Morrison County 
+10. Gordy Wagner – Pope County (via phone) 
+11. Leigh Lenzmeier – Stearns County (via phone) 
+12. Robert Kopitzke – Stevens County (via phone) 
+13. Gary Kneisl – Todd County (via phone) 
+14. Kevin Leininger – Traverse County (via phone) 
+15. Jon Kangas – Wadena County (via phone) 
+16. Neal Folstad – Wilkin County (via phone) 
+17. Charles Borrell – Wright County (via phone) 
+ 
+Members/Alternates Absent: 
+18. Otter Tail County 
+19. Swift County 
+ 
+Other Members/Alternates Present: 
+1. Micah Myers, Chair – Regional Advisory Committee 
+2. Kristen Lahr, Chair (via phone) & Brandon Larson, Vice Chair – Owners & Operators Committee 
+3. Paul McIntyre, Chair – User Committee (via phone) 
+4. Jason Karlgaard, Chair – Next Generation 9-1-1 Committee (via phone) 
+5. Brandon Larson, Chair – Regional Logger Committee  
+ 
+CALL TO ORDER: 
+Meeting called to order by Chair Jeff Jelinski at 1:00 p.m. Quorum reached with 17 of the 19 members 
+present for the whole meeting. 
+ 
+INTRODUCTIONS: 
+Introductions were conducted. 
+ 
+APPROVAL OF AGENDA: 
+Kandiyohi County moved to approve the agenda. Stevens County seconded, motion carried. 
+ 
+COMMUNICATIONS: 
+a. Coronavirus (COVID-19) 
+Myers reported part of the discussion we had at the Executive Committee is how the current 
+predicament we are in right now has impacted our abilities to meet as we are meeting via 
+phone today. It is anticipated that the Governor in his address today will probably shut down 
+the state agencies. Looking at it if we do not need to meet then we do not need to meet. Can 
+we change our current process?  
+ 
+- 2 - 
+COMMUNICATIONS: (Continued) 
+a. Coronavirus (COVID-19) (Continued) 
+Myers asked if there are action items that come through, for example, Stevens County has to 
+go through the approval process for a SOAR/CRAE. They have to convert it to a CRAE. It 
+is a communication enhancement to the system they deployed. Per the SWIC, they are 
+recommended, as per the standard, they need to move that forward. That would typically be 
+reviewed by the Owners & Operators and then brought forth through the approval process 
+and then up to the state. If there is no timeline established on that, then that is fine. But if 
+there are action items that come up that need to be addressed, can we convene meetings? In 
+which we do have the authority to do that, we can call a special meeting, but do it via the 
+video conferencing. And looking at some of the approval processes, instead of having the 
+O&O go through, can we go with the Executive Committee, or we bring it direct to the 
+Board. We have to look at how we do business. We are going to do some further 
+exploration, but that might be all for not if the Governor does not shut down the state, which 
+we are thinking that is most likely, because there are two executive orders we are expecting 
+out of his conference today. This is a game changer for us and how do we do businesses. We 
+would like to get some feedback from the group.  
+ 
+Stearns County asked is there a way we can temporarily empower an Executive Committee? 
+Myers replied we do already have an Executive Committee that has representation from all 
+of our committees and the board. Myers would run it through legal. Myers does not think 
+there is anything in our JPA. Myers would have to look at the articles of membership. Myers 
+thinks we can, but Myers will review that with legal. And if that is, we can correspond that 
+out, but we could take that action today. Myers explained this was not meant to be an action 
+item, but you could make an action that you empower the Executive Committee to handle the 
+business on behalf of the Board. Stearns County would make such a motion. Benton County 
+seconded. Myers stated we are temporarily granting the Executive Committee the power to 
+move either contracts, or take care of board business, during this COVID-19 process so we 
+are clear on the motion. Pope County asked how many members are on that Executive 
+Committee? Myers replied there is the Chair and Vice Chair of Board and all the 
+subcommittees. You have the RAC, Owners & Operators, Users, NG911, EMAC and the 
+Logger. There is 8. Kandiyohi County stated our next meeting is not until June. The motion 
+is in order to have you folks keep an eye on things until June. After that hopefully we will 
+continue to have regular meetings. Wright County does not know if we have to meet for this. 
+We can have this meeting over the phone anytime. What would be different if we were not 
+having this crisis right now? We are taking any action that needs to get taken today and we 
+will not meet for two months. Wright County does not know what the difference is. Myers 
+gave clarification if there are any items that come up with the Committees like the O&O, 
+like the example Myers gave with Stevens County. Typically, the O&O would review, then 
+if it is a policy thing the RAC would review, then the recommendation would come back to 
+this board. Being able that if those groups do not want to meet, because they are regular 
+large groups, that the Executive Committee could do the review process and then make the 
+recommendation to the board for approval going forward. Wright County replied it is acting 
+a little differently now, more with the groups, not so much with our Board. Grant County 
+would think anything immediate action they should be able to act on that, but when we are 
+talking preliminary budgets and budgets then it should be the full Board. Myers replied that 
+is the plan. City of St. Cloud stated just a quick clarification, somebody mentioned that the 
+duration would be in until the June meeting. Is that okay if we can put something in there so 
+that this expires at the June meeting? Stearns County does not have a problem at all, but it 
+should also include some sort of mechanism if we need another short-term extension.  
+ 
+- 3 - 
+COMMUNICATIONS: (Continued) 
+a. Coronavirus (COVID-19) (Continued) 
+Stevens County stated we could have a conference call like this if this goes to June. City of 
+St. Cloud stated it gives the Executive Committee the power they need between now and the 
+next board meeting, and at June if we need to extend it we can do this again to re-up it. 
+Wright County asked so we are still going to have our June meeting just as we would, either 
+if this was over it would be up in St. Cloud, or if not, it would be over the phone, correct? 
+Chair Jelinski replied by all indications we will have our June 10th meeting. Wilkin County 
+asked what is the motion? Myers replied the motion will state that the Executive Committee 
+will handle ESB business that is normally handled by the lower committees. If there is a 
+requirement to call the board we will do a special meetings to finalize that business. These 
+powers will remain intact until the June budget meeting. Chair Jelinski asked Stearns 
+County if that was their motion. Stearns County replied it is now. Chair Jelinski called for 
+further discussion. Role call vote: City of St. Cloud – yes; Benton – yes; Big Stone – yes; 
+Douglas – yes; Grant – yes; Kandiyohi – yes; Meeker – yes; Mille Lacs – yes; Morrison – 
+yes; Pope – yes; Stearns – yes; Stevens – yes; Todd – yes; Traverse – yes; Wadena – yes; 
+Wilkin – yes; Wright – Aye; RAC – yes; O&O – Aye; Users – Aye; NG911 – Aye; Logger – 
+Aye. Motion passes.  
+ 
+b. Aging Eyes Initiative 
+Myers stated if anyone wants to attend, as of Friday, this thing is still on. It will be hosted in 
+Alexandria on Thursday, April 9th. It is basically a seminar on giving information and 
+assisting folks as they are having visual impairments. Myers threw this out when we were 
+looking at the website ADA compliance. This is some of the things that would be discussed 
+like how do you access tools online. They also give a kit. It has a value of $200 for folks that 
+want to participate. This is just informational just showing you that this is becoming more of 
+a real thing here as we start looking at the visual impairments.  
+ 
+REPORTS: 
+SECB: 
+a.   SECB: 
+ 
+No Report.  
+ 
+ 
+GENERAL DISCUSSION AND NEW BUSINESS 
+Executive Committee Reports and Items: 
+1. Website – ADA Issues 
+Myers stated per the Board’s direction, this is a draft that was put together by staff. This will be 
+going out with the folks on their website billing. One of things we will have to make note of is 
+that we are going to still have to do a budget meeting with that group, and that can be held via 
+Teams or WebEx to discuss the changes we are implementing with our website. 
+ 
+2. COMU Renewal for Scott MacKissock (Action Required) 
+Lahr reported at the Executive Committee we reviewed a renewal packet for Scott MacKissock. 
+He is a COML for Morrison County. Normally the O&O Committee does review based on all 
+renewals and new applications for COMU. However, the O&O Committee did not meet in 
+March and we did cancel our April meeting in anticipation for the Public Safety Conference 
+which also is now cancelled. The Executive Committee did review his paperwork and found it 
+complete. We are looking for a motion to approve his application for renewal and move that one 
+to the COMU Workgroup at the SECB level. Kandiyohi County motioned. Wright County 
+seconded. Chair Jelinski asked is there anyone against this motion? If not this motion passes.  
+ 
+- 4 - 
+GENERAL DISCUSSION AND NEW BUSINESS (Continued) 
+Executive Committee Reports and Items: (Continued) 
+3. Training Provider RFP (Action Required) 
+Myers reported in your packet you will see the two submittals for our RFP for training services 
+for the Central Region. After review from the Executive Committee at our last meeting, On 
+Target Training (OTTC) is who we are making a recommendation to this Board for approval 
+based on its thoroughness and price point. They were pretty comparable. On Target provided an 
+additional training that we would have had to go out separately for if we had chosen the 
+Preferred Response. All the items that we asked for, On Target had submitted. That is our 
+recommendation to the Board. Pope County moved to approve the contract with OTTC. Grant 
+County seconded. Chair Jelinski asked for any further discussion. Jelinski asked is there anyone 
+against this motion? If there is no one against this motion this motion passes.  
+ 
+4. Training Provider Contract (Action Required) 
+Myers reported this contract has been submitted and reviewed by legal. Legal did have one 
+change. It is on page #2 in the Indemnification section, which is simply adding “defend and” 
+between indemnify and hold. This revision was sent back to the vendor. Vendor was okay with 
+that. This has had the legal review, so Myers would ask the board to approve the On Target 
+Training contract as presented. Wilkin County approved. Meeker County seconded. Chair 
+Jelinski asked is there any further discussion on this? Jelinski asked is there anyone against this 
+motion? Hearing no one, this motion will pass.  
+ 
+5. SUA Cost Allocations 
+Myers stated of this you will see all the regions contribution. You will see the membership of 
+the Central Region and their allocation. If you did not add anything from your SUA contract last 
+year to this year these numbers should be the same as this was flat-lined. Next year is where we 
+will see the jump depending on how the negotiations go with Motorola. You will be receiving a 
+bill from MnDOT for the dollar amount that is associated to your county. 
+ 
+6. SECB Committee Appointments 
+Myers reported in your packet you will see the recently appointed. We had a separation on 
+the NG911 which is vacant. Then we had the point of contact for the grants, and the grants 
+workgroup were some of the noteworthy changes. This is just more for information as the 
+RAC goes through and does the approvals and then reports back to this group.   
+ 
+Additional Agenda Items 
+None.  
+ 
+OLD BUSINESS: 
+ 
+UPCOMING MEETINGS: 
+The next meeting will be held on June 10, 2020 in the City of St. Cloud Conference Room #1.  
+ 
+ADJOURNMENT: 
+Traverse County made a motion to adjourn the meeting. Meeker County seconded. Chair Jelinski stated 
+if there was no one against this motion then this motion passes at 1:29 p.m. 
+ 
+Minutes recorded by Shari Gieseke. 
+ 
+Due to the CDC’s guidelines during the Coronavirus pandemic, Central Region meetings may be 
+conducted under Minnesota Statute 13D.021 – Meetings by Telephone or Other Electronic Means. 
+1
+Micah Myers
+From:
+Stromberg, James (DPS) <james.stromberg@state.mn.us>
+Sent:
+Monday, June 1, 2020 8:42 PM
+To:
+Dave Olson; Mike Keyport; Micah Myers; Erik Wallen; tim.mohr@blueearthcountymn.gov; Robert 
+Shogren; Dave Pike
+Cc:
+Dewey Johnson; tfredrick@mn-mesb.org; Bruning, Marcus (DPS); Tait, Steven (DPS); Lahr, Kristen; 
+Keith Ruffing; Wahlberg, Dana (DPS); Clark, Cathy (DPS)
+Subject:
+Regional Notification Form
+Attachments:
+MN Duty Officer Communication Resources Reference Form -- 2019-05-23.pdf
+The Sender "Stromberg, James (DPS)" is external to the St. Cloud email system.  Use caution when replying 
+and opening attachments/hyperlinks.  St. Cloud IT Dept. 
+RAC Chairs, 
+ 
+Many of you were around in 2017 when ECN partnered with the Minnesota Duty Officer to update the process for 
+obtaining communications assistance.  The plan was should anyone need communications personnel, STR equipment, or 
+communications knowledge and they didn’t know who to call they could be connected with someone in the applicable 
+region by way of the Minnesota Duty Officer.  The calling list is nearing a year old and needs freshening.  Will you please 
+review and let me know of any changes.  Also, the process may evolve and mature a bit as it relates to the MN Duty 
+Officer but be assured that any major changes will include regional input.  However the process changes, it is still helpful 
+to update the list.  You can email your updates directly to me.   
+ 
+Let your RIC or I know if you have any questions.  Thank you! 
+ 
+Jim Stromberg 
+Statewide Interoperability Coordinator / ARMER Program Manager 
+State of Minnesota, Department of Public Safety, Division of Emergency Communication Networks 
+445 Minnesota Street, Suite 1725, Saint Paul, Minnesota 55101 
+651‐201‐7557 
+James.Stromberg@state.mn.us 
+Emergency Communication Networks 
+Statewide Emergency Communications Board 
+ 
+Minnesota Duty Officer 
+Guidelines and Contact Information for 
+Communications Resources 
+ 
+May 23, 2019 
+The Minnesota Department of Public Safety division of Emergency Communication Networks 
+(ECN), the Statewide Emergency Communications Board (SECB), and regional Emergency 
+Communications/Services Boards (ECB/ESB) support communication resources for large-scale 
+and emergency events.  These resources include equipment, personnel, knowledge, and services 
+and are available both as a formal component of the Incident Command System (ICS) or outside 
+of ICS. 
+ 
+Communication resources may be requested through the Minnesota Duty Officer.  These 
+resources include: 
+ 
+Communications Equipment (Strategic Technology Reserve) 
+• Cache Radios (ARMER, 
+VHF, & UHF) 
+• Transportable Towers and 
+Repeaters 
+• Gateways 
+• Communication Vehicles 
+ 
+Communications Personnel (ICS Personnel, Teams, & Subject Matter Experts) 
+• Communication Leaders 
+(COML) 
+• Communication Technicians 
+(COMT) 
+• Incident Communication 
+Center Managers (INCM) 
+• Incident Tactical Dispatchers 
+(INTD) 
+• Radio Operators (RADO) 
+• Auxiliary Emergency 
+Communication Specialists 
+(AECS) 
+• Communications Response 
+Task Forces (CRTF) 
+• Telecommunicator 
+Emergency Response 
+Taskforces (TERT) 
+ 
+Communications Knowledge and Services (Guidance & Support) 
+• ARMER Radio Resources 
+• Amateur Radio Resources 
+• Non-ARMER Radio 
+Resources
+Process 
+The Duty Officer should convey requests for communication resources to the appropriate 
+persons listed on the following pages.  The Minnesota Duty Officer should follow these steps: 
+1. Determine the general nature of the request.   
+2. Identify the location of the need. 
+3. Determine if this is an immediate need or future need.  Routine requests that come in 
+more than 24 hours in advance and after 10PM should be held until 8AM. 
+4. Request name and contact information (e.g. telephone number, dispatcher’s telephone 
+number, radio talkgroup being used) from the caller and advise that someone will be 
+in touch. 
+5. Consult the lists on the following pages to identify the correct ECB/ESB region for 
+the county in need. 
+Minnesota Duty Officer 
+Guidelines and Contact Information for 
+Communications Resources 
+ 
+May 23, 2019 
+6. Attempt to contact a representative from that region based on the first, second, and 
+third contact names and contact methods. 
+7. For requests of the following nature, contact a state representative: 
+• All requests not specific to a region 
+• Multi-Region requests 
+• State-specific requests 
+• Non-response by a region 
+• Interstate / EMAC Requests 
+8. For requests of the following nature, contact a Metro Region representative: 
+• Requests specifically for the Metro Region’s Communications Response 
+Taskforce (CRTF). 
+• Interstate / EMAC Requests 
+ 
+Questions regarding this process should be directed to the Statewide Interoperability 
+Coordinator, Jim Stromberg (contact info listed under the state section below). 
+ 
+ 
+ 
+ 
+ 
+Minnesota Duty Officer 
+Guidelines and Contact Information for 
+Communications Resources 
+ 
+May 23, 2019 
+NORTHWEST REGION 
+Counties Served:
+Becker 
+Beltrami 
+Clay 
+Clearwater 
+Hubbard 
+Kittson 
+Lake of the Woods 
+Mahnomen 
+Marshall 
+Norman 
+Pennington 
+Polk 
+Red Lake 
+Roseau 
+Contacts: 
+NW Region 
+Contact Name 
+Best Method 
+Second Method 
+Third Method 
+First Contact 
+Dave Olson 
+218-681-6161 
+218-416-2172 
+dolson@penning
+tonsheriff.org 
+Second Contact 
+Nicholas 
+Robertson 
+218 681-0943 
+nicholas.robertso
+n@state.mn.us 
+n/a 
+Third contact 
+Neil Dolan 
+218-694-6226 
+Neil.dolan@co.c
+learwater.mn.us 
+n/a 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Minnesota Duty Officer 
+Guidelines and Contact Information for 
+Communications Resources 
+ 
+May 23, 2019 
+NORTHEAST REGION 
+Counties Served: 
+Aitkin 
+Carlton 
+Cass 
+Cook 
+Crow Wing 
+Itasca 
+Kanabec 
+Koochiching 
+Lake 
+Pine 
+Saint Louis
+Contacts: 
+NE Region 
+Contact Name 
+Best Method 
+Second Method 
+Third Method 
+First Contact 
+St. Louis County 
+PSAP 
+218-625-3581 
+n/a 
+n/a 
+Second Contact 
+Dewey Johnson 
+218-726-2936 
+(218) 343-5760 
+JohnsonD@StL
+ouisCountyMN.
+gov 
+Third contact 
+Steve Olson 
+(218) 830-8835 
+steve.olson@co.l
+ake.mn.us 
+n/a 
+ 
+ 
+ 
+ 
+ 
+ 
+Minnesota Duty Officer 
+Guidelines and Contact Information for 
+Communications Resources 
+ 
+May 23, 2019 
+CENTRAL REGION 
+Counties Served: 
+Benton 
+Big Stone 
+Douglas 
+Grant 
+Kandiyohi 
+Meeker 
+Mille Lacs 
+Morrison 
+Otter Tail 
+Pope 
+Stearns 
+Stevens 
+Swift 
+Todd 
+Traverse 
+Wadena 
+Wilkin 
+Wright 
+Contacts: 
+CM Region 
+Contact Name 
+Best Method 
+Second Method 
+Third Method 
+First Contact 
+Al Fjerstad 
+320-983-8288 
+612-916-5378 
+Al.fjerstad@co.
+mille-
+lacs.mn.us 
+Second Contact 
+Kristen Lahr 
+320-259-3727 
+320-290-9151 
+Kristen.lahr@c
+o.stearns.mn.us 
+Third contact 
+Brandon Larson 
+320-650-3304 
+320-828-6685 
+Brandon.larson
+@ci.stcloud.mn.
+us 
+ 
+ 
+ 
+ 
+ 
+Minnesota Duty Officer 
+Guidelines and Contact Information for 
+Communications Resources 
+ 
+May 23, 2019 
+METRO REGION 
+Counties Served: 
+Anoka 
+Carver 
+Chisago 
+Dakota 
+Hennepin 
+Isanti 
+Scott 
+Sherburne 
+Ramsey 
+Washington 
+Contacts: 
+ME Region 
+Contact Name 
+Best Method 
+Second Method 
+Third Method 
+First Contact 
+Tracey Fredrick 
+651-643-8398 
+tfredrick@mn-
+mesb.org 
+ 
+Second 
+Contact 
+Don Smiley 
+651-775-8714 
+don.smiley@co.r
+amsey.mn.us 
+n/a 
+Third contact 
+Mark 
+Vandenberghe 
+612-716-7843 
+MVandenberghe
+@edenprairie.or
+g 
+n/a 
+ 
+All Interstate / EMAC Requests should also go to the Metro Region 
+ 
+The Metro Region Communications Response Taskforce (CRTF) is available for statewide 
+response and provides communications, communications planning, technical support and 
+documentation support in the field, the command post, the EOC, or the PSAP. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Minnesota Duty Officer 
+Guidelines and Contact Information for 
+Communications Resources 
+ 
+May 23, 2019 
+SOUTHWEST REGION 
+Counties Served: 
+Chippewa 
+Cottonwood 
+Jackson 
+Lac Qui Parle 
+Lincoln 
+Lyon 
+Murray 
+Nobles 
+Pipestone 
+Redwood 
+Renville 
+Rock 
+Yellow Medicine 
+Contacts: 
+SW Region 
+Contact Name 
+Best Method 
+Second Method 
+Third Method 
+First Contact 
+Lyon County 
+Sheriff’s Office 
+507-537-7666 
+n/a 
+n/a 
+Second Contact 
+Eric Wallin 
+507-537-7666 
+507-829-4473 
+ericwallen@co.l
+yon.mn.us 
+Third contact 
+Bill Flaten 
+320-564-5896 
+320-305-9796 
+Bill.flaten@co.y
+m.mn.gov 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Minnesota Duty Officer 
+Guidelines and Contact Information for 
+Communications Resources 
+ 
+May 23, 2019 
+SOUTH CENTRAL REGION 
+Counties Served: 
+Blue Earth 
+Brown 
+Faribault 
+Le Sueur 
+Martin 
+McLeod 
+Nicollet 
+Sibley 
+Waseca 
+Watonwan 
+Contacts: 
+SR Region 
+Contact Name 
+Best Method 
+Second Method 
+Third Method 
+First Contact 
+Keith Ruffing 
+507-931-1550 
+507-779-4612 
+keithr@saintpete
+rmn.gov 
+Second Contact 
+Adam Krueger 
+507-304-4863 
+507-382-3380 
+akruger@manka
+tomn.gov 
+Third contact 
+Tim Peterson 
+507-304-4863 
+ 
+tim.peterson@bl
+ueearthcountym
+n.gov 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Minnesota Duty Officer 
+Guidelines and Contact Information for 
+Communications Resources 
+ 
+May 23, 2019 
+SOUTHEAST REGION 
+Counties Served: 
+Dodge 
+Fillmore 
+Freeborn 
+Goodhue 
+Houston 
+Mower 
+Olmsted 
+Rice 
+Steele 
+Wabasha 
+Winona 
+Contacts: 
+SE Region 
+Contact Name 
+Best Method 
+Second Method 
+Third Method 
+First Contact 
+Dave Pike 
+507-437-9400 
+507-438-1070 
+dpike@co.mowe
+r.mn.us 
+Second Contact 
+Mike Burton 
+507-328-6800 
+507-923-6599 
+burton.mike@co
+.olmsted.mn.us 
+Third contact 
+Matt Maas 
+507-319-2322 
+507-635-6200 
+matt.mass@co.d
+odge.mn.us 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Minnesota Duty Officer 
+Guidelines and Contact Information for 
+Communications Resources 
+ 
+May 23, 2019 
+STATE 
+When to Contact: 
+• All requests not specific to a region 
+• Multi-Region requests 
+• State-specific requests 
+• Non-response by a region 
+• Interstate / EMAC Requests 
+Contacts: 
+State 
+Contact Name 
+Best Method 
+Second Method 
+Third Method 
+First Contact 
+Jim Stromberg 
+952-923-6318 
+612-391-8061 
+James.Stromber
+g@state.mn.us 
+Second Contact 
+Brad Winger 
+651-201-7498 
+651-797-8239 
+952-451-5230 
+Third Contact 
+John Dooley 
+651-701-7099 
+612-384-1755 
+John.Dooley@st
+ate.mn.us 
+Fourth Contact 
+Dana Wahlberg 
+218-348-0306 
+651-485-4082 
+Dana.Wahlberg
+@state.mn.us 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Minnesota Duty Officer 
+Guidelines and Contact Information for 
+Communications Resources 
+ 
+May 23, 2019 
+INTERSTATE and EMAC REQUESTS 
+• Interstate and Emergency Management Assistance Compact (EMAC) requests should be 
+directed to Homeland Security and Emergency Management (HSEM). 
+• Metro Region and state contacts should be notified. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1
+Micah Myers
+From:
+Stromberg, James (DPS) <james.stromberg@state.mn.us>
+Sent:
+Tuesday, June 2, 2020 1:57 PM
+To:
+Dave Olson; Mike Keyport; Micah Myers; Erik Wallen; tim.mohr@blueearthcountymn.gov; Robert 
+Shogren; Dave Pike
+Cc:
+Dennis Ward; Bruning, Marcus (DPS); Tait, Steven (DPS); tfredrick@mn-mesb.org
+Subject:
+Tusa Review of Individual Service Contracts
+The Sender "Stromberg, James (DPS)" is external to the St. Cloud email system.  Use caution when replying 
+and opening attachments/hyperlinks.  St. Cloud IT Dept. 
+RAC Chairs, 
+ 
+Will you please share this with your regional ARMER contacts and leadership?  Thanks.   
+ 
+As you are aware, Tusa Consulting was hired by ECN to assist the state with ARMER System Upgrade Agreement 
+decisions and negotiations.  During Tusa’s in‐person and virtual regional visits they explained that they are also willing to 
+review local ARMER‐related service contracts for duplications of billing and opportunities for efficiencies.  Tusa would 
+like to wrap this task and asks, if you would like them to review your contract, that you forward it to them by June 
+15.  You may send them directly to Dennis Ward (dennis.ward@tusaconsulting.com) or route them through your me 
+and/or your RIC. 
+ 
+Jim Stromberg 
+Statewide Interoperability Coordinator / ARMER Program Manager 
+State of Minnesota, Department of Public Safety, Division of Emergency Communication Networks 
+445 Minnesota Street, Suite 1725, Saint Paul, Minnesota 55101 
+651‐201‐7557 
+James.Stromberg@state.mn.us 
+Emergency Communication Networks 
+Statewide Emergency Communications Board 
+ 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+ 
+Page 1 of 2 
+Thursday, April 23, 2020 
+12:30 – 2:30 p.m. 
+WebEx Meeting Link 
+Phone: 855-282-6330 
+Meeting No.: 968 448 437 
+Password: Board 
+ 
+CHAIR: Assistant Commissioner Bruce West / VICE-CHAIR: Jeff Jelinski 
+MEETING LOCATION: Due to COVID-19 Pandemic and social distancing guidelines, 
+this meeting will only be held by WebEx/telephone 
+AGENDA 
+Call to Order 
+ 
+Approval of Agenda 
+ 
+Approval of Previous Meeting Minutes 
+• February 26, 2020 
+ 
+Announcements 
+ 
+Standing Committee Reports 
+• Land Mobile Radio Committee ....................................................................................... Dave Thomson 
+• Steering Committee ........................................................................................................ 
+Irene Fernando 
+• 
+Interoperability Committee  ........................................................................................ Mike Wisniewski 
+• Legislative and Government Affairs Committee  
+............................................................... Kip Bruender 
+• IPAWS Committee 
+..........................................................................................................Trevor Hamdorf 
+• NG911 ................................................................................................................................ Dar Pankonie 
+• Wireless Broadband & Applications ....................................................................................... Dave Deal 
+• Finance Committee ............................................................................................................ Micah Myers 
+ 
+Special Reports 
+• ARMER Project Status Report ..................................................................................................... Tim Lee 
+• ECN Update .................................................................................................................... Dana Wahlberg 
+• DPS Update ............................................................................................................. Commissioner West 
+ 
+Old Business 
+ 
+New Business 
+• CentraCare Full Participation Plan ........................................................................ Dave Thomson 
+• Hennepin County Request to connect an Asset Management System to ARMER . Dave Thomson 
+• Motorola Solution’s response to Minnesota’s inter-zone patching concern ......... Dave Thomson 
+• Sanford Health ARMER network transport change ............................................... Dave Thomson 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+ 
+Page 2 of 2 
+• Mayo Clinic Ambulance dispatch console additions 
+.............................................. Dave Thomson 
+• SECB Investment Hierarchy – 2020 Grant ................................................................ Micah Myers 
+ 
+Other Business 
+ 
+Motion to Adjourn 
+ 
+ 
+ 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+ 
+Page 1 of 2 
+Thursday, May 28, 2020 
+12:30 – 2:30 p.m. 
+WebEx Meeting Link 
+Phone: 855-282-6330 
+Meeting No.: 968 448 437 
+Password: Board 
+ 
+CHAIR: Assistant Commissioner Bruce West / VICE-CHAIR: Jeff Jelinski 
+MEETING LOCATION: Due to COVID-19 Pandemic and social distancing guidelines, 
+this meeting will only be held by WebEx and/or telephone. 
+AGENDA 
+Call to Order 
+ 
+Approval of Agenda 
+ 
+Approval of Previous Meeting Minutes 
+• April 23, 2020 
+ 
+Announcements 
+ 
+Standing Committee Reports 
+• Land Mobile Radio Committee ....................................................................................... Dave Thomson 
+• Steering Committee ........................................................................................................ 
+Irene Fernando 
+• 
+Interoperability Committee  ........................................................................................ Mike Wisniewski 
+• Legislative and Government Affairs Committee  
+............................................................... Kip Bruender 
+• IPAWS Committee 
+..........................................................................................................Trevor Hamdorf 
+• NG911 ................................................................................................................................ Dar Pankonie 
+• Wireless Broadband & Applications ....................................................................................... Dave Deal 
+• Finance Committee ............................................................................................................ Micah Myers 
+ 
+Special Reports 
+• ARMER Project Status Report ..................................................................................................... Tim Lee 
+• ECN Update .................................................................................................................... Dana Wahlberg 
+• DPS Update ............................................................................................................. Commissioner West 
+ 
+Old Business 
+ 
+New Business 
+• ARMER System Vendor Support Services Contract ...........................................................Tim Lee 
+• Request that certain items from LMRC not move to SECB .................................... Dave Thomson 
+• SECB Standard GOV-2 (1.5.0) ................................................................................ 
+Irene Fernando 
+• M Health Fairview 9-1-1 Participation Plan....................................................... Darlene Pankonie 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+ 
+Page 2 of 2 
+ 
+Other Business 
+ 
+Adjourn 
+ 
+ 
+ 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+FINANCE COMMITTEE 
+Finance Committee 
+Page 1 
+ 
+April 9, 2020 
+9:00 – 11:00 a.m. 
+Phone: 855-282-6330 
+Join Webex meeting  
+Meeting number: 963 415 027 
+Meeting password: Finance 
+ 
+CHAIR: Micah Myers / VICE-CHAIR: Jack Swanson 
+MEETING LOCATION:  WebEx 
+ 
+AGENDA 
+Call to Order 
+ 
+Approval of Agenda 
+ 
+Approval of Previous Meeting’s Minutes 
+• March 12, 2020 
+ 
+Announcements 
+ 
+Standing Committee Reports 
+• Grants Workgroup Grants Hierarchy ....................................................................... Myers 
+ 
+Special Reports 
+ 
+Old Business 
+• Updates to ECN Grants Website 
+.............................................................................. Myers 
+• 9-1-1 CPE Grant Applications/Awards ..................................................................... Myers 
+• 9-1-1 GIS Grant (Status)  ......................................................................................... Myers 
+ 
+New Business 
+• Central region award letter ..................................................................................... Myers 
+• Northeast region award letter ................................................................................ Myers 
+• Carlton County grant evaluation ............................................................................. Myers 
+• Cass County grant evaluation .................................................................................. Myers 
+• Cook County grant evaluation ................................................................................. Myers 
+• Douglas County grant evaluation ............................................................................ Myers 
+• Grant County grant evaluation ................................................................................ Myers 
+• Kandiyohi County grant evaluation ......................................................................... Myers 
+• Lake County grant evaluation 
+.................................................................................. Myers 
+• Otter Tail County grant evaluation .......................................................................... Myers 
+• Pope County grant evaluation ................................................................................. Myers 
+• Stevens County grant evaluation 
+............................................................................. Myers 
+• Swift County grant evaluation ................................................................................. Myers 
+• Todd County grant evaluation ................................................................................. Myers 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+FINANCE COMMITTEE 
+Finance Committee 
+Page 2 
+ 
+• Wadena County grant evaluation 
+............................................................................ Myers 
+• Wilkin County grant evaluation ............................................................................... Myers 
+ 
+Other Business 
+ 
+Motion to Adjourn 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+FINANCE COMMITTEE 
+Finance Committee 
+Page 1 of 1 
+ 
+May 14, 2020 
+9:00 – 11:00 a.m. 
+Join WebEx meeting  
+ 
+Phone: 855-282-6330 
+Meeting Number: 963 415 027 
+Meeting Password: Finance 
+ 
+CHAIR: Micah Myers / VICE-CHAIR: Jack Swanson 
+MEETING LOCATION: WebEx/telephone 
+ 
+AGENDA 
+Call to Order 
+ 
+Approval of Agenda 
+ 
+Approval of Previous Meeting’s Minutes 
+• April 9, 2020 
+ 
+Announcements 
+ 
+Standing Committee Reports 
+• Grants Workgroup................................................................................................... Myers 
+ 
+Special Reports 
+• Update from Tusa Consulting ............................................. 
+Jim Stromberg & Dennis Ward 
+ 
+Old Business 
+ 
+New Business 
+• Tentative ARMER System Upgrade Agreement ..................................................... Tim Lee 
+ 
+Other Business 
+ 
+Motion to Adjourn 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+INTEROPERABILITY COMMITTEE 
+Interoperability Committee 
+Page 1 of 2 
+ 
+Tuesday, March 19, 2020 
+1:00 – 3:00 p.m. 
+Join WebEx meeting 
+Phone Number: 855-282-6330 
+Meeting Number: 966 721 885 
+Meeting Password: Interop 
+ 
+CHAIR:  Michael Wisniewski / VICE CHAIR: Tim Boyer 
+MEETING LOCATION: Due to COVID-19 Pandemic and social distancing guidelines,  
+this meeting will only be held by WebEx/telephone 
+ 
+AGENDA 
+Call to Order 
+ 
+Approval of Agenda 
+ 
+Approval of Previous Meeting Minutes 
+• January 21, 2020 
+ 
+Announcements 
+Standing Committee Reports 
+• Strategic Technology Reserve Workgroup ........................................................... Mike Henrion 
+• Communications Unit Workgroup ....................................................................... Dan Anderson 
+• EMS & Hospital Workgroup .................................................................................. Paul McIntyre 
+ 
+Special Reports 
+• NG911 Program Report ................................................................................... Dan Craigie 
+• ARMER Program Report ............................................................................. Jim Stromberg 
+• Wireless Broadband and Applications Report ............................................ Melinda Miller 
+• IPAWS Program Report .................................................................................. John Dooley 
+• FEMA RECCWG 
+..................................................................................................... Jim Stromberg 
+ 
+Old Business 
+ 
+New Business 
+• Donald Smiley INCM Recognition Request  ......................................................... Dan Anderson 
+• Kristyn Warnke INTD Recognition Request  ........................................................ Dan Anderson 
+• Clayton Bartholow AECS Recognition Request  ................................................... Dan Anderson 
+• COMU Renewals .................................................................................................. Dan Anderson 
+o Chad Steffen COML Renewal Request 
+o Chad Steffen COMT Renewal Request 
+o Marlyn Halvorson COML Renewal Request  
+o Nancie Pass COML Renewal Request  
+o Peter Sauter COML Renewal Request 
+o Daniel Klawitter COML Renewal Request 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+INTEROPERABILITY COMMITTEE 
+Interoperability Committee 
+Page 2 of 2 
+ 
+o Rodney Olson COMT Renewal Request 
+o Rodney Olson COML Renewal Request 
+o Robert Beem COML Renewal Request 
+o Michael Ostlund COMT Renewal Request 
+• Strategic Technology Reserve (STR) Financial Report ......................................... Jim Stromberg 
+• NIFOG Updates .................................................................................................... Jim Stromberg 
+ 
+Other Business 
+ 
+Motion to Adjourn 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+WIRELESS BROADBAND & APPLICATIONS 
+COMMITTEE 
+Wireless Broadband & Applications 
+Page 1 of 1 
+ 
+Tuesday, May 19, 2020 
+10:00 – 12:00 p.m. 
+Join Meeting 
+WebEx password: WBBC 
+Call-in Number: 1-855-282-6330 
+Meeting number: 962 540 126 
+ 
+CHAIR: Dave Deal / VICE-CHAIR: Brandon Larson 
+MEETING LOCATION: Due to COVID-19 Pandemic and social distancing guidelines, 
+this meeting will only be held by WebEx/telephone 
+ 
+AGENDA 
+Call to Order 
+ 
+Approval of Agenda 
+ 
+Approval of Previous Meeting’s Minutes 
+• March 17, 2020 
+ 
+Announcements 
+• Bridge4ps App .......................................................................................................... Miller 
+ 
+Standing Reports  
+• Northwest Region ............................................................................. Zastoupil/Grafstrom 
+• Northeast Region ................................................................................... Watkins/Angelos 
+• Metro Region ......................................................................................... Olson/Thompson 
+• Central Region 
+.......................................................................................... Brandon Larson 
+• Southwest Region ............................................................................................... Peterson 
+• South Central Region ............................................................................... 
+Buckmeier/Gray 
+• Southeast Region ........................................................................................... Pike/Burton 
+ 
+Special Reports 
+• Success Stories  .................................................................................................................. Miller 
+ 
+Old Business 
+• Priorities for Televate Contract.......................................................................................... Miller 
+ Survey, Carrier Evaluation Checklist and Network Requirements Categorization 
+ 
+New Business 
+• Direction of the Committee ................................................................................................. Deal 
+ 
+Other Business 
+ 
+Adjourn 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+LEGISLATIVE COMMITTEE 
+Legislative Committee 
+   
+June 4, 2020 
+Page 1 
+ 
+June 4, 2020 
+10:00 – 11:00 
+WebEx Meeting Link 
+Phone: 855-282-6330 
+Meeting Number: 965 371 459 
+Meeting Password: LEGC 
+ 
+ 
+CHAIR: Kip Bruender / VICE CHAIR: Tom Egan 
+MEETING LOCATION: Conference Call 
+ 
+AGENDA 
+ 
+Call to Order 
+ 
+Approval of Agenda 
+ 
+Approval of Previous Meeting Minutes 
+• September 5, 2019 
+ 
+Announcements 
+ 
+Old Business 
+403 Statute Update 
+......................................................................................................... Dan Craigie 
+Telecommunicator Certification Bill Update .................................................................. Dan Craigie 
+ 
+New Business 
+Next Steps for 403 Statute 
+.............................................................................................. Dan Craigie 
+ 
+Other Business 
+ 
+Motion to Adjourn 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+LAND MOBILE RADIO COMMITTEE 
+LMR Committee 
+P a g e  | 1 
+ 
+April 14, 2020 
+1:00 – 3:00 p.m. 
+WebEx Meeting Link 
+ 
+Call-in Number: 855-282-6330 
+Meeting # 967 592 680 
+Password: LMRC 
+Chair: Dave Thomson / Vice Chair: McIntyre 
+MEETING LOCATION: Due to COVID-19 Pandemic and social distancing guidelines, 
+this meeting will only be held by WebEx/telephone 
+ 
+AGENDA 
+I. 
+Call to Order 
+ 
+II. 
+Approval of Agenda 
+ 
+III. 
+Approval of Previous Meeting Minutes 
+March 10, 2020 
+ 
+IV. 
+Announcements 
+ 
+V. 
+Standing Committee Reports 
+1. Northwest ................................................................................. Brian Zastoupil/Dave Olson 
+2. Northeast ....................................................................... Tom Semmelroth/Rowan Watkins 
+3. Central 
+........................................................................................ Kristen Lahr/Mike Henrion 
+4. Metro .......................................................................................... Nate Timm/Mike Mihelich 
+5. Southwest ....................................................................................... 
+Paul Johnson/Bill Flaten 
+6. South Central ........................................................................... 
+Terry Wesley/Darrin Haeder 
+7. Southeast ............................................................................................... Dave Pike/Rich Hall 
+8. Northern RIC ................................................................................................ Marcus Bruning 
+9. Southern RIC ..........................................................................................................Steve Tait 
+ 
+VI. 
+Special Reports 
+10. MnDOT .............................................................................................. 
+Dave Klema/Jim Mohn 
+11. ARMER Projects ............................................................................................. Jim Stromberg 
+12. Cybersecurity Workgroup .................................................................................. Dave Klema 
+13. Version Control Workgroup 
+............................................................................... Dave Klema 
+14. NCSWIC-SAFECOM P-25 User Needs Working Group ................................... Mike Mihelich 
+15. SAFECOM-NCSWIC P-25 Compliance Assessment Program Task Force 
+........ Mike Mihelich 
+16. PoC-LTE Workgroup ....................................................................................... Jim Stromberg 
+ 
+VII. 
+Old Business 
+17. Motorola Inter-Zone Patching Presentation ......................................................... Dan Nohr 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+LAND MOBILE RADIO COMMITTEE 
+LMR Committee 
+P a g e  | 2 
+ 
+18. CentraCare Wide Area Site Access Request .................................................... Rey Freeman 
+ 
+VIII. 
+New Business 
+19. Goodhue County request for radio IDs 
+............................................................. 
+Chad Steffen 
+20. Request to approve Motorola APX Next radios for use on ARMER .................. Dave Klema 
+21. Sanford Health ARMER plan amendment .................................................... Brian Zastoupil 
+22. Mayo Clinic Ambulance request for additional 7500e consoles .................... Paul McIntyre 
+ 
+IX. 
+Adjourn 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+LAND MOBILE RADIO COMMITTEE 
+LMR Committee 
+P a g e  | 1 
+ 
+May 12, 2020 
+1:00 – 3:00 p.m. 
+WebEx Meeting Link 
+ 
+Call-in Number: 855-282-6330 
+Meeting # 967 592 680 
+Password: LMRC 
+Chair: Dave Thomson / Vice Chair: McIntyre 
+MEETING LOCATION: Due to COVID-19 Pandemic and social distancing guidelines, 
+this meeting will only be held by WebEx/telephone 
+ 
+AGENDA 
+I. 
+Call to Order 
+ 
+II. 
+Approval of Agenda 
+ 
+III. 
+Approval of Previous Meeting Minutes 
+April 14, 2020 
+ 
+IV. 
+Announcements 
+ 
+V. 
+Standing Committee Reports 
+1. Northwest ................................................................................. Brian Zastoupil/Dave Olson 
+2. Northeast ....................................................................... Tom Semmelroth/Rowan Watkins 
+3. Central 
+........................................................................................ Kristen Lahr/Mike Henrion 
+4. Metro .......................................................................................... Nate Timm/Mike Mihelich 
+5. Southwest ....................................................................................... 
+Paul Johnson/Bill Flaten 
+6. South Central ........................................................................... 
+Terry Wesley/Darrin Haeder 
+7. Southeast ............................................................................................... Dave Pike/Rich Hall 
+8. Northern RIC ................................................................................................ Marcus Bruning 
+9. Southern RIC ..........................................................................................................Steve Tait 
+ 
+VI. 
+Special Reports 
+10. MnDOT .............................................................................................. 
+Dave Klema/Jim Mohn 
+11. ARMER Projects ............................................................................................. Jim Stromberg 
+12. Cybersecurity Workgroup .................................................................................. Dave Klema 
+13. Version Control Workgroup 
+............................................................................... Dave Klema 
+14. NCSWIC-SAFECOM P-25 User Needs Working Group ................................... Mike Mihelich 
+15. SAFECOM-NCSWIC P-25 Compliance Assessment Program Task Force 
+........ Mike Mihelich 
+16. PoC-LTE Workgroup ....................................................................................... Jim Stromberg 
+ 
+VII. 
+Old Business 
+ 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+LAND MOBILE RADIO COMMITTEE 
+LMR Committee 
+P a g e  | 2 
+ 
+VIII. 
+New Business 
+17. US Marshals ARMER plan amendment 
+............................................................. Chris Siebert 
+18. Clarifying items from LMRC not moving to SECB.......................................... Dave Thomson 
+19. Blue Earth County/Mankato ARMER plan amendment .......... Darrin Haeder & Adam Gray 
+20. Update from Tusa Consulting .............................................. Jim Stromberg & Dennis Ward 
+21. Tentative ARMER System Upgrade Agreement 
+........................................................ Tim Lee 
+ 
+IX. 
+Adjourn 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+LAND MOBILE RADIO COMMITTEE 
+LMR Committee 
+P a g e  | 1 
+ 
+June 9, 2020 
+1:00 – 3:00 p.m. 
+WebEx Meeting Link 
+ 
+Call-in Number: 855-282-6330 
+Meeting # 967 592 680 
+Password: LMRC 
+Chair: Dave Thomson / Vice Chair: McIntyre 
+MEETING LOCATION: Due to COVID-19 Pandemic and social distancing guidelines, 
+this meeting will only be held by WebEx/telephone 
+ 
+AGENDA 
+I. 
+Call to Order 
+ 
+II. 
+Approval of Agenda 
+ 
+III. 
+Approval of Previous Meeting Minutes 
+May 12, 2020 
+ 
+IV. 
+Announcements 
+ 
+V. 
+Standing Committee Reports 
+1. Northwest ................................................................................. Brian Zastoupil/Dave Olson 
+2. Northeast ....................................................................... Tom Semmelroth/Rowan Watkins 
+3. Central 
+........................................................................................ Kristen Lahr/Mike Henrion 
+4. Metro .......................................................................................... Nate Timm/Mike Mihelich 
+5. Southwest ....................................................................................... 
+Paul Johnson/Bill Flaten 
+6. South Central ........................................................................... 
+Terry Wesley/Darrin Haeder 
+7. Southeast ............................................................................................... Dave Pike/Rich Hall 
+8. Northern RIC ................................................................................................ Marcus Bruning 
+9. Southern RIC ..........................................................................................................Steve Tait 
+ 
+VI. 
+Special Reports 
+10. MnDOT .............................................................................................. 
+Dave Klema/Jim Mohn 
+11. ARMER Projects ............................................................................................. Jim Stromberg 
+12. Cybersecurity Workgroup .................................................................................. Dave Klema 
+13. Version Control Workgroup 
+............................................................................... Dave Klema 
+14. NCSWIC-SAFECOM P-25 User Needs Working Group ................................... Mike Mihelich 
+15. SAFECOM-NCSWIC P-25 Compliance Assessment Program Task Force 
+........ Mike Mihelich 
+16. PoC-LTE Workgroup ....................................................................................... Jim Stromberg 
+ 
+VII. 
+Old Business 
+ 
+STATEWIDE EMERGENCY COMMUNICATIONS BOARD 
+LAND MOBILE RADIO COMMITTEE 
+LMR Committee 
+P a g e  | 2 
+ 
+VIII. 
+New Business 
+17. Lake of the Woods County ARMER Plan amendment request 
+..................... Brian Zastoupil 
+18. Greater Northwest EMS ARMER Plan amendment request 
+......................... Brian Zastoupil 
+19. MnDOT Vulnerability Scan Plan ......................................................................... Dave Klema 
+20. Edina Fire Department request .................................................................... 
+Tracey Fredrick 
+21. Carver County ARMER Plan amendment request ............................................ Peter Sauter 
+22. Lyon County ARMER Plan amendment 
+............................................................ Paul Johnson 
+ 
+IX. 
+Adjourn 
+ 
+ 
+Assistant Commissioner West 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                         April 23, 2020 
+Chairman Statewide Emergency Communications Board 
+Minnesota Department of Public Safety  
+444 Cedar Street 
+Saint Paul, MN  55101 
+ 
+RE:  2021 Motorola SUAII Support Service 
+ 
+Dear Asst. Commissioner West: 
+ 
+In response to standard 4.12.0, MnDOT is submitting the calendar year 2021 Motorola System Software 
+Upgrade Agreement (SUAII) cost and agency cost shares.  
+ 
+A new SUA II contract has been negotiated with Motorola. The proposed contract with Motorola has a five year 
+term covering calendar years 2021-2025 with a total cost of $31.7M.  
+ 
+The Motorola System Upgrade Agreement (SUA II) contract provides for: 
+• 
+One on site dedicated field service technician 
+• 
+Technical Support Services 
+• 
+Security Update Services  
+• 
+SUA II System Software Subscription Agreement. This provides all Software and Hardware as 
+required per contract for upgrades and life cycle replacement, and professional services 
+required for both software and hardware implementation  
+ 
+A breakdown of the agency costs is attached. The attached breakdown provides the costs for the full 5 year term 
+of the contract. These cost are subject to change if an agency adds or removes equipment to/from the Motorola 
+system.  
+ 
+I’m seeking Board approval for MnDOT to enter into the SUAII contract with Motorola and approving that 
+MnDOT bill the local agencies annually for their shares of the cost.  
+ 
+Sincerely, 
+ 
+Tim Lee, Director 
+Office of Statewide Radio Communications 
+ 
+Cc. 
+Irene Fernando, Chair Steering Committee 
+ 
+Micah Myers, Chair Finance Committee 
+ 
+Dave Thompson, Chair Land Mobile Radio Committee 
+ 
+Dana Wahlberg, DPS-ECN 
+ 
+ARMER FIVE YEAR SERVICES AND SUA II PRICING 
+Support Services Brief Description of Services
+2021
+2022
+2023
+2024
+2025 Five Year Total
+Technical Support
+Technical Support is available 7 days a week, 24 hours 
+a day, as defined in Section X. The Motorola System 
+Support Center's staff will work with your local service 
+organization or technicians to handle questions 
+related to your Motorola 2-way communications 
+system. If the problem is beyond the scope of the 
+SSC's staff, they will contact key personnel who are 
+involved with the design, development, and 
+manufacture of your communication products for 
+resolution.
+ 
+ 
+ 
+ 
+ 
+ 
+Total Technical Support
+$148,759.00
+$158,040.00
+$167,490.00
+$177,135.00
+$186,964.00
+$838,388.00
+Dedicated FSO
+Motorola will provide one dedicated field service 
+technician, who is specifically trained and qualified to 
+support the MN Metro/ARMER Radio System.  The 
+assigned technician will expend his/her full 40-hour 
+workweek performing corrective maintenance on 
+appropriate project work assigned as agreed to by 
+Motorola and the System Owners with direction from 
+the MN Metro/ARMER System Administrator.
+ 
+ 
+ 
+ 
+ 
+ 
+Total Dedicated FSO 
+$235,286.00
+$239,992.00
+$244,791.00
+$249,700.00
+$254,689.00
+$1,224,458.00
+Security Update Service
+Security Update Service provides updates of the latest 
+anti-virus definition, intrusion signature files and OS 
+Patches that have been pre-tested on a Motorola test 
+system to ensure they do not interfere with radio 
+system functionality.  Pre-tested updates will be made 
+available as necessary, however, an outbreak of 
+malicious code that is deemed a significant threat to 
+the Astro 25 radio network will cause a priority test 
+cycle to occur which will release anti-virus definition 
+updates in a shorter cycle. 
+ 
+ 
+ 
+ 
+ 
+ 
+ Total Security Update Service 
+$61,072.00
+$62,904.00
+$64,791.00
+$66,735.00
+$68,737.00
+$324,239.00
+Services Total
+$445,117.00
+$460,936.00
+$477,072.00
+$493,570.00
+$510,390.00
+$2,387,085.00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SUA II
+Includes All Software and Hardware as required per 
+contract for upgrades and life cycle replacement, and 
+professional services required for both software and 
+hardware implementation. 
+SUA II Total 
+$5,793,155.00
+$5,826,843.00
+$5,861,542.00
+$5,897,282.00
+$5,934,093.00
+$29,312,915.00
+ 
+Annual Contract Totals
+$6,238,272.00 $6,287,779.00
+$6,338,614.00
+$6,390,852.00 $6,444,483.00
+$31,700,000.00
+*(From existing contract) Motorola will invoice the 
+State on a semi- annual basis (one invoice in advance 
+in January and one invoice in July of each year) and 
+payment is due within thirty (30) days of the invoice 
+date. 
+*Pricing  Based Upon Five Year Contract
+ 
+ 
+ 
+ 
+ 
+ 
+*Not a firm offer for sale till fully approved via MSI internal approval process and subject to change
+*Pricing Validity Based Upon Contract Execution 
+ by November 
+20, 2020
+ 
+ 
+ 
+ 
+*Price Based Upon Scope As Above Any Changes Would Adjust Pricing Of All Items 
+Motorola SUAII Cost  shares for 
+Calendar year 
+2021
+2022
+2023
+2024
+2025
+SUAII Contract Total: 
+$6,238,272.00
+$6,287,779.00
+$6,338,614.00
+$6,390,852.00
+$6,444,483.00
+These costrs are based on the system configuration as of April 2020. Subject to change if you add or remove equipment.
+ MESB
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+MESB
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Metro Transit
+$35,273.63
+$35,481.12
+$35,751.58
+$36,029.53
+$36,314.90
+HCMC
+$8,900.16
+$8,952.52
+$9,020.76
+$9,090.89
+$9,162.90
+MRCC East
+$6,260.47
+$6,297.30
+$6,345.30
+$6,394.63
+$6,445.28
+Edina
+$4,173.65
+$4,198.20
+$4,230.20
+$4,263.09
+$4,296.85
+MAC
+$6,587.50
+$6,626.25
+$6,676.76
+$6,728.67
+$6,781.96
+Ridgeview
+$5,053.55
+$5,083.27
+$5,122.02
+$5,161.84
+$5,202.72
+St Louis Park
+$4,173.65
+$4,198.20
+$4,230.20
+$4,263.09
+$4,296.85
+Bloomington
+$5,606.41
+$5,639.39
+$5,682.38
+$5,726.56
+$5,771.91
+Eden Prairie
+$18,680.23
+$18,790.11
+$18,933.34
+$19,080.53
+$19,231.66
+U of M
+$5,933.44
+$5,968.34
+$6,013.84
+$6,060.59
+$6,108.60
+Anoka County
+$87,609.94
+$88,125.28
+$88,797.04
+$89,487.38
+$90,196.16
+Carver County
+$30,494.32
+$30,673.69
+$30,907.51
+$31,147.80
+$31,394.50
+Chisago County
+$59,756.78
+$60,108.28
+$60,566.47
+$61,037.34
+$61,520.79
+Dakota County
+$100,201.77
+$100,791.18
+$101,559.49
+$102,349.04
+$103,159.70
+Hennepin County
+$284,852.76
+$286,528.34
+$288,712.48
+$290,957.03
+$293,261.56
+Isanti County
+$9,956.04
+$10,014.61
+$10,090.94
+$10,169.39
+$10,249.94
+Ramsey County
+$118,088.12
+$118,782.75
+$119,688.20
+$120,618.70
+$121,574.06
+Scott County
+$60,660.14
+$61,016.96
+$61,482.08
+$61,960.06
+$62,450.81
+Sherburne County
+$29,615.89
+$29,790.09
+$30,017.18
+$30,250.54
+$30,490.14
+Washington County
+$117,299.15
+$117,989.13
+$118,888.54
+$119,812.81
+$120,761.79
+Minneapolis
+$78,972.27
+$79,436.81
+$80,042.34
+$80,664.62
+$81,303.52
+Total
+$1,078,149.85
+$1,084,491.80
+$1,092,758.65
+$1,101,254.12
+$1,109,976.63
+State ( Includes any SW users)
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+ARMER Infrastructure (MnDOT)
+$4,144,534.09
+$4,181,725.21
+$4,216,506.21
+$4,252,246.22
+$4,288,938.35
+MnDOT
+$12,598.67
+$12,672.78
+$12,769.38
+$12,868.65
+$12,970.58
+State Patrol
+$54,857.21
+$55,179.90
+$55,600.52
+$56,032.78
+$56,476.59
+DOC 
+$90,223.23
+$90,753.95
+$91,445.74
+$92,156.68
+$92,886.60
+MSOP
+$16,643.26
+$16,741.16
+$16,868.78
+$16,999.92
+$17,134.57
+North Memorial
+$8,900.16
+$8,952.52
+$9,020.76
+$9,090.89
+$9,162.90
+Allina(Lakeview EMS, New River Ambulance)
+$14,179.55
+$14,262.96
+$14,371.68
+$14,483.41
+$14,598.13
+Mayo/Gold Cross
+$15,261.82
+$15,351.60
+$15,468.62
+$15,588.88
+$15,712.35
+Sanford
+$7,467.40
+$7,511.32
+$7,568.58
+$7,627.42
+$7,687.83
+Total
+$4,364,665.40
+$4,403,151.38
+$4,439,620.27
+$4,477,094.85
+$4,515,567.90
+Motorola SUAII Cost  shares for 
+Calendar year 
+2021
+2022
+2023
+2024
+2025
+SUAII Contract Total: 
+$6,238,272.00
+$6,287,779.00
+$6,338,614.00
+$6,390,852.00
+$6,444,483.00
+These costrs are based on the system configuration as of April 2020. Subject to change if you add or remove equipment.
+Central MN Region
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+CM Regional Equipment
+$3,846.62
+$3,869.25
+$3,898.74
+$3,929.05
+$3,960.17
+St Cloud
+$20,387.23
+$20,507.15
+$20,663.47
+$20,824.12
+$20,989.05
+Stearns County
+$56,109.60
+$56,439.65
+$56,869.88
+$57,312.01
+$57,765.95
+Benton County
+$5,003.68
+$5,033.12
+$5,071.48
+$5,110.91
+$5,151.39
+Wright County
+$32,456.49
+$32,647.41
+$32,896.27
+$33,152.02
+$33,414.60
+Kandiyohi County
+$18,278.41
+$18,385.92
+$18,526.08
+$18,670.10
+$18,817.98
+Meeker County
+$14,003.57
+$14,085.94
+$14,193.32
+$14,303.66
+$14,416.95
+Grant County
+$3,997.67
+$4,021.18
+$4,051.84
+$4,083.34
+$4,115.68
+Douglas County
+$10,258.14
+$10,318.48
+$10,397.14
+$10,477.97
+$10,560.96
+Stevens County
+$3,972.74
+$3,996.11
+$4,026.57
+$4,057.87
+$4,090.01
+Pope County
+$4,274.84
+$4,299.98
+$4,332.76
+$4,366.44
+$4,401.03
+Wadena County
+$3,293.75
+$3,313.12
+$3,338.38
+$3,364.33
+$3,390.98
+Otter Tail County
+$22,324.47
+$22,455.79
+$22,626.96
+$22,802.87
+$22,983.48
+Morrison County 
+$12,343.50
+$12,416.10
+$12,510.75
+$12,608.01
+$12,707.87
+Mille Lacs County
+$11,589.72
+$11,657.89
+$11,746.76
+$11,838.08
+$11,931.84
+Wilkin County
+$6,410.05
+$6,447.76
+$6,496.91
+$6,547.42
+$6,599.28
+Traverse County
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Big Stone County
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Todd County
+$4,500.68
+$4,527.15
+$4,561.66
+$4,597.12
+$4,633.54
+Swift County
+$6,410.05
+$6,447.76
+$6,496.91
+$6,547.42
+$6,599.28
+Total
+$239,461.19
+$240,869.76
+$242,705.86
+$244,592.74
+$246,530.04
+South East MN Region
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Olmsted County
+$28,835.71
+$29,005.33
+$29,226.43
+$29,453.65
+$29,686.93
+Rochester
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Goodhue County
+$40,072.00
+$40,307.72
+$40,614.97
+$40,930.73
+$41,254.92
+Wabasha County
+$5,154.73
+$5,185.05
+$5,224.58
+$5,265.20
+$5,306.90
+Winona County
+$14,204.48
+$14,288.03
+$14,396.95
+$14,508.88
+$14,623.79
+Houston County
+$3,620.78
+$3,642.08
+$3,669.84
+$3,698.37
+$3,727.66
+Fillmore County
+$4,274.84
+$4,299.98
+$4,332.76
+$4,366.44
+$4,401.03
+Mower County
+$12,922.76
+$12,998.78
+$13,097.86
+$13,199.69
+$13,304.24
+Freeborn County
+$20,614.53
+$20,735.79
+$20,893.86
+$21,056.29
+$21,223.07
+Dodge County
+$3,620.78
+$3,642.08
+$3,669.84
+$3,698.37
+$3,727.66
+Rice County
+$17,546.62
+$17,649.84
+$17,784.38
+$17,922.64
+$18,064.60
+Steele County
+$13,875.98
+$13,957.61
+$14,064.00
+$14,173.34
+$14,285.60
+Rice/Steel Dispatch
+$19,560.12
+$19,675.18
+$19,825.16
+$19,979.29
+$20,137.53
+Total
+$184,303.35
+$185,387.47
+$186,800.63
+$188,252.89
+$189,743.95
+Motorola SUAII Cost  shares for 
+Calendar year 
+2021
+2022
+2023
+2024
+2025
+SUAII Contract Total: 
+$6,238,272.00
+$6,287,779.00
+$6,338,614.00
+$6,390,852.00
+$6,444,483.00
+These costrs are based on the system configuration as of April 2020. Subject to change if you add or remove equipment.
+South Central MN Region
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Regional Radio Board
+$6,838.27
+$6,878.50
+$6,930.93
+$6,984.81
+$7,040.14
+McLeod County
+$12,469.62
+$12,542.96
+$12,638.58
+$12,736.83
+$12,837.72
+Hutchinson
+$3,293.75
+$3,313.12
+$3,338.38
+$3,364.33
+$3,390.98
+Sibley County
+$10,357.86
+$10,418.79
+$10,498.21
+$10,579.83
+$10,663.62
+Nicollet County
+$5,154.73
+$5,185.05
+$5,224.58
+$5,265.20
+$5,306.90
+LeSueur County
+$12,318.57
+$12,391.03
+$12,485.48
+$12,582.55
+$12,682.21
+Brown County
+$10,709.82
+$10,772.82
+$10,854.94
+$10,939.33
+$11,025.97
+Blue Earth County
+$8,121.45
+$8,169.23
+$8,231.50
+$8,295.49
+$8,361.20
+Watonwan Caounty
+$3,293.75
+$3,313.12
+$3,338.38
+$3,364.33
+$3,390.98
+Waseca County
+$18,628.90
+$18,738.48
+$18,881.32
+$19,028.11
+$19,178.82
+Martin County
+$3,947.81
+$3,971.03
+$4,001.30
+$4,032.41
+$4,064.35
+Faribault County
+$4,827.70
+$4,856.10
+$4,893.12
+$4,931.16
+$4,970.22
+Total
+$99,962.23
+$100,550.23
+$101,316.71
+$102,104.38
+$102,913.10
+South West MN Region
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+SW MN Emergency Communications Board
+$27,050.98
+$27,210.11
+$27,417.52
+$27,630.68
+$27,849.52
+Murray County
+$3,620.78
+$3,642.08
+$3,669.84
+$3,698.37
+$3,727.66
+Laq Qui Parle County
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Chippewa County
+$10,030.83
+$10,089.84
+$10,166.75
+$10,245.79
+$10,326.94
+Renville County
+$10,030.83
+$10,089.84
+$10,166.75
+$10,245.79
+$10,326.94
+Yellow Medicine County
+$10,357.86
+$10,418.79
+$10,498.21
+$10,579.83
+$10,663.62
+Redwood County
+$4,274.84
+$4,299.98
+$4,332.76
+$4,366.44
+$4,401.03
+Lincoln County
+$2,740.88
+$2,757.00
+$2,778.02
+$2,799.62
+$2,821.79
+Lyon County
+$10,684.89
+$10,747.74
+$10,829.67
+$10,913.86
+$11,000.31
+Pipestone County
+$3,947.81
+$3,971.03
+$4,001.30
+$4,032.41
+$4,064.35
+Cottonwood County
+$3,947.81
+$3,971.03
+$4,001.30
+$4,032.41
+$4,064.35
+Rock County
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Nobles County
+$3,947.81
+$3,971.03
+$4,001.30
+$4,032.41
+$4,064.35
+Jackson County
+$6,410.05
+$6,447.76
+$6,496.91
+$6,547.42
+$6,599.28
+Total
+$97,045.37
+$97,616.22
+$98,360.32
+$99,125.01
+$99,910.13
+Motorola SUAII Cost  shares for 
+Calendar year 
+2021
+2022
+2023
+2024
+2025
+SUAII Contract Total: 
+$6,238,272.00
+$6,287,779.00
+$6,338,614.00
+$6,390,852.00
+$6,444,483.00
+These costrs are based on the system configuration as of April 2020. Subject to change if you add or remove equipment.
+North East MN Region
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Itasca County
+$6,361.66
+$6,399.08
+$6,447.86
+$6,497.99
+$6,549.45
+Kanabec County
+$4,173.65
+$4,198.20
+$4,230.20
+$4,263.09
+$4,296.85
+Pine County
+$3,947.81
+$3,971.03
+$4,001.30
+$4,032.41
+$4,064.35
+Cass County
+$21,343.38
+$21,468.93
+$21,632.58
+$21,800.76
+$21,973.43
+Crow Wing County
+$17,397.04
+$17,499.38
+$17,632.77
+$17,769.85
+$17,910.60
+Atkin County
+$10,910.73
+$10,974.91
+$11,058.57
+$11,144.54
+$11,232.81
+Koochiching County
+$3,293.75
+$3,313.12
+$3,338.38
+$3,364.33
+$3,390.98
+Carlton County
+$5,908.51
+$5,943.27
+$5,988.57
+$6,035.13
+$6,082.93
+St Louis County
+$48,145.06
+$48,428.26
+$48,797.42
+$49,176.79
+$49,566.30
+City of Duluth
+$7,465.93
+$7,509.85
+$7,567.09
+$7,625.92
+$7,686.32
+Lake County
+$3,947.81
+$3,971.03
+$4,001.30
+$4,032.41
+$4,064.35
+Cook County
+$3,721.97
+$3,743.86
+$3,772.40
+$3,801.73
+$3,831.84
+Leech Lake Band of Ojibwe
+$3,620.78
+$3,642.08
+$3,669.84
+$3,698.37
+$3,727.66
+Total
+$140,238.08
+$141,062.99
+$142,138.28
+$143,243.32
+$144,377.88
+North West MN Region
+Agency
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Infrastructure SUAII cost
+Hubbard County
+$3,947.81
+$3,971.03
+$4,001.30
+$4,032.41
+$4,064.35
+Polk County 
+$5,053.55
+$5,083.27
+$5,122.02
+$5,161.84
+$5,202.72
+Becker County
+$5,531.62
+$5,564.16
+$5,606.58
+$5,650.16
+$5,694.92
+Beltrami County
+$5,707.60
+$5,741.18
+$5,784.94
+$5,829.91
+$5,876.09
+White Earth
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Clearwater County
+$0.00
+$0.00
+$0.00
+$0.00
+$0.00
+Pennington
+$3,293.75
+$3,313.12
+$3,338.38
+$3,364.33
+$3,390.98
+RRRDC
+$10,208.28
+$10,268.33
+$10,346.60
+$10,427.04
+$10,509.62
+Clay County
+$703.92
+$708.06
+$713.46
+$719.00
+$724.70
+Cass County ND(Estimated)
+(Under warranty)
+$82,375.25
+$83,003.18
+$83,648.48
+$84,311.02
+Total
+$34,446.52
+$117,024.40
+$117,916.45
+$118,833.17
+$119,774.39
+ 
+ 
+ 
+ 
+Assistant Commissioner West 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                         April 23, 2020 
+Chairman Statewide Emergency Communications Board 
+Minnesota Department of Public Safety  
+444 Cedar Street 
+Saint Paul, MN  55101 
+ 
+RE:  FY 2021 MnDOT ARMER Operations and Maintenance Budget Estimate 
+ 
+Dear Asst. Commissioner West: 
+ 
+In an effort to meet the following requirements the estimated Fiscal Year 2021 MnDOT ARMER System 
+Backbone Maintenance and Operations Budget is attached.  
+ 
+MnDOT – DPS DECN Contract 93882:  
+ 
+8.2a MnDOT shall prepare and submit to DPS and the Board a proposed maintenance and repair budget plan for 
+the upcoming budget year and for each fiscal year of the state biennium by May 1 of each year. The 
+maintenance, repair and routine equipment replacement budget shall include normal recurring maintenance 
+costs and anticipated major repair or equipment replacement costs.  
+ 
+8.4 The budget shall identify funding levels provided for in MnDOT’s base budget, any restriction upon these 
+appropriations and amounts that are not presently funded. The budget and all relevant information shall be 
+presented to the Board.  
+ 
+I will be available at the Finance Committee and Board to answer any question on the estimated budget. 
+ 
+ 
+Sincerely, 
+ 
+Tim Lee, Director 
+Office of Statewide Radio Communications 
+1500 West County Road B2 
+Roseville, MN 55113 
+ 
+ 
+ 
+Cc. 
+Dana Wahlberg, DPS DECN 
+ 
+Micah Myers, Chair SECB Finance Committee 
+ 
+Office of Statewide Radio Communications 
+1500 West County Road B2 
+Roseville, MN 55113 
+ 
+April 22, 2020 
+ 
+Fiscal Year 2021 
+ARMER System Backbone Maintenance and Operations Budget  
+ 
+The annual report for the maintenance and operations budget of the ARMER system is presented to 
+the Department of Public Safety and the Statewide Radio Board through its Finance Committee by May 
+1st of each year.  
+The purpose of this report is to aid the Statewide Emergency Communications Board in its obligation to 
+oversee the implementation of the ARMER plan and ensure that the system is built, owned, operated, 
+and maintained in accordance with the ARMER plan.  
+ 
+ARMER Backbone Maintenance and Operations Revenue Sources 
+The following table summarizes the revenue sources that directly support ARMER backbone 
+maintenance and operations for the next fiscal year; FY 2021 (July 1, 2020 – June 30, 2021.)  
+Revenue Sources for ARMER Backbone Maintenance and Operations 
+Source 
+FY 2021 
+911 Fee Legislative Appropriation to MnDOT OSRC 
+ $                                       9,675,000.00  
+Trunk Highway Funds (ARMER Appropriation to OSRC)  $                                       1,300,000.00  
+Trunk Highway Funds (MnDOT Appropriation to 
+OSRC)* 
+ $                                       1,550,000.00  
+Tower Rental Lease Receipts (Estimated) 
+ $                                       1,200,000.00  
+Total  $                                     13,725,000.00  
+ 
+* Estimate of ARMER maintenance and operations expenses paid from TH Funds appropriated to 
+Statewide Radio Communications.  
+Note:  Minnesota Constitution dedicates Trunk Highway Funds to trunk highway purposes. The use of 
+these funds for ARMER system maintenance and operations is to support MnDOT and State Patrol use 
+of the ARMER system.  
+ 
+ARMER Expenditures (FY2019) 
+The last complete fiscal year, FY 2019, was used as a baseline for estimating the FY21 budget. The total 
+ARMER maintenance and operation expenditure for FY2019 was $13,924,712.74. The following table 
+shows the FY 2019 expenditures. 
+ARMER Maintenance & Operations Expenditures for FY 2019 
+Total ARMER Labor 
+ $                                                               5,812,917.05  
+Motorola SUAII (ARMER backbone share)* 
+ $                                                               2,955,316.07  
+Utilities 
+ $                                                               1,269,036.77  
+ARMER Facilities improvements 
+ $                                                               1,367,018.30  
+Parts/Repairs 
+ $                                                               1,721,463.11  
+Rent 
+ $                                                                   360,231.00  
+Office Other 
+ $                                                                   438,730.43  
+Total: 
+ $                                                             13,924,712.74  
+*The SUAII cost shown here is not the full cost of the SUAII, this is only the portion of the SUAII 
+paid from the ARMER Maintenance and Operations budget.  
+The following tables show a breakdown of the FY2019 labor, parts/services lines from the above table. 
+This show how the maintenance services are split around the different elements that make up the 
+ARMER system backbone.  
+Breakdown of FY 2019 ARMER Labor Expenditures  
+800 MHz system maintenance  
+ $                                                               2,086,158.29  
+Facilities maintenance 
+ $                                                               1,640,393.12  
+Microwave maintenance 
+ $                                                                   757,237.77  
+Radio Operation Center 
+ $                                                                   572,941.97  
+Partner Agency Support  
+ $                                                                   325,714.71  
+Overtime/Shift Diff/On call 
+ $                                                                   207,577.43  
+MnIT Embedded (Sys Admin) 
+ $                                                                   153,459.60  
+Interop maintenance 
+ $                                                                     30,597.31  
+FCC Licensing 
+ $                                                                     38,836.86  
+Total ARMER Labor 
+ $                                                               5,812,917.05  
+Breakdown of FY 2019 ARMER Parts/Services Expenditures  
+Facilities Maintenance Parts & Services 
+ $                                                                   440,466.91  
+800 MHz System Parts & Services 
+ $                                                                   879,571.11  
+Microwave Parts & Services 
+ $                                                                   401,276.98  
+Interop System Parts & Services 
+ $                                                                           148.11  
+Total Parts/services 
+ $                                                               1,721,463.11  
+ 
+ARMER Maintenance and operations proposed budget for Fiscal Years 2021 
+The FY21 proposed maintenance and operation budget is outlined in the table below. This proposed 
+budget is based on experience from previous budget years, planned facilities/equipment upgrades and 
+known increased operating costs. This budget plan assumes continued routine maintenance as 
+previous years. If a major equipment failure were to occur with costs beyond the routine budget we 
+would reevaluate and postpone any planned major facilities/equipment upgrades.   
+ARMER Operations & Maintenance Estimates 
+FY2021 
+  
+800 MHz system maintenance labor 
+ $                                 1,450,000.00    
+Facilities maintenance labor 
+ $                                 1,500,000.00    
+Microwave labor 
+ $                                     850,000.00    
+System Admin/ System Eng./Install Support Labor 
+ $                                     650,000.00    
+Radio Operation Center labor 
+ $                                     580,000.00    
+Partner Agency Support Labor 
+ $                                     325,000.00    
+Overtime/Shift Diff/On call 
+ $                                     210,000.00    
+MnIT Embedded (Sys Admin) 
+ $                                     300,000.00    
+Interop maintenance labor 
+ $                                     150,000.00    
+FCC Licensing 
+ $                                       35,000.00    
+Motorola SUAII (ARMER Backbone share) 
+ $                                 3,119,136.00  * 
+Utilities 
+ $                                 1,300,000.00    
+Facilities upgrades 
+ $                                     450,000.00    
+Microwave/backhaul upgrades 
+ $                                     300,000.00    
+Interop station replacements 
+ $                                       75,000.00    
+Facilities Maintenance Parts & Services 
+ $                                     400,000.00    
+800 MHz System Parts & Services 
+ $                                     880,000.00    
+Microwave Parts & Services 
+ $                                     450,000.00    
+Interop System Parts & Services 
+ $                                         5,000.00    
+Rent 
+ $                                     360,000.00    
+Test Equipment 
+ $                                       25,000.00    
+Vehicles 
+ $                                       90,000.00    
+Training 
+ $                                       50,000.00    
+Travel (In State) 
+ $                                       20,000.00    
+General Office Support, IT Support, Phones, etc. 
+ $                                     150,000.00    
+TOTAL 
+ $                               13,724,136.00    
+ 
+* FY21 ARMER Backbone Motorola SUAII cost increases beginning January 2021.  
+Statewide Radio Communications ARMER Maintenance Staffing 
+No major personnel changes are planned for this budget cycle, other than we are working to add a new 
+embedded MnIT employee to serve as a backup and assistant to the ARMER System Administrator. To 
+offset this position we will not backfill a future planned retirement in the office. 
+We continue to have personnel rotations as staff retire or move on. With this change over in staff we 
+will continue to have training costs to bring them up to speed on the ARMER system.  
+ 
+Planned major improvements and equipment replacements for FY20/21 
+The following equipment or facilities upgrades are planned in the FY20 budget: 
+• FY20 – Replace Thief River Falls tower 
+ 
+$600,000 
+Replace older tower and install new shelter at MnDOT facilities in Thief River Falls. 
+ 
+• FY20/21 – Upgrades to the Proteus microwave 
+$600,000 
+Purchase software upgrade licenses to the Proteus microwave radios. These upgrades are in 
+preparation for packet backhaul requirements of the ARMER network. 
+ 
+• FY21 – Interop system changes(if approved)  
+$150,000 labor charges 
+A workgroup of the LMR committee are working on a plan to update the VHF interop layer. This 
+plan when approved will require addition time to relicense and reprogram the interop base 
+radios. 
+ 
+• FY21 -  Interop station replacement  
+ 
+$75,000 
+ 
+Replace 8CALL and 8TAC1 station at City Center. These stations were installed in 2001 and have 
+become difficult to maintain.  
+ 
+• FY20 – Upgrade the metro area multiplexers 
+$450,000 
+Replace the lucent multiplexers in the metro area microwave loops. Equipment is getting older 
+and needs to be replaced. Replacement will support future microwave transport changes 
+planned in the metro system.  
+ 
+• FY21 – Purchase 4 radio equipment shelter  
+$450,000 
+Purchase new radio equipment shelters for Wolf Lake, Idington, Roosevelt and Little Fork. 
+ 
+• FY21 – Shelter installs  
+ 
+ 
+ 
+$150,000 
+Foundations, fencing, etc. for shelter installs at Wolf Lake and Idington.  
+ 
+ 
+Motorola SUAII 
+ 
+ 
+SUAII Calendar years 2021-2025 
+ 
+December 2020 is the end of the current Motorola support contract. Contract work is in process with 
+Motorola for the 2021-2015 contract. The negotiated price for the 2021-2025 contract is 
+$31,700,000.00. 
+ 
+ 
+SUAII Impact of future contract on ARMER Backbone Maintenance and operations budget 
+ 
+For FY 2021 the ARMER backbone maintenance and operations budget will have an estimated cost of 
+$3,119,136.00 towards the Motorola SUAII contract.  
+ 
+For FY 2022 and beyond the current ARMER backbone maintenance and operations budget can 
+support $3,650,000.00 annually towards the Motorola SUAII contract. This leaves an annual funding 
+gap in the MnDOT ARMER operating budget of $519,288 in FY22, $557,543 in FY23, $592,625 in FY24 
+and $629,062 in FY25. MnDOT is working with DPS-ECN to cover these funding gaps.  
+ 
+The following table shows the planned payments to Motorola. 
+ 
+  
+  
+  
+Motorola SUAII 
+Invoice 
+Payment 
+Funding source 
+ 
+FY 
+2020 
+ July 
+2019 
+Motorola SUAII Plus Contract - 
+Ends December 31, 2020        
+Contract Yearly Total 
+$10,066,132.42   (SUAII portion 
+$4,499,234.60  -  7.19 Hardware 
+portion $5,566,897.82) 
+ $    5,033,066.21   $ 3,952,911.76  
+Pass thru Billing from Local Agencies 
+ 
+ $ 1,080,154.45  
+Pass thru billing from DPS-ECN Contract 
+ 
+ 
+January 
+2020 
+ $    5,033,066.21   $ 3,041,387.19  
+MnDOT - OSRC Operating and Maintenance Budget 
+ 
+ $ 1,991,679.02  
+Pass thru billing from DPS-ECN Contract 
+ 
+FY 
+2021 
+ July 
+2020 
+ $    5,033,066.21   $ 3,952,911.76  
+Pass thru Billing from Local Agencies 
+ 
+ $ 1,080,154.45  
+Pass thru billing from DPS-ECN Contract (Contract  
+Ends 2020) 
+ 
+ 
+January 
+2021 
+New Motorola SUAII Contract 
+$31,700,000.00 over 5 calendar 
+years, 2021-2025. 
+ $    3,119,136.00   $ 3,119,136.00  
+MnDOT-OSRC Operating and Maintenance Budget 
+$3.12M from MnDOT OSRC 
+  
+  
+FY21 Operating Budget 
+FY 
+2022 
+ July 
+2021 
+ $    3,119,136.00   $ 2,093,737.91  
+Pass thru Billing from Local Agencies  
+ 
+ $ 1,025,398.09  
+MnDOT - OSRC Operating and Maintenance Budget 
+$3.65M from MnDOT OSRC 
+ 
+January 
+2022 
+ $    3,143,889.50   $ 2,624,601.91  
+MnDOT - OSRC Operating and Maintenance Budget 
+FY22 Operating Budget 
+ $    519,287.59      New Contract with DPS-ECN needed 
+ 
+FY 
+2023 
+ July 
+2022 
+ $    3,143,889.50   $ 2,106,053.79  
+Pass thru Billing from Local Agencies  
+ 
+ $ 1,037,835.71  
+MnDOT - OSRC Operating and Maintenance Budget 
+$3.65M from MnDOT OSRC 
+ 
+January 
+2023 
+ $    3,169,307.00   $ 2,612,164.29  
+MnDOT - OSRC Operating and Maintenance Budget 
+FY23 Operating Budget 
+ $    557,142.71      New Contract with DPS-ECN needed 
+ 
+FY 
+2024 
+ July 
+2023 
+ $    3,169,307.00   $ 2,122,107.79  
+Pass thru Billing from Local Agencies  
+ 
+ $ 1,047,199.21  
+MnDOT - OSRC Operating and Maintenance Budget 
+$3.65M from MnDOT OSRC 
+ 
+January 
+2024 
+ $    3,195,426.00   $ 2,602,800.79  
+MnDOT - OSRC Operating and Maintenance Budget 
+FY24 Operating Budget 
+ $    592,625.21      New Contract with DPS-ECN needed 
+ 
+FY 
+2025 
+ July 
+2024 
+ $    3,195,426.00   $ 2,138,605.78  
+Pass thru Billing from Local Agencies  
+ 
+ $ 1,056,820.22  
+MnDOT - OSRC Operating and Maintenance Budget 
+$3.65M from MnDOT OSRC 
+ 
+January 
+2025 
+ $    3,222,241.50   $ 2,593,179.78  
+MnDOT - OSRC Operating and Maintenance Budget 
+FY25 Operating Budget 
+ $    629,061.72      New Contract with DPS-ECN needed 
+ 
+FY 
+2026 
+ July 
+2025 
+ $    3,222,241.50   $ 2,155,544.65  
+Pass thru Billing from Local Agencies  
+ 
+ $ 1,066,696.85  
+MnDOT - OSRC Operating and Maintenance Budget 
+$1.1M + ?? from MnDOT-
+OSRC 
+ 
+January 
+2026 
+?? Contract 2026 and beyond ?? 
+ ?????  
+  
+  
+FY26 Operating Budget 
+  
+  
+?? - 2026 Contract 
+Motorola SUAII (Impact of future contract cont.) 
+In addition to the cost increase to the SUAII we have also been informed that the radio site and console 
+connections to the master sites will need to transition from T1 based to Ethernet. The estimated cost 
+to convert the transport is $2,000,000.00.  MnDOT OSRC engineering staff is current working with 
+MnIT to better define the network design and update this estimate. As we are working on the final 
+network we are also working on what the implementation plan and timeline will be. Depending on the 
+timeline we may be able to fit the costs into the MnDOT ARMER operations budget by delaying some 
+facility upgrade plans.  
+In addition the local agencies with Motorola connected equipment will need to convert their 
+connections to Ethernet. Options for converting this connect will vary agency by agency. For planning 
+purposes connected agencies should plan that every T1 they have for a console connection or a local 
+enhancement site connection will need to purchase T1 to Ethernet converters. A pair of RAD RiCi’s per 
+T1 is one option to accomplish this. We would estimate the cost of a pair of RAD RiCi’s to be about 
+$4000.   
+Once the details of the final network design are completed MnDOT will bring forward an ARMER 
+system plan change to the Board.  
+ 
+Long term facilities and equipment replacement plans 
+We have a number of towers that are on the air for ARMER that are old towers constructed in the 
+1950’s. These towers did not pass structural when we added the new ARMER equipment. But the level 
+of structural deficiency was not a risk that required immediate replacement. So we have held off on 
+replacement of these towers to see where we were in the ARMER construction budget to build what 
+we had in the approved plan.  These towers will not fit into the ARMER construction funds and will 
+need to be funded out of the Operations and Maintenance budget as it allows.  
+ 
+ 
+TOWER REPLACEMENTS  
+Freedhem 
+Replace tower/shelter 
+$600,000.00 
+Thief River Falls 
+Replace tower/shelter 
+$600,000.00 
+Viola 
+Replace tower 
+$600,000.00 
+Kimball 
+Replace tower 
+$600,000.00 
+Hoffman 
+Replace tower 
+$600,000.00 
+New London 
+Replace tower/shelter 
+$600,000.00 
+Woodland 
+Replace tower/shelter 
+$600,000.00 
+Littlefork 
+Replace tower/shelter 
+$600,000.00 
+Roosevelt 
+Replace tower/shelter 
+$600,000.00 
+Crookston 
+Replace Tower 
+$400,000.00 
+Wolf Lake 
+Replace Shelter 
+$140,000.00 
+Indington  
+Replace Shelter 
+$140,000.00 
+Geneva: Need to look at land purchase, new tower? 
+$500,000.00 
+Mapleton:  Find land and build new tower 
+$500,000.00 
+ 
+ 
+ 
+As it fits into the available maintenance budget we are also planning for: 
+• Tower Painting 
+• Tower inspections 
+• Tower guy wire tensioning/replacement 
+• Tower safety climbs 
+• Tower lighting system replacements 
+• HVAC replacements 
+• Replacing VHF interop stations (109 stations across the state that are 20(+) years old) 
+• Battery replacements 
+• Replenish spares inventory 
+• Replacement of older microwave radios 
+o Constellation microwave links (23 hops) 
+o CM6 microwave links (39 hops) 
+o Megastar microwave links (27 hops) 
+ 
+ 
+ 
+ 
+445 MINNESOTA STREET, SUITE 1725  •  SAINT PAUL, MINNESOTA 55101 
+PHONE: 651.201.7547  •  FAX: 651.296.2665  •  TTY: 651.282.6555 
+DPS.MN.GOV  •  SECB@STATE.MN.US 
+ 
+TO: 
+Allied Radio Matrix for Emergency Response (ARMER) 
+System Upgrade Agreement Stakeholders 
+FROM:  
+Assistant Commissioner Bruce West, SECB Chair 
+DATE:  
+April 9, 2020 
+SUBJECT: 
+ARMER 2021-2025 System Upgrade Agreement (SUA) Status 
+ 
+Minnesota’s land mobile radio system known as ARMER has been in service and has experienced 
+continual growth and improvement since 2002.  To keep the ARMER system current and to provide 
+predictable on-going costs, the state engaged in a System Upgrade Agreement (SUA) with ARMER’s 
+manufacturer, Motorola Solutions.  The current five-year SUA contract between the state and Motorola 
+expires 12/31/2020. 
+While the Minnesota Department of Transportation (MnDOT) owns the ARMER network “backbone” 
+and a majority of the infrastructure, many ARMER participant entities own network components 
+including local subsystem infrastructure and dispatch consoles.  The Department of Public Safety 
+division of Emergency Communication Networks (ECN) has primary responsibility for the majority of the 
+SUA financial cost.  However, all network component owners proportionally contribute toward SUA 
+costs and have a vested interest in the SUA contract. 
+MnDOT and ECN have been engaged in ongoing discussions with Motorola for the 2021 – 2025 SUA.  We 
+recently reached an agreement with Motorola which surpasses an offer that was previously shared with 
+ARMER stakeholders.  This has been a lengthy but productive process.  We are appreciative of the input, 
+guidance and support we received from our public safety partners during this process.   
+To recap, in late 2017 Motorola presented an initial budgetary proposal for the next five-year SUA in the 
+amount of $45M ($9M per year).  The state did not accept that offer as it included services beyond what 
+Minnesota requested or required.  In early 2018, Motorola produced a revised budgetary proposal 
+offering services in alignment with those of the current SUA at a cost of $33M ($6.6M per year).  While 
+ECN and MnDOT furthered discussions with Motorola, MnDOT calculated the tentative five-year SUA 
+cost to each network component owner based on their respective ownership proportion.  These 
+preliminary SUA costs were provided to all stakeholders in 2018 for their budgetary planning purposes. 
+Because ARMER is a statewide, shared system resource, it is essential that all ARMER network 
+component owners are in agreement with both the level of service and the associated cost to support 
+those services over the course of each Motorola contract. 
+In July 2018 and again in November 2018, ECN hosted informational meetings with statewide ARMER 
+stakeholders to review Motorola’s proposal.  ECN was provided with valuable feedback from individual 
+stakeholders as well as from the regional Emergency Communications/Services Boards (ECB/ESBs) 
+indicating Motorola’s $33M proposal for a five-year SUA lacked sufficient detail and justification for cost.  
+ECN was delegated with pursuing increased detail and improved pricing. 
+ECN initiated a Request for Proposal (RFP) in quarter four 2018 to secure professional and technical 
+consultants to support this important initiative.  In February 2019, ECN awarded a contract to Tusa 
+Consulting to assist in analyzing the scope and cost for the proposed SUA proposal.  The Tusa team met 
+Page 2 
+with ECN and ARMER stakeholders, as well as with MnDOT and with Motorola to become familiar with 
+the current SUA, to understand the specifics of the proposed SUA, as well as to perform a detailed 
+comparison and analysis between the current services and those being offered in the proposed SUA.  
+During this process, Tusa met with regional ECBs/ESBs to keep information flowing and communication 
+lines open, as well as to solicit their feedback.  Regular updates were provided during Land Mobile Radio 
+committee meetings, as well as Statewide Emergency Communication Board (SECB) meetings. 
+Thanks to the collaborative efforts of multiple partners, we have recently reached a tentative agreement 
+with Motorola.  Highlights of the five-year SUA for 2021-2025 include: 
+•
+Cost of $31.7M for five years.  Motorola priced year one at $6,238,272.00 and reflects a 1%
+increase each subsequent year.
+•
+Motorola will deliver two major upgrades during the five year period.
+•
+Motorola will discount subscriber radio pricing for the remainder of the existing subscriber 
+contract (beginning late-April 2020 and expires February 1, 2022).
+•
+Motorola will discontinue requiring old radios be traded in when negotiating large purchases 
+with pricing better than the state contract (allowing entities to donate old radios).
+•
+Motorola and MnDOT will continue to share system maintenance responsibilities similar to 
+existing practice.
+•
+The contract must be fully executed by November 20, 2020.
+Next steps are currently under way.  The Finance committee is expected to review the proposal and 
+make a recommendation to the SECB to approve it. MnDOT will begin work with the Minnesota 
+Department of Administration (MDA) to initiate a Single Source Justification RFP in accordance with 
+state procurement rules.  MDA will continue to support the contract negotiation process to ensure that 
+all terms and conditions are met.   
+Each ARMER network infrastructure owner has a contract with MnDOT defining their financial share of 
+the SUA cost.  MnDOT has prepared and distributed revised proportional stakeholder costs in 
+accordance with the SUA cost. ECN will engage in a contract with MnDOT to assume financial 
+responsibility for the remaining amount that exceeds MnDOT’s appropriated maintenance fund.  
+Once approved by the Department of Administration, the Motorola SUA for 2021-2025 will be formally 
+executed.  ECN and MnDOT have made a commitment to Motorola to make every effort to complete 
+this on or before November 20, 2020. 
+Thank you sincerely for your determination in working together to ensure that we have achieved a 
+successful outcome to this lengthy, but critically important initiative for public safety communications in 
+Minnesota.   
+If you have any questions about this process please contact either Tim Lee at MnDOT (651-234-7963) or 
+Jim Stromberg at ECN (651-201-7557). 
+ARMER SERVICES and SUA II PRICING 
+Detail/Description 
+2021 
+2022 
+2023 
+2024 
+2025 
+Five Year Total 
+ 
+TECHNICAL SUPPORT 
+Technical Support is available 7 days a week, 24 hours a day, as defined in Section X. The Motorola System Support Center's staff will work with your local service 
+organization or technicians to handle questions related to your Motorola 2-way communications system. If the problem is beyond the scope of the SSC's staff, 
+they will contact key personnel who are involved with the design, development, and manufacture of your communication products for resolution. 
+Total Technical Support 
+$148,759 
+$158,040 
+$167,490 
+$177,135 
+$186,964 
+$838,388 
+ 
+SERVICES 
+Dedicated FSO: Motorola will provide one dedicated field service technician, who is specifically trained and qualified to support the MN Metro/ARMER Radio 
+System. The assigned technician will expend his/her full 40-hour workweek performing corrective maintenance on appropriate project work assigned as agreed 
+to by Motorola and the System Owners with direction from the MN Metro/ARMER System Administrator. 
+Total Dedicated FSO 
+$235,286 
+$239,992 
+$244,791 
+$249,700 
+$254,689 
+$1,224,458 
+ 
+Security Update Service: Security Update Service provides updates of the latest anti-virus definition, intrusion signature files and OS Patches that have been 
+pre-tested on a Motorola test system to ensure they do not interfere with radio system functionality. Pre-tested updates will be made available as necessary, 
+however, an outbreak of malicious code that is deemed a significant threat to the Astro 25 radio network will cause a priority test cycle to occur which will 
+release anti-virus definition updates in a shorter cycle. 
+Total Security Update Service 
+$61,072 
+$62,904 
+$64,791 
+$66,735 
+$68,737 
+$324,239 
+ 
+Services Total 
+$445,117 
+$460,936 
+$477,072 
+$493,570.00 
+$510,390 
+$2,387,085 
+ 
+SOFTWARE 
+SUA II:  Includes All Software and Hardware as required per contract for upgrades and life cycle replacement, and professional services required for both software 
+and hardware implementation. 
+SUA II Total 
+$5,793,155 
+$5,826,843 
+$5,861,542 
+$5,897,282 
+$5,934,093 
+$29,312,915 
+ 
+Annual Contract Totals 
+$6,238,272 
+$6,287,779.00 
+$6,338,614 
+$6,390,852 
+$6,444,483 
+$31,700,000 
+ 
+Motorola SUAII Cost  shares for Calendar year 2021
+SUAII Contract Total: 
+$6,238,272.00
+ MESB
+Agency
+Infrastructure SUAII cost
+MESB
+$0.00
+Metro Transit
+$35,273.63
+HCMC
+$8,900.16
+MRCC East
+$6,260.47
+Edina
+$4,173.65
+MAC
+$6,587.50
+Ridgeview
+$5,053.55
+St Louis Park
+$4,173.65
+Bloomington
+$5,606.41
+Eden Prairie
+$18,680.23
+U of M
+$5,933.44
+Anoka County
+$87,609.94
+Carver County
+$30,494.32
+Chisago County
+$59,756.78
+Dakota County
+$100,201.77
+Hennepin County
+$284,852.76
+Isanti County
+$9,956.04
+Ramsey County
+$118,088.12
+Scott County
+$60,660.14
+Washington County
+$117,299.15
+Minneapolis
+$78,972.27
+Total
+$1,048,533.97
+State ( Includes any SW users)
+Agency
+Infrastructure SUAII cost
+ARMER Infrastructure (MnDOT)
+$4,144,534.09
+MnDOT
+$12,598.67
+State Patrol
+$54,857.21
+DOC 
+$90,223.23
+MSOP
+$16,643.26
+North Memorial
+$8,900.16
+Allina(Lakeview EMS, New River Ambulance)
+$14,179.55
+Mayo/Gold Cross
+$15,261.82
+Sanford
+$7,467.40
+Total
+$4,364,665.40
+Motorola SUAII Cost  shares for Calendar year 2021
+SUAII Contract Total: 
+$6,238,272.00
+Central MN Region
+SUAII
+Agency
+Infrastructure SUAII cost
+CM Regional Equipment
+$3,846.62
+St Cloud
+$20,387.23
+Stearns County
+$56,109.60
+Benton County
+$5,003.68
+Sherburne County
+$29,615.89
+Wright County
+$32,456.49
+Kandiyohi County
+$18,278.41
+Meeker County
+$14,003.57
+Grant County
+$3,997.67
+Douglas County
+$10,258.14
+Stevens County
+$3,972.74
+Pope County
+$4,274.84
+Wadena County
+$3,293.75
+Otter Tail County
+$22,324.47
+Morrison County 
+$12,343.50
+Mille Lacs County
+$11,589.72
+Wilkin County
+$6,410.05
+Traverse County
+$0.00
+Big Stone County
+$0.00
+Todd County
+$4,500.68
+Swift County
+$6,410.05
+Total
+$269,077.08
+South East MN Region
+SUAII
+Agency
+Infrastructure SUAII cost
+Olmsted County
+$28,835.71
+Rochester
+$0.00
+Goodhue County
+$40,072.00
+Wabasha County
+$5,154.73
+Winona County
+$14,204.48
+Houston County
+$3,620.78
+Fillmore County
+$4,274.84
+Mower County
+$12,922.76
+Freeborn County
+$20,614.53
+Dodge County
+$3,620.78
+Rice County
+$17,546.62
+Steele County
+$13,875.98
+Rice/Steel Dispatch
+$19,560.12
+Total
+$184,303.35
+Motorola SUAII Cost  shares for Calendar year 2021
+SUAII Contract Total: 
+$6,238,272.00
+South Central MN Region
+Agency
+Infrastructure SUAII cost
+Regional Radio Board
+$6,838.27
+McLeod County
+$12,469.62
+Hutchinson
+$3,293.75
+Sibley County
+$10,357.86
+Nicollet County
+$5,154.73
+LeSueur County
+$12,318.57
+Brown County
+$10,709.82
+Blue Earth County
+$8,121.45
+Watonwan Caounty
+$3,293.75
+Waseca County
+$18,628.90
+Martin County
+$3,947.81
+Faribault County
+$4,827.70
+Total
+$99,962.23
+South West MN Region
+Agency
+Infrastructure SUAII cost
+SW MN Emergency Communications Board
+$27,050.98
+Murray County
+$3,620.78
+Laq Qui Parle County
+$0.00
+Chippewa County
+$10,030.83
+Renville County
+$10,030.83
+Yellow Medicine County
+$10,357.86
+Redwood County
+$4,274.84
+Lincoln County
+$2,740.88
+Lyon County
+$10,684.89
+Pipestone County
+$3,947.81
+Cottonwood County
+$3,947.81
+Rock County
+$0.00
+Nobles County
+$3,947.81
+Jackson County
+$6,410.05
+Total
+$97,045.37
+Motorola SUAII Cost  shares for Calendar year 2021
+SUAII Contract Total: 
+$6,238,272.00
+North East MN Region
+Agency
+Infrastructure SUAII cost
+Itasca County
+$6,361.66
+Kanabec County
+$4,173.65
+Pine County
+$3,947.81
+Cass County
+$21,343.38
+Crow Wing County
+$17,397.04
+Atkin County
+$10,910.73
+Koochiching County
+$3,293.75
+Carlton County
+$5,908.51
+St Louis County
+$48,145.06
+City of Duluth
+$7,465.93
+Lake County
+$3,947.81
+Cook County
+$3,721.97
+Leech Lake Band of Ojibwe
+$3,620.78
+Total
+$140,238.08
+North West MN Region
+Agency
+Infrastructure SUAII cost
+Hubbard County
+$3,947.81
+Polk County 
+$5,053.55
+Becker County
+$5,531.62
+Beltrami County
+$5,707.60
+White Earth
+$0.00
+Clearwater County
+$0.00
+Pennington
+$3,293.75
+RRRDC
+$10,208.28
+Clay County
+$703.92
+Cass County ND
+$0.00 Under warrenty 2021
+Total
+$34,446.52
+$6,238,272.00
+ 
+ 
+ 
+CENTRAL MINNESOTA EMERGENCY SERVICES BOARD 
+   PHONE (320) 650 - 3320 
+FAX (320) 650 - 3410
+ 
+MEMORANDUM 
+To: 
+Dana Wahlberg, ECN 
+From: 
+Jeff Jelinski, CMESB Chair   
+Subject: 
+Representation on SECB Committees 
+Date: 
+April 9, 2020 
+The Central MN RAC currently holds the following positions on the SECB Committees 
+subcommittee of the Statewide Emergency Communications. We recognize the value and 
+importance of these committees and we are committed to supporting its work. 
+ 
+As chair of the Central MN ESB, I would like to designate CMNESB members listed below 
+to be appointed as the representatives for CMNESB to the SECB Committees listed below. 
+ 
+Currently the Central Region has the following representation on SECB Committees:  
+Committee 
+Delegate 
+Alternate 
+Land Mobile Radio 
+Kristen Lahr 
+Mike Henrion 
+Legislative 
+Micah Myers 
+Steve Schmitt 
+Steering 
+Kristen Lahr 
+Tina Lindquist 
+Finance 
+Micah Myers 
+Kristen Lahr 
+Grants Workgroup 
+Micah Myers 
+Shari Gieseke 
+Regional Grants 
+Coordinator/POC 
+Micah Myers 
+ 
+Interoperability  
+Micah Myers 
+Kristen Lahr 
+Interop COMU 
+Workgroup 
+Chief Dean Wrobbel 
+Brandon Larson 
+Interop STR 
+Workgroup 
+Douglas County 
+Brandon Larson as 
+Regional Coordinator 
+IPAWS 
+Patrick Waletzko 
+Erin Tufte 
+Wireless Broadband 
+& Applications 
+Brandon Larson 
+Mike Wisniewski 
+NG911 
+Jason Karlgaard 
+Sarah Booker 
+CAG 
+Brandon Larson 
+ 
+ 
+We feel that this would make a good discussion item for the regional quarterly meetings. 
+Thank you for your consideration in this matter. 
+ 
+Sincerely, 
+ 
+Jeff Jelinski 
+Budget Base:
+44,800.00
+$                 
+Regional Coordinator 
+65,200.00
+                   
+Logger 
+78,900.00
+                   
+Professional Services
+-
+                              
+188,900.00
+$            
+50% of Total of Base
+Equal Shares
+25% of Total
+Total
+Regional 
+2020
+Proposed 
+& Professional Servs
+Regional 
+based on Radio Count
+Distribution
+Logger
+Costs
+2021 Costs
+Equal Shares
+Coordinator
+2010
+Number
+Distribution
+2010 Census
+Distribution
+City of St. Cloud
+1,178.95
+                     
+3,431.58
+            
+6,953
+            
+123.70
+        
+792
+             
+882.10
+        
+5,616.31
+           
+5,260.00
+       
+11,685.55
+     
+10,876.31
+     
+Benton County
+1,178.95
+                     
+3,431.58
+            
+38,451
+          
+684.06
+        
+294
+             
+327.45
+        
+5,622.03
+           
+5,622.03
+       
+5,622.03
+       
+Big Stone County
+1,178.95
+                     
+3,431.58
+            
+5,269
+            
+93.74
+          
+239
+             
+266.19
+        
+4,970.45
+           
+5,260.00
+       
+11,039.68
+     
+10,230.45
+     
+Douglas County
+1,178.95
+                     
+3,431.58
+            
+36,009
+          
+640.61
+        
+798
+             
+888.78
+        
+6,139.92
+           
+5,260.00
+       
+12,209.15
+     
+11,399.92
+     
+Grant County
+1,178.95
+                     
+3,431.58
+            
+6,018
+            
+107.06
+        
+297
+             
+330.79
+        
+5,048.38
+           
+5,260.00
+       
+11,117.61
+     
+10,308.38
+     
+Kandiyohi County
+1,178.95
+                     
+3,431.58
+            
+42,239
+          
+751.45
+        
+842
+             
+937.79
+        
+6,299.76
+           
+5,260.00
+       
+12,368.99
+     
+11,559.76
+     
+Meeker County
+1,178.95
+                     
+3,431.58
+            
+23,300
+          
+414.52
+        
+400
+             
+445.51
+        
+5,470.55
+           
+5,260.00
+       
+11,539.78
+     
+10,730.55
+     
+Mille Lacs County
+1,178.95
+                     
+3,431.58
+            
+26,097
+          
+464.27
+        
+605
+             
+673.83
+        
+5,748.63
+           
+5,260.00
+       
+11,817.86
+     
+11,008.63
+     
+Morrison County
+1,178.95
+                     
+3,431.58
+            
+33,198
+          
+590.60
+        
+528
+             
+588.07
+        
+5,789.20
+           
+5,789.20
+       
+5,789.20
+       
+Otter Tail County
+1,178.95
+                     
+3,431.58
+            
+57,303
+          
+1,019.44
+     
+965
+             
+1,074.78
+     
+6,704.75
+           
+5,260.00
+       
+12,773.98
+     
+11,964.75
+     
+Pope County
+1,178.95
+                     
+3,431.58
+            
+10,995
+          
+195.60
+        
+281
+             
+312.97
+        
+5,119.10
+           
+5,260.00
+       
+11,188.33
+     
+10,379.10
+     
+Sherburne County
+-
+                              
+-
+                     
+-
+                
+-
+              
+-
+              
+-
+              
+-
+                    
+5,260.00
+       
+6,069.23
+       
+5,260.00
+       
+Stearns County
+1,178.95
+                     
+3,431.58
+            
+150,642
+        
+2,679.97
+     
+1,345
+          
+1,498.01
+     
+8,788.51
+           
+5,260.00
+       
+8,788.51
+       
+14,048.51
+     
+Stevens County
+1,178.95
+                     
+3,431.58
+            
+9,726
+            
+173.03
+        
+231
+             
+257.28
+        
+5,040.83
+           
+5,260.00
+       
+11,110.07
+     
+10,300.83
+     
+Swift County
+1,178.95
+                     
+3,431.58
+            
+9,783
+            
+174.04
+        
+319
+             
+355.29
+        
+5,139.86
+           
+5,139.86
+       
+5,139.86
+       
+Todd County
+1,178.95
+                     
+3,431.58
+            
+24,895
+          
+442.89
+        
+408
+             
+454.42
+        
+5,507.83
+           
+5,507.83
+       
+5,507.83
+       
+Traverse County
+1,178.95
+                     
+3,431.58
+            
+3,558
+            
+63.30
+          
+241
+             
+268.42
+        
+4,942.24
+           
+4,942.24
+       
+4,942.24
+       
+Wadena County
+1,178.95
+                     
+3,431.58
+            
+13,843
+          
+246.27
+        
+313
+             
+348.61
+        
+5,205.41
+           
+5,205.41
+       
+5,205.41
+       
+Wilkin County
+1,178.95
+                     
+3,431.58
+            
+6,576
+            
+116.99
+        
+120
+             
+133.65
+        
+4,861.17
+           
+5,260.00
+       
+10,930.40
+     
+10,121.17
+     
+Wright County
+1,178.95
+                     
+3,431.58
+            
+124,700
+        
+2,218.46
+     
+1,038
+          
+1,156.09
+     
+7,985.07
+           
+5,260.00
+       
+14,054.30
+     
+13,245.07
+     
+Washington County
+5,260.00
+       
+5,260.00
+       
+22,400.00
+                   
+65,200.00
+          
+629,555
+11,200.00
+   
+10,056.00
+   
+11,200.00
+   
+110,000.00
+       
+78,900.00
+    
+188,900.01
+   
+183,640.00
+   
+Regional Radio Board Operating Expenses
+Composite Allocation Plan
+25% of Total  
+based on Population
+2017
+2018
+2019
+2020
+2021
+Administrative Expenses
+Meeting Expenses
+Office Supplies
+1,100.00
+        
+20.00
+             
+800.00
+           
+800.00
+           
+800.00
+           
+Printing
+4,800.00
+        
+-
+                  
+4,000.00
+        
+4,000.00
+        
+4,000.00
+        
+Phone
+1,800.00
+        
+800.00
+           
+1,100.00
+        
+1,100.00
+        
+1,100.00
+        
+Postage
+400.00
+           
+20.00
+             
+400.00
+           
+400.00
+           
+400.00
+           
+8,100.00
+        
+840.00
+           
+6,300.00
+        
+6,300.00
+        
+6,300.00
+        
+MCIT
+1,200.00
+        
+1,100.00
+        
+1,200.00
+        
+1,200.00
+        
+1,200.00
+        
+1,200.00
+        
+1,100.00
+        
+1,200.00
+        
+1,200.00
+        
+1,200.00
+        
+55,000.00
+      
+65,200.00
+      
+65,200.00
+      
+65,200.00
+      
+65,200.00
+      
+5,000.00
+        
+5,100.00
+        
+5,300.00
+        
+5,300.00
+        
+5,300.00
+        
+6,000.00
+        
+6,000.00
+        
+6,000.00
+        
+6,000.00
+        
+6,000.00
+        
+2,200.00
+        
+38,000.00
+      
+9,300.00
+        
+8,000.00
+        
+-
+                  
+-
+                  
+2,400.00
+        
+2,400.00
+        
+2,400.00
+        
+2,400.00
+        
+2,400.00
+        
+3,000.00
+        
+3,000.00
+        
+3,000.00
+        
+3,000.00
+        
+3,000.00
+        
+2,600.00
+        
+2,600.00
+        
+2,600.00
+        
+2,600.00
+        
+2,600.00
+        
+18,000.00
+      
+18,000.00
+      
+18,000.00
+      
+18,000.00
+      
+18,000.00
+      
+140,200.00
+   
+111,600.00
+   
+102,500.00
+   
+102,500.00
+   
+102,500.00
+   
+13,300.00
+      
+13,300.00
+      
+13,300.00
+      
+48,000.00
+      
+48,000.00
+      
+48,000.00
+      
+47,000.00
+      
+47,000.00
+      
+500.00
+           
+500.00
+           
+500.00
+           
+500.00
+           
+500.00
+           
+2,700.00
+        
+2,800.00
+        
+2,800.00
+        
+2,800.00
+        
+2,800.00
+        
+14,300.00
+      
+14,300.00
+      
+14,300.00
+      
+15,300.00
+      
+15,300.00
+      
+65,500.00
+     
+65,600.00
+     
+78,900.00
+     
+78,900.00
+     
+78,900.00
+     
+Total:
+215,000.00
+   
+179,140.00
+   
+188,900.00
+   
+188,900.00
+   
+188,900.00
+   
+Base Budget
+43,900.00
+      
+36,640.00
+      
+44,800.00
+      
+44,800.00
+      
+44,800.00
+      
+Motorola SUA II
+Motorola Monitoring
+Logger Maintenance Total
+Replacement Fund
+Genesis
+Misc
+Professional Services Total 
+Logger Maintenance
+Northland
+MnDOT
+Website Maintenance
+Administrative Expenses Total
+Insurance Expense
+Insurance Expense Total
+Professional Services
+System Admin
+Audit 
+Analyzer
+STR
+Training
+Website Design
+Website Re-Design
+DATE:        May 6, 2020 
+TO:             All RAC Chairs 
+FROM:       Cathy Anderson, Standards & Training Coordinator 
+RE:              Standard for consideration 
+The Standards workgroup has reviewed the following standard and recommended that each region review it 
+and provide their feedback before it goes to the Steering Committee.   
+PLEASE INCLUDE IT IN YOUR NEXT REGIONAL MEETING (RAC, O/O, Users, etc.) AND LET ME KNOW THE 
+OUTCOME, INCLUDING ANY FEEDBACK, FROM YOUR REGION AS SOON AS POSSIBLE.  TARGET DATE IS MAY 
+31, BUT LET ME KNOW IF YOUR REGION WILL NOT BE MEETING IN MAY (or if they already met).   
+8.1.0 – Greater Minnesota Regional ESB / ECB Statewide Emergency Communications Board Member 
+Selection 
+This standard explains how selection occurs for regional representatives and defines their rotation of 
+appointments to serve as a member and alternate of the SECB.  
+The workgroup’s changes include:  
+ 
+Purpose / Objective: 
+• Removed the word radio, as regional boards are no longer exclusively for radio and have a broader 
+spectrum of SECB standards.  
+ 
+Operational Context: 
+• Removed the “Represents” column so as not to have to make changes every time a region adds or 
+loses an entity.  Additionally, if listing, it should be consistent with the signatories on each region’s JPA 
+and would have to list them all. 
+• Workgroup felt it is not necessary to know how many are represented and that this particular historical 
+information is not needed.   
+• The Workgroup felt it was important to call out that this standard goes to regions prior to going to the 
+SECB.  
+ 
+Recommended Procedure: 
+• Service Year table was updated based on scheduled rotation through 2037.  
+Greater Minnesota Regional Radio Board  
+Statewide Radio Board Member Selection 
+SECB Standard 8.1.0 
+Approval 11/30/2017 
+ 
+1 
+Allied Radio Matrix for Emergency Response  
+Standards, Protocols, Procedures 
+ 
+ 
+Document Section 8 
+Miscellaneous 
+Status: Complete 
+ 
+SECB Standard Number 
+GOV-3 
+Legacy Standard Number 
+8.1.0 
+Standard Title 
+Greater Minnesota Regional 
+ESB/ECB Statewide 
+Emergency Communications 
+Board Member Selection 
+Date Established 
+10/01/2010 
+SECB Approval: 11/30/2017 
+Replaces Document Dated 
+01/24/201108/10/2017 
+Date Revised/Reviewed 
+08/10/201705/04/2020 
+ 
+1.  Purpose or Objective 
+ 
+The purpose of this standard is to define the process for selecting a regional radio 
+representative to serve on the Statewide Emergency Communications Board (SECB) 
+representing Regional Emergency Services/Emergency Communications Boards (ESB/ECBs) 
+in greater Minnesota. 
+ 
+2.  Technical Background 
+ 
+ Capabilities 
+ Constraints 
+ 
+3.  Operational Context 
+ 
+The formation of the SECB included a member intended to represent rRegional ESB/ECBs in 
+Greater Minnesota. The SECB is charged with coordinating the appointment process to ensure 
+representation from throughout the state. 
+ 
+All regions of the state have been defined; rRegional ESB/ECBs are established and functioning 
+providing regional governance in every region. The following list includes the defined regions 
+in Greater Minnesota, their membership, and date of organization. 
+ 
+Greater Minnesota Region  
+                              Represents  
+   Formed: 
+Central Minnesota Regional ESB 
+ 
+        19 counties & 1 city 
+ June 7, 2007 
+Northwest Minnesota Regional ECB 
+        14 counties & 1 city 
+February 8, 2008 
+Southeast Minnesota Regional ECB                      11 counties & 1 city         April 16, 2008 
+Southwest Minnesota Regional ECB                     13 counties & 2 cities     September 18, 2008 
+South Central Minnesota Regional ECB               10 counties & 2 cities     September 30, 2008 
+Northeast Minnesota Regional ECB                      11 counties & 4 cities     December 17, 2008 
+ 
+Greater Minnesota Regional Radio Board  
+Statewide Radio Board Member Selection 
+SECB Standard 8.1.0 
+Approval 11/30/2017 
+ 
+2 
+The Central Minnesota Regional ESB was the first Regional Radio Board formed.  They 
+appointed a member and alternate to serve on the SECB in June 2007. After all regions 
+constituted boards, regional leadership from Greater Minnesota began discussions to create a 
+process for the rotation of representation to ensure that all regions of the state had equal and 
+appropriate opportunity to serve on the SECB representing the interests of Greater Minnesota. 
+This standard has been approved by the Regional Advisory Committees (RACs) and Regional 
+ESB/ECBs representing all regions in Greater Minnesota. 
+ 
+4.  Recommended Protocol/ Standard 
+ 
+The Regional ESB/ECBs in Greater Minnesota will have the responsibility to select both 
+alternate and primary SECB representatives in rotation, based on seniority by date of their 
+Board’s formation.  
+ 
+• In year one, the senior Board shall select a member to serve as a member of the SECB. 
+The next senior Board shall select a member to serve as alternate.  
+• In year two, the alternate from the previous year would serve as an SECB member 
+representing Greater Minnesota ESB/ECBs, and the next senior board would select a 
+member to serve as an alternate. 
+  
+If an alternate is not available to serve for any reason (i.e., Regional ESB/ECB term expiration, 
+resignation, etc.) the appointing Regional ESB/ECB is responsible for appointing a member 
+to serve. An ESB/ECB may select, by majority vote, to waive their right to serve.  
+ 
+If a Regional ESB/ECB representing a Greater Minnesota region determines not to appoint 
+an alternate for their appointment period, the next Board in rotation shall make the 
+appointment. The Board waiving their right to serve shall again be considered for service on 
+the next full rotation of the seniority list. The rotation will continue until all Boards selecting 
+to serve have had the opportunity. When the least senior Board has completed the selection 
+process, the next selection shall start again at the top of the list. 
+ 
+Since the Central Minnesota Regional ECB has appointed a member to serve since its 
+formation, this process will start with the next senior Regional ESB/ECB for the first rotation.  
+ 
+5.  Recommended Procedure 
+ 
+ The schedule defining the rotation of appointments to serve as a member and alternate 
+of the SECB representing ESB/ECBs in Greater Minnesota shall be: 
+ 
+ 
+Greater Minnesota Regional Radio Board  
+Statewide Radio Board Member Selection 
+SECB Standard 8.1.0 
+Approval 11/30/2017 
+ 
+3 
+Service 
+Year 
+Service 
+Year 
+Service 
+Year 
+Primary 
+Appointment 
+Alternate 
+Appointment 
+20102028 20162034 
+2022 
+Central 
+Northwest 
+20112029 20172035 
+2023 
+Northwest 
+Southeast 
+20122030 20182036 
+2024 
+Southeast 
+Southwest 
+20132031 20192037 
+2025 
+Southwest 
+South Central 
+20142032 
+2020 
+2026 
+South Central 
+Northeast 
+20152033 
+2021 
+2027 
+Northeast 
+Central 
+ 
+ 
+ The term of service as an SECB member or alternate representing Greater Minnesota 
+Regional ESB/ECBs shall be one year, commencing with the first meeting in January and 
+ending with the last meeting in December, or until replaced by a duly- appointed 
+replacement, in accordance with this SECB Standard.  
+ 
+ The chair of the Regional ESB/ECB responsible for the appointment of a primary 
+member to serve on the SECB representing Greater Minnesota Regional ESB/ECBs shall 
+notify the chair of the SECB of the appointment. The notification shall include all contact 
+information required to ensure proper and adequate notification of meeting schedules, 
+location, agendas, and other required and relevant information. The Chair of the 
+Regional ESB/ECB shall make every reasonable effort to ensure notification is 
+completed no later than December 15 of the year prior to the appointment year. 
+ 
+ The chair of the Regional ESB/ECB responsible for the appointment of an alternate to 
+serve on the SECB representing Greater Minnesota Regional ESB/ECBs shall notify the 
+chair of the SECB of the appointment. The notification shall include all contact 
+information required to ensure proper and adequate notification of meeting schedules, 
+location, agendas, and other required and relevant information. The chair of the 
+Regional ESB/ECB shall make every reasonable effort to ensure notification is 
+completed no later than December 15 of the year prior to the appointment year. 
+ 
+ The chair of the Regional ESB/ECB responsible for the appointment of a member or 
+alternate to serve on the SECB representing Greater Minnesota Regional ESB/ECBs 
+where the Regional ESB/ECB has waived its right to appoint shall notify the Chair of the 
+SECB no later than December 15 of the year prior to the appointment year. The Chair of 
+the SECB shall notify the Chair of the next Regional ESB/ECB in rotation and coordinate 
+their appointment process to ensure timely and effective appointment of replacements. 
+ 
+ The SECB shall extend or adjust the schedule in this standard as required by expiration 
+or waiver of appointment. 
+Greater Minnesota Regional Radio Board  
+Statewide Radio Board Member Selection 
+SECB Standard 8.1.0 
+Approval 11/30/2017 
+ 
+4 
+6.  Management 
+ 
+The SECB is responsible for the management of this process. 
+ 
+Meeting Date: May 13,2020 
+Regular Agenda: 
+X 
+Requesting Entity: Region 4 EMAC 
+Special Request: 
+ 
+Title of Requested Item As It Will Appear on Board Agenda: 
+ 
+ 
+ 
+ 
+Background Information: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Action Requested: 
+ 
+ 
+ 
+ 
+ 
+Fiscal Impact: 
+Estimated Cost ($): 
+$89250.00 
+Source of Funds: 
+HSEM SHSP funding 
+New or Additional Revenue ($): 
+No 
+Cost Budgeted in Current Year? (Yes/No) 
+ 
+ 
+Accommodations: 
+Amt of Time Requested 
+Specific Time on Agenda 
+Laptop Needed? 
+Overhead Needed? 
+10 minutes 
+ 
+ 
+ 
+ Yes               No 
+ 
+Yes               No 
+ 
+Approved by: 
+Signature 
+Date 
+Committee Representative: 
+ Stephanie Johnson, Meeker County 
+05/08/2020 
+ 
+Approval of 2020 SHSP Grant Application 
+Draft SHSP grant application was submitted to HSEM for contractor services for the next grant 
+period on Friday, April 24, 2020. Due to communication issues, we were notified of the grant with 
+very limited time to submit an application. After speaking with Shari and Micah, a draft application 
+was submitted to HSEM for contractor services. The grant application is the same as the last SHSP 
+grant application. Region 4 EMAC group is asking for official approval for the SHSP draft grant 
+application. 
+Approval of SHSP Grant Application for Region 4 EMAC 
+EMERGENCY SERVICES BOARD 
+AGENDA REQUEST 
+ 
+ 
+ 
+ 
+Rev. 10/24/2018 
+State Homeland Security Grant Program FFY2019 
+SHSP Project Application 
+Grant performance period: January 1 – December 31, 2020
+HSEM Region 
+Jurisdiction/Agency Name 
+Contact Name 
+Phone 
+Email 
+Project Name 
+Project can start within 90 days of award date: 
+Yes 
+No 
+Core capability most strongly supported by this project: 
+Investment justification most strongly supported by this project: 
+Project Description and Outcomes — Describe the project, its outcomes and how it will improve 
+preparedness in your jurisdiction: 
+Capabilities — Describe how this project sustains or maintains your current capabilities: 
+Project Budget — Break down your project cost by category: 
+Category 
+Amount 
+Description 
+Planning 
+Organization 
+Equipment 
+Training 
+Exercises 
+M&A 
+Total 
+If applicable, amount going directly to law enforcement:  
+4 - WC
+Central MN - EMAC 
+Stephanie Johnson
+(320) 693-5420
+stephanie.johnson@co.meeker.mn.u
+Training/Exercise Coordination
+Planning
+Strengthen Planning
+The National Preparedness Goal describes a set of core capabilities organized into five different mission areas. 
+Protection, one of the mission areas, aims to prevent, avoid or stop an imminent, threatened or actual act of terrorism. 
+Within that mission area, Intelligence and Information Sharing is described as providing timely, accurate, and actionable  
+information resulting from the planning, direction, collection, exploitation, processing, analysis, production, dissemination, 
+evaluation, and feedback of available information concerning physical and cyber threats to the United States. Information 
+sharing is the ability to exchange intelligence, information, data, or knowledge among government or private sector 
+entities. All 18 Counties within Region IV strive to be as prepared and engaged as possible in order to successfully 
+prevent incidences of terrorism, using a whole community approach. Readiness is not only about having a written plan, it 
+also incorporates training, exercising, and multi-jurisdictional collaboration to test, evaluate, and generate guidelines and 
+practices we can later incorporate into response and recovery efforts. 
+Central Minnesota Emergency Management Advisory Committee (CM-EMAC) would like to enhance our preparedness 
+and methods of prevention by contracting for services to guide and facilitate our efforts as a region through the use of 
+exercises at a county or sub-regional level. The contractor would create, facilitate, evaluate, and assist with improvement 
+planning for training or exercises up to 18 times throughout the region. The contractor will build a base exercise focused 
+on the identified core capability and tailor it to each county upon request. They will then facilitate trainings and exercises 
+and create an after action report/improvement plan in coordination with the local county. In addition to regional 
+coordination, the contractor would also work individually with each county to focus on their gap analysis and work to 
+enhance their preparedness level through training and exercise implementation based on a terrorism event. Central 
+Minnesota Emergency Management Advisory Committee (CMEMAC) seeks to enhance our readiness by securing the 
+services of a regional contractor to assist in closing jurisdiction & region capability gaps. Beyond maintaining/enhancing 
+the CMEMAC Preparedness Report and Strategic Plan, the contractor will utilize it to support efforts to identify, develop, 
+and implement capability-based education, training, and projects to achieve the region’s goals – with an emphasis on 
+efforts to prevent, respond, and recover from a terrorism event. The contractor will also establish a regional multi-year 
+training & exercise plan to ensure progress and testing of newly developed/enhanced capabilities, along with our ability 
+to provide for coordinated response and recovery operations where regional efforts and support may be needed.
+With the assistance of contract services, Region IV has been able to continue establishing our capabilities and gaps as 
+well as identifying our threats and hazards. We also continue to work on making progress identifying our critical 
+infrastructure and conducting threat assessments.  
+CM-EMAC sees the progress and advantages of contracting for services to aid with strategic and terrorism planning as 
+well as exercise development/facilitation.  
+Core Capabilities addressed by this project: Housing, Risk Management for Protection Programs & Activities, Long-Term 
+Vulnerability Reduction, and Supply Chain Integrity & Security.   
+ 
+$ 75,000 Contract Hours for Personnel 
+$ 5,000 Facilitation of Trainings, Supplies, Room Rental, Speaker Fees
+$ 5,000 Facilitation of Exercises, Supplies, Room Rental, Speaker Fees
+$ 4,250 Management & Administration
+$ 89,250
+Rev. 10/24/2018 
+Equipment Request — Provide a detailed list of the equipment purchases proposed for this project: 
+AEL Number 
+Title 
+Authorized 
+for SHSP 
+Cost per unit 
+Qty. 
+Yes 
+No 
+Yes 
+No 
+Yes 
+No 
+Yes 
+No 
+Yes 
+No 
+Environmental and Historic Preservation — Describe any new construction, modifications to existing 
+structures or any activity that could affect the natural environment included in this project (N/A if none): 
+Project Timeline — Provide a timeline of project tasks with milestones and dates for each task: 
+Task (for example, hire, equip and 
+train a planner; conduct training; 
+purchase software) 
+Milestone 
+Start Date 
+End Date 
+Submit completed form to Matti.Gurney@state.mn.us, your regional program coordinator, and regional 
+board chair.  Projects must be ranked by region and rankings submitted to HSEM by April 30th 2019.
+For questions regarding this application or the SHSP, contact HSEM 
+Homeland Security Grant Administrator Matti Gurney at (651) 201-7422 
+Distribute RFP
+RFP Made Available for Responses
+9/1/2020
+9/13/2020
+Select Candidates for Interviews
+Interviews Scheduled
+9/23/2020
+9/27/2020
+Conduct Interviews 
+Interviews Finished & Candidate Identified
+9/30/2020
+10/4/2020
+CM EMAC Approval of Candidate
+Affirmative Vote of CM EMAC
+10/23/2020
+10/23/2020
+ESB Contract Approval 
+Affirmative Vote of ESB
+12/18/2020
+12/18/2020
+Award Contract 
+Signed Contract
+12/19/2020
+12/19/2020
+Contract Work Begins 
+Contractor Provided Initial Intro/Task(s)
+1/1/2021
+1/1/2021
+Contract Work Ends
+All Work Products Provided to CM EMAC
+12/31/2021
+12/31/2021
+Save As...
+Submit  
+ 
+ 
+Meeting Date: June 10, 2020 
+Regular Agenda: 
+X 
+Requesting Entity: Central MN Logger Committee 
+Special Request: 
+ 
+Title of Requested Item As It Will Appear on Board Agenda: 
+ 
+ 
+ 
+ 
+Background Information: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Action Requested: 
+ 
+ 
+ 
+ 
+ 
+Fiscal Impact: 
+Estimated Cost ($): 
+ 
+Source of Funds: 
+ 
+New or Additional Revenue ($): 
+ 
+Cost Budgeted in Current Year? (Yes/No) 
+ 
+ 
+Accommodations: 
+Amt of Time Requested 
+Specific Time on Agenda 
+Laptop Needed? 
+Overhead Needed? 
+ 
+ 
+ 
+ 
+ Yes               No 
+ 
+Yes               No 
+ 
+Approved by: 
+Signature 
+Date 
+Committee Representative: 
+ 
+ 
+ 
+Central MN Logger Committee – Bylaw Update 
+The Central MN Logger Committee requests to approve the updates to our bylaws.  The updates 
+include additional language regarding “Limited Membership” to better describe what a limited 
+member is and the expectations. 
+Approve. 
+EMERGENCY SERVICES BOARD 
+AGENDA REQUEST 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Bylaws 
+ 
+ 
+ 
+Central Minnesota 
+Emergency Services Board 
+Logger Committee 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Submitted by: 
+ 
+Central Minnesota Regional Logger Committee 
+Adopted: June 2017 
+Revised: March 2020 
+Formatted: Centered
+Formatted: Centered
+ 
+ 
+ 
+BY-LAWS 
+ Central Minnesota Emergency Services Board 
+Logger Committee 
+ 
+Adopted:  June 2017 
+Revised: March 2020 
+ 
+ARTICLE I:  Name 
+ 
+This organization shall be known as the Central Minnesota Emergency Services Board Logger 
+Committee.  The committee may be referred to as the "CM Logger Committee". The Logger 
+Committee is formed pursuant to the Joint Powers Agreement (hereinafter “Agreement”) forming 
+the Central Minnesota Emergency Services Board (hereinafter “Board”). 
+ 
+ARTICLE II:  Purpose 
+ 
+The purpose of the Logger Committee is to: 
+ 
+A. 
+A collaborative effort of a portion of the JPA membership that worked to create shared 
+logging infrastructure that is scalable. 
+ 
+B. 
+Provide cost sharing for logging equipment and maintenance agreements, better utilizing 
+public dollars. 
+ 
+C. 
+Propose and develop policies and standards for the regional logger. 
+ 
+D. 
+Advise the Central Minnesota Emergency Services Board when acting as the Logger 
+Committee, on matters of protocol, procedures and operations. 
+ 
+E. 
+To assist the members of the region to assure their logging needs are being met 
+satisfactorily. 
+ 
+F. 
+Such other duties as assigned by the Central Minnesota Emergency Services Board. 
+ 
+ARTICLE III:  Membership 
+ 
+A. 
+Full Membership.  The administration of each party to the Central Minnesota Emergency 
+Services Board that chooses to participate and others shall appoint, at the invitation of the 
+Central Minnesota Emergency Services Board, one delegate and one alternate.  The 
+appointment shall be in writing and addressed to the Chair, Central Minnesota Emergency 
+Services Board.   
+  
+B. 
+Limited Membership.  To include Non-Governmental Organizations (NGOs) or other, are 
+non-voting parties.  The party shall appoint a non-voting representative and one alternate 
+to represent their party’s interest. The appointment shall be in writing and addressed to the 
+Chair, Central Minnesota Emergency Services Board.   
+ 
+C.  
+Term.  The term of appointment shall be determined by the appointing authority.  Members, 
+once appointed by their respective parties, shall remain the appointee of the Members 
+agency until notified in writing of a change. There shall be no limit on the number of times 
+a member may be reappointed by their respective party. 
+ 
+Formatted: Indent: Left:  0", First line:  0"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ARTICLE IV:  Officers 
+ 
+A. 
+Elected Officers. The elected officers shall be Chairperson and Vice Chairperson. 
+ 
+B. 
+Term of Office.  All terms of office shall be for a period of one (1) calendar year, following 
+election at the first regular meeting of each year, provided that the first elected officers 
+shall serve until the first meeting of the following year. 
+ 
+C. 
+Duties.   
+ 
+ 
+1. 
+Chairperson – The Chairperson shall preside at all meetings of the Central 
+Minnesota Emergency Services Board Logger Committee.  The Chairperson is 
+responsible for making subcommittee appointments and delegating assignments 
+with the advice of the committee membership. 
+ 
+ 
+2. 
+Vice Chairperson – The Vice Chairperson shall act in the place of the Chairperson 
+in his or her absence and shall hold responsibilities as directed by the membership. 
+ 
+ 
+3. 
+The Chairperson and the Vice Chairperson shall serve as the committee’s 
+appointments to the Central MN Emergency Services Board (CMNESB).  The 
+Chair will serve as the delegate and the Vice Chair will serve as the alternate. 
+ 
+ 
+D. 
+Vacancies.  The membership shall fill all vacancies at the next regular meeting of the 
+Logger Committee.   
+ 
+ARTICLE VVI:  Voting, Nominations and Elections 
+ 
+A. 
+Voting.  Each member appointed by a member jurisdiction shall be entitled to a vote on all 
+matters considered by the Logger Committee.  Under no circumstances will any 
+jurisdiction be entitled to more than one (1) vote per member actually present. 
+ 
+B. 
+Candidates.  Any member in good standing appointed by a member jurisdiction to a term 
+fully inclusive of the proposed term of office may be nominated for office. 
+ 
+C. 
+Quorum and Voting.  For the purpose of conducting business at any meeting, a quorum 
+shall consist of members representing at least one quarter (1/4) of the total member 
+jurisdictions.  Approval by a majority of the members in attendance shall be valid. 
+ 
+ARTICLE VII:  Subcommittees 
+ 
+The Logger Committee may create and appoint such subcommittees as it deems appropriate to the 
+completion of its purpose. 
+ 
+ 
+ 
+ 
+ 
+Formatted: Normal, Left
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ARTICLE VIII:  Meetings and Fiscal Year 
+ 
+A. 
+Meetings. 
+ 
+ 
+1. 
+Regular meetings shall be held at a time and place determined in accordance with 
+a schedule adopted by the Logger Committee.  The schedule may be modified by 
+the membership at any time in a manner to be determined by the Logger 
+Committee. 
+ 
+ 
+2. 
+The agenda and supporting materials for regular and special meetings shall be 
+distributed electronically a minimum of seven (7) calendar days prior to the 
+meeting date. 
+ 
+ 
+3. 
+Special meetings may be called by the Chairperson after polling, by phone or e-
+mail, and obtaining the consent of members representing at least fifty percent 
+(50%) of the appointed members of the Logger Committee. Business at special 
+meetings shall be limited to those items specifically listed in the published agenda. 
+ 
+B. 
+Fiscal Year 
+ 
+ 
+1. 
+The fiscal year shall run from January 1 through December 31. 
+ 
+ARTICLE VIIIIX:  Rules of Order 
+ 
+Robert's Rules of Order will prevail in all Logger Committee or subcommittee meetings except as 
+amended in the By-Laws of the Central Minnesota Emergency Services Board Logger Committee.  
+The Authorized version shall be the most recent version available. 
+ 
+ARTICLE IX:  Amendments to By-Laws 
+ 
+These By-Laws may be amended at any meeting by a minimum of two-thirds (2/3) vote of those 
+appointed members present, providing a quorum has been established (see Article VI, Section C, 
+Nominations and Elections, Quorum/Voting).  A minimum thirty (30) day written notice of the 
+intent to change the By-Laws must be submitted to the entire Committee.  All modifications and 
+addendums to the Logger Committee By-Laws must be approved by the Central Minnesota 
+Emergency Services Board before taking effect. 
+ 
+ARTICLE XI:  Limitations 
+ 
+A. 
+Membership Expenses.  The Logger Committee shall not be responsible for any expenses 
+of members.  All member jurisdictions shall be solely responsible for expenses incurred by 
+their representatives. 
+ 
+ARTICLE XII:  Dissolution 
+ 
+A. 
+Dissolution.  The Logger Committee may only be dissolved as provided by the parties to 
+the agreement forming the Central Minnesota Emergency Services Board. 
+Formatted: Font: 10 pt
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Bylaws 
+ 
+ 
+ 
+Central Minnesota 
+Emergency Services Board 
+Logger Committee 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Submitted by: 
+ 
+Central Minnesota Logger Committee 
+Adopted: June 2017 
+Revised: March 2020 
+ 
+ 
+ 
+BY-LAWS 
+ Central Minnesota Emergency Services Board 
+Logger Committee 
+ 
+Adopted:  June 2017 
+Revised: March 2020 
+ 
+ARTICLE I:  Name 
+ 
+This organization shall be known as the Central Minnesota Emergency Services Board Logger 
+Committee.  The committee may be referred to as the "CM Logger Committee". The Logger 
+Committee is formed pursuant to the Joint Powers Agreement (hereinafter “Agreement”) forming 
+the Central Minnesota Emergency Services Board (hereinafter “Board”). 
+ 
+ARTICLE II:  Purpose 
+ 
+The purpose of the Logger Committee is to: 
+ 
+A. 
+A collaborative effort of a portion of the JPA membership that worked to create shared 
+logging infrastructure that is scalable. 
+ 
+B. 
+Provide cost sharing for logging equipment and maintenance agreements, better utilizing 
+public dollars. 
+ 
+C. 
+Propose and develop policies and standards for the regional logger. 
+ 
+D. 
+Advise the Central Minnesota Emergency Services Board when acting as the Logger 
+Committee, on matters of protocol, procedures and operations. 
+ 
+E. 
+To assist the members of the region to assure their logging needs are being met 
+satisfactorily. 
+ 
+F. 
+Such other duties as assigned by the Central Minnesota Emergency Services Board. 
+ 
+ARTICLE III:  Membership 
+ 
+A. 
+Full Membership.  The administration of each party to the Central Minnesota Emergency 
+Services Board that chooses to participate and others shall appoint, at the invitation of the 
+Central Minnesota Emergency Services Board, one delegate and one alternate.  The 
+appointment shall be in writing and addressed to the Chair, Central Minnesota Emergency 
+Services Board.   
+  
+B. 
+Limited Membership.  To include Non-Governmental Organizations (NGOs) or other, are 
+non-voting parties.  The party shall appoint a non-voting representative and one alternate 
+to represent their party’s interest. The appointment shall be in writing and addressed to the 
+Chair, Central Minnesota Emergency Services Board.   
+ 
+C.  
+Term.  The term of appointment shall be determined by the appointing authority.  Members, 
+once appointed by their respective parties, shall remain the appointee of the Members 
+agency until notified in writing of a change. There shall be no limit on the number of times 
+a member may be reappointed by their respective party. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ARTICLE IV:  Officers 
+ 
+A. 
+Elected Officers. The elected officers shall be Chairperson and Vice Chairperson. 
+ 
+B. 
+Term of Office.  All terms of office shall be for a period of one (1) calendar year, following 
+election at the first regular meeting of each year, provided that the first elected officers 
+shall serve until the first meeting of the following year. 
+ 
+C. 
+Duties.   
+ 
+ 
+1. 
+Chairperson – The Chairperson shall preside at all meetings of the Central 
+Minnesota Emergency Services Board Logger Committee.  The Chairperson is 
+responsible for making subcommittee appointments and delegating assignments 
+with the advice of the committee membership. 
+ 
+ 
+2. 
+Vice Chairperson – The Vice Chairperson shall act in the place of the Chairperson 
+in his or her absence and shall hold responsibilities as directed by the membership. 
+ 
+ 
+3. 
+The Chairperson and the Vice Chairperson shall serve as the committee’s 
+appointments to the Central MN Emergency Services Board (CMNESB).  The 
+Chair will serve as the delegate and the Vice Chair will serve as the alternate. 
+ 
+ 
+D. 
+Vacancies.  The membership shall fill all vacancies at the next regular meeting of the 
+Logger Committee.   
+ 
+ARTICLE V:  Voting, Nominations and Elections 
+ 
+A. 
+Voting.  Each member appointed by a member jurisdiction shall be entitled to a vote on all 
+matters considered by the Logger Committee.  Under no circumstances will any 
+jurisdiction be entitled to more than one (1) vote per member actually present. 
+ 
+B. 
+Candidates.  Any member in good standing appointed by a member jurisdiction to a term 
+fully inclusive of the proposed term of office may be nominated for office. 
+ 
+C. 
+Quorum and Voting.  For the purpose of conducting business at any meeting, a quorum 
+shall consist of members representing at least one quarter (1/4) of the total member 
+jurisdictions.  Approval by a majority of the members in attendance shall be valid. 
+ 
+ARTICLE VI:  Subcommittees 
+ 
+The Logger Committee may create and appoint such subcommittees as it deems appropriate to the 
+completion of its purpose. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ARTICLE VII:  Meetings and Fiscal Year 
+ 
+A. 
+Meetings. 
+ 
+ 
+1. 
+Regular meetings shall be held at a time and place determined in accordance with 
+a schedule adopted by the Logger Committee.  The schedule may be modified by 
+the membership at any time in a manner to be determined by the Logger 
+Committee. 
+ 
+ 
+2. 
+The agenda and supporting materials for regular and special meetings shall be 
+distributed electronically a minimum of seven (7) calendar days prior to the 
+meeting date. 
+ 
+ 
+3. 
+Special meetings may be called by the Chairperson after polling, by phone or e-
+mail, and obtaining the consent of members representing at least fifty percent 
+(50%) of the appointed members of the Logger Committee. Business at special 
+meetings shall be limited to those items specifically listed in the published agenda. 
+ 
+B. 
+Fiscal Year 
+ 
+ 
+1. 
+The fiscal year shall run from January 1 through December 31. 
+ 
+ARTICLE VIII:  Rules of Order 
+ 
+Robert's Rules of Order will prevail in all Logger Committee or subcommittee meetings except as 
+amended in the By-Laws of the Central Minnesota Emergency Services Board Logger Committee.  
+The Authorized version shall be the most recent version available. 
+ 
+ARTICLE IX:  Amendments to By-Laws 
+ 
+These By-Laws may be amended at any meeting by a minimum of two-thirds (2/3) vote of those 
+appointed members present, providing a quorum has been established (see Article VI, Section C, 
+Nominations and Elections, Quorum/Voting).  A minimum thirty (30) day written notice of the 
+intent to change the By-Laws must be submitted to the entire Committee.  All modifications and 
+addendums to the Logger Committee By-Laws must be approved by the Central Minnesota 
+Emergency Services Board before taking effect. 
+ 
+ARTICLE X:  Limitations 
+ 
+A. 
+Membership Expenses.  The Logger Committee shall not be responsible for any expenses 
+of members.  All member jurisdictions shall be solely responsible for expenses incurred by 
+their representatives. 
+ 
+ARTICLE XI:  Dissolution 
+ 
+A. 
+Dissolution.  The Logger Committee may only be dissolved as provided by the parties to 
+the agreement forming the Central Minnesota Emergency Services Board. 
+Central MN Emergency Services Board
+Standard 7.2.1
+Attendance Score 2020
+Period:  May 2019 - April 2020
+ESB mtgs= 6
+RAC mtgs =12
+OO mtgs =12
+USER mtgs=12
+Annual = 42
+Entity
+#
+Score
+#
+Score
+#
+Score
+#
+Score
+TOTAL #
+Score
+City of St. Cloud
+6
+100%
+12
+100%
+12
+100%
+11
+92%
+41
+98%
+Benton
+4
+67%
+11
+92%
+11
+92%
+11
+92%
+37
+88%
+Big Stone
+6
+100%
+12
+100%
+10
+83%
+11
+92%
+39
+93%
+Douglas
+6
+100%
+10
+83%
+11
+92%
+11
+92%
+38
+90%
+Grant
+6
+100%
+11
+92%
+8
+67%
+11
+92%
+36
+86%
+Kandiyohi
+6
+100%
+12
+100%
+9
+75%
+10
+83%
+37
+88%
+Meeker
+4
+67%
+11
+92%
+12
+100%
+12
+100%
+39
+93%
+Mille Lacs
+5
+83%
+11
+92%
+12
+100%
+12
+100%
+40
+95%
+Morrison
+6
+100%
+9
+75%
+11
+92%
+11
+92%
+37
+88%
+Otter Tail
+5
+83%
+11
+92%
+11
+92%
+12
+100%
+39
+93%
+Pope
+6
+100%
+11
+92%
+12
+100%
+12
+100%
+41
+98%
+Stearns
+5
+83%
+11
+92%
+12
+100%
+12
+100%
+40
+95%
+Stevens
+6
+100%
+12
+100%
+12
+100%
+12
+100%
+42
+100%
+Swift
+4
+67%
+11
+92%
+10
+83%
+10
+83%
+35
+83%
+Todd
+6
+100%
+12
+100%
+12
+100%
+12
+100%
+42
+100%
+Traverse
+6
+100%
+10
+83%
+10
+83%
+11
+92%
+37
+88%
+Wadena
+6
+100%
+10
+83%
+8
+67%
+11
+92%
+35
+83%
+Wilkin
+6
+100%
+11
+92%
+11
+92%
+12
+100%
+40
+95%
+Wright
+6
+100%
+12
+100%
+11
+92%
+12
+100%
+41
+98%
+ESB Board, RAC, Owners and Operators, and User Committees

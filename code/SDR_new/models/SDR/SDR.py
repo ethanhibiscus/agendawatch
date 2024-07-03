@@ -208,11 +208,35 @@ class SDR(TransformersBase):
         return parser
 
     def prepare_data(self):
-        block_size = self.hparams.block_size if hasattr(self.hparams, "block_size") else self.tokenizer.model_max_length
-        self.train_dataset = AgendaTextDataset(tokenizer=self.tokenizer, hparams=self.hparams,
-                                               text_files_dir='./data/text_files', block_size=block_size)
-        self.val_dataset = AgendaTextDataset(tokenizer=self.tokenizer, hparams=self.hparams,
-                                             text_files_dir='./data/text_files', block_size=block_size)
-        self.test_dataset = AgendaTextDatasetTest(tokenizer=self.tokenizer, hparams=self.hparams,
-                                                  text_files_dir='./data/text_files', block_size=block_size)
+        block_size = (
+            self.hparams.block_size
+            if hasattr(self.hparams, "block_size")
+            and self.hparams.block_size > 0
+            and self.hparams.block_size < self.tokenizer.max_len
+            else self.tokenizer.max_len
+        )
+        self.train_dataset = WikipediaTextDatasetParagraphsSentences(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="train",
+        )
+        self.val_dataset = WikipediaTextDatasetParagraphsSentences(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="val",
+        )
+        self.val_dataset.indices_map = self.val_dataset.indices_map[: self.hparams.limit_val_indices_batches]
+        self.val_dataset.labels = self.val_dataset.labels[: self.hparams.limit_val_indices_batches]
+
+        self.test_dataset = WikipediaTextDatasetParagraphsSentencesTest(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="test",
+        )
 
