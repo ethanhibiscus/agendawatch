@@ -15,12 +15,21 @@ from models.reco.recos_utils import index_amp
 
 
 nltk.download("punkt")
-class AgendaTextDataset(Dataset):
-    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train", data_dir=None):
-        self.hparams = hparams
-        self.data_dir = data_dir if data_dir else hparams.data_dir
-        self.mode = mode
+import nltk
+from torch.utils.data import Dataset
+from transformers import PreTrainedTokenizer
+import os
+import pickle
+import numpy as np
+from tqdm import tqdm
+import torch
+import json
 
+nltk.download("punkt")
+
+class CustomTextDatasetParagraphsSentences(Dataset):
+    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):
+        self.hparams = hparams
         cached_features_file = os.path.join(
             f"data/datasets/cached_proccessed/{dataset_name}",
             f"bs_{block_size}_{dataset_name}_{type(self).__name__}_tokenizer_{str(type(tokenizer)).split('.')[-1][:-2]}_mode_{mode}",
@@ -28,7 +37,7 @@ class AgendaTextDataset(Dataset):
         self.cached_features_file = cached_features_file
         os.makedirs(os.path.dirname(cached_features_file), exist_ok=True)
 
-        raw_data_path = self.data_dir
+        raw_data_path = self.download_raw(dataset_name)
 
         all_articles = self.save_load_splitted_dataset(mode, cached_features_file, raw_data_path)
 
@@ -40,11 +49,11 @@ class AgendaTextDataset(Dataset):
         self.tokenizer = tokenizer
 
         if os.path.exists(cached_features_file) and (self.hparams is None or not self.hparams.overwrite_data_cache):
-            print("\nLoading features from cached file %s", cached_features_file)
+            print(f"\nLoading features from cached file {cached_features_file}")
             with open(cached_features_file, "rb") as handle:
                 self.examples, self.indices_map = pickle.load(handle)
         else:
-            print("\nCreating features from dataset file at ", cached_features_file)
+            print(f"\nCreating features from dataset file at {cached_features_file}")
 
             self.examples = []
             self.indices_map = []
@@ -79,7 +88,7 @@ class AgendaTextDataset(Dataset):
                     valid_sections_count += 1
                 self.examples.append((this_sample_sections, title))
 
-            print("\nSaving features into cached file %s", cached_features_file)
+            print(f"\nSaving features into cached file {cached_features_file}")
             with open(cached_features_file, "wb") as handle:
                 pickle.dump((self.examples, self.indices_map), handle, protocol=pickle.HIGHEST_PROTOCOL)
 
@@ -109,13 +118,41 @@ class AgendaTextDataset(Dataset):
         return all_articles
 
     def read_all_articles(self, raw_data_path):
-        csv.field_size_limit(sys.maxsize)
-        with open(raw_data_path, newline="") as f:
-            reader = csv.reader(f)
-            all_articles = list(reader)
-        return all_articles[1:]
-    
-class AgendaTextDatasetTest(AgendaTextDataset):
+        all_articles = []
+        for filename in os.listdir(raw_data_path):
+            if filename.endswith('.txt'):
+                with open(os.path.join(raw_data_path, filename), 'r', encoding='utf-8') as file:
+                    content = file.read().strip()
+                    all_articles.append((filename, content))
+        return all_articles
+
+    def download_raw(self, dataset_name):
+        raw_data_path = f"data/text_files"
+        os.makedirs(os.path.dirname(raw_data_path), exist_ok=True)
+        return raw_data_path
+
+    def __len__(self):
+        return len(self.indices_map)
+
+    def __getitem__(self, item):
+        idx_article, idx_section, idx_sentence = self.indices_map[item]
+        sent = self.examples[idx_article][0][idx_section][0][idx_sentence]
+
+        return (
+            torch.tensor(self.tokenizer.build_inputs_with_special_tokens(sent[0]), dtype=torch.long,)[
+                : self.hparams.limit_tokens
+            ],
+            self.examples[idx_article][1],
+            self.examples[idx_article][0][idx_section][1],
+            sent[1],
+            idx_article,
+            idx_section,
+            idx_sentence,
+            item,
+            self.labels[item],
+        )
+
+class CustomTextDatasetParagraphsSentencesTest(CustomTextDatasetParagraphsSentences):
     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="test"):
         super().__init__(tokenizer, hparams, dataset_name, block_size, mode=mode)
 
@@ -142,7 +179,7 @@ class AgendaTextDatasetTest(AgendaTextDataset):
                 )
             sections.append(sentences)
         return sections
-    
+
 class WikipediaTextDatasetParagraphsSentences(Dataset):
     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):
         self.hparams = hparams

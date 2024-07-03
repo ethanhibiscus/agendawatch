@@ -19,7 +19,8 @@ from utils import metrics_utils
 from pytorch_metric_learning.samplers import MPerClassSampler
 from torch.utils.data.dataloader import DataLoader
 import json
-from data.datasets import AgendaTextDataset
+from data.datasets import CustomTextDatasetParagraphsSentences, CustomTextDatasetParagraphsSentencesTest
+
 
 
 class SDR(TransformersBase):
@@ -209,7 +210,35 @@ class SDR(TransformersBase):
         return parser
 
     def prepare_data(self):
-        block_size = self.hparams.block_size if hasattr(self.hparams, "block_size") and self.hparams.block_size > 0 and self.hparams.block_size < self.tokenizer.max_len else self.tokenizer.max_len
-        self.train_dataset = AgendaTextDataset(tokenizer=self.tokenizer, hparams=self.hparams, data_dir="./data/text_files", block_size=block_size, mode="train")
-        self.val_dataset = AgendaTextDataset(tokenizer=self.tokenizer, hparams=self.hparams, data_dir="./data/text_files", block_size=block_size, mode="val")
-        self.test_dataset = AgendaTextDataset(tokenizer=self.tokenizer, hparams=self.hparams, data_dir="./data/text_files", block_size=block_size, mode="test")
+        block_size = (
+            self.hparams.block_size
+            if hasattr(self.hparams, "block_size")
+            and self.hparams.block_size > 0
+            and self.hparams.block_size < self.tokenizer.max_len
+            else self.tokenizer.max_len
+        )
+        self.train_dataset = CustomTextDatasetParagraphsSentences(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="train",
+        )
+        self.val_dataset = CustomTextDatasetParagraphsSentences(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="val",
+        )
+        self.val_dataset.indices_map = self.val_dataset.indices_map[: self.hparams.limit_val_indices_batches]
+        self.val_dataset.labels = self.val_dataset.labels[: self.hparams.limit_val_indices_batches]
+
+        self.test_dataset = CustomTextDatasetParagraphsSentencesTest(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="test",
+        )
+
