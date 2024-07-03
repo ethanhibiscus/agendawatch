@@ -19,10 +19,15 @@ from utils import metrics_utils
 from pytorch_metric_learning.samplers import MPerClassSampler
 from torch.utils.data.dataloader import DataLoader
 import json
-from data.datasets import CustomTextDataset
-from torch.utils.data import DataLoader, RandomSampler
+
 
 class SDR(TransformersBase):
+
+    """
+    Author: Dvir Ginzburg.
+
+    SDR model (ACL IJCNLP 2021)
+    """
 
     def __init__(
         self, hparams,
@@ -30,23 +35,21 @@ class SDR(TransformersBase):
         """Stub."""
         super(SDR, self).__init__(hparams)
 
+
     def forward_train(self, batch):
         inputs, labels = transformer_utils.mask_tokens(batch[0].clone().detach(), self.tokenizer, self.hparams)
-
-        # Ensure sample_labels is a tensor
-        sample_labels = torch.tensor(batch[-1], device=inputs.device)
 
         outputs = self.model(
             inputs,
             masked_lm_labels=labels,
             non_masked_input_ids=batch[0],
-            sample_labels=sample_labels,
+            sample_labels=batch[-1],
             run_similarity=True,
             run_mlm=True,
         )
 
         self.losses["mlm_loss"] = outputs[0]
-        self.losses["d2v_loss"] = (outputs[1] or 0)  * self.hparams.sim_loss_lambda  # If no similarity loss we ignore
+        self.losses["d2v_loss"] = (outputs[1] or 0)  * self.hparams.sim_loss_lambda # If no similarity loss we ignore
 
         tracked = self.track_metrics(input_ids=inputs, outputs=outputs, is_train=self.hparams.mode == "train", labels=labels,)
         self.tracks.update(tracked)
@@ -161,7 +164,12 @@ class SDR(TransformersBase):
             )
 
         elif mode == "val":
-            sampler = RandomSampler(self.val_dataset)  # Use RandomSampler for validation
+            sampler = MPerClassSamplerDeter(
+                self.val_dataset.labels,
+                2,
+                length_before_new_iter=self.hparams.limit_val_indices_batches,
+                batch_size=self.hparams.val_batch_size,
+            )
 
             loader = DataLoader(
                 self.val_dataset,
@@ -200,31 +208,11 @@ class SDR(TransformersBase):
         return parser
 
     def prepare_data(self):
-        block_size = (
-            self.hparams.block_size
-            if hasattr(self.hparams, "block_size")
-            and self.hparams.block_size > 0
-            and self.hparams.block_size < self.tokenizer.max_len
-            else self.tokenizer.max_len
-        )
-        self.train_dataset = CustomTextDataset(
-            tokenizer=self.tokenizer,
-            hparams=self.hparams,
-            dataset_name=self.hparams.dataset_name,
-            block_size=block_size,
-            mode="train",
-        )
-        self.val_dataset = CustomTextDataset(
-            tokenizer=self.tokenizer,
-            hparams=self.hparams,
-            dataset_name=self.hparams.dataset_name,
-            block_size=block_size,
-            mode="val",
-        )
-        self.test_dataset = CustomTextDataset(
-            tokenizer=self.tokenizer,
-            hparams=self.hparams,
-            dataset_name=self.hparams.dataset_name,
-            block_size=block_size,
-            mode="test",
-        )
+        block_size = self.hparams.block_size if hasattr(self.hparams, "block_size") else self.tokenizer.model_max_length
+        self.train_dataset = AgendaTextDataset(tokenizer=self.tokenizer, hparams=self.hparams,
+                                               text_files_dir='./data/text_files', block_size=block_size)
+        self.val_dataset = AgendaTextDataset(tokenizer=self.tokenizer, hparams=self.hparams,
+                                             text_files_dir='./data/text_files', block_size=block_size)
+        self.test_dataset = AgendaTextDatasetTest(tokenizer=self.tokenizer, hparams=self.hparams,
+                                                  text_files_dir='./data/text_files', block_size=block_size)
+

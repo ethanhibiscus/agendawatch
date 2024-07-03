@@ -12,43 +12,49 @@ import json
 import csv
 import sys
 from models.reco.recos_utils import index_amp
-import random
+
 
 nltk.download("punkt")
-class CustomTextDataset(Dataset):
-    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):
+class AgendaTextDataset(Dataset):
+    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, text_files_dir, block_size):
         self.hparams = hparams
         self.tokenizer = tokenizer
-        self.block_size = block_size
-
+        self.block_size = min(block_size, tokenizer.model_max_length)
         self.examples = []
         self.indices_map = []
-        self.labels = []  # Fake labels
 
-        text_files_dir = './data/text_files'
-        for filename in os.listdir(text_files_dir):
-            if filename.endswith('.txt'):
-                with open(os.path.join(text_files_dir, filename), 'r') as file:
-                    text = file.read()
-                    paragraphs = text.split('\n\n')
-                    for p_idx, paragraph in enumerate(paragraphs):
-                        sentences = nltk.sent_tokenize(paragraph)
-                        for s_idx, sentence in enumerate(sentences):
-                            tokenized_sentence = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(sentence))[:block_size]
-                            self.examples.append((tokenized_sentence, len(tokenized_sentence), p_idx, s_idx, 0))  # Add fake label
-                            self.indices_map.append((len(self.examples) - 1))
-                            self.labels.append(0)  # Assign a fake label
+        for idx, filename in enumerate(os.listdir(text_files_dir)):
+            with open(os.path.join(text_files_dir, filename), 'r') as file:
+                content = file.read()
+                paragraphs = content.split('\n\n')  # Assuming paragraphs are separated by double newlines
+                for p_idx, paragraph in enumerate(paragraphs):
+                    sentences = nltk.sent_tokenize(paragraph)
+                    for s_idx, sentence in enumerate(sentences):
+                        tokenized_sentence = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(sentence))[:self.block_size]
+                        self.examples.append((tokenized_sentence, len(tokenized_sentence), idx, p_idx, s_idx))
+                        self.indices_map.append((idx, p_idx, s_idx))
+
+        self.labels = [idx for idx, _, _ in self.indices_map]
 
     def __len__(self):
         return len(self.indices_map)
 
-    def __getitem__(self, idx):
-        example_idx = self.indices_map[idx]
-        tokenized_sentence, sent_len, p_idx, s_idx, label = self.examples[example_idx]
-        return torch.tensor(tokenized_sentence, dtype=torch.long), sent_len, p_idx, s_idx, label  # Ensure label is included
+    def __getitem__(self, item):
+        idx, p_idx, s_idx = self.indices_map[item]
+        sentence = self.examples[item]
+        return (torch.tensor(self.tokenizer.build_inputs_with_special_tokens(sentence[0]), dtype=torch.long),
+                len(sentence[0]), idx, p_idx, s_idx)
 
+class AgendaTextDatasetTest(AgendaTextDataset):
+    def __init__(self, tokenizer: PreTrainedTokenizer, hparams, text_files_dir, block_size):
+        super().__init__(tokenizer, hparams, text_files_dir, block_size)
 
-
+    def __getitem__(self, item):
+        sentences = []
+        for s_idx, sentence in enumerate(self.examples[item]):
+            sentences.append((torch.tensor(self.tokenizer.build_inputs_with_special_tokens(sentence[0]), dtype=torch.long),
+                              len(sentence[0]), item, s_idx))
+        return sentences
 
 class WikipediaTextDatasetParagraphsSentences(Dataset):
     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):

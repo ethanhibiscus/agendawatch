@@ -1,11 +1,10 @@
-"""Top level file, parse flags and call trining loop."""
 import os
 from utils.pytorch_lightning_utils.pytorch_lightning_utils import load_params_from_checkpoint
 import torch
 from pytorch_lightning.profiler.profilers import SimpleProfiler
 from utils.pytorch_lightning_utils.callbacks import RunValidationOnStart
 from utils import switch_functions
-import pytorch_lightning
+import pytorch_lightning as pl
 from pytorch_lightning import Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint
 from utils.argparse_init import default_arg_parser, init_parse_argparse_default_params
@@ -13,9 +12,10 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 from pytorch_lightning.loggers import TensorBoardLogger
+
 def main():
     parser = default_arg_parser()
-    parser = Trainer.add_argparse_args(parser)
+    parser = Trainer.add_argparse_args(parser)  # Bug in PL
     parser = default_arg_parser(description="docBert", parents=[parser])
 
     eager_flags = init_parse_argparse_default_params(parser)
@@ -26,7 +26,7 @@ def main():
     main_train(model_class_pointer, hyperparams, parser)
 
 def main_train(model_class_pointer, hparams, parser):
-    pytorch_lightning.utilities.seed.seed_everything(seed=hparams.seed)
+    pl.seed_everything(seed=hparams.seed)
 
     if hparams.resume_from_checkpoint not in [None, '']:
         hparams = load_params_from_checkpoint(hparams, parser)
@@ -35,6 +35,7 @@ def main_train(model_class_pointer, hparams, parser):
 
     logger = TensorBoardLogger(save_dir=model.hparams.hparams_dir, name='', default_hp_metric=False)
     logger.log_hyperparams(model.hparams, metrics={model.hparams.metric_to_track: 0})
+    print(f"\nLog directory:\n{model.hparams.hparams_dir}\n")
 
     trainer = Trainer(
         num_sanity_val_steps=2,
@@ -61,11 +62,12 @@ def main_train(model_class_pointer, hparams, parser):
         reload_dataloaders_every_epoch=True,
         resume_from_checkpoint=hparams.resume_from_checkpoint,
     )
+
     if not hparams.test_only:
         trainer.fit(model)
     else:
         if hparams.resume_from_checkpoint is not None:
-            model = model.load_from_checkpoint(hparams.resume_from_checkpoint, hparams=hparams, map_location=torch.device('cpu'))
+            model = model.load_from_checkpoint(hparams.resume_from_checkpoint, hparams=hparams, map_location=torch.device("cpu"))
         trainer.test(model)
 
 if __name__ == "__main__":
