@@ -60,16 +60,17 @@ class CustomTextDatasetParagraphsSentences(Dataset):
 
             for idx_article, article in enumerate(tqdm(all_articles)):
                 this_sample_sections = []
-                title, sections = article[0], ast.literal_eval(article[1])
+                title, content = article[0], article[1]
+                sections = content.split("\n\n")  # Assuming sections are separated by double newlines
                 valid_sections_count = 0
                 for section_idx, section in enumerate(sections):
                     this_sections_sentences = []
-                    if section[1] == "":
+                    if section.strip() == "":
                         continue
                     valid_sentences_count = 0
-                    title_with_base_title = "{}:{}".format(title, section[0])
-                    for sent_idx, sent in enumerate(nltk.sent_tokenize(section[1][:max_article_len])[:max_sentences]):
-                        tokenized_desc = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(json.dumps(sent[:max_sent_len])))[
+                    title_with_base_title = "{}:{}".format(title, f"Section {section_idx}")
+                    for sent_idx, sent in enumerate(nltk.sent_tokenize(section[:max_article_len])[:max_sentences]):
+                        tokenized_desc = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(sent[:max_sent_len]))[
                             :block_size
                         ]
                         this_sections_sentences.append(
