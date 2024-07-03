@@ -62,6 +62,9 @@ def get_non_default(parsed,parser):
     
 def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     TASK_OPTIONS = ["document_similarity"]
+    parser.add_argument(
+        "--data_dir", default="./data/text_files", type=str, help="The directory where the text files are located",
+    )
 
     parser.add_argument(
         "--task_name", type=str, default="document_similarity", choices=TASK_OPTIONS, help="The task to solve",
