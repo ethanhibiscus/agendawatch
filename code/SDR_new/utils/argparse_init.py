@@ -69,17 +69,16 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     task_name = parser.parse_known_args()[0].task_name
 
     DATASET_OPTIONS = {
-        "document_similarity": ["video_games", "wines", "custom_dataset"],  # Add 'custom_dataset' here
+        "document_similarity": ["video_games", "wines", "custom_dataset"],
     }
     parser.add_argument(
         "--dataset_name",
         type=str,
         default=DATASET_OPTIONS[task_name][0],
         choices=DATASET_OPTIONS[task_name],
-        help="The dataset to evaluate on",
+        help="The dataset to evalute on",
     )
     dataset_name = dataset_name or parser.parse_known_args()[0].dataset_name
-
 
     ## General learning parameters
     parser.add_argument(
@@ -104,6 +103,12 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
     ## Input Output parameters
     parser.add_argument(
         "--default_root_dir", default=os.path.join(os.getcwd(), "output", task_name), help="The path to store this run output",
+    )
+    parser.add_argument(
+        "--data_dir", default="./data/text_files", help="The path to the input data directory",
+    )
+    parser.add_argument(
+        "--output_dir", default="./output", help="The path to the output directory",
     )
     output_dir = parser.parse_known_args()[0].default_root_dir
     os.makedirs(output_dir, exist_ok=True)
@@ -153,4 +158,3 @@ def init_parse_argparse_default_params(parser, dataset_name=None, arch=None):
         "task_name": task_name,
         "architecture": architecture,
     }
-
