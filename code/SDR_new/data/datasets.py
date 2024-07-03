@@ -35,7 +35,7 @@ class CustomTextDataset(Dataset):
                         sentences = nltk.sent_tokenize(paragraph)
                         for s_idx, sentence in enumerate(sentences):
                             tokenized_sentence = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(sentence))[:block_size]
-                            self.examples.append((tokenized_sentence, len(tokenized_sentence), p_idx, s_idx))
+                            self.examples.append((tokenized_sentence, len(tokenized_sentence), p_idx, s_idx, 0))  # Add fake label
                             self.indices_map.append((len(self.examples) - 1))
                             self.labels.append(0)  # Assign a fake label
 
@@ -44,8 +44,9 @@ class CustomTextDataset(Dataset):
 
     def __getitem__(self, idx):
         example_idx = self.indices_map[idx]
-        tokenized_sentence, sent_len, p_idx, s_idx = self.examples[example_idx]
-        return torch.tensor(tokenized_sentence, dtype=torch.long), sent_len, p_idx, s_idx, self.labels[idx]  # Return the fake label
+        tokenized_sentence, sent_len, p_idx, s_idx, label = self.examples[example_idx]
+        return torch.tensor(tokenized_sentence, dtype=torch.long), sent_len, p_idx, s_idx, label  # Ensure label is included
+
 
 
 

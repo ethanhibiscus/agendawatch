@@ -39,13 +39,11 @@ def reco_sentence_test_collate(examples: List[torch.Tensor], tokenizer):
 def reco_sentence_collate(examples: List[torch.Tensor], tokenizer):
     return (
         pad_sequence([i[0] for i in examples], batch_first=True, padding_value=tokenizer.pad_token_id),
-        [i[2] for i in examples],
-        [i[3] for i in examples],
-        [i[4] for i in examples],
-        [i[5] for i in examples],
-        torch.tensor([i[6] for i in examples]),  # Fake labels
+        [i[1] for i in examples],  # sent_len
+        [i[2] for i in examples],  # p_idx
+        [i[3] for i in examples],  # s_idx
+        [i[4] for i in examples],  # label (fake label)
     )
-
 
 
 def raw_data_link(dataset_name):
