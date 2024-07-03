@@ -22,21 +22,13 @@ import json
 from data.datasets import CustomTextDataset
 from torch.utils.data import DataLoader, RandomSampler
 
-
 class SDR(TransformersBase):
-
-    """
-    Author: Dvir Ginzburg.
-
-    SDR model (ACL IJCNLP 2021)
-    """
 
     def __init__(
         self, hparams,
     ):
         """Stub."""
         super(SDR, self).__init__(hparams)
-
 
     def forward_train(self, batch):
         inputs, labels = transformer_utils.mask_tokens(batch[0].clone().detach(), self.tokenizer, self.hparams)
@@ -208,14 +200,31 @@ class SDR(TransformersBase):
         return parser
 
     def prepare_data(self):
-        block_size = self.hparams.block_size if hasattr(self.hparams, "block_size") and self.hparams.block_size > 0 and self.hparams.block_size < self.tokenizer.max_len else self.tokenizer.max_len
-        self.block_size = block_size
-
-        if self.hparams.dataset_name == "custom_dataset":
-            self.train_dataset = CustomTextDataset(tokenizer=self.tokenizer, hparams=self.hparams, dataset_name=self.hparams.dataset_name, block_size=block_size, mode="train")
-            self.val_dataset = CustomTextDataset(tokenizer=self.tokenizer, hparams=self.hparams, dataset_name=self.hparams.dataset_name, block_size=block_size, mode="val")
-            self.test_dataset = CustomTextDataset(tokenizer=self.tokenizer, hparams=self.hparams, dataset_name=self.hparams.dataset_name, block_size=block_size, mode="test")
-        else:
-            self.train_dataset = WikipediaTextDatasetParagraphsSentences(tokenizer=self.tokenizer, hparams=self.hparams, dataset_name=self.hparams.dataset_name, block_size=block_size, mode="train")
-            self.val_dataset = WikipediaTextDatasetParagraphsSentences(tokenizer=self.tokenizer, hparams=self.hparams, dataset_name=self.hparams.dataset_name, block_size=block_size, mode="val")
-            self.test_dataset = WikipediaTextDatasetParagraphsSentencesTest(tokenizer=self.tokenizer, hparams=self.hparams, dataset_name=self.hparams.dataset_name, block_size=block_size, mode="test")
+        block_size = (
+            self.hparams.block_size
+            if hasattr(self.hparams, "block_size")
+            and self.hparams.block_size > 0
+            and self.hparams.block_size < self.tokenizer.max_len
+            else self.tokenizer.max_len
+        )
+        self.train_dataset = CustomTextDataset(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="train",
+        )
+        self.val_dataset = CustomTextDataset(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="val",
+        )
+        self.test_dataset = CustomTextDataset(
+            tokenizer=self.tokenizer,
+            hparams=self.hparams,
+            dataset_name=self.hparams.dataset_name,
+            block_size=block_size,
+            mode="test",
+        )
