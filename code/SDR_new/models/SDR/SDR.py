@@ -154,15 +154,13 @@ class SDR(TransformersBase):
                 batch_size=self.hparams.train_batch_size,
                 length_before_new_iter=(self.hparams.limit_train_batches) * self.hparams.train_batch_size,
             )
-
             loader = DataLoader(
                 self.train_dataset,
                 num_workers=self.hparams.num_data_workers,
                 sampler=sampler,
                 batch_size=self.hparams.train_batch_size,
-                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer,),
+                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer),
             )
-
         elif mode == "val":
             sampler = MPerClassSamplerDeter(
                 self.val_dataset.labels,
@@ -170,21 +168,19 @@ class SDR(TransformersBase):
                 length_before_new_iter=self.hparams.limit_val_indices_batches,
                 batch_size=self.hparams.val_batch_size,
             )
-
             loader = DataLoader(
                 self.val_dataset,
                 num_workers=self.hparams.num_data_workers,
                 sampler=sampler,
                 batch_size=self.hparams.val_batch_size,
-                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer,),
+                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer),
             )
-
         else:
             loader = DataLoader(
                 self.test_dataset,
                 num_workers=self.hparams.num_data_workers,
                 batch_size=self.hparams.test_batch_size,
-                collate_fn=partial(reco_sentence_test_collate, tokenizer=self.tokenizer,),
+                collate_fn=partial(reco_sentence_test_collate, tokenizer=self.tokenizer),
             )
         return loader
 

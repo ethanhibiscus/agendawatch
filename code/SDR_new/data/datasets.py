@@ -20,59 +20,67 @@ nltk.download("punkt")
 class WikipediaTextDatasetParagraphsSentences(Dataset):
     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):
         self.hparams = hparams
-        self.block_size = min(block_size, tokenizer.model_max_length)
         self.tokenizer = tokenizer
+        self.block_size = block_size
+        self.mode = mode
 
         cached_features_file = os.path.join(
             f"data/datasets/cached_proccessed/{dataset_name}",
             f"bs_{block_size}_{dataset_name}_{type(self).__name__}_tokenizer_{str(type(tokenizer)).split('.')[-1][:-2]}_mode_{mode}",
         )
-        self.cached_features_file = cached_features_file
         os.makedirs(os.path.dirname(cached_features_file), exist_ok=True)
 
-        raw_data_path = f"./data/text_files"  # Adjusted path to your text files
+        raw_data_path = f"data/text_files"
 
-        if os.path.exists(cached_features_file) and (self.hparams is None or not self.hparams.overwrite_data_cache):
-            print("\nLoading features from cached file %s", cached_features_file)
+        self.examples, self.indices_map = self.load_and_cache_examples(cached_features_file, raw_data_path)
+
+        self.labels = [idx_article for idx_article, _, _ in self.indices_map]
+
+    def load_and_cache_examples(self, cached_features_file, raw_data_path):
+        if os.path.exists(cached_features_file) and not self.hparams.overwrite_data_cache:
+            print("\nLoading features from cached file", cached_features_file)
             with open(cached_features_file, "rb") as handle:
-                self.examples, self.indices_map = pickle.load(handle)
+                examples, indices_map = pickle.load(handle)
         else:
-            print("\nCreating features from dataset file at ", cached_features_file)
+            print("\nCreating features from dataset file at", cached_features_file)
 
-            self.examples = []
-            self.indices_map = []
-            all_files = os.listdir(raw_data_path)
-            for idx_file, file_name in enumerate(tqdm(all_files)):
-                with open(os.path.join(raw_data_path, file_name), 'r') as f:
-                    text = f.read()
-                paragraphs = text.split('\n\n')
-                valid_paragraphs = [p for p in paragraphs if len(p.strip()) > 0]
-                for paragraph in valid_paragraphs:
-                    sentences = nltk.sent_tokenize(paragraph)
-                    tokenized_sentences = [tokenizer.convert_tokens_to_ids(tokenizer.tokenize(sent))[:self.block_size] for sent in sentences]
-                    self.examples.append((tokenized_sentences, file_name))
-                    for idx_sent, sent in enumerate(tokenized_sentences):
-                        self.indices_map.append((idx_file, idx_sent))
+            examples = []
+            indices_map = []
+            max_article_len = int(1e6)
+            max_sentences = 16
+            max_sent_len = 10000
 
-            print("\nSaving features into cached file %s", cached_features_file)
+            for idx_article, filename in enumerate(tqdm(os.listdir(raw_data_path))):
+                filepath = os.path.join(raw_data_path, filename)
+                with open(filepath, 'r') as file:
+                    content = file.read()
+                    sections = nltk.sent_tokenize(content[:max_article_len])
+                    valid_sections_count = 0
+                    for section_idx, section in enumerate(sections[:max_sentences]):
+                        tokenized_desc = self.tokenizer.convert_tokens_to_ids(self.tokenizer.tokenize(section[:max_sent_len]))[:self.block_size]
+                        examples.append((tokenized_desc, len(tokenized_desc), idx_article, valid_sections_count, section))
+                        indices_map.append((idx_article, valid_sections_count))
+                        valid_sections_count += 1
+
             with open(cached_features_file, "wb") as handle:
-                pickle.dump((self.examples, self.indices_map), handle, protocol=pickle.HIGHEST_PROTOCOL)
+                pickle.dump((examples, indices_map), handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-        self.labels = [idx_file for idx_file, _ in self.indices_map]
+        return examples, indices_map
 
     def __len__(self):
         return len(self.indices_map)
-
+    
     def __getitem__(self, item):
-        idx_file, idx_sentence = self.indices_map[item]
-        sentence = self.examples[idx_file][0][idx_sentence]
+        idx_article, idx_section = self.indices_map[item]
+        sent = self.examples[idx_article][0][idx_section]
 
         return (
-            torch.tensor(self.tokenizer.build_inputs_with_special_tokens(sentence), dtype=torch.long)[:self.hparams.limit_tokens],
-            self.examples[idx_file][1],
-            sentence,
-            idx_file,
-            idx_sentence,
+            torch.tensor(self.tokenizer.build_inputs_with_special_tokens(sent[0]), dtype=torch.long)[:self.hparams.limit_tokens],
+            self.examples[idx_article][1],
+            self.examples[idx_article][0][idx_section][1],
+            sent[1],
+            idx_article,
+            idx_section,
             item,
             self.labels[item],
         )
@@ -85,18 +93,20 @@ class WikipediaTextDatasetParagraphsSentencesTest(WikipediaTextDatasetParagraphs
         return len(self.examples)
 
     def __getitem__(self, item):
-        sentences = self.examples[item][0]
-        processed_sentences = []
-        for idx_sentence, sentence in enumerate(sentences):
-            processed_sentences.append(
+        sections = []
+        for idx_section, section in enumerate(self.examples[item][0]):
+            sentences = []
+            sentences.append(
                 (
-                    torch.tensor(self.tokenizer.build_inputs_with_special_tokens(sentence), dtype=torch.long),
+                    torch.tensor(self.tokenizer.build_inputs_with_special_tokens(section[0]), dtype=torch.long),
                     self.examples[item][1],
-                    sentence,
+                    section[1],
+                    section[1],
                     item,
-                    idx_sentence,
+                    idx_section,
                     item,
                     self.labels[item],
                 )
             )
-        return processed_sentences
+            sections.append(sentences)
+        return sections
