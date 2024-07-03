@@ -150,7 +150,7 @@ class SDR(TransformersBase):
         if mode == "train":
             sampler = MPerClassSampler(
                 self.train_dataset.labels,
-                2,
+                4,
                 batch_size=self.hparams.train_batch_size,
                 length_before_new_iter=(self.hparams.limit_train_batches) * self.hparams.train_batch_size,
             )
@@ -164,7 +164,7 @@ class SDR(TransformersBase):
         elif mode == "val":
             sampler = MPerClassSamplerDeter(
                 self.val_dataset.labels,
-                2,
+                4,
                 length_before_new_iter=self.hparams.limit_val_indices_batches,
                 batch_size=self.hparams.val_batch_size,
             )
