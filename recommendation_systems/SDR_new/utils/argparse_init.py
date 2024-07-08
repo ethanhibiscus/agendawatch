@@ -54,7 +54,7 @@ def default_arg_parser(description="", conflict_handler="resolve", parents=[], i
 def get_non_default(parsed,parser):
     non_default = {
         opt.dest: getattr(parsed, opt.dest)
-        for opt in parser._option_string_actions.values()
+        for opt in parser._option_string_actions.values() 
         if hasattr(parsed, opt.dest) and opt.default != getattr(parsed, opt.dest)
     }
     return non_default
