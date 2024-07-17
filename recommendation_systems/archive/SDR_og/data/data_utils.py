@@ -49,8 +49,8 @@ def reco_sentence_collate(examples: List[torch.Tensor], tokenizer):
     )
 
 
-def raw_data_link(dataset_name):
-    if dataset_name == "wines":
-        return "https://zenodo.org/record/4812960/files/wines.txt?download=1"
-    if dataset_name == "video_games":
-        return "https://zenodo.org/record/4812962/files/video_games.txt?download=1"
+# def raw_data_link(dataset_name):
+#     if dataset_name == "wines":
+#         return "https://zenodo.org/record/4812960/files/wines.txt?download=1"
+#     if dataset_name == "video_games":
+#         return "https://zenodo.org/record/4812962/files/video_games.txt?download=1"
