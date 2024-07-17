@@ -27,7 +27,7 @@ def main():
     main_train(model_class_pointer, hyperparams,parser)
 
 
-def main_train(model_class_pointer, hparams,parser):
+def main_train(model_class_pointer, hparams, parser):
     """Initialize the model, call training loop."""
     pytorch_lightning.utilities.seed.seed_everything(seed=hparams.seed)
 
