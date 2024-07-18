@@ -7,6 +7,8 @@ from models.SDR.SDR import SDR
 from utils.argparse_init import default_arg_parser, init_parse_argparse_default_params
 import torch.nn.functional as F
 
+nltk.download('punkt')  # Ensure that the punkt package is downloaded
+
 # Function to tokenize the new documents
 def tokenize_document(document, tokenizer):
     paragraphs = document.split('\n\n')
@@ -53,7 +55,7 @@ def read_documents_from_directory(directory_path):
 # Main function for inference
 def main():
     parser = default_arg_parser()
-    parser = init_parse_argparse_default_params(parser)
+    init_parse_argparse_default_params(parser)
 
     # Parse the arguments
     hparams = parser.parse_args()
@@ -64,6 +66,10 @@ def main():
     # Read documents from the directory
     document_dir = './data/text_files'
     documents = read_documents_from_directory(document_dir)
+
+    if not documents:
+        print(f"No documents found in the directory {document_dir}")
+        return
 
     # Randomly select a source document
     source_filename = random.choice(list(documents.keys()))
