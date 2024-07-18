@@ -1,5 +1,6 @@
 # ./sdr_inference_hierarchical.py
 
+import os
 import torch
 from transformers import RobertaTokenizer
 from torch.nn.utils.rnn import pad_sequence
@@ -12,6 +13,7 @@ from models.SDR.SDR import SDR  # Assuming SDR is your custom model class
 import pytorch_lightning as pl
 
 def load_model_and_tokenizer(checkpoint_path, model_class, tokenizer_name):
+    checkpoint_path = os.path.expanduser(checkpoint_path)  # Expand the tilde to the home directory
     checkpoint = torch.load(checkpoint_path, map_location=torch.device('cpu'))
     hparams = checkpoint['hyper_parameters']
     model = model_class.load_from_checkpoint(checkpoint_path, hparams=hparams)
@@ -56,7 +58,7 @@ def rank_documents(source_document, candidate_documents, model, tokenizer, datas
     return rankings, similarity_scores
 
 if __name__ == "__main__":
-    checkpoint_path = "~/03_07_2024-23_10_34/"
+    checkpoint_path = "~/03_07_2024-23_10_34/last.ckpt"
     model_class = SDR  # Replace with the correct model class
     tokenizer_name = "roberta-large"
     dataset_class = CustomTextDatasetParagraphsSentencesTest
