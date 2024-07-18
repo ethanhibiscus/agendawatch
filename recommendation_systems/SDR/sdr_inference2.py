@@ -38,8 +38,9 @@ def generate_sentence_embeddings(model, processed_documents):
         for document in processed_documents:
             document_embeddings = []
             for paragraph in document:
-                outputs = model(**paragraph)
-                paragraph_embedding = outputs.last_hidden_state.mean(dim=1)  # Mean pooling
+                inputs = {key: val.to(model.device) for key, val in paragraph.items()}
+                outputs = model(**inputs)
+                paragraph_embedding = outputs[0].mean(dim=1)  # Assuming outputs[0] is the last_hidden_state
                 document_embeddings.append(paragraph_embedding)
             embeddings.append(document_embeddings)
     return embeddings
