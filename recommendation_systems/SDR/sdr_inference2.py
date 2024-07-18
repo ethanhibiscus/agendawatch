@@ -9,9 +9,9 @@ from models.reco.hierarchical_reco import vectorize_reco_hierarchical
 from data.datasets import CustomTextDatasetParagraphsSentencesTest
 from utils.torch_utils import to_numpy
 
-def load_model_and_tokenizer(checkpoint_path, model_class, tokenizer_class, model_args):
-    model = model_class.load_from_checkpoint(checkpoint_path, **model_args)
-    tokenizer = tokenizer_class.from_pretrained("roberta-large")
+def load_model_and_tokenizer(model_path, tokenizer_path):
+    model = RobertaModel.from_pretrained(model_path)
+    tokenizer = RobertaTokenizer.from_pretrained(tokenizer_path)
     return model, tokenizer
 
 def preprocess_documents(dataset_class, tokenizer, source_document, candidate_documents):
@@ -52,16 +52,14 @@ def rank_documents(source_document, candidate_documents, model, tokenizer, datas
     return rankings, similarity_scores
 
 if __name__ == "__main__":
-    checkpoint_path = "~/03_07_2024-23_10_34/last.ckpt"
-    model_class = RobertaModel  # Replace with the correct model class if different
-    tokenizer_class = RobertaTokenizer
+    model_path = "~/03_07_2024-23_10_34/last.ckpt"
+    tokenizer_path = "roberta-large"
     dataset_class = CustomTextDatasetParagraphsSentencesTest
-    model_args = {}  # Additional arguments if needed
 
     source_document = "Your source document text."
     candidate_documents = ["Candidate document text 1.", "Candidate document text 2.", ...]
 
-    model, tokenizer = load_model_and_tokenizer(checkpoint_path, model_class, tokenizer_class, model_args)
+    model, tokenizer = load_model_and_tokenizer(model_path, tokenizer_path)
     
     rankings, scores = rank_documents(source_document, candidate_documents, model, tokenizer, dataset_class)
     
