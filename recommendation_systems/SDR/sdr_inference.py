@@ -6,6 +6,7 @@ from transformers import RobertaTokenizer
 from models.SDR.SDR import SDR
 from torch.utils.data import DataLoader
 from tqdm import tqdm
+from functools import partial
 from utils.torch_utils import to_numpy
 from utils.argparse_init import init_parse_argparse_default_params
 from data.datasets import CustomTextDatasetParagraphsSentencesTest
@@ -14,9 +15,11 @@ from pytorch_lightning.utilities.seed import seed_everything
 
 def load_model_and_tokenizer(checkpoint_dir):
     print("Loading model and tokenizer...")
-    hparams_path = os.path.join(checkpoint_dir, 'last.ckpt')
-    model = SDR.load_from_checkpoint(hparams_path)
-    tokenizer = RobertaTokenizer.from_pretrained(model.hparams.config_name)
+    checkpoint_path = os.path.join(checkpoint_dir, 'last.ckpt')
+    checkpoint = torch.load(checkpoint_path)
+    hparams = checkpoint['hyper_parameters']
+    model = SDR.load_from_checkpoint(checkpoint_path, hparams=hparams)
+    tokenizer = RobertaTokenizer.from_pretrained(hparams['config_name'])
     print("Model and tokenizer loaded.")
     return model, tokenizer
 
@@ -25,8 +28,8 @@ def load_dataset(tokenizer, hparams):
     dataset = CustomTextDatasetParagraphsSentencesTest(
         tokenizer=tokenizer,
         hparams=hparams,
-        dataset_name=hparams.dataset_name,
-        block_size=hparams.block_size,
+        dataset_name=hparams['dataset_name'],
+        block_size=hparams['block_size'],
         mode="test",
     )
     print("Dataset loaded.")
@@ -37,8 +40,8 @@ def compute_similarity_scores(model, tokenizer, dataset, hparams):
     model.eval()
     dataloader = DataLoader(
         dataset,
-        batch_size=hparams.test_batch_size,
-        num_workers=hparams.num_data_workers,
+        batch_size=hparams['test_batch_size'],
+        num_workers=hparams['num_data_workers'],
         collate_fn=partial(reco_sentence_test_collate, tokenizer=tokenizer),
     )
 
@@ -46,7 +49,7 @@ def compute_similarity_scores(model, tokenizer, dataset, hparams):
     with torch.no_grad():
         for batch in tqdm(dataloader, desc="Processing batches"):
             section_out = []
-            for section in batch[0]:
+            for section in tqdm(batch[0], desc="Processing sections", leave=False):
                 sentences = []
                 for sentence in section[0][:8]:
                     sentences.append(sentence.mean(0))
