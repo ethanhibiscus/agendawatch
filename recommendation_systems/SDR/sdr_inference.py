@@ -1,151 +1,87 @@
 import os
-import torch
-import nltk
 import random
+import torch
 import pickle
 from transformers import RobertaTokenizer
 from models.SDR.SDR import SDR
-from utils.argparse_init import default_arg_parser, init_parse_argparse_default_params
-import torch.nn.functional as F
-from tqdm import tqdm
+from torch.utils.data import DataLoader
+from utils.torch_utils import to_numpy
+from utils.argparse_init import init_parse_argparse_default_params
+from data.datasets import CustomTextDatasetParagraphsSentencesTest
+from models.reco.hierarchical_reco import vectorize_reco_hierarchical
+from pytorch_lightning.utilities.seed import seed_everything
 
-nltk.download('punkt')  # Ensure that the punkt package is downloaded
+def load_model_and_tokenizer(checkpoint_dir):
+    # Load model and tokenizer
+    hparams_path = os.path.join(checkpoint_dir, 'last.ckpt')
+    model = SDR.load_from_checkpoint(hparams_path)
+    tokenizer = RobertaTokenizer.from_pretrained(model.hparams.config_name)
+    return model, tokenizer
 
-# Function to tokenize the new documents
-def tokenize_document(document, tokenizer):
-    paragraphs = document.split('\n\n')
-    tokenized_paragraphs = []
-    for paragraph in paragraphs:
-        sentences = nltk.sent_tokenize(paragraph)
-        tokenized_sentences = [tokenizer.encode(sentence, add_special_tokens=True, max_length=128, truncation=True) for sentence in sentences]
-        tokenized_paragraphs.append(tokenized_sentences)
-    return tokenized_paragraphs
+def load_dataset(tokenizer, hparams):
+    dataset = CustomTextDatasetParagraphsSentencesTest(
+        tokenizer=tokenizer,
+        hparams=hparams,
+        dataset_name=hparams.dataset_name,
+        block_size=hparams.block_size,
+        mode="test",
+    )
+    return dataset
 
-# Function to compute embeddings
-def compute_embeddings(tokenized_documents, model, tokenizer):
-    all_embeddings = []
-    for tokenized_paragraphs in tqdm(tokenized_documents, desc="Computing embeddings"):
-        paragraph_embeddings = []
-        for tokenized_sentences in tokenized_paragraphs:
-            sentences_tensor = [torch.tensor(sent, dtype=torch.long).unsqueeze(0) for sent in tokenized_sentences]
-            with torch.no_grad():
-                sentences_embeddings = [model.roberta(sent)[0].mean(1) for sent in sentences_tensor]  # Mean pooling
-            paragraph_embeddings.append(torch.stack(sentences_embeddings))
-        all_embeddings.append(paragraph_embeddings)
-    return all_embeddings
-
-# Function to compute similarity
-def compute_similarity(doc_embeddings1, doc_embeddings2):
-    similarities = []
-    for para1 in doc_embeddings1:
-        for para2 in doc_embeddings2:
-            sim_matrix = F.cosine_similarity(para1.unsqueeze(1), para2.unsqueeze(0), dim=-1)
-            paragraph_similarity = sim_matrix.max(dim=-1)[0].mean().item()  # Aggregating similarities
-            similarities.append(paragraph_similarity)
-    return sum(similarities) / len(similarities)
-
-# Function to read all documents from a directory
-def read_documents_from_directory(directory_path):
-    documents = {}
-    for filename in os.listdir(directory_path):
-        if filename.endswith('.txt'):
-            with open(os.path.join(directory_path, filename), 'r', encoding='utf-8') as file:
-                content = file.read().strip()
-                documents[filename] = content
-    return documents
-
-# Main function for inference
-def main():
-    print("Parsing arguments...")
-    parser = default_arg_parser()
-    parser = init_parse_argparse_default_params(parser)
-
-    # Add the base_model_name argument if it's missing
-    if not any(arg.dest == 'base_model_name' for arg in parser._actions):
-        parser.add_argument("--base_model_name", type=str, default="roberta", help="Base model name")
-
-    # Parse the arguments
-    hparams = parser.parse_args()
-
-    print("Loading tokenizer...")
-    # Load the tokenizer
-    tokenizer = RobertaTokenizer.from_pretrained('roberta-large')
-
-    print("Reading documents from directory...")
-    # Read documents from the directory
-    document_dir = './data/text_files'
-    documents = read_documents_from_directory(document_dir)
-
-    if not documents:
-        print(f"No documents found in the directory {document_dir}")
-        return
-
-    # Randomly select a source document
-    source_filename = random.choice(list(documents.keys()))
-    source_document = documents.pop(source_filename)
-    
-    print(f"Selected source document: {source_filename}")
-
-    print("Tokenizing source document and other documents...")
-    # Tokenize source document and other documents
-    tokenized_source_document = tokenize_document(source_document, tokenizer)
-    tokenized_documents = {filename: tokenize_document(content, tokenizer) for filename, content in tqdm(documents.items(), desc="Tokenizing documents")}
-
-    # Create output directory
-    output_dir = 'inference_outputs'
-    os.makedirs(output_dir, exist_ok=True)
-
-    # Save tokenized documents
-    with open(os.path.join(output_dir, 'tokenized_source_document.pkl'), 'wb') as f:
-        pickle.dump(tokenized_source_document, f)
-    with open(os.path.join(output_dir, 'tokenized_documents.pkl'), 'wb') as f:
-        pickle.dump(tokenized_documents, f)
-
-    print("Loading the trained model...")
-    # Load the trained model
-    hparams.resume_from_checkpoint = os.path.expanduser('~/03_07_2024-23_10_34/epoch=10.ckpt')  # Update with actual path
-    model = SDR(hparams)
-    checkpoint = torch.load(hparams.resume_from_checkpoint, map_location=torch.device('cpu'))
-    model.load_state_dict(checkpoint['state_dict'])
+def compute_similarity_scores(model, tokenizer, dataset, hparams):
     model.eval()
+    dataloader = DataLoader(
+        dataset,
+        batch_size=hparams.test_batch_size,
+        num_workers=hparams.num_data_workers,
+        collate_fn=partial(reco_sentence_test_collate, tokenizer=tokenizer),
+    )
 
-    print("Computing embeddings for the source document...")
-    # Compute embeddings for the source document
-    source_embeddings = compute_embeddings([tokenized_source_document], model, tokenizer)[0]
+    outputs = []
+    with torch.no_grad():
+        for batch in dataloader:
+            section_out = []
+            for section in batch[0]:
+                sentences = []
+                for sentence in section[0][:8]:
+                    sentences.append(sentence.mean(0))
+                section_out.append(torch.stack(sentences))
+            outputs.append((section_out, batch[0][0][1][0]))
+
+    return outputs
+
+def rank_documents(model, outputs):
+    titles = [output[1] for output in outputs]
+    section_sentences_features = [output[0] for output in outputs]
+    recos, metrics = vectorize_reco_hierarchical(
+        all_features=section_sentences_features,
+        titles=titles,
+        gt_path="",
+        output_path=""
+    )
+    return recos
+
+def save_results(recos, output_dir):
+    os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, 'ranked_documents.pkl')
+    with open(output_path, 'wb') as f:
+        pickle.dump(recos, f)
+    print(f"Results saved to {output_path}")
+
+def main():
+    checkpoint_dir = '~/03_07_2024-23_10_34'
+    output_dir = './inference_outputs'
+
+    seed_everything(42)
     
-    print("Computing embeddings for the other documents...")
-    # Compute embeddings for the other documents
-    document_embeddings = {filename: compute_embeddings([tokenized_content], model, tokenizer)[0] for filename, tokenized_content in tqdm(tokenized_documents.items(), desc="Computing document embeddings")}
-
-    # Save embeddings
-    with open(os.path.join(output_dir, 'source_embeddings.pkl'), 'wb') as f:
-        pickle.dump(source_embeddings, f)
-    with open(os.path.join(output_dir, 'document_embeddings.pkl'), 'wb') as f:
-        pickle.dump(document_embeddings, f)
-
-    print("Computing similarities...")
-    # Compute similarity and find top 15 similar documents
-    similarities = []
-    for filename, embeddings in tqdm(document_embeddings.items(), desc="Computing similarities"):
-        similarity_score = compute_similarity(source_embeddings, embeddings)
-        similarities.append((filename, similarity_score))
-
-    similarities.sort(key=lambda x: x[1], reverse=True)
-    top_15_similar_documents = similarities[:15]
-
-    # Save similarities
-    with open(os.path.join(output_dir, 'similarities.pkl'), 'wb') as f:
-        pickle.dump(similarities, f)
-
-    # Print out the title of the top 15 most similar documents
-    print(f"Source document: {source_filename}")
-    print("Top 15 most similar documents:")
-    for filename, score in top_15_similar_documents:
-        print(f"{filename}: {score}")
-
-    # Save top 15 similar documents
-    with open(os.path.join(output_dir, 'top_15_similar_documents.pkl'), 'wb') as f:
-        pickle.dump(top_15_similar_documents, f)
+    model, tokenizer = load_model_and_tokenizer(checkpoint_dir)
+    hparams = model.hparams
+    dataset = load_dataset(tokenizer, hparams)
+    
+    outputs = compute_similarity_scores(model, tokenizer, dataset, hparams)
+    recos = rank_documents(model, outputs)
+    
+    save_results(recos, output_dir)
 
 if __name__ == "__main__":
     main()
