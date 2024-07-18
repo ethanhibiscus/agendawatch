@@ -20,29 +20,33 @@ def load_model_and_tokenizer(checkpoint_path, model_class, tokenizer_name):
     tokenizer = RobertaTokenizer.from_pretrained(tokenizer_name)
     return model, tokenizer
 
-def preprocess_documents(dataset_class, tokenizer, source_document, candidate_documents):
+def preprocess_documents(tokenizer, source_document, candidate_documents):
     # Combine source and candidate documents into a single list
     all_documents = [source_document] + candidate_documents
-    # Create dataset
-    dataset = dataset_class(tokenizer, None, "custom_dataset", 512, mode="test", documents=all_documents)
-    return dataset
+    processed_documents = []
 
-def generate_sentence_embeddings(model, dataset):
+    for document in all_documents:
+        paragraphs = document.split("\n\n")
+        inputs = [tokenizer(paragraph, padding=True, truncation=True, max_length=512, return_tensors='pt') for paragraph in paragraphs]
+        processed_documents.append(inputs)
+    
+    return processed_documents
+
+def generate_sentence_embeddings(model, processed_documents):
     embeddings = []
     with torch.no_grad():
-        for batch in dataset:
-            for section in batch:
-                sentence_embeddings = []
-                for sentence in section:
-                    outputs = model(sentence[0].unsqueeze(0), attention_mask=None)
-                    sentence_embedding = outputs.last_hidden_state.mean(dim=1)  # Mean pooling
-                    sentence_embeddings.append(sentence_embedding)
-                embeddings.append(torch.stack(sentence_embeddings))
+        for document in processed_documents:
+            document_embeddings = []
+            for paragraph in document:
+                outputs = model(**paragraph)
+                paragraph_embedding = outputs.last_hidden_state.mean(dim=1)  # Mean pooling
+                document_embeddings.append(paragraph_embedding)
+            embeddings.append(document_embeddings)
     return embeddings
 
-def rank_documents(source_document, candidate_documents, model, tokenizer, dataset_class):
-    dataset = preprocess_documents(dataset_class, tokenizer, source_document, candidate_documents)
-    all_embeddings = generate_sentence_embeddings(model, dataset)
+def rank_documents(source_document, candidate_documents, model, tokenizer):
+    processed_documents = preprocess_documents(tokenizer, source_document, candidate_documents)
+    all_embeddings = generate_sentence_embeddings(model, processed_documents)
 
     source_embeddings_np = [to_numpy(embedding) for embedding in all_embeddings[0]]
     candidate_embeddings_np_list = [[to_numpy(embedding) for embedding in candidate_embeddings] for candidate_embeddings in all_embeddings[1:]]
@@ -61,14 +65,13 @@ if __name__ == "__main__":
     checkpoint_path = "~/03_07_2024-23_10_34/last.ckpt"
     model_class = SDR  # Replace with the correct model class
     tokenizer_name = "roberta-large"
-    dataset_class = CustomTextDatasetParagraphsSentencesTest
 
     source_document = "Your source document text."
     candidate_documents = ["Candidate document text 1.", "Candidate document text 2.", ...]
 
     model, tokenizer = load_model_and_tokenizer(checkpoint_path, model_class, tokenizer_name)
     
-    rankings, scores = rank_documents(source_document, candidate_documents, model, tokenizer, dataset_class)
+    rankings, scores = rank_documents(source_document, candidate_documents, model, tokenizer)
     
     print("Rankings:", rankings)
     print("Scores:", scores)
