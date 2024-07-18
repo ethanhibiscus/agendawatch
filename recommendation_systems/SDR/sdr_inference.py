@@ -1,7 +1,6 @@
 import os
 import torch
 from transformers import RobertaTokenizer
-from pytorch_lightning import Trainer
 from models.SDR.SDR import SDR
 from data.datasets import CustomTextDatasetParagraphsSentencesTest
 from sklearn.metrics.pairwise import cosine_similarity
@@ -11,14 +10,14 @@ from torch.utils.data import DataLoader
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Load the model checkpoint
-checkpoint_path = os.path.expanduser('~/03_07_2024-23_10_34/epoch=10.ckpt')
+checkpoint_path = '~/03_07_2024-23_10_34/epoch=10.ckpt'
 model = SDR.load_from_checkpoint(checkpoint_path).to(device)
 
 # Initialize the tokenizer
 tokenizer = RobertaTokenizer.from_pretrained('roberta-large')
 
 # Load source document and target documents
-source_document_path = './data/text_files/source.txt'
+source_document_path = './data/text_files/ab-bonnyville_civicplus_06092020-270.txt'
 target_documents_dir = './data/text_files/'
 
 # Read source document
@@ -28,7 +27,7 @@ with open(source_document_path, 'r', encoding='utf-8') as file:
 # Read target documents
 target_texts = []
 for filename in os.listdir(target_documents_dir):
-    if filename.endswith('.txt'):
+    if filename.endswith('.txt') and filename != os.path.basename(source_document_path):
         with open(os.path.join(target_documents_dir, filename), 'r', encoding='utf-8') as file:
             target_texts.append((filename, file.read()))
 
