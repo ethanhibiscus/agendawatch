@@ -2,13 +2,16 @@
 
 import torch
 from transformers import RobertaTokenizer, RobertaModel
-from torch.nn.functional import cosine_similarity
+from torch.nn.utils.rnn import pad_sequence
 import numpy as np
 from tqdm import tqdm
+from models.reco.hierarchical_reco import vectorize_reco_hierarchical
+from data.datasets import CustomTextDatasetParagraphsSentencesTest
+from utils.torch_utils import to_numpy
 
-def load_model_and_tokenizer(model_path, tokenizer_path):
-    model = RobertaModel.from_pretrained(model_path)
-    tokenizer = RobertaTokenizer.from_pretrained(tokenizer_path)
+def load_model_and_tokenizer(checkpoint_path, model_class, tokenizer_class, model_args):
+    model = model_class.load_from_checkpoint(checkpoint_path, **model_args)
+    tokenizer = tokenizer_class.from_pretrained("roberta-large")
     return model, tokenizer
 
 def preprocess_document(tokenizer, document, max_length=512):
@@ -25,32 +28,6 @@ def generate_sentence_embeddings(model, inputs):
             embeddings.append(sentence_embeddings)
     return embeddings
 
-def compute_sentence_similarity_matrix(source_paragraph, candidate_paragraph):
-    sentence_sim_matrix = cosine_similarity(source_paragraph.unsqueeze(1), candidate_paragraph.unsqueeze(0), dim=2)
-    return sentence_sim_matrix
-
-def compute_paragraph_similarity(source_embeddings, candidate_embeddings):
-    paragraph_similarities = []
-    for source_paragraph in source_embeddings:
-        paragraph_scores = []
-        for candidate_paragraph in candidate_embeddings:
-            sentence_sim_matrix = compute_sentence_similarity_matrix(source_paragraph, candidate_paragraph)
-            paragraph_score = sentence_sim_matrix.max(dim=-1)[0].mean().item()
-            paragraph_scores.append(paragraph_score)
-        paragraph_similarities.append(paragraph_scores)
-    return paragraph_similarities
-
-def normalize_scores(scores):
-    mean = np.mean(scores)
-    std = np.std(scores)
-    normalized_scores = [(score - mean) / (std if std > 0 else 1) for score in scores]
-    return normalized_scores
-
-def compute_document_similarity(paragraph_similarities):
-    normalized_similarities = [normalize_scores(row) for row in paragraph_similarities]
-    document_similarity_score = np.mean([max(row) for row in normalized_similarities])
-    return document_similarity_score
-
 def rank_documents(source_document, candidate_documents, model, tokenizer):
     source_inputs = preprocess_document(tokenizer, source_document)
     source_embeddings = generate_sentence_embeddings(model, source_inputs)
@@ -61,22 +38,29 @@ def rank_documents(source_document, candidate_documents, model, tokenizer):
         candidate_embeddings = generate_sentence_embeddings(model, candidate_inputs)
         candidate_embeddings_list.append(candidate_embeddings)
 
-    similarity_scores = []
-    for candidate_embeddings in candidate_embeddings_list:
-        paragraph_similarities = compute_paragraph_similarity(source_embeddings, candidate_embeddings)
-        document_similarity_score = compute_document_similarity(paragraph_similarities)
-        similarity_scores.append(document_similarity_score)
-    
+    source_embeddings_np = [to_numpy(embedding) for embedding in source_embeddings]
+    candidate_embeddings_np_list = [[to_numpy(embedding) for embedding in candidate_embeddings] for candidate_embeddings in candidate_embeddings_list]
+
+    titles = ["source"] + [f"candidate_{i}" for i in range(len(candidate_documents))]
+    all_embeddings = [source_embeddings_np] + candidate_embeddings_np_list
+
+    recos, metrics = vectorize_reco_hierarchical(all_embeddings, titles, gt_path="")
+
+    similarity_scores = [metrics['mrr']]  # Assuming 'mrr' as the similarity score for demonstration
     rankings = np.argsort(similarity_scores)[::-1]
+    
     return rankings, similarity_scores
 
 if __name__ == "__main__":
-    model_path = "path/to/your/model"
-    tokenizer_path = "path/to/your/tokenizer"
+    checkpoint_path = "~/03_07_2024-23_10_34/last.ckpt"
+    model_class = RobertaModel  # Replace with the correct model class if different
+    tokenizer_class = RobertaTokenizer
+    model_args = {}  # Additional arguments if needed
+
     source_document = "Your source document text."
     candidate_documents = ["Candidate document text 1.", "Candidate document text 2.", ...]
 
-    model, tokenizer = load_model_and_tokenizer(model_path, tokenizer_path)
+    model, tokenizer = load_model_and_tokenizer(checkpoint_path, model_class, tokenizer_class, model_args)
     
     rankings, scores = rank_documents(source_document, candidate_documents, model, tokenizer)
     
