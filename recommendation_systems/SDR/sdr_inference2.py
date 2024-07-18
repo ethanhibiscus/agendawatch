@@ -56,7 +56,7 @@ def rank_documents(source_document, candidate_documents, model, tokenizer, datas
     return rankings, similarity_scores
 
 if __name__ == "__main__":
-    checkpoint_path = "~/03_07_2024-23_10_34/last.ckpt"
+    checkpoint_path = "~/03_07_2024-23_10_34/"
     model_class = SDR  # Replace with the correct model class
     tokenizer_name = "roberta-large"
     dataset_class = CustomTextDatasetParagraphsSentencesTest
