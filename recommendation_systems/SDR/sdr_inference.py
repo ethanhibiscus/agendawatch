@@ -2,6 +2,7 @@ import os
 import torch
 import nltk
 import random
+import pickle
 from transformers import RobertaTokenizer
 from models.SDR.SDR import SDR
 from utils.argparse_init import default_arg_parser, init_parse_argparse_default_params
@@ -57,7 +58,11 @@ def read_documents_from_directory(directory_path):
 def main():
     print("Parsing arguments...")
     parser = default_arg_parser()
-    init_parse_argparse_default_params(parser)
+    parser = init_parse_argparse_default_params(parser)
+
+    # Add the base_model_name argument if it's missing
+    if not any(arg.dest == 'base_model_name' for arg in parser._actions):
+        parser.add_argument("--base_model_name", type=str, default="roberta", help="Base model name")
 
     # Parse the arguments
     hparams = parser.parse_args()
@@ -86,6 +91,16 @@ def main():
     tokenized_source_document = tokenize_document(source_document, tokenizer)
     tokenized_documents = {filename: tokenize_document(content, tokenizer) for filename, content in tqdm(documents.items(), desc="Tokenizing documents")}
 
+    # Create output directory
+    output_dir = 'inference_outputs'
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Save tokenized documents
+    with open(os.path.join(output_dir, 'tokenized_source_document.pkl'), 'wb') as f:
+        pickle.dump(tokenized_source_document, f)
+    with open(os.path.join(output_dir, 'tokenized_documents.pkl'), 'wb') as f:
+        pickle.dump(tokenized_documents, f)
+
     print("Loading the trained model...")
     # Load the trained model
     hparams.resume_from_checkpoint = os.path.expanduser('~/03_07_2024-23_10_34/epoch=10.ckpt')  # Update with actual path
@@ -102,6 +117,12 @@ def main():
     # Compute embeddings for the other documents
     document_embeddings = {filename: compute_embeddings([tokenized_content], model, tokenizer)[0] for filename, tokenized_content in tqdm(tokenized_documents.items(), desc="Computing document embeddings")}
 
+    # Save embeddings
+    with open(os.path.join(output_dir, 'source_embeddings.pkl'), 'wb') as f:
+        pickle.dump(source_embeddings, f)
+    with open(os.path.join(output_dir, 'document_embeddings.pkl'), 'wb') as f:
+        pickle.dump(document_embeddings, f)
+
     print("Computing similarities...")
     # Compute similarity and find top 15 similar documents
     similarities = []
@@ -112,11 +133,19 @@ def main():
     similarities.sort(key=lambda x: x[1], reverse=True)
     top_15_similar_documents = similarities[:15]
 
+    # Save similarities
+    with open(os.path.join(output_dir, 'similarities.pkl'), 'wb') as f:
+        pickle.dump(similarities, f)
+
     # Print out the title of the top 15 most similar documents
     print(f"Source document: {source_filename}")
     print("Top 15 most similar documents:")
     for filename, score in top_15_similar_documents:
         print(f"{filename}: {score}")
+
+    # Save top 15 similar documents
+    with open(os.path.join(output_dir, 'top_15_similar_documents.pkl'), 'wb') as f:
+        pickle.dump(top_15_similar_documents, f)
 
 if __name__ == "__main__":
     main()
