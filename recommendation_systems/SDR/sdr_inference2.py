@@ -1,17 +1,18 @@
 # ./sdr_inference_hierarchical.py
 
 import torch
-from transformers import RobertaTokenizer, RobertaModel
+from transformers import RobertaTokenizer
 from torch.nn.utils.rnn import pad_sequence
 import numpy as np
 from tqdm import tqdm
 from models.reco.hierarchical_reco import vectorize_reco_hierarchical
 from data.datasets import CustomTextDatasetParagraphsSentencesTest
 from utils.torch_utils import to_numpy
+from models.SDR.SDR import SDR  # Assuming SDR is your custom model class
 
-def load_model_and_tokenizer(model_path, tokenizer_path):
-    model = RobertaModel.from_pretrained(model_path)
-    tokenizer = RobertaTokenizer.from_pretrained(tokenizer_path)
+def load_model_and_tokenizer(checkpoint_path, model_class, tokenizer_name):
+    model = model_class.load_from_checkpoint(checkpoint_path)
+    tokenizer = RobertaTokenizer.from_pretrained(tokenizer_name)
     return model, tokenizer
 
 def preprocess_documents(dataset_class, tokenizer, source_document, candidate_documents):
@@ -52,14 +53,15 @@ def rank_documents(source_document, candidate_documents, model, tokenizer, datas
     return rankings, similarity_scores
 
 if __name__ == "__main__":
-    model_path = "~/03_07_2024-23_10_34/last.ckpt"
-    tokenizer_path = "roberta-large"
+    checkpoint_path = "~/03_07_2024-23_10_34/last.ckpt"
+    model_class = SDR  # Replace with the correct model class
+    tokenizer_name = "roberta-large"
     dataset_class = CustomTextDatasetParagraphsSentencesTest
 
     source_document = "Your source document text."
     candidate_documents = ["Candidate document text 1.", "Candidate document text 2.", ...]
 
-    model, tokenizer = load_model_and_tokenizer(model_path, tokenizer_path)
+    model, tokenizer = load_model_and_tokenizer(checkpoint_path, model_class, tokenizer_name)
     
     rankings, scores = rank_documents(source_document, candidate_documents, model, tokenizer, dataset_class)
     
