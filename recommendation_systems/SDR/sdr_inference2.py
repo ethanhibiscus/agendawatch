@@ -27,7 +27,7 @@ def preprocess_documents(tokenizer, source_document, candidate_documents):
 
     for document in all_documents:
         paragraphs = document.split("\n\n")
-        inputs = [tokenizer(paragraph, padding=True, truncation=True, max_length=512, return_tensors='pt') for paragraph in paragraphs]
+        inputs = [tokenizer(paragraph, padding='max_length', truncation=True, max_length=512, return_tensors='pt') for paragraph in paragraphs]
         processed_documents.append(inputs)
     
     return processed_documents
@@ -67,7 +67,7 @@ if __name__ == "__main__":
     tokenizer_name = "roberta-large"
 
     source_document = "Your source document text."
-    candidate_documents = ["Candidate document text 1.", "Candidate document text 2.", ...]
+    candidate_documents = ["Candidate document text 1.", "Candidate document text 2."]
 
     model, tokenizer = load_model_and_tokenizer(checkpoint_path, model_class, tokenizer_name)
     
