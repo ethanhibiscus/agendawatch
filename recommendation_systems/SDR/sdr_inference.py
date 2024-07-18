@@ -6,6 +6,7 @@ from transformers import RobertaTokenizer
 from models.SDR.SDR import SDR
 from utils.argparse_init import default_arg_parser, init_parse_argparse_default_params
 import torch.nn.functional as F
+from tqdm import tqdm
 
 nltk.download('punkt')  # Ensure that the punkt package is downloaded
 
@@ -22,7 +23,7 @@ def tokenize_document(document, tokenizer):
 # Function to compute embeddings
 def compute_embeddings(tokenized_documents, model, tokenizer):
     all_embeddings = []
-    for tokenized_paragraphs in tokenized_documents:
+    for tokenized_paragraphs in tqdm(tokenized_documents, desc="Computing embeddings"):
         paragraph_embeddings = []
         for tokenized_sentences in tokenized_paragraphs:
             sentences_tensor = [torch.tensor(sent, dtype=torch.long).unsqueeze(0) for sent in tokenized_sentences]
@@ -54,15 +55,18 @@ def read_documents_from_directory(directory_path):
 
 # Main function for inference
 def main():
+    print("Parsing arguments...")
     parser = default_arg_parser()
     init_parse_argparse_default_params(parser)
 
     # Parse the arguments
     hparams = parser.parse_args()
 
+    print("Loading tokenizer...")
     # Load the tokenizer
     tokenizer = RobertaTokenizer.from_pretrained('roberta-large')
 
+    print("Reading documents from directory...")
     # Read documents from the directory
     document_dir = './data/text_files'
     documents = read_documents_from_directory(document_dir)
@@ -75,10 +79,14 @@ def main():
     source_filename = random.choice(list(documents.keys()))
     source_document = documents.pop(source_filename)
     
+    print(f"Selected source document: {source_filename}")
+
+    print("Tokenizing source document and other documents...")
     # Tokenize source document and other documents
     tokenized_source_document = tokenize_document(source_document, tokenizer)
-    tokenized_documents = {filename: tokenize_document(content, tokenizer) for filename, content in documents.items()}
+    tokenized_documents = {filename: tokenize_document(content, tokenizer) for filename, content in tqdm(documents.items(), desc="Tokenizing documents")}
 
+    print("Loading the trained model...")
     # Load the trained model
     hparams.resume_from_checkpoint = os.path.expanduser('~/03_07_2024-23_10_34/epoch=10.ckpt')  # Update with actual path
     model = SDR(hparams)
@@ -86,13 +94,18 @@ def main():
     model.load_state_dict(checkpoint['state_dict'])
     model.eval()
 
-    # Compute embeddings
+    print("Computing embeddings for the source document...")
+    # Compute embeddings for the source document
     source_embeddings = compute_embeddings([tokenized_source_document], model, tokenizer)[0]
-    document_embeddings = {filename: compute_embeddings([tokenized_content], model, tokenizer)[0] for filename, tokenized_content in tokenized_documents.items()}
+    
+    print("Computing embeddings for the other documents...")
+    # Compute embeddings for the other documents
+    document_embeddings = {filename: compute_embeddings([tokenized_content], model, tokenizer)[0] for filename, tokenized_content in tqdm(tokenized_documents.items(), desc="Computing document embeddings")}
 
+    print("Computing similarities...")
     # Compute similarity and find top 15 similar documents
     similarities = []
-    for filename, embeddings in document_embeddings.items():
+    for filename, embeddings in tqdm(document_embeddings.items(), desc="Computing similarities"):
         similarity_score = compute_similarity(source_embeddings, embeddings)
         similarities.append((filename, similarity_score))
 
