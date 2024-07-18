@@ -28,7 +28,22 @@ import json
 nltk.download("punkt")
 
 class CustomTextDatasetParagraphsSentences(Dataset):
+    """
+    CustomTextDatasetParagraphsSentences is a custom dataset class that processes text files into tokenized sentences 
+    and organizes them into sections and paragraphs. It extends the PyTorch Dataset class.
+    """
+    
     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):
+        """
+        Initializes the dataset object by processing raw text data into tokenized sentences.
+
+        Args:
+            tokenizer (PreTrainedTokenizer): The tokenizer used for tokenizing the text data.
+            hparams: Hyperparameters for processing and training.
+            dataset_name (str): The name of the dataset.
+            block_size (int): The maximum length of a sequence.
+            mode (str): The mode in which the dataset is used (train, val, test).
+        """
         self.hparams = hparams
         cached_features_file = os.path.join(
             f"data/datasets/cached_proccessed/{dataset_name}",
@@ -96,6 +111,17 @@ class CustomTextDatasetParagraphsSentences(Dataset):
         self.labels = [idx_article for idx_article, _, _ in self.indices_map]
 
     def save_load_splitted_dataset(self, mode, cached_features_file, raw_data_path):
+        """
+        Saves or loads the processed dataset split into training and validation sets.
+
+        Args:
+            mode (str): The mode in which the dataset is used (train, val, test).
+            cached_features_file (str): Path to the cached features file.
+            raw_data_path (str): Path to the raw data.
+
+        Returns:
+            list: List of all articles.
+        """
         proccessed_path = f"{cached_features_file}_EXAMPLES"
         if not os.path.exists(proccessed_path):
             all_articles = self.read_all_articles(raw_data_path)
@@ -119,6 +145,15 @@ class CustomTextDatasetParagraphsSentences(Dataset):
         return all_articles
 
     def read_all_articles(self, raw_data_path):
+        """
+        Reads all articles from the raw data path.
+
+        Args:
+            raw_data_path (str): Path to the raw data.
+
+        Returns:
+            list: List of all articles.
+        """
         all_articles = []
         for filename in os.listdir(raw_data_path):
             if filename.endswith('.txt'):
@@ -128,14 +163,29 @@ class CustomTextDatasetParagraphsSentences(Dataset):
         return all_articles
 
     def download_raw(self, dataset_name):
+        """
+        Downloads raw data.
+        """
         raw_data_path = f"data/text_files"
         os.makedirs(os.path.dirname(raw_data_path), exist_ok=True)
         return raw_data_path
 
     def __len__(self):
+        """
+        Returns the number of items in the dataset.
+        """
         return len(self.indices_map)
 
     def __getitem__(self, item):
+        """
+        Returns a single item from the dataset.
+
+        Args:
+            item (int): Index of the item.
+
+        Returns:
+            tuple: Tokenized sentence and its metadata.
+        """
         idx_article, idx_section, idx_sentence = self.indices_map[item]
         sent = self.examples[idx_article][0][idx_section][0][idx_sentence]
 
@@ -154,13 +204,42 @@ class CustomTextDatasetParagraphsSentences(Dataset):
         )
 
 class CustomTextDatasetParagraphsSentencesTest(CustomTextDatasetParagraphsSentences):
+    """
+    CustomTextDatasetParagraphsSentencesTest is a custom dataset class for processing text files in test mode.
+    It extends the CustomTextDatasetParagraphsSentences class.
+    """
     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="test"):
+        """
+        Initializes the dataset object for test mode.
+
+        Args:
+            tokenizer (PreTrainedTokenizer): The tokenizer used for tokenizing the text data.
+            hparams: Hyperparameters for processing and training.
+            dataset_name (str): The name of the dataset.
+            block_size (int): The maximum length of a sequence.
+            mode (str): The mode in which the dataset is used (test).
+        """
         super().__init__(tokenizer, hparams, dataset_name, block_size, mode=mode)
 
     def __len__(self):
+        """
+        Returns the number of items in the test dataset.
+
+        Returns:
+            int: Number of items in the test dataset.
+        """
         return len(self.examples)
 
     def __getitem__(self, item):
+        """
+        Returns a single item from the test dataset.
+
+        Args:
+            item (int): Index of the item.
+
+        Returns:
+            list: List of tokenized sentences and their metadata.
+        """
         sections = []
         for idx_section, section in enumerate(self.examples[item][0]):
             sentences = []
@@ -181,7 +260,7 @@ class CustomTextDatasetParagraphsSentencesTest(CustomTextDatasetParagraphsSenten
             sections.append(sentences)
         return sections
 
-'''the following is all part of the original code from Microsoft SDR'''
+'''the following is all part of the original code from Microsoft SDR, they trained on wikipedia'''
 # class WikipediaTextDatasetParagraphsSentences(Dataset):
 #     def __init__(self, tokenizer: PreTrainedTokenizer, hparams, dataset_name, block_size, mode="train"):
 #         self.hparams = hparams

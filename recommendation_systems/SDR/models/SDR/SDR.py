@@ -1,7 +1,3 @@
-from data.datasets import (
-    WikipediaTextDatasetParagraphsSentences,
-    WikipediaTextDatasetParagraphsSentencesTest,
-)
 from utils.argparse_init import str2bool
 from models.SDR.SDR_utils import MPerClassSamplerDeter
 from data.data_utils import get_gt_seeds_titles, reco_sentence_collate, reco_sentence_test_collate
@@ -22,25 +18,42 @@ import json
 from data.datasets import CustomTextDatasetParagraphsSentences, CustomTextDatasetParagraphsSentencesTest
 
 
-
 class SDR(TransformersBase):
-
     """
+    SDR model (ACL IJCNLP 2021)
     Author: Dvir Ginzburg.
 
-    SDR model (ACL IJCNLP 2021)
+    The SDR (Self-Supervised Document Representation) model inherits from the TransformersBase class.
+    This model is used for document similarity tasks by leveraging the masked language modeling (MLM)
+    and document-to-vector (D2V) loss for self-supervised learning.
     """
 
-    def __init__(
-        self, hparams,
-    ):
-        """Stub."""
+    def __init__(self, hparams):
+        """
+        Initialize the SDR model.
+
+        Args:
+            hparams (Namespace): Hyperparameters for the model.
+        """
         super(SDR, self).__init__(hparams)
 
-
     def forward_train(self, batch):
+        """
+        Forward pass during training.
+
+        Args:
+            batch (tuple): A batch of input data.
+
+        Performs the following steps:
+        1. Masks tokens in the input for masked language modeling (MLM).
+        2. Passes the masked input through the model.
+        3. Computes the MLM loss.
+        4. Computes the D2V loss if available and updates the track metrics.
+        """
+        # Mask tokens for MLM task
         inputs, labels = transformer_utils.mask_tokens(batch[0].clone().detach(), self.tokenizer, self.hparams)
 
+        # Forward pass through the model
         outputs = self.model(
             inputs,
             masked_lm_labels=labels,
@@ -50,42 +63,81 @@ class SDR(TransformersBase):
             run_mlm=True,
         )
 
+        # Compute losses
         self.losses["mlm_loss"] = outputs[0]
-        self.losses["d2v_loss"] = (outputs[1] or 0)  * self.hparams.sim_loss_lambda # If no similarity loss we ignore
+        self.losses["d2v_loss"] = (outputs[1] or 0) * self.hparams.sim_loss_lambda  # If no similarity loss, ignore
 
-        tracked = self.track_metrics(input_ids=inputs, outputs=outputs, is_train=self.hparams.mode == "train", labels=labels,)
+        # Track metrics
+        tracked = self.track_metrics(input_ids=inputs, outputs=outputs, is_train=self.hparams.mode == "train", labels=labels)
         self.tracks.update(tracked)
 
-        return
-
     def forward_val(self, batch):
+        """
+        Forward pass during validation.
+
+        Args:
+            batch (tuple): A batch of input data.
+
+        Calls the forward_train function to reuse the same logic for validation.
+        """
         self.forward_train(batch)
 
     def test_step(self, batch, batch_idx):
+        """
+        Forward pass during testing.
+
+        Args:
+            batch (tuple): A batch of input data.
+            batch_idx (int): Index of the batch.
+
+        Processes each section in the batch, computes embeddings, and averages the non-padded tokens.
+        """
         section_out = []
-        for section in batch[0]:  # batch=1 for test
-            sentences=[]
+        for section in batch[0]:  # batch size is 1 for test
+            sentences = []
+            # Compute embeddings for each sentence in the section
             sentences_embed_per_token = [
                 self.model(
                     sentence.unsqueeze(0), masked_lm_labels=None, run_similarity=False
                 )[5].squeeze(0)
                 for sentence in section[0][:8]
             ]
+            # Average non-padded tokens
             for idx, sentence in enumerate(sentences_embed_per_token):
-                sentences.append(sentence[: section[2][idx]].mean(0))  # We take the non-padded tokens and mean them
+                sentences.append(sentence[: section[2][idx]].mean(0))  # Average non-padded tokens
             section_out.append(torch.stack(sentences))
-        return (section_out, batch[0][0][1][0])  # title name
+        return (section_out, batch[0][0][1][0])  # Return section output and title name
 
     def forward(self, batch):
+        """
+        Forward pass based on mode (train, val, or test).
+
+        Args:
+            batch (tuple): A batch of input data.
+
+        Calls the appropriate forward function based on the current mode.
+        """
         eval(f"self.forward_{self.hparams.mode}")(batch)
 
     @staticmethod
-    def track_metrics(
-        outputs=None, input_ids=None, labels=None, is_train=True, batch_idx=0,
-    ):
-        mode = "train" if is_train else "val"
+    def track_metrics(outputs=None, input_ids=None, labels=None, is_train=True, batch_idx=0):
+        """
+        Track and compute metrics for MLM accuracy.
 
+        Args:
+            outputs (tuple): Model outputs.
+            input_ids (Tensor): Input IDs.
+            labels (Tensor): Labels.
+            is_train (bool): Flag indicating if it's training mode.
+            batch_idx (int): Index of the batch.
+
+        Returns:
+            dict: Dictionary of tracked metrics.
+        """
+        mode = "train" if is_train else "val"
         trackes = {}
+
+        # Compute MLM accuracy
         lm_pred = np.argmax(outputs[3].cpu().detach().numpy(), axis=2)
         labels_numpy = labels.cpu().numpy()
         labels_non_zero = labels_numpy[np.array(labels_numpy != -100)] if np.any(labels_numpy != -100) else np.zeros(1)
@@ -95,14 +147,21 @@ class SDR(TransformersBase):
         ).reshape((1, -1))
 
         trackes["lm_acc_{}".format(mode)] = lm_acc.detach().cpu()
-
         return trackes
 
     def test_epoch_end(self, outputs, recos_path=None):
+        """
+        Perform actions at the end of the test epoch.
+
+        Args:
+            outputs (list): Outputs from the test steps.
+            recos_path (str): Path to save the recommendations (if any).
+        """
         if self.trainer.checkpoint_callback.last_model_path == "" and self.hparams.resume_from_checkpoint is None:
             self.trainer.checkpoint_callback.last_model_path = f"{self.hparams.hparams_dir}/no_train"
-        elif(self.hparams.resume_from_checkpoint is not None):
+        elif self.hparams.resume_from_checkpoint is not None:
             self.trainer.checkpoint_callback.last_model_path = self.hparams.resume_from_checkpoint
+
         if recos_path is None:
             save_outputs_path = f"{self.trainer.checkpoint_callback.last_model_path}_FEATURES_NumSamples_{len(outputs)}"
 
@@ -149,6 +208,15 @@ class SDR(TransformersBase):
         return
 
     def dataloader(self, mode=None):
+        """
+        Create dataloaders for training, validation, and testing.
+
+        Args:
+            mode (str): Mode indicating which dataloader to create ('train', 'val', 'test').
+
+        Returns:
+            DataLoader: PyTorch DataLoader for the specified mode.
+        """
         if mode == "train":
             sampler = MPerClassSampler(
                 self.train_dataset.labels,
@@ -162,7 +230,7 @@ class SDR(TransformersBase):
                 num_workers=self.hparams.num_data_workers,
                 sampler=sampler,
                 batch_size=self.hparams.train_batch_size,
-                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer,),
+                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer),
             )
 
         elif mode == "val":
@@ -178,7 +246,7 @@ class SDR(TransformersBase):
                 num_workers=self.hparams.num_data_workers,
                 sampler=sampler,
                 batch_size=self.hparams.val_batch_size,
-                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer,),
+                collate_fn=partial(reco_sentence_collate, tokenizer=self.tokenizer),
             )
 
         else:
@@ -186,12 +254,24 @@ class SDR(TransformersBase):
                 self.test_dataset,
                 num_workers=self.hparams.num_data_workers,
                 batch_size=self.hparams.test_batch_size,
-                collate_fn=partial(reco_sentence_test_collate, tokenizer=self.tokenizer,),
+                collate_fn=partial(reco_sentence_test_collate, tokenizer=self.tokenizer),
             )
         return loader
 
     @staticmethod
     def add_model_specific_args(parent_parser, task_name, dataset_name, is_lowest_leaf=False):
+        """
+        Add model-specific arguments to the argument parser.
+
+        Args:
+            parent_parser (argparse.ArgumentParser): Parent argument parser.
+            task_name (str): Name of the task.
+            dataset_name (str): Name of the dataset.
+            is_lowest_leaf (bool): Flag indicating if this is the lowest leaf parser.
+
+        Returns:
+            argparse.ArgumentParser: Argument parser with added model-specific arguments.
+        """
         parser = TransformersBase.add_model_specific_args(parent_parser, task_name, dataset_name, is_lowest_leaf=False)
         parser.add_argument("--hard_mine", type=str2bool, nargs="?", const=True, default=True)
         parser.add_argument("--metric_loss_func", type=str, default="ContrastiveLoss")  # TripletMarginLoss #CosineLoss
@@ -210,6 +290,11 @@ class SDR(TransformersBase):
         return parser
 
     def prepare_data(self):
+        """
+        Prepare data for training, validation, and testing.
+
+        Loads and processes the datasets for different modes (train, val, test).
+        """
         block_size = (
             self.hparams.block_size
             if hasattr(self.hparams, "block_size")
@@ -241,4 +326,3 @@ class SDR(TransformersBase):
             block_size=block_size,
             mode="test",
         )
-
