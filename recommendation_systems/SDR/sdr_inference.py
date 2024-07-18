@@ -21,15 +21,15 @@ def load_model_and_tokenizer(checkpoint_dir):
     model = SDR.load_from_checkpoint(checkpoint_path, hparams=hparams)
     tokenizer = RobertaTokenizer.from_pretrained(hparams['config_name'])
     print("Model and tokenizer loaded.")
-    return model, tokenizer
+    return model, tokenizer, hparams
 
 def load_dataset(tokenizer, hparams):
     print("Loading dataset...")
     dataset = CustomTextDatasetParagraphsSentencesTest(
         tokenizer=tokenizer,
         hparams=hparams,
-        dataset_name=hparams['dataset_name'],
-        block_size=hparams['block_size'],
+        dataset_name=hparams.get('dataset_name', 'default_dataset_name'),  # Fallback if key doesn't exist
+        block_size=hparams.get('block_size', 512),  # Fallback to 512 if key doesn't exist
         mode="test",
     )
     print("Dataset loaded.")
@@ -40,8 +40,8 @@ def compute_similarity_scores(model, tokenizer, dataset, hparams):
     model.eval()
     dataloader = DataLoader(
         dataset,
-        batch_size=hparams['test_batch_size'],
-        num_workers=hparams['num_data_workers'],
+        batch_size=hparams.get('test_batch_size', 1),  # Fallback to 1 if key doesn't exist
+        num_workers=hparams.get('num_data_workers', 0),  # Fallback to 0 if key doesn't exist
         collate_fn=partial(reco_sentence_test_collate, tokenizer=tokenizer),
     )
 
@@ -87,8 +87,7 @@ def main():
     print("Initializing...")
     seed_everything(42)
     
-    model, tokenizer = load_model_and_tokenizer(checkpoint_dir)
-    hparams = model.hparams
+    model, tokenizer, hparams = load_model_and_tokenizer(checkpoint_dir)
     dataset = load_dataset(tokenizer, hparams)
     
     outputs = compute_similarity_scores(model, tokenizer, dataset, hparams)
