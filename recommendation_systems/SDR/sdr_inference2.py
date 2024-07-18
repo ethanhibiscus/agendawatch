@@ -9,9 +9,12 @@ from models.reco.hierarchical_reco import vectorize_reco_hierarchical
 from data.datasets import CustomTextDatasetParagraphsSentencesTest
 from utils.torch_utils import to_numpy
 from models.SDR.SDR import SDR  # Assuming SDR is your custom model class
+import pytorch_lightning as pl
 
 def load_model_and_tokenizer(checkpoint_path, model_class, tokenizer_name):
-    model = model_class.load_from_checkpoint(checkpoint_path)
+    checkpoint = torch.load(checkpoint_path, map_location=torch.device('cpu'))
+    hparams = checkpoint['hyper_parameters']
+    model = model_class.load_from_checkpoint(checkpoint_path, hparams=hparams)
     tokenizer = RobertaTokenizer.from_pretrained(tokenizer_name)
     return model, tokenizer
 
