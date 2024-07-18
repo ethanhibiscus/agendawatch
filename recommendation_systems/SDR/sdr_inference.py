@@ -81,7 +81,7 @@ def save_results(recos, output_dir):
     print(f"Results saved to {output_path}")
 
 def main():
-    checkpoint_dir = '~/03_07_2024-23_10_34'
+    checkpoint_dir = os.path.expanduser('~/03_07_2024-23_10_34')
     output_dir = './inference_outputs'
 
     print("Initializing...")
