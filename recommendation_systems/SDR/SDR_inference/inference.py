@@ -7,7 +7,7 @@ from SDR_inference.utils import compute_sentence_embeddings, compute_similarity_
 
 def main():
     # Define paths
-    model_dir = "./output/document_similarity/arch_SDR/dataset_name_custom_dataset/test_only_False"
+    model_dir = "~/03_07_2024-23_10_34"
     data_dir = "./data/text_files"
     model_path = extract_model_path_for_hyperparams(model_dir, SDR)
     
