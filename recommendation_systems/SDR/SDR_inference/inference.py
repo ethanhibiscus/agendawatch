@@ -1,6 +1,7 @@
 import os
 import sys
 import torch
+import pytorch_lightning as pl
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
@@ -56,8 +57,8 @@ def main():
 
     # Print or save the ranked documents
     print("Ranked documents:")
-    for rank, doc in enumerate(ranked_docs):
-        print(f"Rank {rank + 1}: {doc}")
+    for rank, (i, j, score) in enumerate(ranked_docs):
+        print(f"Rank {rank + 1}: Document {i} vs Document {j} with score {score}")
 
 if __name__ == "__main__":
     main()
