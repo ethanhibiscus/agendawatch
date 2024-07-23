@@ -9,7 +9,9 @@ def compute_sentence_embeddings(model, documents):
         sentence_embeddings = []
         for sentence in sentences:
             inputs = model.tokenizer(sentence, return_tensors="pt", truncation=True, padding=True)
-            outputs = model(**inputs)
+            input_ids = inputs['input_ids']
+            attention_mask = inputs['attention_mask']
+            outputs = model(input_ids=input_ids, attention_mask=attention_mask)
             embeddings = torch.mean(outputs.last_hidden_state, dim=1)
             sentence_embeddings.append(embeddings)
         embeddings[doc_id] = torch.stack(sentence_embeddings)
