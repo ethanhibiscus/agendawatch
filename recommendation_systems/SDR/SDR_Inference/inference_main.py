@@ -15,6 +15,9 @@ from argparse import Namespace
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 def main(model_weights_path, data_dir, cache_dir):
+    # Expand the tilde in the model weights path
+    model_weights_path = os.path.expanduser(model_weights_path)
+    
     # Initialize hyperparameters
     parser = argparse.ArgumentParser()
     init_parse_argparse_default_params(parser, dataset_name="custom_dataset", arch="SDR")
