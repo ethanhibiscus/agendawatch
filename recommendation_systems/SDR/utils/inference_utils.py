@@ -15,6 +15,10 @@ def compute_sentence_embeddings(model, documents):
                 outputs = model(
                     input_ids=input_ids,
                     attention_mask=attention_mask,
+                    token_type_ids=None,  # Adjust if necessary
+                    position_ids=None,  # Adjust if necessary
+                    head_mask=None,  # Adjust if necessary
+                    inputs_embeds=None,  # Adjust if necessary
                     run_mlm=False,  # Set to False if not using MLM during inference
                     run_similarity=True  # Set to True if using similarity computation
                 )
