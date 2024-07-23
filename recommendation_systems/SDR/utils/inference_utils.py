@@ -9,8 +9,14 @@ def compute_sentence_embeddings(model, documents):
             inputs = model.tokenizer(doc, return_tensors='pt', padding=True, truncation=True)
             input_ids = inputs['input_ids']
             attention_mask = inputs['attention_mask']
-            outputs = model(input_ids=input_ids, attention_mask=attention_mask)
-            embeddings.append(outputs[0].mean(dim=1).squeeze().cpu().numpy())
+            print(f"input_ids: {input_ids.shape}, attention_mask: {attention_mask.shape}")
+            try:
+                outputs = model(input_ids=input_ids, attention_mask=attention_mask)
+                embeddings.append(outputs[0].mean(dim=1).squeeze().cpu().numpy())
+            except TypeError as e:
+                print(f"Error in model forward pass: {e}")
+                print(f"Model input args: input_ids={input_ids}, attention_mask={attention_mask}")
+                raise e
     return embeddings
 
 def compute_similarity_scores(doc_embeddings):
