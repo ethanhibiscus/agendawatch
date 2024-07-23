@@ -27,16 +27,16 @@ def preprocess_documents(data_dir, cache_dir, model_weights_path, hparams):
     checkpoint = torch.load(model_weights_path, map_location=torch.device('cpu'))
     state_dict = checkpoint['state_dict']
     
-    # Remove the 'model.' prefix from the keys in the state dictionary if it exists
+    # Remove the 'roberta.' prefix from the keys in the state dictionary if it exists
     new_state_dict = {}
     for k, v in state_dict.items():
-        if k.startswith('model.'):
-            new_state_dict[k[len('model.'):]] = v
+        if k.startswith('roberta.'):
+            new_state_dict[k[len('roberta.'):]] = v
         else:
             new_state_dict[k] = v
     
     print("Loading model state dictionary...")
-    model.load_state_dict(new_state_dict)
+    model.load_state_dict(new_state_dict, strict=False)
     model.eval()
     
     print("Loading dataset...")
