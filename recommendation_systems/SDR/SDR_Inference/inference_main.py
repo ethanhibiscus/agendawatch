@@ -1,18 +1,22 @@
 import os
+import sys
 import torch
 import random
 from tqdm import tqdm
+from argparse import ArgumentParser, Namespace
 from pre_process import preprocess_documents
 from sentence_embeddings import generate_sentence_embeddings
 from similarity_matrices import compute_similarity_matrices
 from normalization import normalize_matrices
 from ranking import rank_documents
 from utils.argparse_init import init_parse_argparse_default_params
-from argparse import Namespace
+
+# Add the project root directory to the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 def main(model_weights_path, data_dir, cache_dir):
     # Initialize hyperparameters
-    parser = init_parse_argparse_default_params(argparse.ArgumentParser(), dataset_name="custom_dataset", arch="SDR")
+    parser = init_parse_argparse_default_params(ArgumentParser(), dataset_name="custom_dataset", arch="SDR")
     hparams = Namespace(**vars(parser.parse_args()))
     
     # Step 1: Pre-process text files or load caches
@@ -21,7 +25,8 @@ def main(model_weights_path, data_dir, cache_dir):
     print(f"Pre-processed {len(processed_data)} documents.")
     
     # Select a random document as the source document
-    source_document_path = random.choice(processed_data)[0]
+    source_document = random.choice(processed_data)
+    source_document_path = source_document[0]
     print(f"Selected '{source_document_path}' as the source document.")
 
     # Step 2: Generate sentence embeddings

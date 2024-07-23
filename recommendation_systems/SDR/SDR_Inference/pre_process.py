@@ -1,8 +1,8 @@
 import os
 import pickle
 from tqdm import tqdm
-from data.datasets import CustomTextDatasetParagraphsSentences
 from transformers import RobertaTokenizer
+from data.datasets import CustomTextDatasetParagraphsSentences
 
 def preprocess_documents(data_dir, cache_dir, hparams):
     cache_path = os.path.join(cache_dir, "processed_data.pkl")
