@@ -16,8 +16,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 def main(model_weights_path, data_dir, cache_dir):
     # Initialize hyperparameters
-    parser = init_parse_argparse_default_params(argparse.ArgumentParser(), dataset_name="custom_dataset", arch="SDR")
-    hparams = Namespace(**vars(parser.parse_args()))
+    parser = argparse.ArgumentParser()
+    init_parse_argparse_default_params(parser, dataset_name="custom_dataset", arch="SDR")
+    hparams = parser.parse_args()
     
     # Step 1: Pre-process text files or load caches
     print("Step 1: Pre-processing documents...")
