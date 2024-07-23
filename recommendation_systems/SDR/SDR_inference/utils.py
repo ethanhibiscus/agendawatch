@@ -17,7 +17,7 @@ def compute_sentence_embeddings(model, documents):
 
 def compute_similarity_scores(doc_embeddings):
     scores = {}
-    for doc_id, embeddings in doc_embeddings.items():
+    for doc_id, embeddings in tqdm(doc_embeddings.items(), desc="Computing similarity scores"):
         sim_matrix = cosine_similarity(embeddings.unsqueeze(1), embeddings.unsqueeze(0), dim=-1)
         scores[doc_id] = sim_matrix
     return scores
