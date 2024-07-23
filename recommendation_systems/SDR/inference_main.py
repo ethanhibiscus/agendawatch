@@ -5,6 +5,7 @@ from transformers import RobertaTokenizer
 from functools import partial
 from tqdm import tqdm
 import pickle
+from argparse import Namespace
 from models.SDR.SDR import SDR
 from data.datasets import CustomTextDatasetParagraphsSentencesTest
 from models.reco.recos_utils import sim_matrix
@@ -12,13 +13,12 @@ from models.reco.hierarchical_reco import mean_non_pad_value
 from data.data_utils import reco_sentence_test_collate
 
 # Define the hparams as per your configuration
-class HParams:
-    dataset_name = 'custom_dataset'
-    limit_tokens = 512
-    num_data_workers = 4
-    test_batch_size = 1
-
-hparams = HParams()
+hparams = Namespace(
+    dataset_name='custom_dataset',
+    limit_tokens=512,
+    num_data_workers=4,
+    test_batch_size=1
+)
 
 def main():
     print("Starting inference process...")
