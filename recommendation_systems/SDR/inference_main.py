@@ -17,7 +17,8 @@ hparams = Namespace(
     dataset_name='custom_dataset',
     limit_tokens=512,
     num_data_workers=4,
-    test_batch_size=1
+    test_batch_size=1,
+    default_root_dir='./output'  # Add this line to include the missing attribute
 )
 
 def main():
