@@ -1,5 +1,6 @@
 import os
 import sys
+import torch
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
@@ -26,12 +27,9 @@ def main():
     
     # Load the model
     print(f"Loading model from checkpoint: {model_path}")
-    hparams_file = os.path.join(model_dir, "hparams.yaml")
-    if os.path.exists(hparams_file):
-        hparams = torch.load(hparams_file)
-    else:
-        raise FileNotFoundError(f"hparams.yaml not found in {model_dir}")
-
+    checkpoint = torch.load(model_path, map_location=lambda storage, loc: storage)
+    hparams = checkpoint['hyper_parameters']
+    
     model = SDR.load_from_checkpoint(model_path, hparams=hparams)
     model.eval()
     print("Model loaded successfully.")
