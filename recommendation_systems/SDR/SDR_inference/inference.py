@@ -8,6 +8,13 @@ from models.SDR.SDR import SDR
 from SDR_inference.data_loader import load_data
 from utils.inference_utils import compute_sentence_embeddings, compute_similarity_scores, rank_documents
 
+def get_latest_checkpoint(directory):
+    checkpoints = [os.path.join(directory, f) for f in os.listdir(directory) if f.endswith('.ckpt')]
+    if not checkpoints:
+        raise FileNotFoundError(f"No checkpoint files found in directory: {directory}")
+    latest_checkpoint = max(checkpoints, key=os.path.getctime)
+    return latest_checkpoint
+
 def main():
     print("Starting inference...")
 
@@ -15,9 +22,10 @@ def main():
     model_dir = os.path.expanduser("~/03_07_2024-23_10_34")
     data_dir = "./data/text_files"
     print(f"Loading model from: {model_dir}")
-    model_path = extract_model_path_for_hyperparams(model_dir, SDR)
+    model_path = get_latest_checkpoint(model_dir)
     
     # Load the model
+    print(f"Loading model from checkpoint: {model_path}")
     model = SDR.load_from_checkpoint(model_path)
     model.eval()
     print("Model loaded successfully.")
