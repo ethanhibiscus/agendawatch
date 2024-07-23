@@ -1,5 +1,8 @@
 import os
-import torch
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from utils.model_utils import extract_model_path_for_hyperparams
 from models.SDR.SDR import SDR
 from SDR_inference.data_loader import load_data
@@ -9,7 +12,7 @@ def main():
     print("Starting inference...")
 
     # Define paths
-    model_dir = "~/03_07_2024-23_10_34"
+    model_dir = os.path.expanduser("~/03_07_2024-23_10_34")
     data_dir = "./data/text_files"
     print(f"Loading model from: {model_dir}")
     model_path = extract_model_path_for_hyperparams(model_dir, SDR)
