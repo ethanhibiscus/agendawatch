@@ -1,62 +1,51 @@
 import os
-import sys
-import argparse  # Import argparse module
-import torch
-import random
+import argparse
 from tqdm import tqdm
-from pre_process import preprocess_documents
-from similarity_matrices import compute_similarity_matrices
-from normalization import normalize_matrices
-from ranking import rank_documents
-from utils.argparse_init import init_parse_argparse_default_params
-from argparse import Namespace
+from transformers import RobertaModel, RobertaTokenizer
+import torch
+import pickle
 
-# Ensure the root directory is in the Python path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from pre_process import preprocess_documents
+from data.datasets import init_parse_argparse_default_params
 
 def main(model_weights_path, data_dir, cache_dir):
-    # Expand the tilde in the model weights path
-    model_weights_path = os.path.expanduser(model_weights_path)
-    
-    # Ensure that the path is a file, not a directory
-    if os.path.isdir(model_weights_path):
-        model_weights_path = os.path.join(model_weights_path, 'last.ckpt')  # Using 'last.ckpt' as an example; adjust as needed
-    
-    # Initialize hyperparameters
-    parser = argparse.ArgumentParser()
-    init_parse_argparse_default_params(parser, dataset_name="custom_dataset", arch="SDR")
-    hparams = parser.parse_args()
-    
-    # Step 1: Pre-process text files or load caches
+    print("Initializing argument parser...")
+    parser = init_parse_argparse_default_params(argparse.ArgumentParser(), dataset_name="custom_dataset", arch="SDR")
+    hparams = vars(parser.parse_args())
+
+    # Add default values for missing parameters
+    default_params = {
+        'limit_tokens': 512,
+        'batch_size': 8,
+        'num_workers': 4
+    }
+    for key, value in default_params.items():
+        if key not in hparams:
+            hparams[key] = value
+    hparams = argparse.Namespace(**hparams)
+
     print("Step 1: Pre-processing documents...")
     processed_data = preprocess_documents(data_dir, cache_dir, model_weights_path, hparams)
-    print(f"Pre-processed and generated embeddings for {len(processed_data)} documents.")
-    
-    # Select a random document as the source document
-    source_document_path = random.choice(processed_data)[0]
-    print(f"Selected '{source_document_path}' as the source document.")
 
-    # Step 2: Compute similarity matrices
-    print("Step 2: Computing similarity matrices...")
-    similarity_matrices = compute_similarity_matrices(processed_data, source_document_path)
-    print(f"Computed similarity matrices for {len(similarity_matrices)} documents.")
+    print("Step 2: Selecting a random source document...")
+    source_document = random.choice(processed_data)
+    source_embedding = source_document[1]
 
-    # Step 3: Normalize matrices
-    print("Step 3: Normalizing matrices...")
-    normalized_matrices = normalize_matrices(similarity_matrices)
-    print("Normalized similarity matrices.")
+    print("Step 3: Calculating similarity scores...")
+    similarity_scores = []
+    for filename, embedding in tqdm(processed_data, desc="Calculating similarity scores", unit="doc"):
+        similarity = torch.cosine_similarity(source_embedding, embedding)
+        similarity_scores.append((filename, similarity.item()))
 
-    # Step 4: Rank documents
     print("Step 4: Ranking documents...")
-    ranked_documents = rank_documents(normalized_matrices)
-    print("Ranked documents based on similarity scores.")
-
+    ranked_documents = sorted(similarity_scores, key=lambda x: x[1], reverse=True)
     return ranked_documents
 
 if __name__ == "__main__":
-    model_weights_path = "~/03_07_2024-23_10_34"  # Path to the trained model weights
-    data_dir = "./data/text_files"
-    cache_dir = "./SDR_inference/cache"
-    
+    model_weights_path = os.path.expanduser('~/03_07_2024-23_10_34/last.ckpt')
+    data_dir = './data/text_files'
+    cache_dir = './cache_dir'
     ranked_documents = main(model_weights_path, data_dir, cache_dir)
-    print("Ranked Documents:", ranked_documents)
+    print("Top 5 similar documents:")
+    for doc in ranked_documents[:5]:
+        print(doc)
