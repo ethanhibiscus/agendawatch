@@ -21,11 +21,15 @@ class HParams:
 hparams = HParams()
 
 def main():
+    print("Starting inference process...")
+
     # Load the tokenizer and model
+    print("Loading tokenizer...")
     tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
     model_dir = "/home/ethanhsu/03_07_2024-23_10_34"
 
     # Find the checkpoint file
+    print("Searching for checkpoint file in directory:", model_dir)
     checkpoint_file = None
     for file_name in os.listdir(model_dir):
         if file_name.endswith(".ckpt"):
@@ -35,15 +39,19 @@ def main():
     if checkpoint_file is None:
         raise FileNotFoundError("No checkpoint file found in the directory.")
     
+    print("Checkpoint file found:", checkpoint_file)
+    print("Loading model from checkpoint...")
     model = SDR.load_from_checkpoint(checkpoint_path=checkpoint_file, hparams=hparams)
 
     # Prepare the dataset
+    print("Preparing the dataset...")
     test_dataset = CustomTextDatasetParagraphsSentencesTest(tokenizer=tokenizer, hparams=hparams, dataset_name=hparams.dataset_name, block_size=hparams.limit_tokens, mode='test')
     test_loader = DataLoader(test_dataset, batch_size=hparams.test_batch_size, collate_fn=partial(reco_sentence_test_collate, tokenizer=tokenizer), num_workers=hparams.num_data_workers)
 
     # Create output directory if it doesn't exist
     output_dir = "./inference_outputs"
     os.makedirs(output_dir, exist_ok=True)
+    print(f"Output directory created/verified: {output_dir}")
 
     # Extract features for all documents
     all_features = []
@@ -62,9 +70,10 @@ def main():
 
     # Save intermediate features
     features_path = os.path.join(output_dir, "all_features.pkl")
+    print(f"Saving intermediate features to {features_path}...")
     with open(features_path, "wb") as f:
         pickle.dump(all_features, f)
-    print(f"Saved intermediate features to {features_path}")
+    print(f"Intermediate features saved to {features_path}")
 
     # Compute similarity between the source document and all other documents
     source_doc_features = all_features[0]  # Assuming the first document is the source document
@@ -79,23 +88,28 @@ def main():
 
     # Save similarity scores
     similarity_scores_path = os.path.join(output_dir, "similarity_scores.pkl")
+    print(f"Saving similarity scores to {similarity_scores_path}...")
     with open(similarity_scores_path, "wb") as f:
         pickle.dump(similarity_scores, f)
-    print(f"Saved similarity scores to {similarity_scores_path}")
+    print(f"Similarity scores saved to {similarity_scores_path}")
 
     # Rank the documents based on similarity scores
+    print("Ranking the documents based on similarity scores...")
     ranked_documents = sorted(similarity_scores, key=lambda x: x[1], reverse=True)
 
     # Save ranked documents
     ranked_documents_path = os.path.join(output_dir, "ranked_documents.pkl")
+    print(f"Saving ranked documents to {ranked_documents_path}...")
     with open(ranked_documents_path, "wb") as f:
         pickle.dump(ranked_documents, f)
-    print(f"Saved ranked documents to {ranked_documents_path}")
+    print(f"Ranked documents saved to {ranked_documents_path}")
 
     # Output the ranked documents
     print("Final ranked documents:")
     for doc_id, score in ranked_documents:
         print(f"Document {doc_id} - Similarity Score: {score}")
+
+    print("Inference process completed.")
 
 if __name__ == "__main__":
     main()
