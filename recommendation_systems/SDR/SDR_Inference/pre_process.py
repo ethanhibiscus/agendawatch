@@ -1,9 +1,14 @@
 import os
 import pickle
 from tqdm import tqdm
-from data.datasets import CustomTextDatasetParagraphsSentences
 from transformers import RobertaTokenizer, RobertaModel
 import torch
+
+# Ensure the root directory is in the Python path
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from data.datasets import CustomTextDatasetParagraphsSentences
 
 def preprocess_documents(data_dir, cache_dir, model_weights_path, hparams):
     cache_path = os.path.join(cache_dir, "processed_data_with_embeddings.pkl")

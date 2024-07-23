@@ -1,4 +1,5 @@
 import os
+import sys
 import torch
 import random
 from tqdm import tqdm
@@ -8,6 +9,9 @@ from normalization import normalize_matrices
 from ranking import rank_documents
 from utils.argparse_init import init_parse_argparse_default_params
 from argparse import Namespace
+
+# Ensure the root directory is in the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 def main(model_weights_path, data_dir, cache_dir):
     # Initialize hyperparameters
