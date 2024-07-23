@@ -1,8 +1,8 @@
+import os
 import torch
 from torch.utils.data import DataLoader
 from transformers import RobertaTokenizer
 from functools import partial
-import os
 from models.SDR.SDR import SDR
 from data.datasets import CustomTextDatasetParagraphsSentencesTest
 from models.reco.recos_utils import sim_matrix
@@ -21,8 +21,19 @@ hparams = HParams()
 def main():
     # Load the tokenizer and model
     tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
-    model_path = "~/03_07_2024-23_10_34"
-    model = SDR.load_from_checkpoint(checkpoint_path=model_path, hparams=hparams)
+    model_dir = "/home/ethanhsu/03_07_2024-23_10_34"
+
+    # Find the checkpoint file
+    checkpoint_file = None
+    for file_name in os.listdir(model_dir):
+        if file_name.endswith(".ckpt"):
+            checkpoint_file = os.path.join(model_dir, file_name)
+            break
+    
+    if checkpoint_file is None:
+        raise FileNotFoundError("No checkpoint file found in the directory.")
+    
+    model = SDR.load_from_checkpoint(checkpoint_path=checkpoint_file, hparams=hparams)
 
     # Prepare the dataset
     test_dataset = CustomTextDatasetParagraphsSentencesTest(tokenizer=tokenizer, hparams=hparams, dataset_name=hparams.dataset_name, block_size=hparams.limit_tokens, mode='test')
