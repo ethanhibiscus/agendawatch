@@ -18,7 +18,9 @@ hparams = Namespace(
     limit_tokens=512,
     num_data_workers=4,
     test_batch_size=1,
-    default_root_dir='./output'  # Add this line to include the missing attribute
+    default_root_dir='./output',
+    arch='SDR',  # Add the architecture type
+    base_model_name='roberta'  # Add the base model name
 )
 
 def main():
