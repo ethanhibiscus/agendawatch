@@ -1,11 +1,11 @@
 import torch
-from torch.nn.functional import cosine_similarity
 from tqdm import tqdm
+from torch.nn.functional import cosine_similarity
 
-def compute_similarity_matrices(sentence_embeddings, source_document):
+def compute_similarity_matrices(sentence_embeddings, source_document_path):
     source_embeddings = None
     for filename, embeddings in sentence_embeddings:
-        if filename == source_document:
+        if filename == source_document_path:
             source_embeddings = embeddings
             break
     
@@ -13,9 +13,8 @@ def compute_similarity_matrices(sentence_embeddings, source_document):
         raise ValueError("Source document not found in the processed data.")
     
     similarity_matrices = []
-    print("Computing similarity matrices...")
-    for filename, embeddings in tqdm(sentence_embeddings, desc="Computing similarity"):
-        if filename != source_document:
+    for filename, embeddings in tqdm(sentence_embeddings, desc="Computing Similarity Matrices"):
+        if filename != source_document_path:
             sim_matrix = cosine_similarity(source_embeddings, embeddings.unsqueeze(1)).mean(dim=1)
             similarity_matrices.append((filename, sim_matrix))
     

@@ -1,7 +1,8 @@
+from tqdm import tqdm
+
 def rank_documents(normalized_matrices):
-    print("Ranking documents...")
     document_scores = []
-    for filename, normalized_matrix in normalized_matrices:
+    for filename, normalized_matrix in tqdm(normalized_matrices, desc="Ranking Documents"):
         score = normalized_matrix.mean().item()
         document_scores.append((filename, score))
     

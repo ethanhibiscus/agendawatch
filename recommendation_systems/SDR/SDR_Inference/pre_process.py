@@ -1,30 +1,24 @@
 import os
 import pickle
-from transformers import RobertaTokenizer
 from tqdm import tqdm
+from data.datasets import CustomTextDatasetParagraphsSentences
+from transformers import RobertaTokenizer
 
-def preprocess_documents(data_dir, cache_dir):
+def preprocess_documents(data_dir, cache_dir, hparams):
     cache_path = os.path.join(cache_dir, "processed_data.pkl")
     
     if os.path.exists(cache_path):
-        print("Loading cached processed data...")
         with open(cache_path, "rb") as f:
             processed_data = pickle.load(f)
         return processed_data
     
-    print("Processing documents...")
     tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
+    dataset = CustomTextDatasetParagraphsSentences(tokenizer, hparams, dataset_name="custom_dataset", block_size=512, mode="test")
+    
     processed_data = []
+    for data in tqdm(dataset, desc="Processing Documents"):
+        processed_data.append((data[1], data[0]))
     
-    for filename in tqdm(os.listdir(data_dir), desc="Processing documents"):
-        if filename.endswith('.txt'):
-            with open(os.path.join(data_dir, filename), 'r', encoding='utf-8') as file:
-                content = file.read().strip()
-                tokens = tokenizer(content, return_tensors="pt", truncation=True, padding=True, max_length=512)
-                processed_data.append((filename, tokens))
-    
-    print("Saving processed data to cache...")
-    os.makedirs(cache_dir, exist_ok=True)
     with open(cache_path, "wb") as f:
         pickle.dump(processed_data, f)
     
