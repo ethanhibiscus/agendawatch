@@ -11,8 +11,14 @@ def compute_sentence_embeddings(model, documents):
             attention_mask = inputs['attention_mask']
             print(f"input_ids: {input_ids.shape}, attention_mask: {attention_mask.shape}")
             try:
-                outputs = model(input_ids=input_ids, attention_mask=attention_mask)
-                embeddings.append(outputs[0].mean(dim=1).squeeze().cpu().numpy())
+                # Adjust the forward pass call according to the model's expected inputs
+                outputs = model(
+                    input_ids=input_ids,
+                    attention_mask=attention_mask,
+                    run_mlm=False,  # Set to False if not using MLM during inference
+                    run_similarity=True  # Set to True if using similarity computation
+                )
+                embeddings.append(outputs[2].mean(dim=1).squeeze().cpu().numpy())  # Assuming outputs[2] is the relevant output
             except TypeError as e:
                 print(f"Error in model forward pass: {e}")
                 print(f"Model input args: input_ids={input_ids}, attention_mask={attention_mask}")
