@@ -1,99 +1,103 @@
+# inference_main.py
+
 import os
 import torch
-from torch.utils.data import DataLoader
-from transformers import RobertaTokenizer
-from functools import partial
-from tqdm import tqdm
 import pickle
+from tqdm import tqdm
+from transformers import RobertaTokenizer
 from models.SDR.SDR import SDR
-from data.datasets import CustomTextDatasetParagraphsSentencesTest
+from utils.argparse_init import default_arg_parser
+from utils.switch_functions import model_class_pointer
+from utils.model_utils import extract_model_path_for_hyperparams
+from data.datasets import CustomTextDatasetParagraphsSentences
 from models.reco.recos_utils import sim_matrix
-from models.reco.hierarchical_reco import mean_non_pad_value
-from data.data_utils import reco_sentence_test_collate
+from models.reco.hierarchical_reco import vectorize_reco_hierarchical
 
-# Define the hparams as per your configuration
-class HParams:
-    dataset_name = 'custom_dataset'
-    limit_tokens = 512
-    num_data_workers = 4
-    test_batch_size = 1
+def load_model_and_tokenizer(model_path):
+    """ Load the trained SDR model and tokenizer """
+    print(f"Loading model and tokenizer from {model_path}...")
+    hparams_path = os.path.join(model_path, 'hparams.pkl')
+    with open(hparams_path, 'rb') as f:
+        hparams = pickle.load(f)
 
-hparams = HParams()
+    model_class = model_class_pointer(hparams.task_name, hparams.arch)
+    model = model_class.load_from_checkpoint(
+        checkpoint_path=os.path.join(model_path, 'last.ckpt'),
+        hparams=hparams
+    )
+
+    tokenizer = RobertaTokenizer.from_pretrained(hparams.tokenizer_name)
+
+    print("Model and tokenizer loaded successfully.")
+    return model, tokenizer, hparams
+
+def prepare_datasets(tokenizer, hparams):
+    """ Prepare datasets for inference """
+    print("Preparing datasets for inference...")
+    dataset = CustomTextDatasetParagraphsSentences(
+        tokenizer=tokenizer,
+        hparams=hparams,
+        dataset_name=hparams.dataset_name,
+        block_size=hparams.block_size,
+        mode="test"
+    )
+    print("Datasets prepared successfully.")
+    return dataset
+
+def compute_similarity(model, source_doc, candidate_docs):
+    """ Compute similarity scores between source document and candidate documents """
+    print("Computing similarity scores...")
+    source_embeddings = model.encode_document(source_doc)
+    candidate_embeddings = [model.encode_document(doc) for doc in tqdm(candidate_docs, desc="Encoding candidate documents")]
+
+    similarities = []
+    for candidate_embedding in tqdm(candidate_embeddings, desc="Computing similarities"):
+        sim = sim_matrix(source_embeddings, candidate_embedding)
+        similarities.append(sim.mean().item())
+
+    print("Similarity scores computed successfully.")
+    return similarities
+
+def rank_documents(similarities, candidate_docs):
+    """ Rank candidate documents based on similarity scores """
+    print("Ranking candidate documents...")
+    ranked_docs = sorted(zip(similarities, candidate_docs), reverse=True, key=lambda x: x[0])
+    print("Candidate documents ranked successfully.")
+    return [doc for _, doc in ranked_docs]
 
 def main():
-    print("Starting inference process...")
+    parser = default_arg_parser()
+    args = parser.parse_args()
 
-    # Load the tokenizer and model
-    tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
-    model_dir = "/home/ethanhsu/03_07_2024-23_10_34"
-    checkpoint_file = os.path.join(model_dir, "epoch=10.ckpt")
-
-    print(f"Loading model from checkpoint: {checkpoint_file}")
-    model = SDR.load_from_checkpoint(checkpoint_path=checkpoint_file, hparams=hparams)
-
-    # Prepare the dataset
-    print("Preparing dataset...")
-    test_dataset = CustomTextDatasetParagraphsSentencesTest(tokenizer=tokenizer, hparams=hparams, dataset_name=hparams.dataset_name, block_size=hparams.limit_tokens, mode='test')
-    test_loader = DataLoader(test_dataset, batch_size=hparams.test_batch_size, collate_fn=partial(reco_sentence_test_collate, tokenizer=tokenizer), num_workers=hparams.num_data_workers)
-
-    # Create output directory if it doesn't exist
-    output_dir = "./inference_outputs"
-    os.makedirs(output_dir, exist_ok=True)
-
-    # Extract features for all documents
-    print("Extracting features for all documents...")
-    all_features = []
+    model_path = "~/03_07_2024-23_10_34"
+    model, tokenizer, hparams = load_model_and_tokenizer(model_path)
     model.eval()
-    with torch.no_grad():
-        for batch in tqdm(test_loader, desc="Extracting Features"):
-            section_out = []
-            for section in batch[0]:
-                sentences = []
-                for sentence in section[0]:
-                    sentence_embed = model(sentence.unsqueeze(0), masked_lm_labels=None, run_similarity=False)[5].squeeze(0)
-                    sentences.append(sentence_embed.mean(0))
-                section_out.append(torch.stack(sentences))
-            all_features.append(section_out)
 
-    # Save extracted features
-    features_file = os.path.join(output_dir, "all_features.pkl")
-    print(f"Saving extracted features to {features_file}")
-    with open(features_file, "wb") as f:
-        pickle.dump(all_features, f)
+    dataset = prepare_datasets(tokenizer, hparams)
 
-    # Compute similarity between the source document and all other documents
-    print("Computing similarity scores...")
-    source_doc_features = all_features[0]  # Assuming the first document is the source document
+    source_doc_path = os.path.join(args.source_doc)
+    print(f"Loading source document from {source_doc_path}...")
+    with open(source_doc_path, 'r') as f:
+        source_doc = f.read()
+    print("Source document loaded successfully.")
 
-    similarity_scores = []
-    for i, candidate_features in tqdm(enumerate(all_features), desc="Computing Similarity Scores", total=len(all_features)):
-        sim = sim_matrix(source_doc_features, candidate_features)
-        sim[sim.isnan()] = float("-Inf")
-        score = mean_non_pad_value(sim, axis=-1, pad_value=float("-Inf")).max(-1)[0].mean().item()
-        similarity_scores.append((i, score))
+    print("Loading candidate documents from ./data/text_files...")
+    candidate_docs = []
+    for filename in tqdm(os.listdir('./data/text_files'), desc="Loading candidate documents"):
+        if filename.endswith('.txt'):
+            with open(os.path.join('./data/text_files', filename), 'r') as f:
+                candidate_docs.append(f.read())
+    print("Candidate documents loaded successfully.")
 
-    # Rank the documents based on similarity scores
-    print("Ranking documents based on similarity scores...")
-    ranked_documents = sorted(similarity_scores, key=lambda x: x[1], reverse=True)
+    similarities = compute_similarity(model, source_doc, candidate_docs)
+    ranked_docs = rank_documents(similarities, candidate_docs)
 
-    # Save similarity scores
-    scores_file = os.path.join(output_dir, "similarity_scores.pkl")
-    print(f"Saving similarity scores to {scores_file}")
-    with open(scores_file, "wb") as f:
-        pickle.dump(similarity_scores, f)
-
-    # Output the ranked documents
-    print("Final ranked documents:")
-    for doc_id, score in ranked_documents:
-        print(f"Document {doc_id} - Similarity Score: {score}")
-
-    # Save ranked documents
-    ranked_file = os.path.join(output_dir, "ranked_documents.pkl")
-    print(f"Saving ranked documents to {ranked_file}")
-    with open(ranked_file, "wb") as f:
-        pickle.dump(ranked_documents, f)
-
-    print("Inference process completed successfully.")
+    output_path = os.path.join(model_path, 'ranked_docs.txt')
+    print(f"Saving ranked documents to {output_path}...")
+    with open(output_path, 'w') as f:
+        for doc in ranked_docs:
+            f.write(doc + '\n')
+    print("Ranked documents saved successfully.")
 
 if __name__ == "__main__":
     main()
