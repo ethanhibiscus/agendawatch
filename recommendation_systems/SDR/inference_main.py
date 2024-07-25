@@ -30,9 +30,11 @@ def load_documents(data_path):
     return documents
 
 def tokenize_and_pad(text, tokenizer, block_size):
-    sentences = tokenizer.tokenize(text)
-    tokenized_sentences = tokenizer.convert_tokens_to_ids(sentences[:block_size])
-    return torch.tensor(tokenizer.build_inputs_with_special_tokens(tokenized_sentences), dtype=torch.long)
+    tokens = tokenizer.tokenize(text)
+    token_ids = tokenizer.convert_tokens_to_ids(tokens[:block_size-2])  # Reserve space for special tokens
+    token_ids = [tokenizer.cls_token_id] + token_ids + [tokenizer.sep_token_id]  # Add special tokens
+    token_ids += [tokenizer.pad_token_id] * (block_size - len(token_ids))  # Pad to block_size
+    return torch.tensor(token_ids, dtype=torch.long)
 
 def get_embeddings(documents, model, tokenizer, block_size=512):
     print("Generating embeddings for documents...")
