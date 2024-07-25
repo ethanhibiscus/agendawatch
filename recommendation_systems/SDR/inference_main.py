@@ -69,9 +69,11 @@ def main():
     parser = default_arg_parser()
     args = parser.parse_args()
 
+    print("loading model...")
     model_path = "~/03_07_2024-23_10_34"
     model, tokenizer, hparams = load_model_and_tokenizer(model_path)
     model.eval()
+    print("model loaded")
 
     dataset = prepare_datasets(tokenizer, hparams)
 
