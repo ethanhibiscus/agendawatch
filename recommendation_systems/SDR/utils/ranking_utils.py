@@ -23,7 +23,7 @@ def load_documents(data_path):
     for file in tqdm(text_files, desc="Reading text files"):
         with open(file, 'r', encoding='utf-8') as f:
             content = f.read().strip()
-            documents.append((file, content))
+            documents.append((os.path.basename(file), content))
     print(f"Loaded {len(documents)} documents successfully!")
     return documents
 
@@ -50,9 +50,9 @@ def generate_embeddings(documents, model, tokenizer, block_size=512, output_dir=
 
     print("Generating embeddings for documents...")
     for doc in tqdm(documents, desc="Generating embeddings"):
-        doc_path = doc[0]
-        if doc_path in embedding_cache:
-            embeddings.append(embedding_cache[doc_path])
+        doc_title = doc[0]
+        if doc_title in embedding_cache:
+            embeddings.append(embedding_cache[doc_title])
         else:
             tokenized = tokenize_and_pad(doc[1], tokenizer, block_size).unsqueeze(0)  # Add batch dimension
             with torch.no_grad():
@@ -61,7 +61,7 @@ def generate_embeddings(documents, model, tokenizer, block_size=512, output_dir=
                     tokenized, masked_lm_labels=None, run_similarity=False
                 )[5].squeeze(0).mean(dim=0)
             embeddings.append(sentence_embeddings)
-            embedding_cache[doc_path] = sentence_embeddings
+            embedding_cache[doc_title] = sentence_embeddings
 
     # Save updated embeddings cache
     with open(cache_path, 'wb') as f:

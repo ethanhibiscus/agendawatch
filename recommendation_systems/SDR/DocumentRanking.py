@@ -29,7 +29,7 @@ class DocumentRanking:
         for doc in new_docs:
             with open(doc, 'r', encoding='utf-8') as f:
                 content = f.read().strip()
-                self.documents.append((doc, content))
+                self.documents.append((os.path.basename(doc), content))
         
         self.embeddings = generate_embeddings(self.documents, self.model, self.tokenizer, output_dir=self.output_dir)
         self.similarity_matrix = compute_similarity_matrix(self.embeddings)
