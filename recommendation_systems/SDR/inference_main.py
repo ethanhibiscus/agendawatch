@@ -37,18 +37,25 @@ def tokenize_and_pad(text, tokenizer, block_size):
     attention_mask += [0] * (block_size - len(attention_mask))  # Pad attention mask to block_size
     return torch.tensor(token_ids, dtype=torch.long), torch.tensor(attention_mask, dtype=torch.long)
 
-def get_embeddings(documents, model, tokenizer, block_size=512):
+def get_embeddings(documents, model, tokenizer, block_size=512, batch_size=32):
     print("Generating embeddings for documents...")
     embeddings = []
-    for doc in tqdm(documents, desc="Generating embeddings"):
-        tokenized, attention_mask = tokenize_and_pad(doc[1], tokenizer, block_size).unsqueeze(0)  # Add batch dimension
+    for i in tqdm(range(0, len(documents), batch_size), desc="Generating embeddings"):
+        batch_docs = documents[i:i+batch_size]
+        batch_inputs = [tokenize_and_pad(doc[1], tokenizer, block_size) for doc in batch_docs]
+        input_ids = torch.stack([inp[0] for inp in batch_inputs])
+        attention_masks = torch.stack([inp[1] for inp in batch_inputs])
+        
         with torch.no_grad():
-            model.hparams.mode = 'test'
-            outputs = model.model(input_ids=tokenized, attention_mask=attention_mask)
-            sentence_embeddings = outputs[0].mean(dim=1).squeeze(0)  # Assuming we take mean of token embeddings
-        embeddings.append(sentence_embeddings)
+            outputs = model(input_ids=input_ids, attention_mask=attention_masks, run_similarity=True)
+            
+        # Assuming the model returns document embeddings directly
+        # If not, you might need to adjust this based on the model's output structure
+        batch_embeddings = outputs[5]  # Adjust this index if necessary
+        embeddings.extend(batch_embeddings)
+    
     print("Embeddings generated successfully!")
-    return embeddings
+    return torch.stack(embeddings)
 
 def compute_similarity(embeddings):
     print("Computing similarity matrix...")
