@@ -1,16 +1,13 @@
 import os
 import torch
-from transformers import RobertaTokenizer
 from tqdm import tqdm
+from transformers import RobertaTokenizer
 from models.SDR.SDR import SDR
-from utils.pytorch_lightning_utils.pytorch_lightning_utils import load_params_from_checkpoint
 from models.reco.recos_utils import sim_matrix
-import numpy as np
 
 def load_model(checkpoint_path):
     """Loads the pretrained SDR model and its hyperparameters from a checkpoint file."""
     print("Loading model...")
-    checkpoint_path = os.path.expanduser(checkpoint_path)  # Expand tilde to full path
     hparams = torch.load(checkpoint_path, map_location=torch.device('cpu'))['hyper_parameters']
     model = SDR.load_from_checkpoint(checkpoint_path, hparams=hparams, map_location=torch.device('cpu'))
     model.eval()  # Set the model to evaluation mode
@@ -37,7 +34,7 @@ def tokenize_and_pad(text, tokenizer, block_size):
     token_ids += [tokenizer.pad_token_id] * (block_size - len(token_ids))  # Pad to block_size
     return torch.tensor(token_ids, dtype=torch.long)
 
-def get_embeddings(documents, model, tokenizer, block_size=512):
+def generate_embeddings(documents, model, tokenizer, block_size=512):
     """Generates embeddings for each document using the SDR model."""
     print("Generating embeddings for documents...")
     embeddings = []
@@ -52,7 +49,7 @@ def get_embeddings(documents, model, tokenizer, block_size=512):
     print("Embeddings generated successfully!")
     return embeddings
 
-def compute_similarity(embeddings):
+def compute_similarity_matrix(embeddings):
     """Computes the similarity matrix for the document embeddings."""
     print("Computing similarity matrix...")
     embeddings = torch.stack(embeddings)
@@ -60,51 +57,9 @@ def compute_similarity(embeddings):
     print("Similarity matrix computed successfully!")
     return similarity_matrix
 
-def rank_documents(similarity_matrix, documents):
-    """Ranks the documents based on their similarity scores to the first document."""
-    print("Ranking documents based on similarity scores...")
-    scores = similarity_matrix[0].cpu().numpy()  # Assuming the first document is the source document
-    ranked_indices = np.argsort(scores)[::-1]  # Sort in descending order
-    ranked_documents = [documents[i] for i in ranked_indices]
-    print("Documents ranked successfully!")
-    return ranked_documents, scores[ranked_indices]
-
-def save_intermediate_results(results, filename):
+def save_intermediate_results(results, filename, output_dir):
     """Saves intermediate results to a specified file."""
-    output_dir = './inference_outputs'
     os.makedirs(output_dir, exist_ok=True)
     file_path = os.path.join(output_dir, filename)
     torch.save(results, file_path)
     print(f"Saved intermediate results to {file_path}")
-
-def main():
-    # Define paths
-    checkpoint_path = '~/03_07_2024-23_10_34/epoch=11.ckpt'
-    data_path = './data/text_files'
-    
-    # Load model and tokenizer
-    model, hparams = load_model(checkpoint_path)
-    tokenizer = RobertaTokenizer.from_pretrained('roberta-large')
-    
-    # Load documents
-    documents = load_documents(data_path)
-    
-    # Generate embeddings
-    embeddings = get_embeddings(documents, model, tokenizer)
-    save_intermediate_results(embeddings, 'embeddings.pt')
-    
-    # Compute similarity matrix
-    similarity_matrix = compute_similarity(embeddings)
-    save_intermediate_results(similarity_matrix, 'similarity_matrix.pt')
-    
-    # Rank documents
-    ranked_documents, scores = rank_documents(similarity_matrix, documents)
-    save_intermediate_results((ranked_documents, scores), 'ranked_documents.pt')
-    
-    # Print ranking results
-    print("Ranking Results:")
-    for doc, score in zip(ranked_documents, scores):
-        print(f"Document: {doc[0]}, Score: {score}")
-
-if __name__ == "__main__":
-    main()
