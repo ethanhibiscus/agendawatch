@@ -6,7 +6,6 @@ from models.SDR.SDR import SDR
 from utils.pytorch_lightning_utils.pytorch_lightning_utils import load_params_from_checkpoint
 from models.reco.recos_utils import sim_matrix
 from utils.torch_utils import to_numpy
-from torch.nn.utils.rnn import pad_sequence
 import numpy as np
 
 def load_model(checkpoint_path):
@@ -33,26 +32,21 @@ def tokenize_and_pad(text, tokenizer, block_size):
     tokens = tokenizer.tokenize(text)
     token_ids = tokenizer.convert_tokens_to_ids(tokens[:block_size-2])  # Reserve space for special tokens
     token_ids = [tokenizer.cls_token_id] + token_ids + [tokenizer.sep_token_id]  # Add special tokens
+    attention_mask = [1] * len(token_ids)  # Attention mask with 1s for actual tokens and 0s for padding
     token_ids += [tokenizer.pad_token_id] * (block_size - len(token_ids))  # Pad to block_size
-    return torch.tensor(token_ids, dtype=torch.long)
+    attention_mask += [0] * (block_size - len(attention_mask))  # Pad attention mask to block_size
+    return torch.tensor(token_ids, dtype=torch.long), torch.tensor(attention_mask, dtype=torch.long)
 
 def get_embeddings(documents, model, tokenizer, block_size=512):
     print("Generating embeddings for documents...")
     embeddings = []
     for doc in tqdm(documents, desc="Generating embeddings"):
-        tokenized = tokenize_and_pad(doc[1], tokenizer, block_size).unsqueeze(0)  # Add batch dimension
+        tokenized, attention_mask = tokenize_and_pad(doc[1], tokenizer, block_size).unsqueeze(0)  # Add batch dimension
         with torch.no_grad():
             model.hparams.mode = 'test'
-            section_out = []
-            for section in tokenized:  # Assuming tokenized contains sections
-                sentences = []
-                sentences_embed_per_token = [
-                    model.model(sentence.unsqueeze(0)).last_hidden_state.mean(1).squeeze(0) for sentence in section
-                ]
-                for idx, sentence in enumerate(sentences_embed_per_token):
-                    sentences.append(sentence)
-                section_out.append(torch.stack(sentences))
-            embeddings.append(section_out[0].mean(0))  # Assuming one section per document
+            outputs = model.model(input_ids=tokenized, attention_mask=attention_mask)
+            sentence_embeddings = outputs[0].mean(dim=1).squeeze(0)  # Assuming we take mean of token embeddings
+        embeddings.append(sentence_embeddings)
     print("Embeddings generated successfully!")
     return embeddings
 
