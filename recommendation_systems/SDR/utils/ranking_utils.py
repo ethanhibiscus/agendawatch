@@ -4,6 +4,7 @@ from tqdm import tqdm
 from transformers import RobertaTokenizer
 from models.SDR.SDR import SDR
 from models.reco.recos_utils import sim_matrix
+import pickle
 
 def load_model(checkpoint_path):
     """Loads the pretrained SDR model and its hyperparameters from a checkpoint file."""
@@ -34,19 +35,38 @@ def tokenize_and_pad(text, tokenizer, block_size):
     token_ids += [tokenizer.pad_token_id] * (block_size - len(token_ids))  # Pad to block_size
     return torch.tensor(token_ids, dtype=torch.long)
 
-def generate_embeddings(documents, model, tokenizer, block_size=512):
+def generate_embeddings(documents, model, tokenizer, block_size=512, output_dir='./inference_outputs'):
     """Generates embeddings for each document using the SDR model."""
-    print("Generating embeddings for documents...")
+    os.makedirs(output_dir, exist_ok=True)
     embeddings = []
+    embedding_cache = {}
+
+    # Load existing embeddings if available
+    cache_path = os.path.join(output_dir, 'embedding_cache.pkl')
+    if os.path.exists(cache_path):
+        with open(cache_path, 'rb') as f:
+            embedding_cache = pickle.load(f)
+        print("Loaded existing embeddings from cache.")
+
+    print("Generating embeddings for documents...")
     for doc in tqdm(documents, desc="Generating embeddings"):
-        tokenized = tokenize_and_pad(doc[1], tokenizer, block_size).unsqueeze(0)  # Add batch dimension
-        with torch.no_grad():
-            # Compute embeddings and average non-padded tokens
-            sentence_embeddings = model.model(
-                tokenized, masked_lm_labels=None, run_similarity=False
-            )[5].squeeze(0).mean(dim=0)
-        embeddings.append(sentence_embeddings)
-    print("Embeddings generated successfully!")
+        doc_path = doc[0]
+        if doc_path in embedding_cache:
+            embeddings.append(embedding_cache[doc_path])
+        else:
+            tokenized = tokenize_and_pad(doc[1], tokenizer, block_size).unsqueeze(0)  # Add batch dimension
+            with torch.no_grad():
+                # Compute embeddings and average non-padded tokens
+                sentence_embeddings = model.model(
+                    tokenized, masked_lm_labels=None, run_similarity=False
+                )[5].squeeze(0).mean(dim=0)
+            embeddings.append(sentence_embeddings)
+            embedding_cache[doc_path] = sentence_embeddings
+
+    # Save updated embeddings cache
+    with open(cache_path, 'wb') as f:
+        pickle.dump(embedding_cache, f)
+    print("Embeddings generated and cache updated successfully!")
     return embeddings
 
 def compute_similarity_matrix(embeddings):

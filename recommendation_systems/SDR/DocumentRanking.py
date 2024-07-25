@@ -16,7 +16,7 @@ class DocumentRanking:
         self.similarity_matrix = None
         self.model, self.hparams = load_model(self.checkpoint_path)
         self.documents = load_documents(self.data_path)
-        self.embeddings = generate_embeddings(self.documents, self.model, self.tokenizer)
+        self.embeddings = generate_embeddings(self.documents, self.model, self.tokenizer, output_dir=self.output_dir)
         self.similarity_matrix = compute_similarity_matrix(self.embeddings)
 
     def add_new_document(self, docs):
@@ -31,7 +31,7 @@ class DocumentRanking:
                 content = f.read().strip()
                 self.documents.append((doc, content))
         
-        self.embeddings = generate_embeddings(self.documents, self.model, self.tokenizer)
+        self.embeddings = generate_embeddings(self.documents, self.model, self.tokenizer, output_dir=self.output_dir)
         self.similarity_matrix = compute_similarity_matrix(self.embeddings)
         save_intermediate_results(self.embeddings, 'embeddings.pt', self.output_dir)
         save_intermediate_results(self.similarity_matrix, 'similarity_matrix.pt', self.output_dir)
@@ -63,7 +63,7 @@ class DocumentRanking:
             index = next(i for i, doc in enumerate(self.documents) if doc[0] == doc_name)
         
         self.documents[index] = (self.documents[index][0], new_document)
-        self.embeddings = generate_embeddings(self.documents, self.model, self.tokenizer)
+        self.embeddings = generate_embeddings(self.documents, self.model, self.tokenizer, output_dir=self.output_dir)
         self.similarity_matrix = compute_similarity_matrix(self.embeddings)
         save_intermediate_results(self.embeddings, 'embeddings.pt', self.output_dir)
         save_intermediate_results(self.similarity_matrix, 'similarity_matrix.pt', self.output_dir)
@@ -76,7 +76,7 @@ class DocumentRanking:
             index = next(i for i, doc in enumerate(self.documents) if doc[0] == doc_name)
         
         del self.documents[index]
-        self.embeddings = generate_embeddings(self.documents, self.model, self.tokenizer)
+        self.embeddings = generate_embeddings(self.documents, self.model, self.tokenizer, output_dir=self.output_dir)
         self.similarity_matrix = compute_similarity_matrix(self.embeddings)
         save_intermediate_results(self.embeddings, 'embeddings.pt', self.output_dir)
         save_intermediate_results(self.similarity_matrix, 'similarity_matrix.pt', self.output_dir)
