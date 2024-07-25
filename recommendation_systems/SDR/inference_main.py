@@ -5,6 +5,8 @@ from tqdm import tqdm
 from models.SDR.SDR import SDR
 from utils.pytorch_lightning_utils.pytorch_lightning_utils import load_params_from_checkpoint
 from models.reco.recos_utils import sim_matrix
+from utils.torch_utils import to_numpy
+from torch.nn.utils.rnn import pad_sequence
 import numpy as np
 
 def load_model(checkpoint_path):
@@ -40,8 +42,11 @@ def get_embeddings(documents, model, tokenizer, block_size=512):
     for doc in tqdm(documents, desc="Generating embeddings"):
         tokenized = tokenize_and_pad(doc[1], tokenizer, block_size).unsqueeze(0)  # Add batch dimension
         with torch.no_grad():
-            embedding = model.embed(tokenized)  # Custom embedding method
-        embeddings.append(embedding)
+            # Compute embeddings
+            sentence_embeddings = model.model(
+                tokenized, masked_lm_labels=None, run_similarity=False
+            )[5].squeeze(0).mean(dim=0)  # Averaging the non-padded tokens
+        embeddings.append(sentence_embeddings)
     print("Embeddings generated successfully!")
     return embeddings
 
