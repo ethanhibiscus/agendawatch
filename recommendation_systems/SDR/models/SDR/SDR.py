@@ -107,6 +107,15 @@ class SDR(TransformersBase):
                 sentences.append(sentence[: section[2][idx]].mean(0))  # Average non-padded tokens
             section_out.append(torch.stack(sentences))
         return (section_out, batch[0][0][1][0])  # Return section output and title name
+    
+    def embed(self, input_ids):
+        outputs = self.model(
+            input_ids,
+            attention_mask=input_ids.ne(self.tokenizer.pad_token_id)
+        )
+        # Assuming we take the mean of token embeddings to get sentence embeddings
+        sentence_embeddings = outputs[0].mean(dim=1)
+        return sentence_embeddings
 
     def forward(self, batch):
         """
