@@ -37,13 +37,12 @@ def tokenize_and_pad(text, tokenizer, block_size):
 def get_embeddings(documents, model, tokenizer, block_size=512):
     print("Generating embeddings for documents...")
     embeddings = []
-    model.eval()  # Ensure model is in evaluation mode
     for doc in tqdm(documents, desc="Generating embeddings"):
-        tokenized = tokenize_and_pad(doc[1], tokenizer, block_size)
+        tokenized = tokenize_and_pad(doc[1], tokenizer, block_size).unsqueeze(0)  # Add batch dimension
         with torch.no_grad():
-            output = model.model(tokenized.unsqueeze(0))
-            embedding = output.last_hidden_state.mean(1).squeeze(0)
-        embeddings.append(embedding)
+            outputs = model.model(tokenized)
+            sentence_embeddings = outputs[0].mean(dim=1).squeeze(0)  # Assuming we take mean of token embeddings
+        embeddings.append(sentence_embeddings)
     print("Embeddings generated successfully!")
     return embeddings
 
