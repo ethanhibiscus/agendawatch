@@ -11,6 +11,7 @@ import numpy as np
 
 def load_model(checkpoint_path):
     print("Loading model...")
+    checkpoint_path = os.path.expanduser(checkpoint_path)  # Expand tilde to full path
     hparams = torch.load(checkpoint_path, map_location=torch.device('cpu'))['hyper_parameters']
     model = SDR.load_from_checkpoint(checkpoint_path, hparams=hparams, map_location=torch.device('cpu'))
     model.eval()
