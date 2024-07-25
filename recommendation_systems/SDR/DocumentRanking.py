@@ -5,6 +5,14 @@ import numpy as np
 from utils.ranking_utils import load_model, load_documents, generate_embeddings, compute_similarity_matrix, save_intermediate_results
 from transformers import RobertaTokenizer
 
+
+'''
+DocumentRanking class:
+This class was designed to allow easy interfacing with Self-Supervised Document Ranking based on Microsoft's research. The class has five basic functions
+1. add_new_documents(docs) ==> takes in either a directory of .txt files or a .txt file and adds the document to the corpus 
+
+
+'''
 class DocumentRanking:
     def __init__(self, checkpoint_path='~/03_07_2024-23_10_34/epoch=11.ckpt', data_path='./data/text_files', output_dir='./inference_outputs'):
         self.checkpoint_path = os.path.expanduser(checkpoint_path)
