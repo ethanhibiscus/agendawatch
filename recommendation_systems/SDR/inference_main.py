@@ -1,105 +1,78 @@
-# inference_main.py
-
 import os
 import torch
-import pickle
-from tqdm import tqdm
 from transformers import RobertaTokenizer
+from tqdm import tqdm
 from models.SDR.SDR import SDR
-from utils.argparse_init import default_arg_parser
-from utils.switch_functions import model_class_pointer
-from utils.model_utils import extract_model_path_for_hyperparams
-from data.datasets import CustomTextDatasetParagraphsSentences
+from utils.pytorch_lightning_utils.pytorch_lightning_utils import load_params_from_checkpoint
 from models.reco.recos_utils import sim_matrix
-from models.reco.hierarchical_reco import vectorize_reco_hierarchical
+from utils.torch_utils import to_numpy
+from torch.nn.utils.rnn import pad_sequence
+import numpy as np
 
-def load_model_and_tokenizer(model_path):
-    """ Load the trained SDR model and tokenizer """
-    print(f"Loading model and tokenizer from {model_path}...")
-    hparams_path = os.path.join(model_path, 'hparams.pkl')
-    with open(hparams_path, 'rb') as f:
-        hparams = pickle.load(f)
+def load_model(checkpoint_path):
+    print("Loading model...")
+    hparams = torch.load(checkpoint_path, map_location=torch.device('cpu'))['hyper_parameters']
+    model = SDR.load_from_checkpoint(checkpoint_path, hparams=hparams, map_location=torch.device('cpu'))
+    model.eval()
+    print("Model loaded successfully!")
+    return model, hparams
 
-    model_class = model_class_pointer(hparams.task_name, hparams.arch)
-    model = model_class.load_from_checkpoint(
-        checkpoint_path=os.path.join(model_path, 'last.ckpt'),
-        hparams=hparams
-    )
+def load_documents(data_path):
+    print("Loading documents...")
+    text_files = [os.path.join(data_path, f) for f in os.listdir(data_path) if f.endswith('.txt')]
+    documents = []
+    for file in tqdm(text_files, desc="Reading text files"):
+        with open(file, 'r', encoding='utf-8') as f:
+            content = f.read().strip()
+            documents.append((file, content))
+    print(f"Loaded {len(documents)} documents successfully!")
+    return documents
 
-    tokenizer = RobertaTokenizer.from_pretrained(hparams.tokenizer_name)
+def tokenize_and_pad(text, tokenizer, block_size):
+    sentences = tokenizer.tokenize(text)
+    tokenized_sentences = tokenizer.convert_tokens_to_ids(sentences[:block_size])
+    return torch.tensor(tokenizer.build_inputs_with_special_tokens(tokenized_sentences), dtype=torch.long)
 
-    print("Model and tokenizer loaded successfully.")
-    return model, tokenizer, hparams
+def get_embeddings(documents, model, tokenizer, block_size=512):
+    print("Generating embeddings for documents...")
+    embeddings = []
+    for doc in tqdm(documents, desc="Generating embeddings"):
+        tokenized = tokenize_and_pad(doc[1], tokenizer, block_size)
+        with torch.no_grad():
+            embedding = model(tokenized.unsqueeze(0)).last_hidden_state.mean(1).squeeze(0)
+        embeddings.append(embedding)
+    print("Embeddings generated successfully!")
+    return embeddings
 
-def prepare_datasets(tokenizer, hparams):
-    """ Prepare datasets for inference """
-    print("Preparing datasets for inference...")
-    dataset = CustomTextDatasetParagraphsSentences(
-        tokenizer=tokenizer,
-        hparams=hparams,
-        dataset_name=hparams.dataset_name,
-        block_size=hparams.block_size,
-        mode="test"
-    )
-    print("Datasets prepared successfully.")
-    return dataset
+def compute_similarity(embeddings):
+    print("Computing similarity matrix...")
+    embeddings = torch.stack(embeddings)
+    similarity_matrix = sim_matrix(embeddings, embeddings)
+    print("Similarity matrix computed successfully!")
+    return similarity_matrix
 
-def compute_similarity(model, source_doc, candidate_docs):
-    """ Compute similarity scores between source document and candidate documents """
-    print("Computing similarity scores...")
-    source_embeddings = model.encode_document(source_doc)
-    candidate_embeddings = [model.encode_document(doc) for doc in tqdm(candidate_docs, desc="Encoding candidate documents")]
-
-    similarities = []
-    for candidate_embedding in tqdm(candidate_embeddings, desc="Computing similarities"):
-        sim = sim_matrix(source_embeddings, candidate_embedding)
-        similarities.append(sim.mean().item())
-
-    print("Similarity scores computed successfully.")
-    return similarities
-
-def rank_documents(similarities, candidate_docs):
-    """ Rank candidate documents based on similarity scores """
-    print("Ranking candidate documents...")
-    ranked_docs = sorted(zip(similarities, candidate_docs), reverse=True, key=lambda x: x[0])
-    print("Candidate documents ranked successfully.")
-    return [doc for _, doc in ranked_docs]
+def rank_documents(similarity_matrix, documents):
+    print("Ranking documents based on similarity scores...")
+    scores = similarity_matrix[0].cpu().numpy()  # Assuming the first document is the source document
+    ranked_indices = np.argsort(scores)[::-1]  # Sort in descending order
+    ranked_documents = [documents[i] for i in ranked_indices]
+    print("Documents ranked successfully!")
+    return ranked_documents, scores[ranked_indices]
 
 def main():
-    parser = default_arg_parser()
-    args = parser.parse_args()
+    checkpoint_path = '~/03_07_2024-23_10_34/epoch=11.ckpt'
+    data_path = './data/text_files'
 
-    print("loading model...")
-    model_path = "~/03_07_2024-23_10_34"
-    model, tokenizer, hparams = load_model_and_tokenizer(model_path)
-    model.eval()
-    print("model loaded")
-
-    dataset = prepare_datasets(tokenizer, hparams)
-
-    source_doc_path = os.path.join(args.source_doc)
-    print(f"Loading source document from {source_doc_path}...")
-    with open(source_doc_path, 'r') as f:
-        source_doc = f.read()
-    print("Source document loaded successfully.")
-
-    print("Loading candidate documents from ./data/text_files...")
-    candidate_docs = []
-    for filename in tqdm(os.listdir('./data/text_files'), desc="Loading candidate documents"):
-        if filename.endswith('.txt'):
-            with open(os.path.join('./data/text_files', filename), 'r') as f:
-                candidate_docs.append(f.read())
-    print("Candidate documents loaded successfully.")
-
-    similarities = compute_similarity(model, source_doc, candidate_docs)
-    ranked_docs = rank_documents(similarities, candidate_docs)
-
-    output_path = os.path.join(model_path, 'ranked_docs.txt')
-    print(f"Saving ranked documents to {output_path}...")
-    with open(output_path, 'w') as f:
-        for doc in ranked_docs:
-            f.write(doc + '\n')
-    print("Ranked documents saved successfully.")
+    model, hparams = load_model(checkpoint_path)
+    tokenizer = RobertaTokenizer.from_pretrained('roberta-large')
+    documents = load_documents(data_path)
+    embeddings = get_embeddings(documents, model, tokenizer)
+    similarity_matrix = compute_similarity(embeddings)
+    ranked_documents, scores = rank_documents(similarity_matrix, documents)
+    
+    print("Ranking Results:")
+    for doc, score in zip(ranked_documents, scores):
+        print(f"Document: {doc[0]}, Score: {score}")
 
 if __name__ == "__main__":
     main()
