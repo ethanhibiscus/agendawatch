@@ -43,7 +43,9 @@ def get_embeddings(documents, model, tokenizer, block_size=512):
         tokenized = tokenize_and_pad(doc[1], tokenizer, block_size).unsqueeze(0)  # Add batch dimension
         with torch.no_grad():
             outputs = model.model(tokenized)
-            sentence_embeddings = outputs[0].mean(dim=1).squeeze(0)  # Assuming we take mean of token embeddings
+            # Assuming we take the mean of the last hidden state as sentence embedding
+            last_hidden_state = outputs.last_hidden_state
+            sentence_embeddings = last_hidden_state.mean(dim=1).squeeze(0)
         embeddings.append(sentence_embeddings)
     print("Embeddings generated successfully!")
     return embeddings
