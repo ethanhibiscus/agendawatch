@@ -13,6 +13,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 from pytorch_lightning.loggers import TensorBoardLogger
 
+
 def main():
     """Initialize all the parsers, before training init."""
     parser = default_arg_parser()

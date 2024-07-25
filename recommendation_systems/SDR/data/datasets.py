@@ -77,7 +77,7 @@ class CustomTextDatasetParagraphsSentences(Dataset):
                 this_sample_sections = []
                 title, content = article[0], article[1]
                 sections = content.split("\n\n")  # Assuming sections are separated by double newlines
-                valid_sections_count = 0
+                valid_sections_count = 0 
                 for section_idx, section in enumerate(sections):
                     this_sections_sentences = []
                     if section.strip() == "":
