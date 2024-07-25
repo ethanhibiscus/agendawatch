@@ -42,10 +42,17 @@ def get_embeddings(documents, model, tokenizer, block_size=512):
     for doc in tqdm(documents, desc="Generating embeddings"):
         tokenized = tokenize_and_pad(doc[1], tokenizer, block_size).unsqueeze(0)  # Add batch dimension
         with torch.no_grad():
-            outputs = model.model(tokenized)
-            last_hidden_state = outputs[0]  # Accessing the first element of the tuple
-            sentence_embeddings = last_hidden_state.mean(dim=1).squeeze(0)
-        embeddings.append(sentence_embeddings)
+            model.hparams.mode = 'test'
+            section_out = []
+            for section in tokenized:  # Assuming tokenized contains sections
+                sentences = []
+                sentences_embed_per_token = [
+                    model.model(sentence.unsqueeze(0)).last_hidden_state.mean(1).squeeze(0) for sentence in section
+                ]
+                for idx, sentence in enumerate(sentences_embed_per_token):
+                    sentences.append(sentence)
+                section_out.append(torch.stack(sentences))
+            embeddings.append(section_out[0].mean(0))  # Assuming one section per document
     print("Embeddings generated successfully!")
     return embeddings
 
